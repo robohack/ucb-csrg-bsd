@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 7/9/93
+#	@(#)Makefile	8.1 (Berkeley) 7/9/93
 
 NOMAN=noman
 NOOBJ=noobj
