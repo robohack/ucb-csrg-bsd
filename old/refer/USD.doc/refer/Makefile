@@ -1,13 +1,13 @@
-#	@(#)Makefile	8.1 (Berkeley) 6/8/93
+#	@(#)Makefile	8.2 (Berkeley) 5/20/94
 
 # refer.mac should be typed on a 12 pitch Daisy wheel printer
 DIR=	usd/26.refer
-SRCS=	refer.bib
-MACROS=	-msU
+SRCS=	refer.bib refer.mac
+MACROS=	-ms
 REFER=	refer -p biblio
 CLEANFILES=biblio.ig
 
 paper.ps: ${SRCS}
-	${REFER} ${SRCS} | ${ROFF} > ${.TARGET}
+	${REFER} ${SRCS} | ${TBL} | ${ROFF} > ${.TARGET}
 
 .include <bsd.doc.mk>
