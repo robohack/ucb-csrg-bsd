@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)mkheaders.c	5.8 (Berkeley) 5/4/92";
+static char sccsid[] = "@(#)mkheaders.c	5.9 (Berkeley) 6/25/92";
 #endif /* not lint */
 
 /*
@@ -170,7 +170,7 @@ char *tomacro(dev)
 	cp = mbuf;
 	*cp++ = 'N';
 	while (*dev)
-		*cp++ = toupper(*dev++);
+		*cp++ = islower(*dev) ? toupper(*dev++) : *dev++;
 	*cp++ = 0;
 	return (mbuf);
 }
