@@ -1,4 +1,4 @@
-/*	@(#)siglist.c	4.2 (Berkeley) 2/10/83	*/
+/*	@(#)siglist.c	4.3 (Berkeley) 5/22/85	*/
 
 #include <signal.h>
 
@@ -31,8 +31,8 @@ char	*sys_siglist[NSIG] = {
 	"Filesize limit exceeded",	/* SIGXFSZ */
 	"Virtual timer expired",	/* SIGVTALRM */
 	"Profiling timer expired",	/* SIGPROF */
-	"Signal 28",
+	"Window size changes",		/* SIGWINCH */
 	"Signal 29",
-	"Signal 30",
-	"Signal 31"
+	"User defined signal 1",	/* SIGUSR1 */
+	"User defined signal 2"		/* SIGUSR2 */
 };
