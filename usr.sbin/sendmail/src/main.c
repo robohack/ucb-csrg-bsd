@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	5.37 (Berkeley) 11/22/91";
+static char sccsid[] = "@(#)main.c	5.38 (Berkeley) 12/12/91";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -254,8 +254,9 @@ main(argc, argv, envp)
 			q = strchr(jbuf, '.');
 			if (q != NULL)
 			{
-				*q = '\0';
+				*q++ = '\0';
 				p = newstr(jbuf);
+				define('m', q, CurEnv);
 			}
 			setclass('w', p);
 		}
