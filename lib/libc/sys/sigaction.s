@@ -16,7 +16,7 @@
  */
 
 #if defined(SYSLIBC_SCCS) && !defined(lint)
-	.asciz "@(#)sigaction.s	1.1 (Berkeley) 8/27/89"
+	.asciz "@(#)sigaction.s	5.1 (Berkeley) 8/27/89"
 #endif /* SYSLIBC_SCCS and not lint */
 
 #include "SYS.h"
