@@ -7,7 +7,7 @@
 # include <syslog.h>
 # endif LOG
 
-SCCSID(@(#)main.c	3.77		5/31/82);
+SCCSID(@(#)main.c	3.78		5/31/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -741,7 +741,7 @@ finis()
 
 	/* send back return receipts as requested */
 	if (CurEnv->e_sendreceipt && ExitStat == EX_OK)
-		returntosender("Return receipt", &CurEnv->e_from, FALSE);
+		(void) returntosender("Return receipt", &CurEnv->e_from, FALSE);
 
 	/* mail back the transcript on errors */
 	if (FatalErrors)
@@ -959,7 +959,7 @@ initsys()
 		{
 			if (rindex(p, '/') != NULL)
 				p = rindex(p, '/') + 1;
-			strcpy(ybuf, p);
+			(void) strcpy(ybuf, p);
 			define('y', ybuf);
 		}
 	}
@@ -1039,7 +1039,7 @@ ENVELOPE *
 newenvelope(e)
 	register ENVELOPE *e;
 {
-	bmove(CurEnv, e, sizeof *e);
+	bmove((char *) CurEnv, (char *) e, sizeof *e);
 	e->e_header = NULL;
 	e->e_queueup = FALSE;
 	e->e_oldstyle = FALSE;
