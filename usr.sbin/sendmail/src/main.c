@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.114 (Berkeley) 5/25/95";
+static char sccsid[] = "@(#)main.c	8.115 (Berkeley) 5/27/95";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -944,8 +944,11 @@ main(argc, argv, envp)
 			(void) fflush(stdout);
 			if (fgets(buf, sizeof buf, stdin) == NULL)
 				finis();
+			p = strchr(buf, '\n');
+			if (p != NULL)
+				*p = '\0';
 			if (!Verbose)
-				printf("> %s", buf);
+				printf("> %s\n", buf);
 			testmodeline(buf, CurEnv);
 		}
 	}
@@ -1511,7 +1514,8 @@ setuserenv(envar, value)
 	}
 
 	/* make sure it is in our environment as well */
-	putenv(p);
+	if (putenv(p) < 0)
+		syserr("setuserenv: putenv(%s) failed", p);
 }
 /*
 **  DUMPSTATE -- dump state
@@ -1606,9 +1610,6 @@ testmodeline(line, e)
 		switch (line[1])
 		{
 		  case 'D':
-			p = strchr(line, '\n');
-			if (p != NULL)
-				*p = '\0';
 			mid = macid(&line[2], &delimptr);
 			if (mid != '\0')
 				define(mid, newstr(delimptr), e);
@@ -1625,11 +1626,9 @@ testmodeline(line, e)
 				char *cp;
 				STAB *s;
 
-				if ((cp = strchr(line, '\n')) != NULL)
-					*cp = '\0';
-				if (cp == line+2)
+				if (line[2] == '\0')
 					return;
-				s = stab(line+2, ST_RULESET, ST_FIND);
+				s = stab(&line[2], ST_RULESET, ST_FIND);
 				if (s == NULL)
 				{
 					if (!isdigit(line[2]))
@@ -1675,10 +1674,7 @@ testmodeline(line, e)
 		switch (line[1])
 		{
 		  case 'd':
-			if (line[2] == '\n')
-				tTflag("");
-			else
-				tTflag(&line[2]);
+			tTflag(&line[2]);
 			break;
 
 		  default:
@@ -1702,12 +1698,9 @@ testmodeline(line, e)
 		return;
 
 	  case '/':		/* miscellaneous commands */
-		p = strchr(line, '\n');
-		if (p != NULL)
-		{
-			while (p >= line && isascii(*p) && isspace(*p))
-				*p-- = '\0';
-		}
+		p = &line[strlen(line)];
+		while (--p >= line && isascii(*p) && isspace(*p))
+			*p = '\0';
 		p = strpbrk(line, " \t");
 		if (p != NULL)
 		{
