@@ -25,7 +25,7 @@ char copyright[] =
 #endif not lint
 
 #ifndef lint
-static char sccsid[] = "@(#)nfsd.c	5.2 (Berkeley) 1/4/90";
+static char sccsid[] = "@(#)nfsd.c	5.3 (Berkeley) 5/4/90";
 #endif not lint
 
 #include <stdio.h>
@@ -35,9 +35,6 @@ static char sccsid[] = "@(#)nfsd.c	5.2 (Berkeley) 1/4/90";
 #include <sys/types.h>
 #include <sys/ioctl.h>
 #include <sys/stat.h>
-#include <sys/dir.h>
-#include <sys/uio.h>
-#include <sys/namei.h>
 #include <sys/mount.h>
 #include <sys/socket.h>
 #include <sys/socketvar.h>
