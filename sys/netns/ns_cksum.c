@@ -4,11 +4,11 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)ns_cksum.c	7.7 (Berkeley) 4/29/91
+ *	@(#)ns_cksum.c	7.8 (Berkeley) 3/2/92
  */
 
-#include "sys/param.h"
-#include "sys/mbuf.h"
+#include "param.h"
+#include "mbuf.h"
 
 /*
  * Checksum routine for Network Systems Protocol Packets (Big-Endian).
