@@ -5,7 +5,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	5.2 (Berkeley) 1/9/86";
+static char sccsid[] = "@(#)main.c	5.3 (Berkeley) 5/23/86";
 #endif not lint
 
 #include "dump.h"
@@ -156,7 +156,7 @@ main(argc, argv)
 	  host = tape;
 	  tape = index(host, ':');
 	  if (tape == 0) {
-		msg("need keyletter ``f'' and device ``host:tape''");
+		msg("need keyletter ``f'' and device ``host:tape''\n");
 		exit(1);
 	  }
 	  *tape++ = 0;
