@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)pathnames.h	5.2 (Berkeley) 4/18/91
+ *	@(#)pathnames.h	5.3 (Berkeley) 4/30/91
  */
 
-#define	_PATH_FONTS	"/usr/libdata/troff_font/ftXX"
+#define	_PATH_FONTS	"/usr/old/libdata/troff_font/ftXX"
