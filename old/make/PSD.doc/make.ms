@@ -1,4 +1,4 @@
-.\"	@(#)make.ms	4.1 (Berkeley) 5/4/86
+.\"	@(#)make.ms	5.1 (Berkeley) 5/4/86
 .\"
 .....TR 57
 .ND August 15, 1978
