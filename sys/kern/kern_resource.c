@@ -3,11 +3,10 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)kern_resource.c	7.4 (Berkeley) 4/26/89
+ *	@(#)kern_resource.c	7.5 (Berkeley) 5/5/89
  */
 
 #include "param.h"
-#include "dir.h"
 #include "user.h"
 #include "proc.h"
 
