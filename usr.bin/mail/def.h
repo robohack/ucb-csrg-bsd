@@ -1,16 +1,16 @@
 #
 
-#include "local.h"
 #include <sys/types.h>
 #include <signal.h>
 #include <stdio.h>
 #include <sgtty.h>
+#include "local.h"
 
 #undef isalpha
 #undef isdigit
 
 /*
- * Sccs Id = "@(#)def.h	2.5 6/24/82";
+ * Sccs Id = "@(#)def.h	2.6 7/26/82";
  */
 
 /*
