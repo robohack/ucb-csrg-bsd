@@ -4,13 +4,11 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)general.h	1.4 (Berkeley) 6/1/90
+ *	@(#)general.h	1.5 (Berkeley) 6/28/90
  */
 
 /*
  * Some general definitions.
- *
- * @(#)general.h	3.1 (Berkeley) 8/11/87
  */
 
 
