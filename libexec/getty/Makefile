@@ -1,7 +1,7 @@
-#	@(#)Makefile	5.11 (Berkeley) 7/2/90
+#	@(#)Makefile	5.12 (Berkeley) 1/21/91
 
 PROG=	getty
-SRCS=	main.c init.c subr.c gettytab.c get_date.c ttydefaults.c
+SRCS=	main.c init.c subr.c gettytab.c ttydefaults.c
 DPADD=	${LIBUTIL}
 LDADD=	-lutil
 MAN5=	gettytab.0 ttys.0
