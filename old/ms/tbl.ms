@@ -1,4 +1,7 @@
-.\" @(#)tbl.ms	1.3 (Berkeley) 6/2/90
+.\" %sccs.include.proprietary.roff%
+.\"
+.\"	@(#)tbl.ms	5.1 (Berkeley) 4/17/91
+.\"
 .	\" TS - table start
 .de TS
 .br

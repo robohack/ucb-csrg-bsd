@@ -1,8 +1,14 @@
+/ Copyright (c) 1991 The Regents of the University of California.
+/ All rights reserved.
+/
+/ %sccs.include.proprietary.c%
+/
+/	@(#)ovdoprnt.s	1.3 (Berkeley) 4/17/91
+/ 
+
 / C library -- conversions
 / Overlay modification -- wfj 8/80
 / stack frame is one word larger...
-/ sccs id @(#)ovdoprnt.s	1.2 8/26/80
-/
 
 / width=-8.
 / formp=-10.

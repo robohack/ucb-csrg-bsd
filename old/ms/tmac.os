@@ -1,4 +1,7 @@
-.\"	@(#)tmac.os	1.3 (Berkeley) 6/2/90
+.\" %sccs.include.proprietary.roff%
+.\"
+.\"	@(#)tmac.os	5.1 (Berkeley) 4/17/91
+.\"
 .ds // /usr/share/tmac/
 .nr TN 0
 .\"	RT -  reset everything to normal state

@@ -1,4 +1,7 @@
-.\" @(#)ref.ms	1.3 (Berkeley) 6/2/90
+.\" %sccs.include.proprietary.roff%
+.\"
+.\"	@(#)ref.ms	5.1 (Berkeley) 4/17/91
+.\"
 .	\" refer macros for citations
 .de []
 .][ \\$1

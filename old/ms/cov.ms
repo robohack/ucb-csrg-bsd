@@ -1,4 +1,7 @@
-.\" @(#)cov.ms	1.3 (Berkeley) 6/2/90
+.\" %sccs.include.proprietary.roff%
+.\"
+.\"	@(#)cov.ms	5.1 (Berkeley) 4/17/91
+.\"
 .	\" TL - title and initialization
 .de TL
 .if \\n(TM .nr ST 1
