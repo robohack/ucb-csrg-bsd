@@ -1,12 +1,12 @@
 /*
- * Copyright (c) 1985 Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1985, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)pow.c	5.11 (Berkeley) 5/2/93";
+static char sccsid[] = "@(#)pow.c	8.1 (Berkeley) 6/4/93";
 #endif /* not lint */
 
 /* POW(X,Y)  
