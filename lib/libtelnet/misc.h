@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1991 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1991, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)misc.h	5.1 (Berkeley) 2/28/91
+ *	@(#)misc.h	8.1 (Berkeley) 6/4/93
  */
 
 extern char *UserNameRequested;
