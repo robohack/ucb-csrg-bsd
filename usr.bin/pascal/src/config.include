@@ -1,7 +1,7 @@
-#	@(#)config.include	5.1 (Berkeley) 6/29/90
+#	@(#)config.include	8.1 (Berkeley) 6/6/93
 
 VERSION=	3.1
-DATE=		6/29/90
+DATE=		6/6/93
 LIBEXEC=	/usr/libexec/pascal
 LIBDATA=	/usr/libdata/pascal
 INSTALLDIR=	/usr/bin
