@@ -1,4 +1,4 @@
-/*	hp.c	3.1	11/15/19	*/
+/*	hp.c	3.2	11/15/19	*/
 
 /*
  * RP04/RP06/RM03 disk driver
@@ -385,7 +385,7 @@ register struct buf *bp;
 	register char *cp;
 	register mask;
 	short piget();
-	extern char buffers[][];
+	extern char buffers[NBUF][BSIZE];
 
 	b = (((((struct mba_regs *)MBA0)->mba_bcr&0xffff) +
 		(bp->b_bcount) - 1)>>9)&0177;
