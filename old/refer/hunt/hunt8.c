@@ -1,5 +1,5 @@
 #ifndef lint
-static char *sccsid = "@(#)hunt8.c	4.1 (Berkeley) 5/6/83";
+static char *sccsid = "@(#)hunt8.c	4.2 (Berkeley) 6/23/83";
 #endif
 
 #include <stdio.h>
@@ -49,7 +49,6 @@ char *indexname;
 # endif
 			runbib(indexname);
 			time(&indexdate);
-			unopen(fb);
 		}
 		else /* failure */
 		return(0);
