@@ -1,6 +1,13 @@
+/*-
+ * Copyright (c) 1991 The Regents of the University of California.
+ * All rights reserved.
+ *
+ * %sccs.include.proprietary.c%
+ */
+
 #ifndef lint
-static char sccsid[] = "@(#)expr.c	5.1 (Berkeley) 1/16/89";
-#endif
+static char sccsid[] = "@(#)expr.c	5.2 (Berkeley) 4/4/91";
+#endif /* not lint */
 
 /*
  * adb - expression parser

@@ -1,6 +1,13 @@
+/*-
+ * Copyright (c) 1991 The Regents of the University of California.
+ * All rights reserved.
+ *
+ * %sccs.include.proprietary.c%
+ */
+
 #ifndef lint
-static char sccsid[] = "@(#)opset.c	4.8 (Berkeley) 1/16/89";
-#endif
+static char sccsid[] = "@(#)opset.c	4.9 (Berkeley) 4/4/91";
+#endif /* not lint */
 
 /*
  * adb - instruction printing routines: VAX version

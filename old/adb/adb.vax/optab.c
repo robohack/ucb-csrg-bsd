@@ -1,6 +1,13 @@
+/*-
+ * Copyright (c) 1991 The Regents of the University of California.
+ * All rights reserved.
+ *
+ * %sccs.include.proprietary.c%
+ */
+
 #ifndef lint
-static char optab_sccsid[] = "@(#)optab.c	4.5 (Berkeley) 1/16/89";
-#endif
+static char sccsid[] = "@(#)optab.c	4.6 (Berkeley) 4/4/91";
+#endif /* not lint */
 
 /*
  * adb - (read-only) tables for VAX instruction decoding
