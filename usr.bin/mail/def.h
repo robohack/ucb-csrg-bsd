@@ -9,7 +9,7 @@
 #undef isdigit
 
 /*
- * Sccs Id = "@(#)def.h	1.11 3/20/81";
+ * Sccs Id = "@(#)def.h	1.12 4/1/81";
  */
 
 /*
@@ -281,6 +281,7 @@ char	*value();
 char	*vcopy();
 char	*yankword();
 off_t	fsize();
+int	(*sigset())();
 struct	cmd	*lex();
 struct	grouphead	*findgroup();
 struct	name	*cat();
