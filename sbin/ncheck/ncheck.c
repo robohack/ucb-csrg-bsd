@@ -12,7 +12,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)ncheck.c	5.15 (Berkeley) 3/19/92";
+static char sccsid[] = "@(#)ncheck.c	5.16 (Berkeley) 5/28/92";
 #endif /* not lint */
 
 /*
@@ -24,6 +24,7 @@ static char sccsid[] = "@(#)ncheck.c	5.15 (Berkeley) 3/19/92";
 
 #include <sys/param.h>
 #include <sys/dir.h>
+#include <sys/time.h>
 #include <ufs/ufs/dinode.h>
 #include <ufs/ffs/fs.h>
 #include <stdio.h>
