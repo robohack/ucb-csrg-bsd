@@ -1,7 +1,6 @@
 /* Coypright (c) 1980 Regents of the University of California */
-static	char sccsid[] = "@(#)asio.c 4.1 8/13/80";
+static	char sccsid[] = "@(#)asio.c 4.2 8/15/80";
 #include <stdio.h>
-#include <sys/types.h>
 #include "as.h"
 /*
  *	Block I/O routines for logical I/O concurrently in
