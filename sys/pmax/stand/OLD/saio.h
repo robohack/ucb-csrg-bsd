@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)saio.h	7.3 (Berkeley) 3/7/92
+ *	@(#)saio.h	7.4 (Berkeley) 9/13/92
  */
 
 /*
@@ -22,6 +22,7 @@ struct vnode {
 };
 
 #include "sys/param.h"
+#include "sys/time.h"
 #include "ufs/ufs/quota.h"
 #include "ufs/ufs/inode.h"
 #include "ufs/ffs/fs.h"
