@@ -2,7 +2,7 @@
 #
 # %sccs.include.proprietary.sh%
 #
-#	@(#)explain.sh	4.7 (Berkeley) 4/17/91
+#	@(#)explain.sh	8.1 (Berkeley) 6/6/93
 #
 
 D=/usr/share/dict/explain.d

@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 6/8/90
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 all explain clean cleandir depend lint tags:
 
