@@ -16,11 +16,10 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)mloop.c	3.14 (Berkeley) 8/2/89";
+static char sccsid[] = "@(#)mloop.c	3.15 (Berkeley) 10/13/89";
 #endif /* not lint */
 
 #include "defs.h"
-#include <sys/signal.h>
 
 mloop()
 {
