@@ -9,16 +9,18 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)setbuf.c	5.3 (Berkeley) 1/20/91";
+static char sccsid[] = "@(#)fileno.c	5.1 (Berkeley) 1/20/91";
 #endif /* LIBC_SCCS and not lint */
 
 #include <stdio.h>
-#include "local.h"
 
-void
-setbuf(fp, buf)
+/*
+ * A subroutine version of the macro fileno.
+ */
+#undef fileno
+
+fileno(fp)
 	FILE *fp;
-	char *buf;
 {
-	(void) setvbuf(fp, buf, buf ? _IOFBF : _IONBF, BUFSIZ);
+	return (__sfileno(fp));
 }

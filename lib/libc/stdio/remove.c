@@ -9,16 +9,13 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)setbuf.c	5.3 (Berkeley) 1/20/91";
+static char sccsid[] = "@(#)remove.c	5.1 (Berkeley) 1/20/91";
 #endif /* LIBC_SCCS and not lint */
 
 #include <stdio.h>
-#include "local.h"
 
-void
-setbuf(fp, buf)
-	FILE *fp;
-	char *buf;
+remove(file)
+	char *file;
 {
-	(void) setvbuf(fp, buf, buf ? _IOFBF : _IONBF, BUFSIZ);
+	return (unlink(file));
 }
