@@ -1,4 +1,4 @@
-/*	init_main.c	3.12	9/14/80	*/
+/*	init_main.c	3.13	9/16/80	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
@@ -18,7 +18,7 @@
 #include "../h/vm.h"
 #include "../h/cmap.h"
 #include "../h/text.h"
-#include "../h/limit.h"
+#include "../h/vlimit.h"
 
 /*
  * Initialization code.
