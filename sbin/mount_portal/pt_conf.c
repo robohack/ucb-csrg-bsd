@@ -8,12 +8,13 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)pt_conf.c	1.1 (Berkeley) 7/9/92
+ *	@(#)pt_conf.c	1.2 (Berkeley) 7/12/92
  *
  * $Id: pt_conf.c,v 1.2 1992/05/27 07:09:27 jsp Exp jsp $
  */
 
 #include <sys/types.h>
+#include <sys/param.h>
 #include "portald.h"
 
 provider providers[] = {
