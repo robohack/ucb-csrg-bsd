@@ -1,4 +1,4 @@
-/*	trap.c	3.6	10/2/80	*/
+/*	trap.c	4.1	11/9/80	*/
 
 
 #include "../h/param.h"

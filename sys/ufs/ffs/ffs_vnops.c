@@ -1,4 +1,4 @@
-/*	ffs_vnops.c	3.5	10/3/80	*/
+/*	ffs_vnops.c	4.1	11/9/80	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
