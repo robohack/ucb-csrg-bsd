@@ -17,7 +17,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)uda.c	7.25 (Berkeley) 2/8/90
+ *	@(#)uda.c	7.26 (Berkeley) 2/17/90
  */
 
 /*
@@ -62,7 +62,6 @@
 #include "systm.h"
 #include "buf.h"
 #include "conf.h"
-#include "dir.h"
 #include "file.h"
 #include "ioctl.h"
 #include "user.h"

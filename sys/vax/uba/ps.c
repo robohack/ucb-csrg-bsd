@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)ps.c	7.3 (Berkeley) 2/8/90
+ *	@(#)ps.c	7.4 (Berkeley) 2/17/90
  */
 
 /*
@@ -28,7 +28,6 @@
 #include "map.h"
 #include "buf.h"
 #include "conf.h"
-#include "dir.h"
 #include "user.h"
 #include "uio.h"
 #include "tsleep.h"
