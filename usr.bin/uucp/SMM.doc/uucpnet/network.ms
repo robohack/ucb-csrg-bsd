@@ -1,6 +1,6 @@
 .\" %sccs.include.proprietary.roff%
 .\"
-.\"	@(#)network.ms	5.5 (Berkeley) 6/5/93
+.\"	@(#)network.ms	8.1 (Berkeley) 6/8/93
 .\"
 .EH 'SMM:15-%''A Dial-Up Network of \s-2UNIX\s+2 Systems'
 .OH 'Dial-Up Network of \s-2UNIX\s+2 Systems''SMM:15-%'
