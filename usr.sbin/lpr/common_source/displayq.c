@@ -72,6 +72,38 @@ displayq(format)
 	RM = pgetstr("rm", &bp);
 
 	/*
+	 * Figure out whether the local machine is the same as the remote 
+	 * machine entry (if it exists).  If not, then ignore the local
+	 * queue information.
+	 */
+	 if (RM != (char *) NULL) {
+		char name[256];
+		struct hostent *hp;
+
+		/* get the standard network name of the local host */
+		gethostname(name, sizeof(name));
+		name[sizeof(name)-1] = '\0';
+		hp = gethostbyname(name);
+		if (hp == (struct hostent *) NULL) {
+		    printf("unable to get network name for local machine %s\n",
+			name);
+		    goto localcheck_done;
+		} else strcpy(name, hp->h_name);
+
+		/* get the network standard name of RM */
+		hp = gethostbyname(RM);
+		if (hp == (struct hostent *) NULL) {
+		    printf("unable to get hostname for remote machine %s\n",
+			RM);
+		    goto localcheck_done;
+		}
+
+		/* if printer is not on local machine, ignore LP */
+		if (strcmp(name, hp->h_name) != 0) *LP = '\0';
+	}
+localcheck_done:
+
+	/*
 	 * If there is no local printer, then print the queue on
 	 * the remote machine and then what's in the queue here.
 	 * Note that a file in transit may not show up in either queue.
