@@ -7,7 +7,7 @@
  *
  * %sccs.include.noredist.c%
  *
- *	@(#)dkbad.c	5.1 (Berkeley) 4/24/90
+ *	@(#)dkbad.c	5.2 (Berkeley) 1/15/91
  */
 
 
