@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1979 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1979, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)libpc.h	1.9 (Berkeley) 4/9/90
+ *	@(#)libpc.h	8.1 (Berkeley) 6/6/93
  */
 
 extern FILE *ACTFILE();
