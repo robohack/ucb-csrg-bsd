@@ -1,9 +1,9 @@
-/* @(#)getpwent.c	4.2 (Berkeley) 4/26/84 */
+/* @(#)getpwent.c	4.3 (Berkeley) 5/17/84 */
 #include <stdio.h>
 #include <pwd.h>
 #include <ndbm.h>
 
-static char PASSWD[]	= "/etc/passwd";
+static char *PASSWD = "/etc/passwd";
 static char EMPTY[] = "";
 static FILE *pwf = NULL;
 static char line[BUFSIZ+1];
@@ -74,4 +74,10 @@ getpwent()
 		p++;
 	*p = '\0';
 	return(&passwd);
+}
+
+setpwfile(file)
+	char *file;
+{
+	PASSWD = file;
 }
