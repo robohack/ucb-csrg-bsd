@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.26 (Berkeley) 2/24/93";
+static char sccsid[] = "@(#)main.c	6.27 (Berkeley) 2/26/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -121,7 +121,6 @@ main(argc, argv, envp)
 	char jbuf[MAXHOSTNAMELEN];	/* holds MyHostName */
 	extern int DtableSize;
 	extern int optind;
-	extern bool safefile();
 	extern time_t convtime();
 	extern putheader(), putbody();
 	extern ENVELOPE *newenvelope();
@@ -192,6 +191,9 @@ main(argc, argv, envp)
 	CurEnv = &BlankEnvelope;
 	STRUCTCOPY(NullAddress, MainEnvelope.e_from);
 
+	RealUid = getuid();
+	RealGid = getgid();
+
 	/* Handle any non-getoptable constructions. */
 	obsolete(argv);
 
@@ -233,8 +235,12 @@ main(argc, argv, envp)
 	InChannel = stdin;
 	OutChannel = stdout;
 
+# ifdef FROZENCONFIG
 	if (!nothaw)
 		readconfig = !thaw(FreezeFile, argv0);
+# else
+	readconfig = TRUE;
+# endif
 
 # ifdef SETPROCTITLE
 	/*
@@ -374,9 +380,18 @@ main(argc, argv, envp)
 			  case MD_TEST:
 			  case MD_INITALIAS:
 			  case MD_PRINT:
+#ifdef FROZENCONFIG
 			  case MD_FREEZE:
+#endif
 				OpMode = j;
 				break;
+
+#ifndef FROZENCONFIG
+			  case MD_FREEZE:
+				usrerr("Frozen configurations unsupported");
+				ExitStat = EX_USAGE;
+				break;
+#endif
 
 			  default:
 				usrerr("Invalid operation mode %c", j);
@@ -534,6 +549,7 @@ main(argc, argv, envp)
 # endif /* QUEUE */
 	switch (OpMode)
 	{
+# ifdef FROZENCONFIG
 	  case MD_FREEZE:
 		/* this is critical to avoid forgeries of the frozen config */
 		(void) setgid(getgid());
@@ -542,6 +558,7 @@ main(argc, argv, envp)
 		/* freeze the configuration */
 		freeze(FreezeFile);
 		exit(EX_OK);
+# endif
 
 	  case MD_INITALIAS:
 		Verbose = TRUE;
@@ -1016,6 +1033,8 @@ initmacros()
 **		Writes BSS and malloc'ed memory to freezefile
 */
 
+# ifdef FROZENCONFIG
+
 union frz
 {
 	char		frzpad[BUFSIZ];	/* insure we are on a BUFSIZ boundary */
@@ -1180,6 +1199,8 @@ thaw(freezefile, binfile)
 		p, hbuf);
 	return (FALSE);
 }
+
+# endif /* FROZENCONFIG */
 /*
 **  DISCONNECT -- remove our connection with any foreground process
 **
