@@ -14,9 +14,9 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)pathnames.h	5.1 (Berkeley) 4/2/89
+ *	@(#)pathnames.h	5.2 (Berkeley) 5/11/89
  */
 
-#define	_PATH_USRACCT	"/usr/adm/usracct"
-#define	_PATH_SAVACCT	"/usr/adm/savacct"
-#define	_PATH_ACCT	"/usr/adm/acct"
+#define	_PATH_USRACCT	"/var/account/usracct"
+#define	_PATH_SAVACCT	"/var/account/savacct"
+#define	_PATH_ACCT	"/var/account/acct"
