@@ -1,6 +1,6 @@
 /*
  * AT floppy controller registers and bitfields
- *	@(#)fdreg.h	1.1 (Berkeley) 11/8/90
+ *	@(#)fdreg.h	1.2 (Berkeley) 5/9/91
  */
 
 /* uses NEC765 controller */
