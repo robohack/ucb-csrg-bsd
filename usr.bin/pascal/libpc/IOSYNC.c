@@ -1,6 +1,13 @@
-/* Copyright (c) 1979 Regents of the University of California */
+/*-
+ * Copyright (c) 1979 The Regents of the University of California.
+ * All rights reserved.
+ *
+ * %sccs.include.redist.c%
+ */
 
-static char sccsid[] = "@(#)IOSYNC.c 1.5 6/10/81";
+#ifndef lint
+static char sccsid[] = "@(#)IOSYNC.c	1.6 (Berkeley) 4/9/90";
+#endif /* not lint */
 
 #include "h00vars.h"
 

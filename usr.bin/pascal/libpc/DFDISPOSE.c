@@ -1,6 +1,13 @@
-/* Copyright (c) 1982 Regents of the University of California */
+/*-
+ * Copyright (c) 1982 The Regents of the University of California.
+ * All rights reserved.
+ *
+ * %sccs.include.redist.c%
+ */
 
-static	char sccsid[] = "@(#)DFDISPOSE.c	4.3	(Berkeley)	7/7/86";
+#ifndef lint
+static char sccsid[] = "@(#)DFDISPOSE.c	4.4 (Berkeley) 4/9/90";
+#endif /* not lint */
 
 /*
  * Close all active files within a dynamic record,
