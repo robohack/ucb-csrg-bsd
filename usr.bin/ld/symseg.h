@@ -3,7 +3,7 @@
  * This code is derived from software copyrighted by the Free Software
  * Foundation.
  *
- *	@(#)symseg.h	5.4 (Berkeley) 4/30/91
+ *	@(#)symseg.h	8.1 (Berkeley) 6/6/93
  */
 
 /* GDB symbol table format definitions.
