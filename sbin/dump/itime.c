@@ -1,4 +1,4 @@
-static	char *sccsid = "@(#)itime.c	1.11 (Berkeley) 6/15/83";
+static	char *sccsid = "@(#)itime.c	1.12 (Berkeley) 9/13/83";
 
 #include "dump.h"
 #include <sys/file.h>
@@ -72,6 +72,7 @@ getitime()
 		fname, increm, incno);
 #endif
 	spcl.c_ddate = 0;
+	lastincno = '0';
 
 	inititimes();
 	/*
