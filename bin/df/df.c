@@ -17,7 +17,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)df.c	8.7 (Berkeley) 4/2/94";
+static char sccsid[] = "@(#)df.c	8.8 (Berkeley) 7/12/94";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -389,6 +389,7 @@ bread(off, buf, cnt)
 void
 usage()
 {
-	(void)fprintf(stderr, "usage: df [-in] [file | file_system ...]\n");
+	(void)fprintf(stderr,
+	    "usage: df [-in] [-t type] [file | file_system ...]\n");
 	exit(1);
 }
