@@ -12,7 +12,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)rlogind.c	5.56 (Berkeley) 7/1/92";
+static char sccsid[] = "@(#)rlogind.c	5.57 (Berkeley) 10/4/92";
 #endif /* not lint */
 
 /*
@@ -251,7 +251,7 @@ doit(f, fromp)
 #ifdef	KERBEROS
 #ifdef	CRYPT
 	if (doencrypt)
-		(void) des_write(f, SECURE_MESSAGE, sizeof(SECURE_MESSAGE));
+		(void) des_write(f, SECURE_MESSAGE, sizeof(SECURE_MESSAGE) - 1);
 #endif
 #endif
 	netf = f;
