@@ -1,10 +1,11 @@
+# include "conf.h"
 # include <time.h>
 # ifndef V6
 # include <sys/types.h>
 # include <sys/timeb.h>
 # endif
 
-static char SccsId[] = "@(#)arpadate.c	3.6	9/6/81";
+static char SccsId[] = "@(#)arpadate.c	3.6.1.1	9/23/81";
 
 /*
 **  ARPADATE -- Create date in ARPANET format

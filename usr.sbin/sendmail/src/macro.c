@@ -1,6 +1,7 @@
 # include "useful.h"
+# include "conf.h"
 
-static char SccsId[] = "@(#)macro.c	3.4	9/6/81";
+static char SccsId[] = "@(#)macro.c	3.4.1.1	9/23/81";
 
 char	*Macro[128];
 extern int	Debug;
