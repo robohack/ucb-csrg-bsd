@@ -1,6 +1,5 @@
-#	@(#)Makefile	5.3 (Berkeley) 7/22/91
+#	@(#)Makefile	5.4 (Berkeley) 3/21/92
 
 PROG=	rev
 
 .include <bsd.prog.mk>
-
