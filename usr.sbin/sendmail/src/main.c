@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.87 (Berkeley) 3/5/95";
+static char sccsid[] = "@(#)main.c	8.88 (Berkeley) 3/5/95";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -306,6 +306,7 @@ main(argc, argv, envp)
 
 	/* initialize some macros, etc. */
 	initmacros(CurEnv);
+	init_vendor_macros(CurEnv);
 
 	/* version */
 	define('v', Version, CurEnv);
