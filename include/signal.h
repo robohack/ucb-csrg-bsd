@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1991 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1991, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)signal.h	5.6 (Berkeley) 5/7/93
+ *	@(#)signal.h	8.1 (Berkeley) 6/6/93
  */
 
 #ifndef _USER_SIGNAL_H
