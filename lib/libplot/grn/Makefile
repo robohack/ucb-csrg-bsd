@@ -1,4 +1,4 @@
-#	@(#)Makefile	6.3 (Berkeley) 5/11/90
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 LIB=	plotgrn
 SRCS=	arc.c box.c circle.c close.c cont.c dot.c erase.c label.c \
