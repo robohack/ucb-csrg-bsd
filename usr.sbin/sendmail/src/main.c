@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.134		11/17/82);
+SCCSID(@(#)main.c	3.135		11/17/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -484,6 +484,18 @@ main(argc, argv)
 		}
 	}
 
+# ifdef QUEUE
+	/*
+	**  If collecting stuff from the queue, go start doing that.
+	*/
+
+	if (queuemode && OpMode != MD_DAEMON && QueueIntvl != 0)
+	{
+		runqueue(FALSE);
+		finis();
+	}
+# endif QUEUE
+
 #ifdef DAEMON
 	/*
 	**  If a daemon, wait for a request.
@@ -542,18 +554,6 @@ main(argc, argv)
 		openxscrpt();
 	}
 #endif DAEMON
-
-# ifdef QUEUE
-	/*
-	**  If collecting stuff from the queue, go start doing that.
-	*/
-
-	if (queuemode && OpMode != MD_DAEMON)
-	{
-		runqueue(FALSE);
-		finis();
-	}
-# endif QUEUE
 
 	/* do basic system initialization */
 	initsys();
