@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)subr_prf.c	7.24 (Berkeley) 5/5/91
+ *	@(#)subr_prf.c	7.25 (Berkeley) 5/8/91
  */
 
 #include "param.h"
@@ -402,7 +402,6 @@ reswitch:	switch (ch = *fmt++) {
 			putchar(ch, flags, tp);
 		}
 	}
-	va_end(ap);
 }
 
 static void
