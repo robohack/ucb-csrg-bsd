@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	5.45 (Berkeley) 2/21/92";
+static char sccsid[] = "@(#)main.c	5.46 (Berkeley) 3/20/92";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -100,6 +100,8 @@ char		*RcptLogFile = NULL;	/* file name */
 ERROR %%%%   Cannot have daemon mode without SMTP   %%%% ERROR
 #endif SMTP
 #endif DAEMON
+
+#define MAXCONFIGLEVEL	3	/* highest config version level known */
 
 main(argc, argv, envp)
 	int argc;
@@ -482,6 +484,11 @@ main(argc, argv, envp)
 	if (OpMode == MD_FREEZE || readconfig)
 		readcf(ConfFile);
 
+	if (ConfigLevel > MAXCONFIGLEVEL)
+	{
+		syserr("Warning: .cf version level (%d) exceeds program functionality (%d)",
+			ConfigLevel, MAXCONFIGLEVEL);
+	}
 	switch (OpMode)
 	{
 	  case MD_FREEZE:
