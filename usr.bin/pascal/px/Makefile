@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.9 (Berkeley) 1/14/91
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	px
 SRCDIR=	${.CURDIR}/../src
