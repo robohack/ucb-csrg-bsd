@@ -1,8 +1,8 @@
 # include <stdio.h>
 # include <ctype.h>
-# include "postbox.h"
+# include "sendmail.h"
 
-static char	SccsId[] = "@(#)parseaddr.c	3.9	3/12/81";
+static char	SccsId[] = "@(#)parseaddr.c	3.10	3/20/81";
 
 /*
 **  PARSE -- Parse an address
