@@ -2,5 +2,5 @@
 .\" All rights reserved.  The Berkeley software License Agreement
 .\" specifies the terms and conditions for redistribution.
 .\"
-.\"	@(#)mail9.nr	4.1 (Berkeley) 5/23/86
+.\"	@(#)mail9.nr	5.1 (Berkeley) 5/23/86
 .\"
