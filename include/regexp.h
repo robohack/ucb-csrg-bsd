@@ -8,8 +8,11 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)regexp.h	5.1 (Berkeley) 2/5/91
+ *	@(#)regexp.h	5.2 (Berkeley) 4/3/91
  */
+
+#ifndef	_REGEXP_H_
+#define	_REGEXP_H_
 
 /*
  * Definitions etc. for regexp(3) routines.
@@ -36,3 +39,5 @@ int regexec __P((const  regexp *, const char *));
 void regsub __P((const  regexp *, const char *, char *));
 void regerror __P((const char *));
 __END_DECLS
+
+#endif /* !_REGEXP_H_ */

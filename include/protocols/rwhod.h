@@ -4,8 +4,11 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)rwhod.h	5.5 (Berkeley) 6/1/90
+ *	@(#)rwhod.h	5.6 (Berkeley) 4/3/91
  */
+
+#ifndef _RWHOD_H_
+#define	_RWHOD_H_
 
 /*
  * rwho protocol packet format.
@@ -35,3 +38,5 @@ struct	whod {
 #define	WHODTYPE_STATUS	1		/* host status */
 
 #define	_PATH_RWHODIR	"/var/rwho"
+
+#endif /* !_RWHOD_H_ */
