@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)wait.h	7.3 (Berkeley) 1/7/88
+ *	@(#)wait.h	7.4 (Berkeley) 1/27/88
  */
 
 /*
@@ -15,7 +15,7 @@
  * detailed information about process resource utilization (<vtimes.h>).
  */
 
-#ifndef ENDIAN
+#ifndef BYTE_ORDER
 #include <machine/endian.h>
 #endif
 
