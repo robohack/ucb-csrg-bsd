@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.33 (Berkeley) 10/24/93";
+static char sccsid[] = "@(#)main.c	8.34 (Berkeley) 11/8/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -334,6 +334,8 @@ main(argc, argv, envp)
 			p = utsname.nodename;
 		else
 		{
+			if (tTd(0, 22))
+				printf("uname failed (%s)\n", errstring(errno));
 			makelower(jbuf);
 			p = jbuf;
 		}
