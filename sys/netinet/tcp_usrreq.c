@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)tcp_usrreq.c	8.2 (Berkeley) 1/3/94
+ *	@(#)tcp_usrreq.c	8.3 (Berkeley) 1/9/95
  */
 
 #include <sys/param.h>
@@ -57,7 +57,7 @@ tcp_usrreq(so, req, m, nam, control)
 	int ostate;
 
 	if (req == PRU_CONTROL)
-		return (in_control(so, (int)m, (caddr_t)nam,
+		return (in_control(so, (u_long)m, (caddr_t)nam,
 			(struct ifnet *)control));
 	if (control && control->m_len) {
 		m_freem(control);
