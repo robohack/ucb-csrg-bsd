@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.96		8/22/82);
+SCCSID(@(#)main.c	3.97		8/22/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -133,7 +133,7 @@ main(argc, argv)
 	typedef int (*fnptr)();
 	register int i;
 	bool safecf = TRUE;		/* this conf file is sys default */
-	char ibuf[30];			/* holds HostName */
+	char jbuf[30];			/* holds HostName */
 	bool queuemode = FALSE;		/* process queue requests */
 	bool aliasinit = FALSE;
 	extern bool safefile();
@@ -418,8 +418,8 @@ main(argc, argv)
 	initsys();
 
 	/* our name for SMTP codes */
-	expand("$i", ibuf, &ibuf[sizeof ibuf - 1], CurEnv);
-	HostName = ibuf;
+	expand("$j", jbuf, &jbuf[sizeof jbuf - 1], CurEnv);
+	HostName = jbuf;
 
 	/* the indices of local and program mailers */
 	st = stab("local", ST_MAILER, ST_FIND);
@@ -1188,6 +1188,7 @@ queuename(e, type)
 		}
 		e->e_qf = newstr(qf);
 		e->e_id = &e->e_qf[fx];
+		define('i', e->e_id);
 # ifdef DEBUG
 		if (tTd(7, 1))
 			printf("queuename: assigned id %s, env=%x\n", e->e_id, e);
