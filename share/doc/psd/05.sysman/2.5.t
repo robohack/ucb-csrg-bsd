@@ -3,12 +3,12 @@
 .\"
 .\" %sccs.include.redist.roff%
 .\"
-.\"	@(#)2.5.t	8.2 (Berkeley) 5/16/94
+.\"	@(#)2.5.t	8.3 (Berkeley) 5/20/94
 .\"
 .Sh 2 "Process debugging
 .Sh 3 "Traditional debugging
 .LP
-Debugger traditionally use the
+Debuggers traditionally use the
 .Fn ptrace
 interface:
 .DS
