@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)if_ecreg.h	6.2 (Berkeley) 6/8/85
+ *	@(#)if_ecreg.h	6.3 (Berkeley) 7/2/85
  */
 
 /*
@@ -51,7 +51,7 @@ struct ecdevice {
 /*
  * Useful combinations
  */
-#define	EC_READ		(EC_AROM|0x600|EC_RINTEN|EC_RWBN)
+#define	EC_READ		(0x600|EC_RINTEN|EC_RWBN)
 #define	EC_WRITE	(EC_JINTEN|EC_XINTEN|EC_XWBN)
 #define	EC_CLEAR	(EC_JINTEN|EC_XINTEN|EC_JCLR)
 
