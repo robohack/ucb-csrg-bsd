@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 11/11/91
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	id
 MAN1=   id.0 groups.0 whoami.0
