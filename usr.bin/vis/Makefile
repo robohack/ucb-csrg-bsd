@@ -1,5 +1,6 @@
-#	@(#)Makefile	5.1 (Berkeley) 5/11/90
+#	@(#)Makefile	5.2 (Berkeley) 6/29/90
 
 PROG=	vis
+SRCS=	vis.c foldit.c
 
 .include <bsd.prog.mk>
