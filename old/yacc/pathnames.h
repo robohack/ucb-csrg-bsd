@@ -14,7 +14,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)pathnames.h	5.1 (Berkeley) 5/11/89
+ *	@(#)pathnames.h	5.2 (Berkeley) 5/31/90
  */
 
-#define	_PATH_PARSER	"/usr/share/misc/yaccpar"
+#define	_PATH_PARSER	"/usr/share/misc/old.yaccpar"
