@@ -3,8 +3,8 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)pow_ii.c	5.1	6/7/85
- */
+ *	@(#)pow_ii.c	5.2	6/7/85
+ *
  *  Corrections by Robert P. Corbett, 1983 March 2
  *  Revised to restore portability, 1983 March 4
  */
