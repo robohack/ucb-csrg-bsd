@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1980 Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1980, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)snake.h	5.6 (Berkeley) 2/3/93
+ *	@(#)snake.h	8.1 (Berkeley) 5/31/93
  */
 
 # include <stdio.h>
