@@ -1,12 +1,12 @@
-/* vpq.c		8/6/82
+/* vpq.c		11/4/87
  * Varian and Versatec queue
  */
 
-static char vpqSCCSid[] = "@(#)vpq.c	1.3\t8/6/82";
+static char vpqSCCSid[] = "@(#)vpq.c	1.4\t11/4/87";
 
 #include <sys/param.h>
-#include <dir.h>
-#include <stat.h>
+#include <sys/dir.h>
+#include <sys/stat.h>
 #include <stdio.h>
 #include <errno.h>
 #define	MAXJOBS 100
