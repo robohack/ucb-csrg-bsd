@@ -1,6 +1,10 @@
+/*-
+ * %sccs.include.proprietary.c%
+ */
+
 #ifndef lint
-static char sccsid[] = "@(#)gcd.c	5.3 (Berkeley) 3/2/87";
-#endif not lint
+static char sccsid[] = "@(#)gcd.c	5.4 (Berkeley) 4/19/91";
+#endif /* not lint */
 
 #include <mp.h>
 gcd(a,b,c) MINT *a,*b,*c;
