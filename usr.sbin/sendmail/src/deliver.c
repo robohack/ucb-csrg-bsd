@@ -17,7 +17,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)deliver.c	5.36 (Berkeley) 4/24/90";
+static char sccsid[] = "@(#)deliver.c	5.37 (Berkeley) 5/30/90";
 #endif /* not lint */
 
 #include "sendmail.h"
@@ -221,7 +221,7 @@ deliver(e, firstto)
 			continue;
 
 		/* avoid overflowing tobuf */
-		if (sizeof tobuf - (strlen(to->q_paddr) + strlen(tobuf) + 2) < 0)
+		if (sizeof tobuf < (strlen(to->q_paddr) + strlen(tobuf) + 2))
 			break;
 
 		if (tTd(10, 1))
