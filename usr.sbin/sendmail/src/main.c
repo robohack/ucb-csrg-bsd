@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.121		10/9/82);
+SCCSID(@(#)main.c	3.122		10/9/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -558,6 +558,21 @@ main(argc, argv)
 	**		slower than it must be.
 	*/
 
+# ifdef QUEUE
+	if (Mode == MD_QUEUE)
+	{
+		register ADDRESS *q;
+
+		for (q = CurEnv->e_sendqueue; q != NULL; q = q->q_next)
+		{
+			if (!bitset(QDONTSEND, q->q_flags))
+			{
+				CurEnv->e_to = q->q_paddr;
+				giveresponse(EX_TEMPFAIL, TRUE, q->q_mailer);
+			}
+			CurEnv->e_to = NULL;
+		}
+	}
 	if (Mode == MD_QUEUE || Mode == MD_FORK ||
 	    (Mode != MD_VERIFY && SuperSafe))
 		queueup(CurEnv, TRUE);
