@@ -1,4 +1,4 @@
-#	@(#)Makefile	6.15 (Berkeley) 7/23/92
+#	@(#)Makefile	8.1 (Berkeley) 6/5/93
 
 MELIB=	${BINDIR}/me
 TMLIB=	${BINDIR}/tmac
