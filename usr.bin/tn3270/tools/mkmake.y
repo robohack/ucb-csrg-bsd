@@ -16,7 +16,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)mkmake.y	1.19 (Berkeley) 6/29/88
+ *	@(#)mkmake.y	4.1 (Berkeley) 12/4/88
  */
 
 typedef struct string {
@@ -1001,7 +1001,7 @@ yylex()
 }
 
 #ifndef lint
-static char sccsid[] = "@(#)mkmake.y	1.19 (Berkeley) 6/29/88";
+static char sccsid[] = "@(#)mkmake.y	4.1 (Berkeley) 12/4/88";
 #endif	/* not lint */
 
 main()
