@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.1 (Berkeley) 1/6/92
+#	@(#)Makefile	8.1 (Berkeley) 6/5/93
 
 PROG=	mount_nfs
 CFLAGS+=-DNFS
