@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)tokenizer.h	5.1 (Berkeley) 6/22/92
+ *	@(#)tokenizer.h	5.2 (Berkeley) 7/3/92
  */
 
 /*
