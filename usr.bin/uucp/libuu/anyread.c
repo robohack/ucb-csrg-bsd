@@ -1,9 +1,8 @@
 #ifndef lint
-static char sccsid[] = "@(#)anyread.c	5.2 (Berkeley) 1/22/85";
+static char sccsid[] = "@(#)anyread.c	5.3 (Berkeley) 4/10/85";
 #endif
 
 #include "uucp.h"
-#include <sys/types.h>
 #include <sys/stat.h>
 
 /*

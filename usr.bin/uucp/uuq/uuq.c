@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)uuq.c	4.1 (Berkeley) 1/22/85";
+static char sccsid[] = "@(#)uuq.c	4.2 (Berkeley) 4/10/85";
 #endif
 
 /*
@@ -12,7 +12,6 @@ static char sccsid[] = "@(#)uuq.c	4.1 (Berkeley) 1/22/85";
 
 #include "uucp.h"
 #include <stdio.h>
-#include <sys/types.h>
 
 #ifdef NDIR
 #include "libndir/ndir.h"
