@@ -9,10 +9,10 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)pk_acct.c	7.3 (Berkeley) 8/30/90
+ *	@(#)pk_acct.c	7.4 (Berkeley) 3/12/91
  */
 
-#include "param.h
+#include "param.h"
 #include "systm.h"
 #include "time.h"
 #include "proc.h"
