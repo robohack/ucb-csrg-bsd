@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)readcf.c	8.23.1.1 (Berkeley) 2/10/95";
+static char sccsid[] = "@(#)readcf.c	8.23.1.2 (Berkeley) 2/10/95";
 #endif /* not lint */
 
 # include "sendmail.h"
@@ -1022,7 +1022,6 @@ setoption(opt, val, safe, sticky, e)
 	register ENVELOPE *e;
 {
 	register char *p;
-	int len;
 	extern bool atobool();
 	extern time_t convtime();
 	extern int QueueLA;
