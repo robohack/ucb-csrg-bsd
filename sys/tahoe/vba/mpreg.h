@@ -1,5 +1,5 @@
 /*
- *	@(#)mpreg.h	1.3 (Berkeley) 5/26/88
+ *	@(#)mpreg.h	7.1 (Berkeley) 5/31/88
  */
 
 /*

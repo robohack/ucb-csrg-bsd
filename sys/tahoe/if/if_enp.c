@@ -9,7 +9,7 @@
  * software without specific prior written permission. This software
  * is provided ``as is'' without express or implied warranty.
  *
- *	@(#)if_enp.c	1.6 (Berkeley) 5/26/88
+ *	@(#)if_enp.c	7.1 (Berkeley) 5/31/88
  */
 
 #include "enp.h"

@@ -9,7 +9,7 @@
  * software without specific prior written permission. This software
  * is provided ``as is'' without express or implied warranty.
  *
- *	@(#)vba.c	1.13 (Berkeley) 5/26/88
+ *	@(#)vba.c	7.1 (Berkeley) 5/31/88
  */
 
 /*
