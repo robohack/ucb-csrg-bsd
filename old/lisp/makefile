@@ -9,10 +9,11 @@
 # software without specific prior written permission. This software
 # is provided ``as is'' without express or implied warranty.
 #
-#	@(#)makefile	5.2 (Berkeley) 6/4/88
+#	@(#)makefile	5.3 (Berkeley) 6/5/88
 #
 
 all: FRC
+	(cd doc; make ${MFLAGS} rall install)
 	./lispconf ${MACHINE}_4_3
 	make -f Makefile ${MFLAGS} DESTDIR=${DESTDIR} copylibrary
 	make -f Makefile ${MFLAGS}
