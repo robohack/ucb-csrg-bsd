@@ -1,8 +1,8 @@
-#	@(#)Makefile	5.2 (Berkeley) 6/26/90
+#	@(#)Makefile	5.3 (Berkeley) 2/25/91
 
 PROG=	register
 SRCS=	register.c des_rw.c
-CFLAGS+=-DKERBEROS -DDEBUG -I${.CURDIR}/../include
+CFLAGS+=-DCRYPT -DDEBUG -DKERBEROS -I${.CURDIR}/../include
 .PATH:	${.CURDIR}/../../usr.bin/rlogin
 DPADD=	${LIBKRB} ${LIBDES}
 LDADD=	-lkrb -ldes
