@@ -8,6 +8,6 @@ divert(-1)
 #
 
 divert(0)
-VERSIONID(`@(#)hpux9.m4	8.1 (Berkeley) 6/7/93')
+VERSIONID(`@(#)hpux9.m4	8.2 (Berkeley) 8/8/93')
 define(`_HPUX_', `')dnl
-define(`LOCAL_MAILER_FLAGS', `')dnl
+define(`LOCAL_MAILER_FLAGS', `m')dnl
