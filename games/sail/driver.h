@@ -1,5 +1,5 @@
 /*
- * sccsid = "@(#)driver.h	1.1 7/20/83";
+ * sccsid = "@(#)driver.h	2.1 10/31/83";
  */
 #include "externs.h"
 
