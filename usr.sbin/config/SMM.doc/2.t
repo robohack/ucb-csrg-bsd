@@ -2,7 +2,7 @@
 .\" All rights reserved.  The Berkeley software License Agreement
 .\" specifies the terms and conditions for redistribution.
 .\"
-.\"	@(#)2.t	5.1 (Berkeley) 5/25/86
+.\"	@(#)2.t	6.1 (Berkeley) 5/25/86
 .\"
 .ds LH "Building Systems With Config
 .ds RH "Configuration File Contents
