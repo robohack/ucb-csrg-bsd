@@ -10,9 +10,9 @@
 
 #ifndef lint
 #ifdef SMTP
-static char sccsid[] = "@(#)usersmtp.c	5.15 (Berkeley) 6/1/90 (with SMTP)";
+static char sccsid[] = "@(#)usersmtp.c	5.16 (Berkeley) 3/2/91 (with SMTP)";
 #else
-static char sccsid[] = "@(#)usersmtp.c	5.15 (Berkeley) 6/1/90 (without SMTP)";
+static char sccsid[] = "@(#)usersmtp.c	5.16 (Berkeley) 3/2/91 (without SMTP)";
 #endif
 #endif /* not lint */
 
@@ -71,7 +71,7 @@ smtpinit(m, pvp)
 	register int r;
 	EVENT *gte;
 	char buf[MAXNAME];
-	extern greettimeout();
+	static int greettimeout();
 
 	/*
 	**  Open the connection to the mailer.
