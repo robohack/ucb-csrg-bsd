@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.19 (Berkeley) 5/21/93
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 PROG=	telnetd
 CFLAGS+=-DLINEMODE -DKLUDGELINEMODE -DUSE_TERMIO -DDIAGNOSTICS -DENV_HACK
