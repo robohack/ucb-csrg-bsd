@@ -1,4 +1,4 @@
-#	@(#)GENERIC.luna68k	7.4 (Berkeley) 5/12/93
+#	@(#)GENERIC.luna68k	8.1 (Berkeley) 6/10/93
 #
 machine		"luna68k"
 
