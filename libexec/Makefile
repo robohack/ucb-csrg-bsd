@@ -1,10 +1,10 @@
-#	@(#)Makefile	5.4 (Berkeley) 6/30/90
+#	@(#)Makefile	5.5 (Berkeley) 7/1/90
 
 SUBDIR=	bugfiler comsat delivermail fingerd ftpd getNAME getty makekey \
 	rexecd rlogind rshd talkd telnetd tftpd uucpd kpasswdd
 
 .if   make(clean) || make(cleandir)
-SUBDIR+=pcc
+SUBDIR+=
 .elif ${MACHINE} == "hp300"
 SUBDIR+=gcc
 .elif ${MACHINE} == "tahoe"
