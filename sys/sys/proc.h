@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1986, 1989, 1991 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1986, 1989, 1991, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)proc.h	7.38 (Berkeley) 5/28/93
+ *	@(#)proc.h	8.1 (Berkeley) 6/2/93
  */
 
 #ifndef _PROC_H_

@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1982, 1986, 1992 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1982, 1986, 1992, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)gmon.h	7.7 (Berkeley) 4/29/93
+ *	@(#)gmon.h	8.1 (Berkeley) 6/2/93
  */
 
 #ifndef _GMON_H_

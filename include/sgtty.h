@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1985 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1985, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)sgtty.h	5.2 (Berkeley) 6/26/91
+ *	@(#)sgtty.h	8.1 (Berkeley) 6/2/93
  */
 
 #ifndef USE_OLD_TTY

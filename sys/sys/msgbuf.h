@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1981, 1984 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1981, 1984, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)msgbuf.h	7.5 (Berkeley) 5/2/91
+ *	@(#)msgbuf.h	8.1 (Berkeley) 6/2/93
  */
 
 #define	MSG_BSIZE	(4096 - 3 * sizeof(long))

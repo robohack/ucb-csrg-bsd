@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1991 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1991, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)resourcevar.h	7.3 (Berkeley) 7/8/92
+ *	@(#)resourcevar.h	8.1 (Berkeley) 6/2/93
  */
 
 #ifndef	_RESOURCEVAR_H_		/* tmp for user.h */

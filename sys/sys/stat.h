@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1982, 1986, 1989 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1982, 1986, 1989, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)stat.h	7.20 (Berkeley) 5/10/93
+ *	@(#)stat.h	8.1 (Berkeley) 6/2/93
  */
 
 #include <sys/time.h>

@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1989 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1989, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)vnode.h	7.69 (Berkeley) 5/7/93
+ *	@(#)vnode.h	8.1 (Berkeley) 6/2/93
  */
 
 #include <sys/queue.h>

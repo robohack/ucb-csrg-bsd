@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1992 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1992, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)assert.h	5.3 (Berkeley) 12/3/92
+ *	@(#)assert.h	8.1 (Berkeley) 6/2/93
  */
 
 /*

@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1991 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1991, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)cdefs.h	7.7 (Berkeley) 3/2/92
+ *	@(#)cdefs.h	8.1 (Berkeley) 6/2/93
  */
 
 #ifndef	_CDEFS_H_

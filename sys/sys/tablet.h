@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1985, 1986 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1985, 1986, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)tablet.h	7.5 (Berkeley) 2/15/91
+ *	@(#)tablet.h	8.1 (Berkeley) 6/2/93
  */
 
 #ifndef _TABLET_H_
