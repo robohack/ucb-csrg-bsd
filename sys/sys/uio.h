@@ -4,11 +4,11 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)uio.h	8.1 (Berkeley) 6/2/93
+ *	@(#)uio.h	8.2 (Berkeley) 1/4/94
  */
 
-#ifndef _UIO_H_
-#define	_UIO_H_
+#ifndef _SYS_UIO_H_
+#define	_SYS_UIO_H_
 
 struct iovec {
 	caddr_t	iov_base;
@@ -53,4 +53,4 @@ __END_DECLS
 
 #endif	/* !KERNEL */
 
-#endif /* !_UIO_H_ */
+#endif /* !_SYS_UIO_H_ */

@@ -4,13 +4,13 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)ttydev.h	8.1 (Berkeley) 6/2/93
+ *	@(#)ttydev.h	8.2 (Berkeley) 1/4/94
  */
 
 /* COMPATABILITY HEADER FILE */
 
-#ifndef _TTYDEV_H_
-#define	_TTYDEV_H_
+#ifndef _SYS_TTYDEV_H_
+#define	_SYS_TTYDEV_H_
 
 #ifdef USE_OLD_TTY
 #define B0	0
@@ -31,4 +31,4 @@
 #define EXTB	15
 #endif /* USE_OLD_TTY */
 
-#endif /* !_TTYDEV_H_ */
+#endif /* !_SYS_TTYDEV_H_ */
