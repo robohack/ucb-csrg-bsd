@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1993 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)ufs_readwrite.c	8.6 (Berkeley) 1/13/94
+ *	@(#)ufs_readwrite.c	8.7 (Berkeley) 1/21/94
  */
 
 #ifdef LFS_READWRITE
