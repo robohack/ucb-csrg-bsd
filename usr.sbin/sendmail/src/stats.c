@@ -1,6 +1,6 @@
 # include "sendmail.h"
 
-SCCSID(@(#)stats.c	3.6		3/26/83);
+SCCSID(@(#)stats.c	3.7		4/17/83);
 
 /*
 **  Statistics structure.
@@ -62,7 +62,10 @@ poststats(sfile)
 
 	fd = open(sfile, 2);
 	if (fd < 0)
+	{
+		errno = 0;
 		return;
+	}
 	if (read(fd, (char *) &stat, sizeof stat) == sizeof stat &&
 	    stat.stat_size == sizeof stat)
 	{
