@@ -1,7 +1,7 @@
 #
 # Machine Language Assist for UC Berkeley Virtual Vax/Unix
 #
-#	locore.s	3.1	11/15/19
+#	locore.s	3.2	11/15/19
 #
 
 	.set	HIGH,31		# mask for total disable
@@ -455,7 +455,7 @@ int_r1:
 	.data
 	.globl	_Sysmap
 _Sysmap:
-	.space	4*NBPG
+	.space	6*NBPG
 UBA0map:
 	.space	16*4
 	.globl	_umbabeg
