@@ -1,5 +1,5 @@
-/*	@(#)local.h	4.1	(Berkeley)	9/12/82	*/
+/*	@(#)local.h	4.2	(Berkeley)	10/2/82	*/
 
-#define CSVAX
+#define UCBVAX
 #define BERKELEY
 #define VAX
