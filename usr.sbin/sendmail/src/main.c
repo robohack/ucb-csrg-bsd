@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.3 (Berkeley) 1/1/93";
+static char sccsid[] = "@(#)main.c	6.4 (Berkeley) 1/2/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -556,17 +556,31 @@ main(argc, argv, envp)
 	expand("\001j", jbuf, &jbuf[sizeof jbuf - 1], CurEnv);
 	MyHostName = jbuf;
 
-	/* the indices of local and program mailers */
+	/* the indices of built-in mailers */
 	st = stab("local", ST_MAILER, ST_FIND);
 	if (st == NULL)
 		syserr("No local mailer defined");
 	else
 		LocalMailer = st->s_mailer;
+
 	st = stab("prog", ST_MAILER, ST_FIND);
 	if (st == NULL)
 		syserr("No prog mailer defined");
 	else
 		ProgMailer = st->s_mailer;
+
+	st = stab("*file*", ST_MAILER, ST_FIND);
+	if (st == NULL)
+		syserr("No *file* mailer defined");
+	else
+		FileMailer = st->s_mailer;
+
+	st = stab("*include*", ST_MAILER, ST_FIND);
+	if (st == NULL)
+		syserr("No *include* mailer defined");
+	else
+		InclMailer = st->s_mailer;
+
 
 	/* operate in queue directory */
 	if (chdir(QueueDir) < 0)
