@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.42 (Berkeley) 3/18/93";
+static char sccsid[] = "@(#)main.c	6.43 (Berkeley) 3/19/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -181,13 +181,6 @@ main(argc, argv, envp)
 	openlog("sendmail", LOG_PID);
 #endif 
 
-	/*
-	**  Set default values for variables.
-	**	These cannot be in initialized data space.
-	*/
-
-	setdefaults();
-
 	/* set up the blank envelope */
 	BlankEnvelope.e_puthdr = putheader;
 	BlankEnvelope.e_putbody = putbody;
@@ -195,6 +188,13 @@ main(argc, argv, envp)
 	STRUCTCOPY(NullAddress, BlankEnvelope.e_from);
 	CurEnv = &BlankEnvelope;
 	STRUCTCOPY(NullAddress, MainEnvelope.e_from);
+
+	/*
+	**  Set default values for variables.
+	**	These cannot be in initialized data space.
+	*/
+
+	setdefaults(&BlankEnvelope);
 
 	RealUid = getuid();
 	RealGid = getgid();
@@ -448,7 +448,7 @@ main(argc, argv, envp)
 			break;
 
 		  case 'o':	/* set option */
-			setoption(*optarg, optarg + 1, FALSE, TRUE);
+			setoption(*optarg, optarg + 1, FALSE, TRUE, CurEnv);
 			break;
 
 		  case 'p':	/* set protocol */
@@ -500,15 +500,15 @@ main(argc, argv, envp)
 		  case 'm':	/* send to me too */
 		  case 'T':	/* set timeout interval */
 		  case 'v':	/* give blow-by-blow description */
-			setoption(j, "T", FALSE, TRUE);
+			setoption(j, "T", FALSE, TRUE, CurEnv);
 			break;
 
 		  case 'e':	/* error message disposition */
-			setoption(j, optarg, FALSE, TRUE);
+			setoption(j, optarg, FALSE, TRUE, CurEnv);
 			break;
 
 		  case 's':	/* save From lines in headers */
-			setoption('f', "T", FALSE, TRUE);
+			setoption('f', "T", FALSE, TRUE, CurEnv);
 			break;
 
 # ifdef DBM
@@ -616,10 +616,10 @@ main(argc, argv, envp)
 	if (Verbose)
 	{
 		/* turn off noconnect option */
-		setoption('c', "F", TRUE, FALSE);
+		setoption('c', "F", TRUE, FALSE, CurEnv);
 
 		/* turn on interactive delivery */
-		setoption('d', "", TRUE, FALSE);
+		setoption('d', "", TRUE, FALSE, CurEnv);
 	}
 
 	/* our name for SMTP codes */
@@ -906,7 +906,7 @@ main(argc, argv, envp)
 		finis();
 	}
 	if (OpMode == MD_VERIFY)
-		SendMode = SM_VERIFY;
+		CurEnv->e_sendmode = SM_VERIFY;
 
 	/*
 	**  Scan argv and deliver the message to everyone.
@@ -1293,7 +1293,7 @@ disconnect(fulldrop, e)
 
 	/* we can't communicate with our caller, so.... */
 	HoldErrs = TRUE;
-	ErrorMode = EM_MAIL;
+	CurEnv->e_errormode = EM_MAIL;
 	Verbose = FALSE;
 
 	/* all input from /dev/null */
