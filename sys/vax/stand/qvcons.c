@@ -14,7 +14,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)qvcons.c	7.4 (Berkeley) 8/9/88
+ *	@(#)qvcons.c	7.5 (Berkeley) 3/15/90
  */
 
 /*
@@ -59,7 +59,7 @@
  * ---------------------------------------------------------------------
  */
 
-#include "../h/types.h"
+#include "../sys/types.h"
 #define KERNEL
 #include "../vaxuba/qvioctl.h"
 #undef KERNEL
