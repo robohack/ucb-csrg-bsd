@@ -6,11 +6,10 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)init.c	5.9 (Berkeley) 6/7/91";
+static char sccsid[] = "@(#)init.c	5.10 (Berkeley) 6/7/91";
 #endif /* not lint */
 
 #include "csh.h"
-#include "local.h"
 #include "extern.h"
 
 #define	INF	1000
