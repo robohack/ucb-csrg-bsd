@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1986 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1986, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.proprietary.c%
  *
- *	@(#)lrnref.h	4.5 (Berkeley) 4/17/91
+ *	@(#)lrnref.h	8.1 (Berkeley) 6/6/93
  */
 
 #define	READY	0
