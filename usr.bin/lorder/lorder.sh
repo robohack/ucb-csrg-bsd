@@ -5,7 +5,7 @@
 #
 # %sccs.include.redist.sh%
 #
-#	@(#)lorder.sh	5.3 (Berkeley) 4/12/91
+#	@(#)lorder.sh	5.4 (Berkeley) 3/8/93
 #
 
 PATH=/bin:/usr/bin
@@ -44,12 +44,12 @@ nm -go $* | sed "
 		d
 	}
 	/ [TD] / {
-		s/:.* [TD]//
+		s/:.* [TD] / /
 		w $S
 		d
 	}
 	/ U / {
-		s/:.* U//
+		s/:.* U / /
 		w $R
 	}
 	d
