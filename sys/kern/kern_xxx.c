@@ -14,7 +14,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)kern_xxx.c	7.10 (Berkeley) 5/2/90
+ *	@(#)kern_xxx.c	7.11 (Berkeley) 5/15/90
  */
 
 #include "param.h"
@@ -76,7 +76,7 @@ sethostname()
 
 reboot()
 {
-	register struct a {
+	struct a {
 		int	opt;
 	};
 	int error;
