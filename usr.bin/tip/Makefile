@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.12 (Berkeley) 5/3/93
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 #
 # Files are:
 #	/etc/remote		remote host description file
