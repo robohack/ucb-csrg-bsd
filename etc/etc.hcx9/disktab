@@ -1,5 +1,5 @@
 #
-#	@(#)disktab	5.2 (Berkeley) 5/23/89
+#	@(#)disktab	8.1 (Berkeley) 6/9/93
 #
 # Disk geometry and partition layout tables. 
 # Key:
