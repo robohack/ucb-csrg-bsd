@@ -1,6 +1,10 @@
+/*-
+ * %sccs.include.proprietary.c%
+ */
+
 #ifndef lint
-static char sccsid[] = "@(#)t6.c	4.4 7/22/88";
-#endif
+static char sccsid[] = "@(#)t6.c	4.5 (Berkeley) 4/18/91";
+#endif /* not lint */
 
  /* t6.c: compute tab stops */
 

@@ -1,4 +1,11 @@
-/*	@(#)spell.h	4.2	2/2/91	*/
+/*-
+ * Copyright (c) 1991 The Regents of the University of California.
+ * All rights reserved.
+ *
+ * %sccs.include.proprietary.c%
+ *
+ *	@(#)spell.h	4.3 (Berkeley) 4/18/91
+ */
 
 #include <stdio.h>
 #include <ctype.h>
