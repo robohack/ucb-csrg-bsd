@@ -1,4 +1,4 @@
-/*	dz.c	3.8	11/15/19	*/
+/*	dz.c	3.9	11/15/19	*/
 
 /*
  *  DZ-11 Driver
@@ -248,10 +248,10 @@ dev_t dev;
 		((struct device *)(tp->t_addr))->dzbrk &= ~(1 << (dev&07));
 		break;
 	case TIOCSDTR:
-		dzmodem(dev, ON);
+		dzmodem(minor(dev), ON);
 		break;
 	case TIOCCDTR:
-		dzmodem(dev, OFF);
+		dzmodem(minor(dev), OFF);
 		break;
 	default:
 		u.u_error = ENOTTY;
