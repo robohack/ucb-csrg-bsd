@@ -7,15 +7,15 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)conf.c	8.4 (Berkeley) 7/16/93";
+static char sccsid[] = "@(#)conf.c	8.5 (Berkeley) 7/19/93";
 #endif /* not lint */
 
+# include "sendmail.h"
+# include "pathnames.h"
 # include <sys/ioctl.h>
 # include <sys/param.h>
 # include <signal.h>
 # include <pwd.h>
-# include "sendmail.h"
-# include "pathnames.h"
 
 /*
 **  CONF.C -- Sendmail Configuration Tables.
