@@ -4,16 +4,10 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)talk.h	5.6 (Berkeley) 6/1/90
+ *	@(#)talk.h	5.7 (Berkeley) 3/1/91
  */
 
-#include <sys/types.h>
 #include <curses.h>
-#include <utmp.h>
-
-#define forever		for(;;)
-
-int	quit();
 
 extern	int sockt;
 extern	int curses_initialized;

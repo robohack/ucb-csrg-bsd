@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)io.c	5.5 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)io.c	5.6 (Berkeley) 3/1/91";
 #endif /* not lint */
 
 /*
@@ -44,7 +44,7 @@ talk()
 	 * standard input ( STDIN_MASK )
 	 */
 	read_template = sockt_mask | STDIN_MASK;
-	forever {
+	for (;;) {
 		read_set = read_template;
 		wait.tv_sec = A_LONG_TIME;
 		wait.tv_usec = 0;
