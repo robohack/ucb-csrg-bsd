@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)egrep.c	5.7 (Berkeley) 10/7/87";
+static char sccsid[] = "@(#)egrep.c	5.8 (Berkeley) 10/8/87";
 #endif not lint
 
 /*
@@ -219,10 +219,10 @@ main(argc, argv)
 		if (grepflag)
 oops("usage: grep [-bchilnosvwy] [-e] pattern [file ...]");
 		else if (fgrepflag)
-oops("usage: fgrep [-bchilnov] {-f patfile | [-e] strings} [file ...]");
+oops("usage: fgrep [-bchilnosvx] {-f patfile | [-e] strings} [file ...]");
 		else		/* encourage SVID options, though we provide
 				 * others */
-oops("usage: egrep [-bchilnov] {-f patfile | [-e] pattern} [file ...]");
+oops("usage: egrep [-bchilnosv] {-f patfile | [-e] pattern} [file ...]");
 	}
 	patind = optind;
 	if (fflag)
