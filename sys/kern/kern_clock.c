@@ -1,4 +1,4 @@
-/*	kern_clock.c	3.8	11/15/19	*/
+/*	kern_clock.c	3.9	11/15/19	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
@@ -169,8 +169,16 @@ out:
 				if(--pp->p_clktim == 0)
 					if (pp->p_flag & STIMO) {
 						s = spl6();
-						if (pp->p_stat == SSLEEP)
+						switch (pp->p_stat) {
+
+						case SSLEEP:
 							setrun(pp);
+							break;
+
+						case SSTOP:
+							unsleep(pp);
+							break;
+						}
 						pp->p_flag &= ~STIMO;
 						splx(s);
 					} else
