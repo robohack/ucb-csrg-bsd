@@ -1,5 +1,6 @@
-/* static	char sccsid[] = "@(#)OPnames.h 1.5 8/29/82"; */
+/* static	char sccsid[] = "@(#)OPnames.h 1.6 8/19/83"; */
 
+#ifndef PC
 char	*otext[] = {
 	0,
 	" NODUMP",
@@ -258,3 +259,4 @@ char	*otext[] = {
 	" ROUND",
 	" TRUNC"
 };
+#endif
