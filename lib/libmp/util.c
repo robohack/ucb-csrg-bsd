@@ -3,7 +3,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)util.c	5.3 (Berkeley) 4/19/91";
+static char sccsid[] = "@(#)util.c	8.1 (Berkeley) 6/4/93";
 #endif /* not lint */
 
 char *malloc();
