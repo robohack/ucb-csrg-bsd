@@ -1,4 +1,4 @@
-(Version 8.14 of 1/3/94)
+(Version 8.15 of 1/7/94)
 
 Key:
   X -- extension (user visible change)
@@ -99,6 +99,9 @@ E ***	Eliminate E qf line and e_errorqueue; use e_errorsto a la
 B ***	Fix syslog buffer overflow problems.
 
 X ***	DECNET_RELAY support in configs.
+
+E **	Make "local configuration error" a temporary failure?
+	(add EX_CONFIG to the markfailure list)
 
 X **	(sigh) BSMTP.
 
