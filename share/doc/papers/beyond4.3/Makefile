@@ -1,10 +1,7 @@
-#	@(#)Makefile	5.1 (Berkeley) 6/30/90
+#	@(#)Makefile	5.2 (Berkeley) 6/8/93
 
 DIR=	papers/beyond43
 SRCS=	beyond43.ms
 MACROS=	-ms
-
-paper.${PRINTER}: ${SRCS}
-	${ROFF} ${SRCS} > ${.TARGET}
 
 .include <bsd.doc.mk>
