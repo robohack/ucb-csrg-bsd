@@ -1,8 +1,8 @@
 #ifndef lint
-static char sccsid[] = "@(#)hys24.c	1.6	(Berkeley) 6/27/90";
+static char sccsid[] = "@(#)hys24.c	1.7	(Berkeley) 3/2/91";
 #endif !lint
 
-#include "../condevs.h"
+#include "condevs.h"
 
 /*
  * hyspopn24(telno, flds, dev) connect to hayes smartmodem (pulse call)

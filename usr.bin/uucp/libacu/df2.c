@@ -1,8 +1,8 @@
 #ifndef lint
-static char sccsid[] = "@(#)df2.c	4.3 (Berkeley) 2/24/88";
+static char sccsid[] = "@(#)df2.c	4.4 (Berkeley) 3/2/91";
 #endif
 
-#include "../condevs.h"
+#include "condevs.h"
 
 /*
  *	df2opn(ph, flds, dev)	dial remote machine
