@@ -1,4 +1,6 @@
-/*	sqrt.c	4.2	83/02/12	*/
+#ifndef lint
+static char sccsid[] = "@(#)sqrt.c	4.3 8/11/83";
+#endif
 
 # include "e.h"
 
