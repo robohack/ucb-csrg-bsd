@@ -1,7 +1,7 @@
-#	@(#)Makefile	5.1 (Berkeley) 5/11/90
+#	@(#)Makefile	5.2 (Berkeley) 4/8/91
 
 PROG=	cfscores
-CFLAGS+=-I${.CURDIR}/..
+CFLAGS+=-I${.CURDIR}/../canfield
 NOMAN=	noman
 HIDEGAME=hidegame
 
