@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)ffs_vfsops.c	6.11 (Berkeley) 6/8/85
+ *	@(#)ffs_vfsops.c	6.12 (Berkeley) 9/4/85
  */
 
 #include "param.h"
@@ -28,7 +28,6 @@ smount()
 	dev_t dev;
 	register struct inode *ip;
 	register struct fs *fs;
-	register char *cp;
 	register struct nameidata *ndp = &u.u_nd;
 	u_int len;
 
