@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.117 (Berkeley) 5/27/95";
+static char sccsid[] = "@(#)main.c	8.118 (Berkeley) 5/28/95";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -89,6 +89,7 @@ ERROR %%%%   Cannot have daemon mode without SMTP   %%%% ERROR
 
 #define MAXCONFIGLEVEL	6	/* highest config version level known */
 
+int
 main(argc, argv, envp)
 	int argc;
 	char **argv;
@@ -107,7 +108,6 @@ main(argc, argv, envp)
 	bool warn_C_flag = FALSE;
 	char warn_f_flag = '\0';
 	static bool reenter = FALSE;
-	char *argv0 = argv[0];
 	struct passwd *pw;
 	struct stat stb;
 	struct hostent *hp;
@@ -115,7 +115,6 @@ main(argc, argv, envp)
 	extern int DtableSize;
 	extern int optind;
 	extern time_t convtime();
-	extern putheader(), putbody();
 	extern void intsig();
 	extern struct hostent *myhostname();
 	extern char *arpadate();
@@ -125,6 +124,7 @@ main(argc, argv, envp)
 	extern char **environ;
 	extern void sigusr1();
 	extern void sighup();
+	extern void initmacros __P((ENVELOPE *));
 
 	/*
 	**  Check to see if we reentered.
@@ -945,6 +945,8 @@ main(argc, argv, envp)
 		}
 		for (;;)
 		{
+			extern void testmodeline __P((char *, ENVELOPE *));
+
 			if (Verbose)
 				printf("> ");
 			(void) fflush(stdout);
@@ -1252,6 +1254,7 @@ struct metamac	MetaMacros[] =
 	'\0'
 };
 
+void
 initmacros(e)
 	register ENVELOPE *e;
 {
@@ -1300,6 +1303,7 @@ initmacros(e)
 **		the controlling tty.
 */
 
+void
 disconnect(droplev, e)
 	int droplev;
 	register ENVELOPE *e;
@@ -1487,9 +1491,10 @@ auth_warning(e, msg, va_alist)
 **		none.
 */
 
+void
 setuserenv(envar, value)
-	char *envar;
-	char *value;
+	const char *envar;
+	const char *value;
 {
 	int i;
 	char **evp = UserEnviron;
@@ -1596,6 +1601,7 @@ sighup()
 **		e -- the current environment.
 */
 
+void
 testmodeline(line, e)
 	char *line;
 	ENVELOPE *e;
@@ -1630,7 +1636,6 @@ testmodeline(line, e)
 			{
 				int rs;
 				struct rewrite *rw;
-				char *cp;
 				STAB *s;
 
 				if (line[2] == '\0')
