@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)autoconf.c	6.27 (Berkeley) 6/6/86
+ *	@(#)autoconf.c	7.1 (Berkeley) 6/6/86
  */
 
 /*
