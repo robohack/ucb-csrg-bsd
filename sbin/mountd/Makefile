@@ -1,7 +1,8 @@
-#	@(#)Makefile	5.2 (Berkeley) 5/11/90
+#	@(#)Makefile	5.3 (Berkeley) 6/25/90
 
 PROG=	mountd
 CFLAGS+=-DNFS
+MAN5=	exports.0
 MAN8=	mountd.0
 DPADD=	${LIBRPC}
 LDADD=	-lrpc
