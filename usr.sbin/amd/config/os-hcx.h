@@ -9,9 +9,9 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)os-hcx.h	5.3 (Berkeley) 5/12/91
+ *	@(#)os-hcx.h	5.4 (Berkeley) 2/9/92
  *
- * $Id: os-hcx.h,v 5.2.1.1 91/05/07 22:19:41 jsp Alpha $
+ * $Id: os-hcx.h,v 5.2.2.1 1992/02/09 15:10:20 jsp beta $
  *
  * Harris HCX/UX Release 3.0 definitions for Amd (automounter)
  */

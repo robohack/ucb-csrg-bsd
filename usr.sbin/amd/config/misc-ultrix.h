@@ -9,9 +9,9 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)misc-ultrix.h	5.3 (Berkeley) 5/12/91
+ *	@(#)misc-ultrix.h	5.4 (Berkeley) 2/9/92
  *
- * $Id: misc-ultrix.h,v 5.2.1.2 91/05/07 22:20:01 jsp Alpha $
+ * $Id: misc-ultrix.h,v 5.2.2.1 1992/02/09 15:10:49 jsp beta $
  *
  */
 
