@@ -1,4 +1,4 @@
-/* @(#)ttyname.c	4.2 (Berkeley) 3/30/82 */
+/* @(#)ttyname.c	4.3 (Berkeley) 5/7/82 */
 /*
  * ttyname(f): return "/dev/ttyXX" which the the name of the
  * tty belonging to file f.
@@ -7,7 +7,7 @@
 
 #define	NULL	0
 #include <sys/param.h>
-#include <sys/ndir.h>
+#include <sys/dir.h>
 #include <sys/stat.h>
 
 static	char	dev[]	= "/dev/";
