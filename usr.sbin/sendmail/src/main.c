@@ -3,7 +3,7 @@
 # include <sys/ioctl.h>
 # include "sendmail.h"
 
-SCCSID(@(#)main.c	3.146		12/14/82);
+SCCSID(@(#)main.c	3.147		12/30/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -92,6 +92,14 @@ main(argc, argv)
 		abort();
 	}
 	reenter = TRUE;
+
+	/*
+	**  Be sure we have enough file descriptors.
+	*/
+
+	for (i = 3; i < 20; i++)
+		(void) close(i);
+	errno = 0;
 
 	/*
 	**  Do a quick prescan of the argument list.
