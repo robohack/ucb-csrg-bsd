@@ -7,7 +7,7 @@
 # include <syslog.h>
 # endif LOG
 
-SCCSID(@(#)main.c	3.84		7/2/82);
+SCCSID(@(#)main.c	3.85		7/5/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -461,7 +461,9 @@ main(argc, argv)
 	**  If a daemon, wait for a request.
 	**	getrequests will always return in a child.
 	**	If we should also be processing the queue, start
-	**	doing it in background.
+	**		doing it in background.
+	**	We check for any errors that might have happened
+	**		during startup.
 	*/
 
 	if (Mode == MD_DAEMON)
@@ -470,6 +472,7 @@ main(argc, argv)
 		if (queuemode)
 			runqueue(TRUE);
 # endif QUEUE
+		checkerrors(CurEnv);
 		getrequests();
 	}
 #endif DAEMON
