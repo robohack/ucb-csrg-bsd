@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)init_main.c	7.22 (Berkeley) 4/5/90
+ *	@(#)init_main.c	7.23 (Berkeley) 4/27/90
  */
 
 #include "param.h"
@@ -129,10 +129,6 @@ main(firstaddr)
 	u.u_cred = crget();
 	u.u_ngroups = 1;
 
-#if defined(QUOTA)
-	qtinit();
-	p->p_quota = u.u_quota = getquota(0, 0, Q_NDQ);
-#endif
 	startrtclock();
 #if defined(vax)
 #include "kg.h"
