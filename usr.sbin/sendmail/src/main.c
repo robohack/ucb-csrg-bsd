@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.44 (Berkeley) 12/15/93";
+static char sccsid[] = "@(#)main.c	8.45 (Berkeley) 1/8/94";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -1002,7 +1002,7 @@ main(argc, argv, envp)
 	**  commands.  This will never return.
 	*/
 
-	if (OpMode == MD_SMTP)
+	if (OpMode == MD_SMTP || OpMode == MD_DAEMON)
 		smtp(CurEnv);
 # endif /* SMTP */
 
