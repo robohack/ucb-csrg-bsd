@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)mbuf.c	5.11 (Berkeley) 5/27/92";
+static char sccsid[] = "@(#)mbuf.c	5.12 (Berkeley) 7/7/92";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -51,7 +51,7 @@ bool seen[256];			/* "have we seen this type yet?" */
  */
 void
 mbpr(mbaddr)
-	off_t mbaddr;
+	u_long mbaddr;
 {
 	register int totmem, totfree, totmbufs;
 	register int i;
