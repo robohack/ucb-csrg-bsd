@@ -1,12 +1,12 @@
 #ifndef lint
-static char sccsid[] = "@(#)trace.c	4.1 11/2/82";
+static char sccsid[] = "@(#)trace.c	4.2 1/11/83";
 #endif
 
 /*
  * Routing Table Management Daemon
  */
 #define	RIPCMDS
-#include "router.h"
+#include "defs.h"
 
 #define	NRECORDS	50		/* size of circular trace buffer */
 #ifdef DEBUG
