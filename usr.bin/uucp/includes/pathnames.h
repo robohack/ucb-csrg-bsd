@@ -14,11 +14,10 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)pathnames.h	5.1 (Berkeley) 5/11/89
+ *	@(#)pathnames.h	5.2 (Berkeley) 2/15/90
  */
 
 #include <paths.h>
 
 #define	_PATH_NEWTTYS	"/etc/ttys.new"
-#define	_PATH_NOLOGIN	"/etc/nologin"
 #define	_PATH_TTYS	"/etc/ttys"
