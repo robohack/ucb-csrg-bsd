@@ -3,7 +3,7 @@
 # include <syslog.h>
 # endif LOG
 
-static char	SccsId[] = "@(#)err.c	3.9	8/20/81";
+static char	SccsId[] = "@(#)err.c	3.10	9/6/81";
 
 extern bool	HasXscrpt;
 
@@ -76,7 +76,7 @@ syserr(fmt, a, b, c, d, e)
 	}
 
 # ifdef LOG
-	syslog(LOG_ERR, "%s->%s: %s", From.q_paddr, To, errbuf);
+	syslog(LOG_ERR, "%s->%s: %s", From.q_paddr, To, &errbuf[4]);
 # endif LOG
 	errno = 0;
 }
