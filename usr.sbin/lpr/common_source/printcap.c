@@ -6,17 +6,17 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)printcap.c	5.6 (Berkeley) 2/6/91";
+static char sccsid[] = "@(#)printcap.c	5.7 (Berkeley) 3/4/91";
 #endif /* not lint */
+
+#include <ctype.h>
+#include <stdio.h>
+#include "pathnames.h"
 
 #ifndef BUFSIZ
 #define	BUFSIZ	1024
 #endif
 #define MAXHOP	32	/* max number of tc= indirections */
-
-#include <ctype.h>
-#include <stdio.h>
-#include "pathnames.h"
 
 /*
  * termcap - routines for dealing with the terminal capability data base
