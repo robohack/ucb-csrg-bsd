@@ -1,11 +1,11 @@
 #ifndef lint
-static char sccsid[] = "@(#)tick.c	4.2 (Berkeley) 8/11/83";
+static char sccsid[] = "@(#)tick.c	4.3 (Berkeley) 5/11/89";
 #endif
 
 /* time programs */
-# include "stdio.h"
-# include "sys/types.h"
-# include "sys/timeb.h"
+# include <stdio.h>
+# include <sys/types.h>
+# include <sys/timeb.h>
 struct tbuffer {
 	long	proc_user_time;
 	long	proc_system_time;
