@@ -3,11 +3,14 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)r_dim.c	5.2	7/8/85
+ *	@(#)r_dim.c	5.3	7/9/85
  */
+
+float flt_retval;
 
 float r_dim(a,b)
 float *a, *b;
 {
-return( *a > *b ? *a - *b : 0);
+flt_retval =  *a > *b ? *a - *b : 0;
+return(flt_retval);
 }
