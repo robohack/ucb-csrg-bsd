@@ -12,7 +12,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)file.c	4.21 (Berkeley) 8/20/91";
+static char sccsid[] = "@(#)file.c	5.1 (Berkeley) 6/17/92";
 #endif /* not lint */
 
 /*
@@ -27,7 +27,7 @@ static char sccsid[] = "@(#)file.c	4.21 (Berkeley) 8/20/91";
 #include <a.out.h>
 
 #if defined(hp300) || defined(hp800)
-#include <hp300/hpux/hpux_exec.h>
+#include <hp/hpux/hpux_exec.h>
 #endif
 
 extern  int errno;
