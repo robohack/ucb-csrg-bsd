@@ -14,10 +14,10 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)in_cksum.c	7.3 (Berkeley) 6/29/88
+ *	@(#)in_cksum.c	7.4 (Berkeley) 9/4/89
  */
 
-#include "types.h"
+#include "param.h"
 #include "mbuf.h"
 
 /*
