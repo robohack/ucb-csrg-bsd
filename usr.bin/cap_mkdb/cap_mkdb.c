@@ -12,7 +12,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)cap_mkdb.c	1.8 (Berkeley) 9/8/92";
+static char sccsid[] = "@(#)cap_mkdb.c	1.9 (Berkeley) 9/9/92";
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -171,7 +171,7 @@ db_build(inputfiles)
 		 */
 		(void)strcpy((char *)(data.data), nf);
 
-		data.size = key.size + 1;	/* need extra byte for tag */
+		data.size = key.size;
 		key.data = namebuf;
 		np = namebuf;
 		for (cp = nf; *cp != '\0'; cp++) {
