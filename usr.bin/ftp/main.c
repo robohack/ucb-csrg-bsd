@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)main.c	4.8 (Berkeley) 6/10/83";
+static char sccsid[] = "@(#)main.c	4.9 (Berkeley) 7/18/83";
 #endif
 
 /*
@@ -178,8 +178,13 @@ cmdscanner(top)
 			printf("ftp> ");
 			fflush(stdout);
 		}
-		if (gets(line) == 0)
+		if (gets(line) == 0) {
+			if (feof(stdin)) {
+				clearerr(stdin);
+				putchar('\n');
+			}
 			break;
+		}
 		if (line[0] == 0)
 			break;
 		makeargv();
