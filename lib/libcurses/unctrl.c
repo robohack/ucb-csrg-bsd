@@ -1,7 +1,7 @@
 /*
  * define unctrl codes for each character
  *
- * 1/26/81 (Berkeley) @(#)unctrl.c	1.1
+ * @(#)unctrl.c	1.2 (Berkeley) 5/1/85
  */
 
 /* LINTLIBRARY */
