@@ -5,7 +5,7 @@
  */
 
 #ifndef lint
-static char *sccsid = "@(#)exp.c	5.2 (Berkeley) 6/6/85";
+static char *sccsid = "@(#)exp.c	5.3 (Berkeley) 6/23/85";
 #endif
 
 #include "sh.h"
@@ -482,7 +482,7 @@ exp6(vp, ignore)
 #ifdef EDEBUG
 	etracc("exp6 default", cp, vp);
 #endif
-	return (ignore&NOGLOB ? cp : globone(cp));
+	return (ignore&NOGLOB ? savestr(cp) : globone(cp));
 }
 
 evalav(v)
