@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)msgs.c	4.12 (Berkeley) 9/12/83";
+static char sccsid[] = "@(#)msgs.c	4.13 (Berkeley) 12/8/83";
 #endif lint
 /*
  * msgs - a user bulletin board program
@@ -612,7 +612,8 @@ onsusp()
 	sigsetmask(0);
 	kill(0, SIGTSTP);
 	signal(SIGTSTP, onsusp);
-	longjmp(tstpbuf);
+	if (!mailing)
+		longjmp(tstpbuf);
 }
 
 linecnt(f)
