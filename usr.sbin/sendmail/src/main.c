@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.41 (Berkeley) 3/18/93";
+static char sccsid[] = "@(#)main.c	6.42 (Berkeley) 3/18/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -871,7 +871,6 @@ main(argc, argv, envp)
 		/* at this point we are in a child: reset state */
 		OpMode = MD_SMTP;
 		(void) newenvelope(CurEnv, CurEnv);
-		openxscript(CurEnv);
 #endif /* DAEMON */
 	}
 	
