@@ -1,4 +1,4 @@
-#	@(#)Makefile	6.7 (Berkeley) 5/28/93
+#	@(#)Makefile	8.1 (Berkeley) 6/7/93
 
 PROG=	sendmail
 
