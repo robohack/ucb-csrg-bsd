@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)util.c	5.23 (Berkeley) 1/4/92";
+static char sccsid[] = "@(#)util.c	5.24 (Berkeley) 2/21/92";
 #endif /* not lint */
 
 # include <stdio.h>
@@ -302,6 +302,10 @@ xputs(s)
 			  case '\t':
 				c = 't';
 				break;
+
+			  case '\001':
+				(void) putchar('$');
+				continue;
 
 			  default:
 				(void) putchar('^');
