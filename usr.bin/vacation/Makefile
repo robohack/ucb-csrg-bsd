@@ -1,7 +1,6 @@
-#	@(#)Makefile	5.3 (Berkeley) 5/11/90
+#	@(#)Makefile	5.4 (Berkeley) 4/1/91
 
 PROG=	vacation
 DPADD=	${LIBDBM}
-LDADD=	-ldbm
 
 .include <bsd.prog.mk>
