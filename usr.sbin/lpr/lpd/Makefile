@@ -1,8 +1,7 @@
-#	@(#)Makefile	5.5 (Berkeley) 9/1/92
+#	@(#)Makefile	5.6 (Berkeley) 4/27/93
 
 PROG=	lpd
 CFLAGS+=-I${.CURDIR}/../common_source
-LDADD=	-lutil
 MAN8=	lpd.0
 SRCS=	lpd.c printjob.c recvjob.c displayq.c rmjob.c startdaemon.c \
 	lpdchar.c common.c

@@ -1,7 +1,6 @@
-#	@(#)Makefile	5.5 (Berkeley) 6/29/90
+#	@(#)Makefile	5.6 (Berkeley) 4/27/93
 
 PROG=	update
 MAN8=	update.0
-LDADD=	-lutil
 
 .include <bsd.prog.mk>

@@ -1,8 +1,7 @@
-#	@(#)Makefile	5.3 (Berkeley) 6/29/90
+#	@(#)Makefile	5.4 (Berkeley) 4/27/93
 
 PROG=	nfsiod
 CFLAGS+=-DNFS
 MAN8=	nfsiod.0
-LDADD=	-lutil
 
 .include <bsd.prog.mk>
