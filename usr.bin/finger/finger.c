@@ -11,7 +11,7 @@ char copyright[] =
 #endif not lint
 
 #ifndef lint
-static char sccsid[] = "@(#)finger.c	5.9 (Berkeley) 8/17/86";
+static char sccsid[] = "@(#)finger.c	5.10 (Berkeley) 4/26/87";
 #endif not lint
 
 /*
@@ -1042,13 +1042,13 @@ netfinger(name)
 		perror("socket");
 		return (1);
 	}
-	printf("[%s]", hp->h_name); fflush(stdout);
+	printf("[%s]\n", hp->h_name);
+	fflush(stdout);
 	if (connect(s, (char *)&sin, sizeof (sin)) < 0) {
 		perror("connect");
 		close(s);
 		return (1);
 	}
-	putchar('\n');
 	if (large) write(s, "/W ", 3);
 	write(s, name, strlen(name));
 	write(s, "\r\n", 2);
