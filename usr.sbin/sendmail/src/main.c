@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.35 (Berkeley) 3/4/93";
+static char sccsid[] = "@(#)main.c	6.36 (Berkeley) 3/5/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -838,7 +838,7 @@ main(argc, argv, envp)
 		if (tTd(0, 1))
 			strcat(dtype, "+debugging");
 
-		syslog(LOG_INFO, "starting %s daemon", dtype);
+		syslog(LOG_INFO, "starting daemon: %s", dtype + 1);
 
 # ifdef QUEUE
 		if (queuemode)
