@@ -1,4 +1,4 @@
-#	@(#)Makefile	4.6 (Berkeley) 5/11/90
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	diff
 SRCS=	diff.c diffdir.c diffreg.c
