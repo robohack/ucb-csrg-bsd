@@ -6,8 +6,15 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)dir.c	5.8 (Berkeley) 6/7/91";
+static char sccsid[] = "@(#)dir.c	5.9 (Berkeley) 6/8/91";
 #endif /* not lint */
+
+#include <sys/param.h>
+#include <sys/stat.h>
+#include <errno.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 #include "csh.h"
 #include "dir.h"
