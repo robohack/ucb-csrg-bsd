@@ -9,7 +9,7 @@
 #include "rcv.h"
 #include <sgtty.h>
 
-static char *SccsId = "@(#)tty.c	1.4 4/1/81";
+static char *SccsId = "@(#)tty.c	2.1 7/1/81";
 
 static	int	c_erase;		/* Current erase char */
 static	int	c_kill;			/* Current kill char */

@@ -11,7 +11,7 @@
  * Auxiliary functions.
  */
 
-static char *SccsId = "@(#)aux.c	1.7 7/1/81";
+static char *SccsId = "@(#)aux.c	2.1 7/1/81";
 
 /*
  * Return a pointer to a dynamic copy of the argument.

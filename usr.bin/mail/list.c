@@ -9,7 +9,7 @@
  * Message list handling.
  */
 
-static char *SccsId = "@(#)list.c	1.5 2/6/81";
+static char *SccsId = "@(#)list.c	2.1 7/1/81";
 
 /*
  * Convert the user string of message numbers and

@@ -9,7 +9,7 @@
  * Still more user commands.
  */
 
-static char *SccsId = "@(#)cmd3.c	1.13 4/1/81";
+static char *SccsId = "@(#)cmd3.c	2.1 7/1/81";
 
 /*
  * Process a shell escape by saving signals, ignoring signals,

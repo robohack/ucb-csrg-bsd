@@ -8,7 +8,7 @@
  */
 
 /*
- * Sccs Id = "@(#)rcv.h	1.1 10/8/80";
+ * Sccs Id = "@(#)rcv.h	2.1 7/1/81";
  */
 
 #include "def.h"

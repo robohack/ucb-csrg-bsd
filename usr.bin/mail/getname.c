@@ -12,7 +12,7 @@
  * implementation.
  */
 
-static char *SccsId = "@(#)getname.c	1.1 10/8/80";
+static char *SccsId = "@(#)getname.c	2.1 7/1/81";
 
 #include "rcv.h"
 

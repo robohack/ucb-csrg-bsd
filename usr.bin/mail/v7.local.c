@@ -10,7 +10,7 @@
 
 #include "rcv.h"
 
-static char *SccsId = "@(#)v7.local.c	1.3 1/5/81";
+static char *SccsId = "@(#)v7.local.c	2.1 7/1/81";
 
 /*
  * Locate the user's mailbox file (ie, the place where new, unread

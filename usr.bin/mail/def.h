@@ -9,7 +9,7 @@
 #undef isdigit
 
 /*
- * Sccs Id = "@(#)def.h	1.12 4/1/81";
+ * Sccs Id = "@(#)def.h	2.1 7/1/81";
  */
 
 /*

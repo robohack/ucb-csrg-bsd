@@ -9,7 +9,7 @@
  * Termination processing.
  */
 
-static char *SccsId = "@(#)quit.c	1.5 3/20/81";
+static char *SccsId = "@(#)quit.c	2.1 7/1/81";
 
 /*
  * Save all of the undetermined messages at the top of "mbox"
