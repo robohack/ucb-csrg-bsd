@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)eval.c	8.1 (Berkeley) 6/6/93";
+static char sccsid[] = "@(#)eval.c	8.2 (Berkeley) 4/27/95";
 #endif /* not lint */
 
 /*
@@ -327,6 +327,7 @@ register int td;
 	/*
 	 * doexit - immediate exit from m4.
 	 */
+		killdiv();
 		exit((argc > 2) ? atoi(argv[2]) : 0);
 		break;
 
