@@ -1,7 +1,7 @@
-#	@(#)Makefile	5.17 (Berkeley) 5/26/91
+#	@(#)Makefile	5.18 (Berkeley) 7/22/91
 
-SUBDIR=	compact cpp crypt hostid ld lex make more roff sum symorder \
-	sysline yacc
+SUBDIR=	compact cpp crypt hostid ld lex make more rev roff sum \
+	symorder sysline yacc
 
 .if   (${MACHINE} == "hp300")
 SUBDIR+=as.hpux
