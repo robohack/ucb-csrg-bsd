@@ -9,9 +9,9 @@
  *
  * %sccs.include.redist.c%
  *
- * from: Utah $Hdr: grf_rbreg.h 1.8 89/08/25$
+ * from: Utah $Hdr: grf_rbreg.h 1.1 90/07/09$
  *
- *	@(#)grf_rbreg.h	7.1 (Berkeley) 5/8/90
+ *	@(#)grf_rbreg.h	7.2 (Berkeley) 11/4/90
  */
 
 /*

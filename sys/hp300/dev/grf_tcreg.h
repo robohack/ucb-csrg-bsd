@@ -9,9 +9,9 @@
  *
  * %sccs.include.redist.c%
  *
- * from: Utah $Hdr: grf_tcreg.h 1.9 89/08/24$
+ * from: Utah $Hdr: grf_tcreg.h 1.1 90/07/09$
  *
- *	@(#)grf_tcreg.h	7.1 (Berkeley) 5/8/90
+ *	@(#)grf_tcreg.h	7.2 (Berkeley) 11/4/90
  */
 
 #define tccm_waitbusy(regaddr) \
