@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)itime.c	5.14 (Berkeley) 6/18/92";
+static char sccsid[] = "@(#)itime.c	5.15 (Berkeley) 6/18/92";
 #endif /* not lint */
 
 #ifdef sunos
@@ -227,8 +227,6 @@ getrecord(df, ddatep)
 #endif
 	return(0);
 }
-
-time_t	unctime();
 
 int
 makedumpdate(ddp, tbuf)
