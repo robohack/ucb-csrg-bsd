@@ -1,4 +1,4 @@
-/*	cons.c	4.4	2/25/81	*/
+/*	cons.c	4.5	2/26/81	*/
 
 /*
  * Vax console driver and floppy interface
