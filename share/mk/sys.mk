@@ -1,4 +1,4 @@
-#	@(#)sys.mk	5.14 (Berkeley) 5/12/93
+#	@(#)sys.mk	5.15 (Berkeley) 7/9/93
 
 unix		?=	We run UNIX.
 
@@ -21,7 +21,7 @@ CFLAGS		?=	-O4
 CFLAGS		?=	-O2
 .endif
 
-CPP		?=	/usr/libexec/gcc2/cpp -traditional
+CPP		?=	cpp
 
 FC		?=	f77
 FFLAGS		?=	-O
