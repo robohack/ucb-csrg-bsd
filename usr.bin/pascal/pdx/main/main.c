@@ -1,6 +1,6 @@
 /* Copyright (c) 1982 Regents of the University of California */
 
-static char sccsid[] = "@(#)main.c 1.5 5/20/82";
+static char sccsid[] = "@(#)main.c 1.6 9/2/82";
 
 /*
  * Debugger main routine.
