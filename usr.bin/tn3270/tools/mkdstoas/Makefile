@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.1 (Berkeley) 5/11/93
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	mkdstoas
 SRCS=	mkdstoas.c asc_ebc.c ebc_disp.c
