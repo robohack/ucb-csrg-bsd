@@ -6,12 +6,13 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)abort.c	5.10 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)abort.c	5.11 (Berkeley) 2/23/91";
 #endif /* LIBC_SCCS and not lint */
 
 #include <sys/signal.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <unistd.h>
 
 void
 abort()
