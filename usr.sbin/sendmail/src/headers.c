@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)headers.c	8.24 (Berkeley) 2/3/94";
+static char sccsid[] = "@(#)headers.c	8.25 (Berkeley) 2/5/94";
 #endif /* not lint */
 
 # include <errno.h>
@@ -504,6 +504,8 @@ logsender(e, msgid)
 		name = "[RESPONSE]";
 	else if ((name = macvalue('_', e)) != NULL)
 		;
+	else if (RealHostName == NULL)
+		name = "localhost";
 	else if (RealHostName[0] == '[')
 		name = RealHostName;
 	else
