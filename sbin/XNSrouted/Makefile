@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.15 (Berkeley) 4/27/93
+#	@(#)Makefile	8.1 (Berkeley) 6/5/93
 
 PROG=	XNSrouted
 MAN8=	XNSrouted.0
