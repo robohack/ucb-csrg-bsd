@@ -1,4 +1,4 @@
-static	char *sccsid = "@(#)misc.c 4.2 7/6/84";
+static	char *sccsid = "@(#)misc.c 4.3 8/31/84";
 
 #include "sh.h"
 
@@ -67,13 +67,6 @@ calloc(i, j)
 			*dp++ = 0;
 		while (--i);
 	return (cp);
-}
-
-cfree(p)
-	char *p;
-{
-
-	free(p);
 }
 
 char **
