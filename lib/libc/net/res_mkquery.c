@@ -5,14 +5,14 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)res_mkquery.c	5.2 (Berkeley) 7/16/85";
+static char sccsid[] = "@(#)res_mkquery.c	5.3 (Berkeley) 7/29/85";
 #endif not lint
 
 #include <stdio.h>
 #include <sys/types.h>
 #include <netinet/in.h>
-#include <nameser.h>
-#include <resolv.h>
+#include <arpa/nameser.h>
+#include <arpa/resolv.h>
 
 /*
  * Form all types of queries.
