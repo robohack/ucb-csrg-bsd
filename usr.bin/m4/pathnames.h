@@ -3,11 +3,11 @@
  * All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
- * Ozan Yigit.
+ * Ozan Yigit at York University.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)pathnames.h	5.4 (Berkeley) 9/3/91
+ *	@(#)pathnames.h	5.5 (Berkeley) 11/20/91
  */
 
 /*
