@@ -1,4 +1,4 @@
-static char *sccsid = "@(#)at.c	4.3 (Berkeley) 7/3/81";
+static char *sccsid = "@(#)at.c	4.4 (Berkeley) 6/28/82";
 /*
  * at time mon day
  * at time wday
@@ -79,6 +79,8 @@ char **argv;
 	larg = makeuday(argc,argv)+1;
 	if (uday==today && larg<=2 && utime<=now)
 		uday++;
+	if (uday < today)
+		uyear++;
 	c = uyear%4==0? 366: 365;
 	if (uday >= c) {
 		uday -= c;
