@@ -1,12 +1,12 @@
 /*-
- * Copyright (c) 1991 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1991, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)authenc.c	5.3 (Berkeley) 5/20/93";
+static char sccsid[] = "@(#)authenc.c	8.1 (Berkeley) 6/6/93";
 #endif /* not lint */
 
 #if	defined(AUTHENTICATION) || defined(ENCRYPTION)
