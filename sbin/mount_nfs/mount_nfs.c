@@ -15,7 +15,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)mount_nfs.c	8.10 (Berkeley) 4/28/95";
+static char sccsid[] = "@(#)mount_nfs.c	8.11 (Berkeley) 5/4/95";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -99,6 +99,7 @@ struct mntopt mopts[] = {
 };
 
 struct nfs_args nfsdefargs = {
+	NFS_ARGSVERSION,
 	(struct sockaddr *)0,
 	sizeof (struct sockaddr_in),
 	SOCK_DGRAM,
