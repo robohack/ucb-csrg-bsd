@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.60 (Berkeley) 6/25/94";
+static char sccsid[] = "@(#)main.c	8.61 (Berkeley) 7/2/94";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -644,6 +644,10 @@ main(argc, argv, envp)
 */
 	if (Warn_Q_option)
 		auth_warning(CurEnv, "Processed from queue %s", QueueDir);
+
+	/* supress error printing if errors mailed back or whatever */
+	if (CurEnv->e_errormode != EM_PRINT)
+		HoldErrs = TRUE;
 
 	/* Enforce use of local time (null string overrides this) */
 	if (TimeZoneSpec == NULL)
