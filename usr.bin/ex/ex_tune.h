@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1980 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1980, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.proprietary.c%
  *
- *	@(#)ex_tune.h	7.14 (Berkeley) 4/17/91
+ *	@(#)ex_tune.h	8.1 (Berkeley) 6/9/93
  */
 
 #include "pathnames.h"
