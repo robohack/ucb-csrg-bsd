@@ -1,6 +1,5 @@
-#	@(#)Makefile	5.3 (Berkeley) 5/11/90
+#	@(#)Makefile	5.4 (Berkeley) 6/1/90
 
-# zoneinfo needs conversion
-SUBDIR=	man me misc ms skel tabset termcap tmac zoneinfo
+SUBDIR=	man me misc mk ms skel tabset termcap tmac zoneinfo
 
 .include <bsd.subdir.mk>
