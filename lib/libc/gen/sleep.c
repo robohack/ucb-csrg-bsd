@@ -1,8 +1,10 @@
-/*	@(#)sleep.c	4.3 (Berkeley) 6/12/83	*/
+#ifndef lint
+static char sccsid[] = "@(#)sleep.c	4.4 (Berkeley) 7/1/83";
+#endif
 
+#include <sys/time.h>
 #include <signal.h>
 #include <setjmp.h>
-#include <time.h>
 
 static jmp_buf jmp;
 
