@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)nfs_socket.c	7.30 (Berkeley) 5/11/92
+ *	@(#)nfs_socket.c	7.31 (Berkeley) 7/2/92
  */
 
 /*
@@ -960,7 +960,7 @@ tryagain:
 	/*
 	 * Wait for the reply from our send or the timer's.
 	 */
-	if (!error)
+	if (!error || error == EPIPE)
 		error = nfs_reply(rep);
 
 	/*
