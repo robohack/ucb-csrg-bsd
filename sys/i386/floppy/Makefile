@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.6 (Berkeley) 5/20/91
+#	@(#)Makefile	8.1 (Berkeley) 6/11/93
 
 SUBDIR=	arp bad144 cat cp dd disklabel dump ed fsck ftp ifconfig \
 	init ls mkdir mknod mount mv netstat newfs ping restore \

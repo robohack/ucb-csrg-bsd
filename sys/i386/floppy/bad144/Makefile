@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.1 (Berkeley) 5/3/91
+#	@(#)Makefile	8.1 (Berkeley) 6/11/93
 
 PROG=	bad144
 SRCS=	bad144.c
