@@ -11,7 +11,7 @@
  */
 
 #ifndef lint
-static char     sccsid[] = "@(#)str.c	8.1 (Berkeley) 6/6/93";
+static char     sccsid[] = "@(#)str.c	8.2 (Berkeley) 1/2/94";
 #endif /* not lint */
 
 #include "make.h"
@@ -109,7 +109,7 @@ brk_string(str, store_argc)
 		case '\'':
 			if (inquote)
 				if (inquote == ch)
-					inquote = NULL;
+					inquote = '\0';
 				else
 					break;
 			else
