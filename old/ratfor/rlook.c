@@ -3,7 +3,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)rlook.c	1.3 (Berkeley) 4/16/91";
+static char sccsid[] = "@(#)rlook.c	8.1 (Berkeley) 6/6/93";
 #endif /* not lint */
 
 #define NULL 0
