@@ -1,5 +1,9 @@
-#	@(#)Makefile	5.2 (Berkeley) 5/31/90
+#	@(#)Makefile	5.3 (Berkeley) 6/4/90
 
 SUBDIR=	compact crypt make more od talk yacc
+
+.if (${MACHINE} == "vax")
+SUBDIR+=talk
+.endif
 
 .include <bsd.subdir.mk>
