@@ -1,11 +1,12 @@
+#ifndef lint
+static char *sccsid ="@(#)stab.c	1.9 (Berkeley) 8/11/83";
+#endif
 /*
  * Symbolic debugging info interface.
  *
  * Here we generate pseudo-ops that cause the assembler to put
  * symbolic debugging information into the object file.
  */
-
-static char *sccsid ="@(#)stab.c	1.8 (Berkeley) 8/10/83";
 
 #include "mfile1"
 

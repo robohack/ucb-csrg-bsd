@@ -1,4 +1,4 @@
-/*	@(#)disktab.h	4.2 (Berkeley) 3/6/83	*/
+/*	disktab.h	4.3	83/08/11	*/
 
 /*
  * Disk description table, see disktab(5)
