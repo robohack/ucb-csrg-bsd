@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)raw_cb.h	7.6 (Berkeley) 6/28/90
+ *	@(#)raw_cb.h	7.7 (Berkeley) 6/4/93
  */
 
 /*
@@ -30,4 +30,14 @@ struct rawcb {
 
 #ifdef KERNEL
 struct rawcb rawcb;			/* head of list */
+
+int	 raw_attach __P((struct socket *, int));
+void	 raw_ctlinput __P((int, struct sockaddr *));
+void	 raw_detach __P((struct rawcb *));
+void	 raw_disconnect __P((struct rawcb *));
+void	 raw_init __P((void));
+void	 raw_input __P((struct mbuf *,
+	    struct sockproto *, struct sockaddr *, struct sockaddr *));
+int	 raw_usrreq __P((struct socket *,
+	    int, struct mbuf *, struct mbuf *, struct mbuf *));
 #endif
