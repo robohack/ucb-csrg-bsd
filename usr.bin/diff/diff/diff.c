@@ -1,4 +1,4 @@
-static	char sccsid[] = "@(#)diff.c 4.7 5/11/89";
+static	char sccsid[] = "@(#)diff.c 4.8 3/1/91";
 
 #include "diff.h"
 #include "pathnames.h"
@@ -176,6 +176,7 @@ max(a,b)
 	return (a > b ? a : b);
 }
 
+void
 done()
 {
 	if (tempfile)
