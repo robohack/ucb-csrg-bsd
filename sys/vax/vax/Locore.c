@@ -1,4 +1,4 @@
-/*	Locore.c	4.7	3/9/81	*/
+/*	Locore.c	4.8	81/03/09	*/
 
 #include "dz.h"
 
