@@ -1,4 +1,4 @@
-#	@(#)Makefile	7.4 (Berkeley) 5/5/92
+#	@(#)Makefile	7.5 (Berkeley) 5/5/92
 
 # Makefile for hp300 tags file
 
@@ -24,6 +24,6 @@ tags: FRC
 
 links:
 	-for i in ${DHP300}; do \
-	    cd ../$$i && rm -f tags; ln -s ../tags tags; done
+	    (cd $$i && rm -f tags; ln -s ../tags tags); done
 
 FRC:
