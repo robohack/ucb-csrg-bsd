@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)mdef.h	5.5 (Berkeley) 6/1/90
+ *	@(#)mdef.h	5.6 (Berkeley) 2/26/91
  */
 
 /*
@@ -15,11 +15,6 @@
  * Facility: m4 macro processor
  * by: oz
  */
-
-#include <sys/signal.h>
-#include <stdio.h>
-#include <ctype.h>
-#include "pathnames.h"
 
 /*
  *
