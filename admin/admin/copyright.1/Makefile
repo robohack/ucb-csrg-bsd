@@ -1,8 +1,7 @@
-#	@(#)Makefile	5.2 (Berkeley) 6/8/90
+#	@(#)Makefile	5.3 (Berkeley) 6/22/90
 
 BUILD=	redist.c redist.sh redist.man redist.gas
 STD=	386.c contrib hdrs kern libc libs libs.cci main make man sh src
-NOOBJ=	noobj
 
 all: ${BUILD}
 
