@@ -12,17 +12,18 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)utils.c	8.1 (Berkeley) 6/4/93
+ *	@(#)utils.c	8.2 (Berkeley) 2/22/94
  *
  * Utah $Hdr: utils.c 3.1 92/07/06$
  * Author: Jeff Forys, University of Utah CSS
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)utils.c	8.1 (Berkeley) 6/4/93";
+static char sccsid[] = "@(#)utils.c	8.2 (Berkeley) 2/22/94";
 #endif /* not lint */
 
 #include <sys/param.h>
+#include <sys/time.h>
 
 #include <fcntl.h>
 #include <signal.h>
