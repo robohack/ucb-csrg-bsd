@@ -1,11 +1,12 @@
 # include <errno.h>
 # include "sendmail.h"
+# include <signal.h>
 
 # ifndef SMTP
-SCCSID(@(#)srvrsmtp.c	3.47		2/18/83	(no SMTP));
+SCCSID(@(#)srvrsmtp.c	3.48		3/26/83	(no SMTP));
 # else SMTP
 
-SCCSID(@(#)srvrsmtp.c	3.47		2/18/83);
+SCCSID(@(#)srvrsmtp.c	3.48		3/26/83);
 
 /*
 **  SMTP -- run the SMTP protocol.
