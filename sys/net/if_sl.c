@@ -1,4 +1,4 @@
-/*	@(#)if_sl.c	5.7 (Berkeley) 5/15/86 */
+/*	@(#)if_sl.c	5.8 (Berkeley) 6/3/86 */
 
 /*
  * Serial Line interface
@@ -42,8 +42,8 @@
 #if INET
 #include "../netinet/in.h"
 #include "../netinet/in_systm.h"
+#include "../netinet/in_var.h"
 #include "../netinet/ip.h"
-#include "../netinet/ip_var.h"
 #endif
 
 #ifdef vax
