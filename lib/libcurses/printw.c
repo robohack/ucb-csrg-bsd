@@ -1,7 +1,7 @@
 /*
  * printw and friends
  *
- * 1/26/81 (Berkeley) @(#)printw.c	1.1
+ * @(#)printw.c	1.2 (Berkeley) 5/1/85
  */
 
 # include	"curses.ext"
