@@ -1,8 +1,16 @@
 #ifndef lint
-static char sccsid[] = "@(#)fetch.c	1.3 (Lucasfilm) 10/2/83";
+static char sccsid[] = "@(#)fetch.c	1.4 (Lucasfilm) 8/9/84";
 #endif
 
 #include "systat.h"
+#include <sys/param.h>
+#include <sys/dir.h>
+#include <sys/user.h>
+#include <sys/proc.h>
+#include <sys/file.h>
+#include <sys/vmmac.h>
+#include <machine/pte.h>
+#include <pwd.h>
 
 long
 getw(loc)

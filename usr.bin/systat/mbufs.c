@@ -1,9 +1,12 @@
 #ifndef lint
-static char sccsid[] = "@(#)mbufs.c	1.2 (Lucasfilm) 10/2/83";
+static char sccsid[] = "@(#)mbufs.c	1.3 (Lucasfilm) 8/9/84";
 #endif
 
 #include "systat.h"
+#include <sys/param.h>
 #include <sys/mbuf.h>
+#include <sys/file.h>
+#include <nlist.h>
 
 WINDOW *
 openmbufs()
