@@ -1,6 +1,6 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-/* static	char sccsid[] = "@(#)piwhoami.h 1.1 10/1/80"; */
+/* static	char sccsid[] = "@(#)piwhoami.h 1.2 3/6/81"; */
 
 /*
  *	am i generating an obj file (OBJ),
@@ -16,6 +16,7 @@
  */
 #define VAX
 #undef	PDP11
+#define DEC11
 
 /*
  *	am i pi or pxp?
