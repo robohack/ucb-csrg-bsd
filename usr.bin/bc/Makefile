@@ -1,8 +1,8 @@
-#	@(#)Makefile	5.5 (Berkeley) 6/23/90
+#	@(#)Makefile	5.6 (Berkeley) 3/1/91
 
 PROG=	bc
 SRCS=	bc.c
-CFLAGS+=-I${.CURDIR}
+CFLAGS+=-w -I${.CURDIR}
 CLEANFILES=	bc.c y.tab.h
 
 beforeinstall:
