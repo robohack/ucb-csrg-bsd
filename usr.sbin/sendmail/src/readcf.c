@@ -1,6 +1,6 @@
 # include "sendmail.h"
 
-SCCSID(@(#)readcf.c	3.30		9/5/82);
+SCCSID(@(#)readcf.c	3.31		9/12/82);
 
 /*
 **  READCF -- read control file.
@@ -433,6 +433,7 @@ struct optlist	OptList[] =
 	'U',	M_UGLYUUCP,
 	'e',	M_EXPENSIVE,
 	'X',	M_FULLSMTP,
+	'C',	M_CANONICAL,
 	'\0',	0
 };
 
