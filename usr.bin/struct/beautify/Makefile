@@ -1,8 +1,8 @@
-#	@(#)Makefile	5.1 (Berkeley) 6/5/90
+#	@(#)Makefile	5.2 (Berkeley) 2/28/91
 
 PROG=	beautify
 SRCS=	beauty.c tree.c lextab.c bdef.c
-CFLAGS+=-I. -I${.CURDIR}
+CFLAGS+=-w -I. -I${.CURDIR}
 BINDIR=	/usr/libexec
 DPADD=	${LIBLN}
 LDADD=	-lln
