@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.110		9/8/82);
+SCCSID(@(#)main.c	3.111		9/8/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -471,8 +471,6 @@ main(argc, argv)
 	}
 # endif DEBUG
 
-	initsys();
-
 #ifdef DAEMON
 	/*
 	**  If a daemon, wait for a request.
@@ -523,7 +521,6 @@ main(argc, argv)
 		CurEnv->e_id = CurEnv->e_qf = CurEnv->e_df = NULL;
 		FatalErrors = FALSE;
 		openxscrpt();
-		initsys();
 	}
 #endif DAEMON
 
@@ -539,13 +536,8 @@ main(argc, argv)
 	}
 # endif QUEUE
 
-	/*
-	**  Give this envelope a reality.
-	**	I.e., an id and a creation time.
-	*/
-
-	(void) queuename(CurEnv, '\0');
-	CurEnv->e_ctime = curtime();
+	/* do basic system initialization */
+	initsys();
 	
 # ifdef SMTP
 	/*
@@ -1020,10 +1012,21 @@ initsys()
 	auto time_t now;
 
 	/*
-	**  Set OutChannel to something useful if stdout isn't it.
+	**  Give this envelope a reality.
+	**	I.e., an id and a creation time.
 	*/
 
-	if (Mode == MD_DAEMON || HoldErrs)
+	(void) queuename(CurEnv, '\0');
+	CurEnv->e_ctime = curtime();
+
+	/*
+	**  Set OutChannel to something useful if stdout isn't it.
+	**	This arranges that any extra stuff the mailer produces
+	**	gets sent back to the user on error (because it is
+	**	tucked away in the transcript).
+	*/
+
+	if ((Mode == MD_DAEMON && QueueRun) || HoldErrs)
 		OutChannel = Xscript;
 
 	/*
