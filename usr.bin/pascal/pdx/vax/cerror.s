@@ -1,3 +1,6 @@
+# Copy
+#
+# static char sccsid[] = "@(#)cerror.s 1.2 9/2/82";
 #
 # modified version of cerror
 #
