@@ -1,6 +1,6 @@
-/*	tm.c	4.18	2/25/81	*/
+/*	tm.c	4.19	2/26/81	*/
 
-#include "tm.h"
+#include "te.h"
 #if NTM > 0
 int	tmgapsdcnt;		/* DEBUG */
 /*
