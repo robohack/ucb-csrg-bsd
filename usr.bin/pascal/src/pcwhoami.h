@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1980 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1980, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)pcwhoami.h	5.3 (Berkeley) 4/16/91
+ *	@(#)pcwhoami.h	8.1 (Berkeley) 6/6/93
  */
 
 /*
