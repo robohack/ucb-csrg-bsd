@@ -1,4 +1,4 @@
-/*	vfs_bio.c	4.7	2/1/81	*/
+/*	vfs_bio.c	4.8	2/3/81	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
@@ -435,7 +435,6 @@ loop:
 	dp->b_forw->b_back = bp;
 	dp->b_forw = bp;
 	bp->b_dev = (dev_t)NODEV;
-	bp->b_hlink = -1;
 	return(bp);
 }
 
