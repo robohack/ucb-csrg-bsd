@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)iso_pcb.c	7.13 (Berkeley) 10/11/92
+ *	@(#)iso_pcb.c	7.14 (Berkeley) 5/25/93
  */
 
 /***********************************************************
@@ -588,4 +588,4 @@ iso_pcblookup(head, fportlen, fport, laddr)
 	}
 	return (struct isopcb *)0;
 }
-#endif ISO
+#endif /* ISO */
