@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)kgdb_proto.h	1.3 (Berkeley) 5/8/91
+ *	@(#)kgdb_proto.h	7.1 (Berkeley) 5/8/91
  *
  * $Header: kgdb_proto.h,v 1.3 91/03/12 22:06:43 mccanne Exp $ (LBL)
  */
