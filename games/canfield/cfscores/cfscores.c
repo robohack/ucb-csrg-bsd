@@ -22,9 +22,10 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)cfscores.c	5.3 (Berkeley) 6/18/88";
+static char sccsid[] = "@(#)cfscores.c	5.4 (Berkeley) 3/5/89";
 #endif /* not lint */
 
+#include <sys/types.h>
 #include <pwd.h>
 
 struct betinfo {

@@ -16,7 +16,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)misc.c	5.2 (Berkeley) 6/18/88";
+static char sccsid[] = "@(#)misc.c	5.3 (Berkeley) 3/5/89";
 #endif /* not lint */
 
 # include	"monop.ext"
@@ -298,6 +298,7 @@ shell_out() {
 /*
  *	This routine looks up the users login shell
  */
+# include	<sys/types.h>
 # include	<pwd.h>
 
 struct passwd	*getpwuid();
