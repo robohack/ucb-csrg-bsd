@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- * 	@(#)qd.c	1.6  Berkeley  6/1/88
+ * 	@(#)qd.c	1.7  Berkeley  6/1/88
  *
  * derived from: "@(#)qd.c	ULTRIX";
  */
