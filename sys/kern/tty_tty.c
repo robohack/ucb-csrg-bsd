@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)tty_tty.c	7.8 (Berkeley) 5/1/90
+ *	@(#)tty_tty.c	7.9 (Berkeley) 6/21/90
  */
 
 /*
@@ -102,6 +102,6 @@ syselect(dev, flag)
 	struct vnode *ttyvp = cttyvp(u.u_procp);
 
 	if (ttyvp == NULL)
-		return (ENXIO);
+		return (1);	/* try operation to get EOF/failure */
 	return (VOP_SELECT(ttyvp, flag, FREAD|FWRITE, NOCRED));
 }
