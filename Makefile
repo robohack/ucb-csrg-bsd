@@ -1,7 +1,7 @@
-#	@(#)Makefile	5.4 (Berkeley) 7/18/92
+#	@(#)Makefile	5.5 (Berkeley) 5/31/93
 
-# BROKEN: contrib
-SUBDIR=	bin games kerberosIV lib libexec old sbin share usr.bin usr.sbin
+SUBDIR=	bin contrib games kerberosIV lib libexec old sbin share \
+	usr.bin usr.sbin
 
 afterinstall:
 	(cd share/man && make makedb)
