@@ -1,6 +1,7 @@
-#	@(#)Makefile	5.4 (Berkeley) 5/11/90
+#	@(#)Makefile	5.5 (Berkeley) 6/29/90
 
 PROG=	cron
+LDADD=	-lutil
 MAN8=	cron.0
 MLINKS=	cron.8 crontab.5
 
