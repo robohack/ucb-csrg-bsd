@@ -9,7 +9,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)fwrite.c	5.3 (Berkeley) 1/20/91";
+static char sccsid[] = "@(#)fwrite.c	5.4 (Berkeley) 2/5/91";
 #endif /* LIBC_SCCS and not lint */
 
 #include <stdio.h>
@@ -22,7 +22,7 @@ static char sccsid[] = "@(#)fwrite.c	5.3 (Berkeley) 1/20/91";
  * Return the number of whole objects written.
  */
 fwrite(buf, size, count, fp)
-	void *buf;
+	const void *buf;
 	size_t size, count;
 	FILE *fp;
 {
@@ -30,7 +30,7 @@ fwrite(buf, size, count, fp)
 	struct __suio uio;
 	struct __siov iov;
 
-	iov.iov_base = buf;
+	iov.iov_base = (void *)buf;
 	uio.uio_resid = iov.iov_len = n = count * size;
 	uio.uio_iov = &iov;
 	uio.uio_iovcnt = 1;

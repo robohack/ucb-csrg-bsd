@@ -9,7 +9,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)vsnprintf.c	5.1 (Berkeley) 1/20/91";
+static char sccsid[] = "@(#)vsnprintf.c	5.2 (Berkeley) 2/5/91";
 #endif /* LIBC_SCCS and not lint */
 
 #include <stdio.h>
@@ -17,7 +17,7 @@ static char sccsid[] = "@(#)vsnprintf.c	5.1 (Berkeley) 1/20/91";
 vsnprintf(str, n, fmt, ap)
 	char *str;
 	size_t n;
-	char *fmt;
+	const char *fmt;
 	_VA_LIST_ ap;
 {
 	int ret;
