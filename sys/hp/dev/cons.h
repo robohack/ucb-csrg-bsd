@@ -9,9 +9,9 @@
  *
  * %sccs.include.redist.c%
  *
- * from: Utah $Hdr: cons.h 1.4 88/12/03$
+ * from: Utah $Hdr: cons.h 1.1 90/07/09$
  *
- *	@(#)cons.h	7.2 (Berkeley) 5/25/90
+ *	@(#)cons.h	7.3 (Berkeley) 11/2/90
  */
 
 struct consdev {
