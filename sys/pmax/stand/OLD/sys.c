@@ -9,7 +9,7 @@
  * This code is derived from software contributed to Berkeley by
  * Ralph Campbell.
  *
- *	@(#)sys.c	7.2 (Berkeley) 2/29/92
+ *	@(#)sys.c	7.3 (Berkeley) 9/13/92
  */
 
 #include "saio.h"
@@ -19,7 +19,8 @@
 #endif
 #include "../include/machMon.h"
 
-ino_t	dlook();
+static ino_t dlook();
+static struct direct *readdir();
 
 int	errno;
 
@@ -180,7 +181,6 @@ dlook(s, io)
 	register struct inode *ip;
 	struct dirstuff dirp;
 	int len;
-	extern struct direct *readdir();
 
 	if (s == NULL || *s == '\0')
 		return (0);
