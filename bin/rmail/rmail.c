@@ -10,7 +10,7 @@
 # include <stdio.h>
 # include <sysexits.h>
 
-static char	SccsId[] =	"@(#)rmail.c	3.12	(Berkeley)	12/27/82";
+static char	SccsId[] =	"@(#)rmail.c	4.2	(Berkeley)	2/18/83";
 
 typedef char	bool;
 #define TRUE	1
