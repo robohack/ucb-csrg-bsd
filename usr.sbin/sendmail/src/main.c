@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.136 (Berkeley) 6/21/95";
+static char sccsid[] = "@(#)main.c	8.137 (Berkeley) 6/21/95";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -527,6 +527,7 @@ main(argc, argv, envp)
 			if (RealUid != 0)
 				warn_C_flag = TRUE;
 			ConfFile = optarg;
+			endpwent();
 			(void) setgid(RealGid);
 			(void) setuid(RealUid);
 			safecf = FALSE;
@@ -628,6 +629,7 @@ main(argc, argv, envp)
 			break;
 
 		  case 'X':	/* traffic log file */
+			endpwent();
 			setgid(RealGid);
 			setuid(RealUid);
 			TrafficLogFile = fopen(optarg, "a");
@@ -901,6 +903,7 @@ main(argc, argv, envp)
 	/* if we've had errors so far, exit now */
 	if (ExitStat != EX_OK && OpMode != MD_TEST)
 	{
+		endpwent();
 		setuid(RealUid);
 		exit(ExitStat);
 	}
@@ -920,6 +923,7 @@ main(argc, argv, envp)
 #ifdef QUEUE
 		dropenvelope(CurEnv);
 		printqueue();
+		endpwent();
 		setuid(RealUid);
 		exit(EX_OK);
 #else /* QUEUE */
@@ -930,6 +934,7 @@ main(argc, argv, envp)
 	  case MD_INITALIAS:
 		/* initialize alias database */
 		initmaps(TRUE, CurEnv);
+		endpwent();
 		setuid(RealUid);
 		exit(EX_OK);
 
@@ -1218,6 +1223,7 @@ finis()
 		ExitStat = EX_OK;
 
 	/* reset uid for process accounting */
+	endpwent();
 	setuid(RealUid);
 
 	exit(ExitStat);
@@ -1248,6 +1254,7 @@ intsig()
 #endif
 
 	/* reset uid for process accounting */
+	endpwent();
 	setuid(RealUid);
 
 	exit(EX_OK);
