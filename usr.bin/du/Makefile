@@ -1,7 +1,5 @@
-#	@(#)Makefile	5.4 (Berkeley) 3/1/92
+#	@(#)Makefile	5.5 (Berkeley) 6/2/93
 
 PROG=	du
-SRCS=	du.c getbsize.c
-.PATH:	${.CURDIR}/../../bin/df
 
 .include <bsd.prog.mk>
