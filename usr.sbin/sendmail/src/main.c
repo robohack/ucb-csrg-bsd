@@ -4,7 +4,7 @@
 # include "sendmail.h"
 # include <sys/file.h>
 
-SCCSID(@(#)main.c	4.9.1.1		6/17/84);
+SCCSID(@(#)main.c	4.10		8/5/84);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -337,6 +337,11 @@ main(argc, argv, envp)
 	**	Extract special fields for local use.
 	*/
 
+	if (!safecf)
+	{
+		setgid(getrgid());
+		setuid(getruid());
+	}
 	if (!safecf || OpMode == MD_FREEZE || readconfig)
 		readcf(ConfFile, safecf);
 
@@ -714,7 +719,6 @@ struct metamac	MetaMacros[] =
 
 	/* these are RHS metasymbols */
 	'#', CANONNET,	'@', CANONHOST,	':', CANONUSER,	'>', CALLSUBR,
-	'{', MATCHLOOKUP,		'}', MATCHELOOKUP,
 
 	/* and finally the conditional operations */
 	'?', CONDIF,	'|', CONDELSE,	'.', CONDFI,
