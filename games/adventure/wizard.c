@@ -11,7 +11,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)wizard.c	5.2 (Berkeley) 5/12/93";
+static char sccsid[] = "@(#)wizard.c	5.3 (Berkeley) 6/2/93";
 #endif /* not lint */
 
 /*      Re-coding of advent in C: privileged operations                 */
@@ -40,7 +40,7 @@ poof()
 	latncy = 45;
 }
 
-start(n)
+Start(n)
 {       int d,t,delay;
 
 	datime(&d,&t);
