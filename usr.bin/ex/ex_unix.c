@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)ex_unix.c	7.11 (Berkeley) 4/17/91";
+static char sccsid[] = "@(#)ex_unix.c	7.12 (Berkeley) 2/23/93";
 #endif /* not lint */
 
 #include "ex.h"
@@ -339,7 +339,6 @@ waitfor()
 {
 	union wait stat, pstat;
 	int wpid;
-	extern char *sys_siglist[];
 
 	pstat.w_status = 0;
 	do {
