@@ -12,7 +12,7 @@ char copyright[] =
 #endif not lint
 
 #ifndef lint
-static char sccsid[] = "@(#)bad144.c	5.18 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)bad144.c	5.19 (Berkeley) 4/11/91";
 #endif not lint
 
 /*
@@ -480,7 +480,6 @@ register struct bt_bad *bt;
 }
 
 #ifdef vax
-#include <machine/dkio.h>
 
 struct rp06hdr {
 	short	h_cyl;
