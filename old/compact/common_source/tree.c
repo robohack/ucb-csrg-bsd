@@ -1,4 +1,6 @@
-/*	tree.c	4.1	83/02/11	*/
+#ifndef lint
+static char sccsid[] = "@(#)tree.c	4.2 (Berkeley) 8/11/83";
+#endif
 
 #include "compact.h"
 

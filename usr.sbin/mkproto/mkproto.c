@@ -1,6 +1,6 @@
-/* Copyright (c) 1982 Regents of the University of California */
-
-static char sccsid[] = "@(#)mkproto.c	4.3	(Berkeley)	5/3/83";
+#ifndef lint
+static char sccsid[] = "@(#)mkproto.c	4.4 (Berkeley) 8/11/83";
+#endif
 
 /*
  * Make a file system prototype.
