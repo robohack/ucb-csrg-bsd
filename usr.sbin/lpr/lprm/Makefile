@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.5 (Berkeley) 9/1/92
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	lprm
 CFLAGS+=-I${.CURDIR}/../common_source
