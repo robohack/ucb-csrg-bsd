@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.116 (Berkeley) 5/27/95";
+static char sccsid[] = "@(#)main.c	8.117 (Berkeley) 5/27/95";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -1056,6 +1056,7 @@ main(argc, argv, envp)
 	{
 		CurEnv->e_sendmode = SM_VERIFY;
 		CurEnv->e_errormode = EM_QUIET;
+		PostMasterCopy = NULL;
 	}
 	else
 	{
