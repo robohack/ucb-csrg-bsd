@@ -1,5 +1,6 @@
-/*	@(#)ul.c	4.4	5/26/83	*/
-static char SccsId[] =	"@(#)ul.c	4.4 (Berkeley) 5/26/83";
+#ifndef lint
+static char sccsid[] =	"@(#)ul.c	4.5 (Berkeley) 8/11/83";
+#endif
 
 #include <stdio.h>
 
