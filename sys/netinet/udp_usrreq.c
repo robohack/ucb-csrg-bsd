@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)udp_usrreq.c	7.27 (Berkeley) 1/8/93
+ *	@(#)udp_usrreq.c	7.28 (Berkeley) 1/18/93
  */
 
 #include <sys/param.h>
@@ -119,7 +119,7 @@ udp_input(m, iphlen)
 		}
 	}
 
-	if (IN_MULTICAST(ntohl(ip->ip_src.s_addr)) ||
+	if (IN_MULTICAST(ntohl(ip->ip_dst.s_addr)) ||
 	    in_broadcast(ip->ip_dst)) {
 		struct socket *last;
 		/*
