@@ -1,6 +1,7 @@
-#	@(#)Makefile	5.1 (Berkeley) 4/27/91
+#	@(#)Makefile	5.2 (Berkeley) 5/6/91
 
 DATFILES=fortunes.dat startrek.dat zippy.dat fortunes-o.dat
+CLEANFILES+=${DATFILES}
 
 install: ${DATFILES}
 	(cd ${.CURDIR} && install -c -o ${BINOWN} -g ${BINGRP} -m 444 \
