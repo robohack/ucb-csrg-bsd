@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.1 (Berkeley) 6/5/90
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 LIB=resolv
 CFLAGS+=-DDEBUG -DLIBC_SCCS
