@@ -1,14 +1,7 @@
-# include <stdio.h>
 # include <pwd.h>
-# include <signal.h>
-# include <ctype.h>
-# include <errno.h>
 # include "sendmail.h"
-# ifdef LOG
-# include <syslog.h>
-# endif LOG
 
-static char SccsId[] = "@(#)recipient.c	3.3	8/20/81";
+static char SccsId[] = "@(#)recipient.c	3.4	8/20/81";
 
 /*
 **  SENDTO -- Designate a send list.
