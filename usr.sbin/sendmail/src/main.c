@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.23 (Berkeley) 2/21/93";
+static char sccsid[] = "@(#)main.c	6.24 (Berkeley) 2/21/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -281,7 +281,7 @@ main(argc, argv, envp)
 		(void) signal(SIGHUP, intsig);
 	(void) signal(SIGTERM, intsig);
 	(void) signal(SIGPIPE, SIG_IGN);
-	OldUmask = umask(0);
+	OldUmask = umask(022);
 	OpMode = MD_DELIVER;
 	FullName = getenv("NAME");
 
