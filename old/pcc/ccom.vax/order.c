@@ -1,8 +1,8 @@
 #ifndef lint
-static char *sccsid ="@(#)order.c	1.5 (Berkeley) 1/18/85";
+static char *sccsid ="@(#)order.c	1.6 (Berkeley) 4/2/85";
 #endif lint
 
-# include "mfile2"
+# include "pass2.h"
 
 int maxargs = { -1 };
 
