@@ -1,6 +1,6 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-/* static	char sccsid[] = "@(#)pcops.h 1.2 2/1/83"; */
+/* static	char sccsid[] = "@(#)pcops.h 1.3 9/19/83"; */
 
     /*
      *	tree node operators
