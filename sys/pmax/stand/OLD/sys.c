@@ -9,15 +9,15 @@
  * This code is derived from software contributed to Berkeley by
  * Ralph Campbell.
  *
- *	@(#)sys.c	7.3 (Berkeley) 9/13/92
+ *	@(#)sys.c	7.4 (Berkeley) 10/11/92
  */
 
-#include "saio.h"
-#include "ufs/ufs/dir.h"
+#include <pmax/stand/saio.h>
+#include <ufs/ufs/dir.h>
 #ifndef SMALL
-#include "stat.h"
+#include <sys/stat.h>
 #endif
-#include "../include/machMon.h"
+#include <machine/machMon.h>
 
 static ino_t dlook();
 static struct direct *readdir();

@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)saio.h	7.4 (Berkeley) 9/13/92
+ *	@(#)saio.h	7.5 (Berkeley) 10/11/92
  */
 
 /*
@@ -21,11 +21,12 @@ struct vnode {
 	int fake;
 };
 
-#include "sys/param.h"
-#include "sys/time.h"
-#include "ufs/ufs/quota.h"
-#include "ufs/ufs/inode.h"
-#include "ufs/ffs/fs.h"
+#include <sys/param.h>
+#include <sys/time.h>
+
+#include <ufs/ufs/quota.h>
+#include <ufs/ufs/inode.h>
+#include <ufs/ffs/fs.h>
 
 /*
  * Io block: includes an
