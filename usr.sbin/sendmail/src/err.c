@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)err.c	8.23 (Berkeley) 2/6/94";
+static char sccsid[] = "@(#)err.c	8.24 (Berkeley) 3/1/94";
 #endif /* not lint */
 
 # include "sendmail.h"
@@ -396,7 +396,7 @@ fmtmsg(eb, to, num, eno, fmt, ap)
 	/* output the "to" person */
 	if (to != NULL && to[0] != '\0')
 	{
-		(void) sprintf(eb, "%s... ", to);
+		(void) sprintf(eb, "%s... ", shortenstring(to, 203));
 		while (*eb != '\0')
 			*eb++ &= 0177;
 	}
