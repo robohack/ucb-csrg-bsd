@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1993 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)getdev.h	5.1 (Berkeley) 5/21/93
+ *	@(#)getdev.h	8.1 (Berkeley) 6/6/93
  */
 
 void	getdev __P((u_long alldevs, int (*match)(struct device *),
