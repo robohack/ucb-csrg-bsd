@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)autover.c	4.1	(Berkeley)	3/23/83";
+static char sccsid[] = "@(#)autover.c	4.2	(Berkeley)	5/27/83";
 #endif not lint
 
 # include	"trek.h"
@@ -24,7 +24,7 @@ static char sccsid[] = "@(#)autover.c	4.1	(Berkeley)	3/23/83";
 
 autover()
 {
-	float			dist;
+	double			dist;
 	register int		course;
 
 	printf("RED ALERT:  The %s is in a supernova quadrant\n", Ship.shipname);
