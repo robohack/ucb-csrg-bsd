@@ -8,14 +8,14 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)mount_umap.c	5.3 (Berkeley) 7/11/92
+ *	@(#)mount_umap.c	5.4 (Berkeley) 7/12/92
  */
 
 #include <sys/param.h>
 #include <sys/mount.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <umapfs/umap.h>
+#include <miscfs/umapfs/umap.h>
 
 #include <errno.h>
 #include <stdio.h>
