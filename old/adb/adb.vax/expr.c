@@ -1,4 +1,6 @@
-#
+#ifndef lint
+static	char sccsid[] = "@(#)expr.c	4.8 8/11/83";
+#endif
 /*
  *
  *	UNIX debugger
@@ -6,7 +8,6 @@
  */
 
 #include "defs.h"
-static	char sccsid[] = "@(#)expr.c	4.7 5/12/83";
 
 MSG		BADSYM;
 MSG		BADVAR;
