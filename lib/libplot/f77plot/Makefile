@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.3 (Berkeley) 5/11/90
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 LIB=	f77plot
 SRCS=	arc.c box.c circle.c clospl.c cont.c dot.c erase.c label.c \
