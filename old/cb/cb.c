@@ -1,4 +1,4 @@
-static char *sccsid = "@(#)cb.c	4.3 (Berkeley) 2/17/86";
+static char *sccsid = "@(#)cb.c	4.4 (Berkeley) 2/9/87";
 #include <stdio.h>
 int	slevel[10];
 int	clevel	= 0;
@@ -356,6 +356,7 @@ comment(){
 			break;
 		case '\n':
 			puts();
+			i = 0;
 			sflg = 1;
 			break;
 		}
