@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)foldit.c	1.1 (Berkeley) 5/23/90";
+static char sccsid[] = "@(#)foldit.c	5.1 (Berkeley) 4/18/91";
 #endif /* not lint */
 
 foldit(chunk, col, max)
