@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.1 (Berkeley) 6/25/90
+#	@(#)Makefile	8.1 (Berkeley) 6/1/93
 
 PROG=	make_key_perm
 SRCS=	make_key_perm.c misc.c
