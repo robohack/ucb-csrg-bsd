@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)vm_map.c	8.6 (Berkeley) 4/27/95
+ *	@(#)vm_map.c	8.7 (Berkeley) 5/11/95
  *
  *
  * Copyright (c) 1987, 1990 Carnegie-Mellon University.
@@ -237,7 +237,7 @@ vm_map_init(map, min, max, pageable)
 	map->first_free = &map->header;
 	map->hint = &map->header;
 	map->timestamp = 0;
-	lock_init(&map->lock, PVM, "thrd_sleep", 0, 0);
+	lockinit(&map->lock, PVM, "thrd_sleep", 0, 0);
 	simple_lock_init(&map->ref_lock);
 	simple_lock_init(&map->hint_lock);
 }
