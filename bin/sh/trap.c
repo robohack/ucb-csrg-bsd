@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)trap.c	8.3 (Berkeley) 5/4/95";
+static char sccsid[] = "@(#)trap.c	8.4 (Berkeley) 6/5/95";
 #endif /* not lint */
 
 #include <signal.h>
@@ -167,6 +167,11 @@ setsignal(signo)
 #endif
 		}
 	}
+
+	if (signo == SIGKILL) 
+		/* Pretend it worked */
+		return 0;
+
 	t = &sigmode[signo - 1];
 	if (*t == 0) {	
 		/* 
