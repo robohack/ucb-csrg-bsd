@@ -4,8 +4,11 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)varargs.h	5.2 (Berkeley) 5/13/90
+ *	@(#)varargs.h	5.3 (Berkeley) 4/3/91
  */
+
+#ifndef _VARARGS_H_
+#define	_VARARGS_H_
 
 #include <stdarg.h>
 
@@ -15,3 +18,5 @@
 #undef	va_start
 #define	va_start(ap) \
 	ap = (char *)&va_alist
+
+#endif /* !_VARARGS_H_ */
