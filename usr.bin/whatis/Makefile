@@ -1,8 +1,7 @@
-#	@(#)Makefile	5.3 (Berkeley) 5/27/90
+#	@(#)Makefile	5.4 (Berkeley) 6/6/93
 
 PROG=	whatis
 SRCS=	whatis.c config.c
 .PATH:	${.CURDIR}/../man
 
-.include "../../Makefile.inc"
 .include <bsd.prog.mk>
