@@ -3,10 +3,10 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)r_tanh.c	5.1	6/7/85
+ *	@(#)r_tanh.c	5.2	7/8/85
  */
 
-double r_tanh(x)
+float r_tanh(x)
 float *x;
 {
 double tanh();
