@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)create.c	5.13 (Berkeley) 6/25/90";
+static char sccsid[] = "@(#)create.c	5.14 (Berkeley) 6/25/90";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -139,6 +139,7 @@ cwalk()
 		}
 		(void)putchar('\n');
 	}
+	(void)ftsclose(t);
 }
 
 #define	MAXGID	5000
