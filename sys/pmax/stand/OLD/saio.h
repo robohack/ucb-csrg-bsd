@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)saio.h	7.2 (Berkeley) 2/29/92
+ *	@(#)saio.h	7.3 (Berkeley) 3/7/92
  */
 
 /*
@@ -21,7 +21,7 @@ struct vnode {
 	int fake;
 };
 
-#include "param.h"
+#include "sys/param.h"
 #include "ufs/ufs/quota.h"
 #include "ufs/ufs/inode.h"
 #include "ufs/ffs/fs.h"
@@ -48,6 +48,7 @@ struct	iob {
 		char dummy[SBSIZE];
 	} i_un;
 };
+#undef i_fs
 #define i_fs i_un.ui_fs
 #define NULL 0
 
