@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)expand.c	5.9 (Berkeley) 7/31/92";
+static char sccsid[] = "@(#)expand.c	5.10 (Berkeley) 4/20/93";
 #endif /* not lint */
 
 /*
@@ -382,7 +382,7 @@ expbackq(cmd, quoted, flag)
 	if (in.buf)
 		ckfree(in.buf);
 	if (in.jp)
-		waitforjob(in.jp);
+		exitstatus = waitforjob(in.jp);
 	if (quoted == 0)
 		recordregion(startloc, dest - stackblock(), 0);
 	TRACE(("evalbackq: size=%d: \"%.*s\"\n",
