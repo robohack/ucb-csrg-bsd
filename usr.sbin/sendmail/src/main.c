@@ -13,14 +13,14 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.85 (Berkeley) 2/28/95";
+static char sccsid[] = "@(#)main.c	8.55.1.6 (Berkeley) 2/28/95";
 #endif /* not lint */
 
 #define	_DEFINE
 
 #include "sendmail.h"
-#include <netdb.h>
 #if NAMED_BIND
+#include <arpa/nameser.h>
 #include <resolv.h>
 #endif
 #include <pwd.h>
@@ -73,15 +73,16 @@ char		*UserEnviron[MAXUSERENVIRON + 2];
 char		RealUserName[256];	/* the actual user id on this host */
 char		*CommandLineArgs;	/* command line args for pid file */
 bool		Warn_Q_option = FALSE;	/* warn about Q option use */
-char		**SaveArgv;	/* argument vector for re-execing */
 
 /*
 **  Pointers for setproctitle.
 **	This allows "ps" listings to give more useful information.
 */
 
+# ifdef SETPROCTITLE
 char		**Argv = NULL;		/* pointer to argument vector */
 char		*LastArgv = NULL;	/* end of argv */
+# endif /* SETPROCTITLE */
 
 static void	obsolete();
 
@@ -91,7 +92,7 @@ ERROR %%%%   Cannot have daemon mode without SMTP   %%%% ERROR
 #endif /* SMTP */
 #endif /* DAEMON */
 
-#define MAXCONFIGLEVEL	6	/* highest config version level known */
+#define MAXCONFIGLEVEL	5	/* highest config version level known */
 
 main(argc, argv, envp)
 	int argc;
@@ -100,6 +101,7 @@ main(argc, argv, envp)
 {
 	register char *p;
 	char **av;
+	extern int finis();
 	extern char Version[];
 	char *ep, *from;
 	typedef int (*fnptr)();
@@ -114,21 +116,19 @@ main(argc, argv, envp)
 	char *argv0 = argv[0];
 	struct passwd *pw;
 	struct stat stb;
-	struct hostent *hp;
 	char jbuf[MAXHOSTNAMELEN];	/* holds MyHostName */
 	extern int DtableSize;
 	extern int optind;
 	extern time_t convtime();
 	extern putheader(), putbody();
 	extern void intsig();
-	extern struct hostent *myhostname();
+	extern char **myhostname();
 	extern char *arpadate();
 	extern char *getauthinfo();
 	extern char *getcfname();
 	extern char *optarg;
 	extern char **environ;
 	extern void sigusr1();
-	extern void sighup();
 
 	/*
 	**  Check to see if we reentered.
@@ -146,8 +146,8 @@ main(argc, argv, envp)
 	/* do machine-dependent initializations */
 	init_md(argc, argv);
 
+	/* arrange to dump state on signal */
 #ifdef SIGUSR1
-	/* arrange to dump state on user-1 signal */
 	setsignal(SIGUSR1, sigusr1);
 #endif
 
@@ -187,8 +187,6 @@ main(argc, argv, envp)
 # endif
 #endif 
 
-	tTsetup(tTdvect, sizeof tTdvect, "0-99.1");
-
 	/* set up the blank envelope */
 	BlankEnvelope.e_puthdr = putheader;
 	BlankEnvelope.e_putbody = putbody;
@@ -217,18 +215,15 @@ main(argc, argv, envp)
 	i = 0;
 	for (av = argv; *av != NULL; )
 		i += strlen(*av++) + 1;
-	SaveArgv = (char **) xalloc(sizeof (char *) * (argc + 1));
 	CommandLineArgs = xalloc(i);
 	p = CommandLineArgs;
-	for (av = argv, i = 0; *av != NULL; )
+	for (av = argv; *av != NULL; )
 	{
-		SaveArgv[i++] = newstr(*av);
 		if (av != argv)
 			*p++ = ' ';
 		strcpy(p, *av++);
 		p += strlen(p);
 	}
-	SaveArgv[i] = NULL;
 
 	/* Handle any non-getoptable constructions. */
 	obsolete(argv);
@@ -238,19 +233,23 @@ main(argc, argv, envp)
 	*/
 
 #if defined(__osf__) || defined(_AIX3)
-# define OPTIONS	"B:b:C:cd:e:F:f:h:IimnO:o:p:q:r:sTtvX:x"
+# define OPTIONS	"B:b:C:cd:e:F:f:h:Iimno:p:q:r:sTtvX:x"
 #endif
 #if defined(ultrix)
-# define OPTIONS	"B:b:C:cd:e:F:f:h:IiM:mnO:o:p:q:r:sTtvX:"
+# define OPTIONS	"B:b:C:cd:e:F:f:h:IiM:mno:p:q:r:sTtvX:"
+#endif
+#if defined(NeXT)
+# define OPTIONS	"B:b:C:cd:e:F:f:h:IimnOo:p:q:r:sTtvX:"
 #endif
 #ifndef OPTIONS
-# define OPTIONS	"B:b:C:cd:e:F:f:h:IimnO:o:p:q:r:sTtvX:"
+# define OPTIONS	"B:b:C:cd:e:F:f:h:Iimno:p:q:r:sTtvX:"
 #endif
 	while ((j = getopt(argc, argv, OPTIONS)) != EOF)
 	{
 		switch (j)
 		{
 		  case 'd':
+			tTsetup(tTdvect, sizeof tTdvect, "0-99.1");
 			tTflag(optarg);
 			setbuf(stdout, (char *) NULL);
 			printf("Version %s\n", Version);
@@ -275,6 +274,7 @@ main(argc, argv, envp)
 	UserEnviron[j] = NULL;
 	environ = UserEnviron;
 
+# ifdef SETPROCTITLE
 	/*
 	**  Save start and extent of argv for setproctitle.
 	*/
@@ -284,9 +284,12 @@ main(argc, argv, envp)
 		LastArgv = envp[i - 1] + strlen(envp[i - 1]);
 	else
 		LastArgv = argv[argc - 1] + strlen(argv[argc - 1]);
+# endif /* SETPROCTITLE */
 
 	if (setsignal(SIGINT, SIG_IGN) != SIG_IGN)
 		(void) setsignal(SIGINT, intsig);
+	if (setsignal(SIGHUP, SIG_IGN) != SIG_IGN)
+		(void) setsignal(SIGHUP, intsig);
 	(void) setsignal(SIGTERM, intsig);
 	(void) setsignal(SIGPIPE, SIG_IGN);
 	OldUmask = umask(022);
@@ -311,7 +314,7 @@ main(argc, argv, envp)
 	define('v', Version, CurEnv);
 
 	/* hostname */
-	hp = myhostname(jbuf, sizeof jbuf);
+	av = myhostname(jbuf, sizeof jbuf);
 	if (jbuf[0] != '\0')
 	{
 		struct	utsname	utsname;
@@ -349,35 +352,17 @@ main(argc, argv, envp)
 			p = jbuf;
 		}
 		if (tTd(0, 4))
-			printf(" UUCP nodename: %s\n", p);
+			printf("UUCP nodename: %s\n", p);
 		p = newstr(p);
 		define('k', p, CurEnv);
 		setclass('k', p);
 		setclass('w', p);
 	}
-	if (hp != NULL)
+	while (av != NULL && *av != NULL)
 	{
-		for (av = hp->h_aliases; av != NULL && *av != NULL; av++)
-		{
-			if (tTd(0, 4))
-				printf("\ta.k.a.: %s\n", *av);
-			setclass('w', *av);
-		}
-		if (hp->h_addrtype == AF_INET && hp->h_length == INADDRSZ)
-		{
-			register int i;
-
-			for (i = 0; hp->h_addr_list[i] != NULL; i++)
-			{
-				char ipbuf[100];
-
-				sprintf(ipbuf, "[%s]",
-					inet_ntoa(*((struct in_addr *) hp->h_addr_list[i])));
-				if (tTd(0, 4))
-					printf("\ta.k.a.: %s\n", ipbuf);
-				setclass('w', ipbuf);
-			}
-		}
+		if (tTd(0, 4))
+			printf("\ta.k.a.: %s\n", *av);
+		setclass('w', *av++);
 	}
 
 	/* current time */
@@ -436,7 +421,9 @@ main(argc, argv, envp)
 			  case MD_TEST:
 			  case MD_INITALIAS:
 			  case MD_PRINT:
+#ifdef MAYBE_NEXT_RELEASE
 			  case MD_ARPAFTP:
+#endif
 				OpMode = j;
 				break;
 
@@ -507,10 +494,6 @@ main(argc, argv, envp)
 			setoption(*optarg, optarg + 1, FALSE, TRUE, CurEnv);
 			break;
 
-		  case 'O':	/* set option (long form) */
-			setoption(' ', optarg, FALSE, TRUE, CurEnv);
-			break;
-
 		  case 'p':	/* set protocol */
 			p = strchr(optarg, ':');
 			if (p != NULL)
@@ -565,6 +548,7 @@ main(argc, argv, envp)
 			break;
 
 		  case 'X':	/* traffic log file */
+			setgid(RealGid);
 			setuid(RealUid);
 			TrafficLogFile = fopen(optarg, "a");
 			if (TrafficLogFile == NULL)
@@ -589,7 +573,9 @@ main(argc, argv, envp)
 			break;
 
 		  case 'e':	/* error message disposition */
+# if defined(ultrix)
 		  case 'M':	/* define macro */
+# endif
 			setoption(j, optarg, FALSE, TRUE, CurEnv);
 			break;
 
@@ -605,6 +591,10 @@ main(argc, argv, envp)
 
 # if defined(__osf__) || defined(_AIX3)
 		  case 'x':	/* random flag that OSF/1 & AIX mailx passes */
+			break;
+# endif
+# if defined(NeXT)
+		  case 'O':	/* random flag that NeXT Mail.app passes */
 			break;
 # endif
 
@@ -646,7 +636,7 @@ main(argc, argv, envp)
 	*/
 
 #if NAMED_BIND
-	if (UseNameServer && !bitset(RES_INIT, _res.options))
+	if (!bitset(RES_INIT, _res.options))
 		res_init();
 #endif
 
@@ -657,17 +647,13 @@ main(argc, argv, envp)
 	if (warn_C_flag)
 		auth_warning(CurEnv, "Processed by %s with -C %s",
 			RealUserName, ConfFile);
-	if (warn_f_flag != '\0' &&
-	    ((st = stab(RealUserName, ST_CLASS, ST_FIND)) == NULL ||
-	     !bitnset('t', st->s_class)))
+/*
+	if (warn_f_flag != '\0')
 		auth_warning(CurEnv, "%s set sender to %s using -%c",
 			RealUserName, from, warn_f_flag);
+*/
 	if (Warn_Q_option)
 		auth_warning(CurEnv, "Processed from queue %s", QueueDir);
-
-	/* supress error printing if errors mailed back or whatever */
-	if (CurEnv->e_errormode != EM_PRINT)
-		HoldErrs = TRUE;
 
 	/* Enforce use of local time (null string overrides this) */
 	if (TimeZoneSpec == NULL)
@@ -719,21 +705,13 @@ main(argc, argv, envp)
 
 	switch (OpMode)
 	{
+	  case MD_INITALIAS:
+		Verbose = TRUE;
+		break;
+
 	  case MD_DAEMON:
 		/* remove things that don't make sense in daemon mode */
 		FullName = NULL;
-
-		/* arrange to restart on hangup signal */
-		setsignal(SIGHUP, sighup);
-		break;
-
-	  case MD_INITALIAS:
-		Verbose = TRUE;
-		/* fall through... */
-
-	  default:
-		/* arrange to exit cleanly on hangup signal */
-		setsignal(SIGHUP, intsig);
 		break;
 	}
 
@@ -759,9 +737,6 @@ main(argc, argv, envp)
 	/* our name for SMTP codes */
 	expand("\201j", jbuf, &jbuf[sizeof jbuf - 1], CurEnv);
 	MyHostName = jbuf;
-	if (strchr(jbuf, '.') == NULL)
-		message("WARNING: local host name (%s) is not qualified; fix $j in config file",
-			jbuf);
 
 	/* make certain that this name is part of the $=w class */
 	setclass('w', MyHostName);
@@ -791,24 +766,6 @@ main(argc, argv, envp)
 	else
 		InclMailer = st->s_mailer;
 
-	/* heuristic tweaking of local mailer for back compat */
-	if (ConfigLevel < 6)
-	{
-		if (LocalMailer != NULL)
-		{
-			setbitn(M_ALIASABLE, LocalMailer->m_flags);
-			setbitn(M_HASPWENT, LocalMailer->m_flags);
-			setbitn(M_TRYRULESET5, LocalMailer->m_flags);
-			setbitn(M_CHECKINCLUDE, LocalMailer->m_flags);
-			setbitn(M_CHECKPROG, LocalMailer->m_flags);
-			setbitn(M_CHECKFILE, LocalMailer->m_flags);
-			setbitn(M_CHECKUDB, LocalMailer->m_flags);
-		}
-		if (ProgMailer != NULL)
-			setbitn(M_RUNASRCPT, ProgMailer->m_flags);
-		if (FileMailer != NULL)
-			setbitn(M_RUNASRCPT, FileMailer->m_flags);
-	}
 
 	/* operate in queue directory */
 	if (OpMode != MD_TEST && chdir(QueueDir) < 0)
@@ -873,7 +830,27 @@ main(argc, argv, envp)
 
 			if (m == NULL)
 				continue;
-			printmailer(m);
+			printf("mailer %d (%s): P=%s S=%d/%d R=%d/%d M=%ld F=", i, m->m_name,
+				m->m_mailer, m->m_se_rwset, m->m_sh_rwset,
+				m->m_re_rwset, m->m_rh_rwset, m->m_maxsize);
+			for (j = '\0'; j <= '\177'; j++)
+				if (bitnset(j, m->m_flags))
+					(void) putchar(j);
+			printf(" E=");
+			xputs(m->m_eol);
+			if (m->m_argv != NULL)
+			{
+				char **a = m->m_argv;
+
+				printf(" A=");
+				while (*a != NULL)
+				{
+					if (a != m->m_argv)
+						printf(" ");
+					xputs(*a++);
+				}
+			}
+			printf("\n");
 		}
 	}
 
@@ -920,91 +897,13 @@ main(argc, argv, envp)
 			  case '#':
 				continue;
 
-			  case '?':		/* try crackaddr */
+#ifdef MAYBENEXTRELEASE
+			  case 'C':		/* try crackaddr */
 			  	q = crackaddr(&buf[1]);
 			  	xputs(q);
 			  	printf("\n");
 			  	continue;
-
-			  case '.':		/* config-style settings */
-				switch (buf[1])
-				{
-				  case 'D':
-					define(buf[2], newstr(&buf[3]), CurEnv);
-					break;
-
-				  case 'C':
-					setclass(buf[2], &buf[3]);
-					break;
-
-				  case 'S':		/* dump rule set */
-					{
-						int rs;
-						struct rewrite *rw;
-						char *cp;
-						STAB *s;
-
-						if ((cp = strchr(buf, '\n')) != NULL)
-							*cp = '\0';
-						if (cp == buf+2)
-							continue;
-						s = stab(buf+2, ST_RULESET, ST_FIND);
-						if (s == NULL)
-						{
-							if (!isdigit(buf[2]))
-								continue;
-							rs = atoi(buf+2);
-						}
-						else
-							rs = s->s_ruleset;
-						if (rs < 0 || rs > MAXRWSETS)
-							continue;
-						if ((rw = RewriteRules[rs]) == NULL)
-							continue;
-						do
-						{
-							char **s;
-							putchar('R');
-							s = rw->r_lhs;
-							while (*s != NULL)
-							{
-								xputs(*s++);
-								putchar(' ');
-							}
-							putchar('\t');
-							putchar('\t');
-							s = rw->r_rhs;
-							while (*s != NULL)
-							{
-								xputs(*s++);
-								putchar(' ');
-							}
-							putchar('\n');
-						} while (rw = rw->r_next);
-					}
-					break;
-
-				  default:
-					printf("Unknown config command %s", buf);
-					break;
-				}
-				continue;
-
-			  case '-':		/* set command-line-like opts */
-				switch (buf[1])
-				{
-				  case 'd':
-					if (buf[2] == '\n')
-						tTflag("");
-					else
-						tTflag(&buf[2]);
-					break;
-
-				  default:
-					printf("Unknown \"-\" command %s", buf);
-					break;
-				}
-				continue;
+#endif
 			}
 
 			for (p = buf; isascii(*p) && isspace(*p); p++)
@@ -1145,7 +1044,7 @@ main(argc, argv, envp)
 	else
 	{
 		/* interactive -- all errors are global */
-		CurEnv->e_flags |= EF_GLOBALERRS|EF_LOGSENDER;
+		CurEnv->e_flags |= EF_GLOBALERRS;
 	}
 
 	/*
@@ -1164,7 +1063,7 @@ main(argc, argv, envp)
 
 		/* collect body for UUCP return */
 		if (OpMode != MD_VERIFY)
-			collect(InChannel, FALSE, FALSE, NULL, CurEnv);
+			collect(FALSE, FALSE, CurEnv);
 		finis();
 	}
 
@@ -1186,7 +1085,7 @@ main(argc, argv, envp)
 	if (OpMode != MD_VERIFY || GrabTo)
 	{
 		CurEnv->e_flags |= EF_GLOBALERRS;
-		collect(InChannel, FALSE, FALSE, NULL, CurEnv);
+		collect(FALSE, FALSE, CurEnv);
 	}
 	errno = 0;
 
@@ -1227,11 +1126,10 @@ main(argc, argv, envp)
 **		exits sendmail
 */
 
-void
 finis()
 {
 	if (tTd(2, 1))
-		printf("\n====finis: stat %d e_flags %x, e_id=%s\n",
+		printf("\n====finis: stat %d e_flags %o, e_id=%s\n",
 			ExitStat, CurEnv->e_flags,
 			CurEnv->e_id == NULL ? "NOQUEUE" : CurEnv->e_id);
 	if (tTd(2, 9))
@@ -1395,6 +1293,7 @@ disconnect(droplev, e)
 	}
 
 	/* be sure we don't get nasty signals */
+	(void) setsignal(SIGHUP, SIG_IGN);
 	(void) setsignal(SIGINT, SIG_IGN);
 	(void) setsignal(SIGQUIT, SIG_IGN);
 
@@ -1520,7 +1419,7 @@ auth_warning(e, msg, va_alist)
 	{
 		register char *p;
 		static char hostbuf[48];
-		extern struct hostent *myhostname();
+		extern char **myhostname();
 
 		if (hostbuf[0] == '\0')
 			(void) myhostname(hostbuf, sizeof hostbuf);
@@ -1530,7 +1429,7 @@ auth_warning(e, msg, va_alist)
 		VA_START(msg);
 		vsprintf(p, msg, ap);
 		VA_END;
-		addheader("X-Authentication-Warning", buf, &e->e_header);
+		addheader("X-Authentication-Warning", buf, e);
 	}
 }
 /*
@@ -1545,13 +1444,15 @@ dumpstate(when)
 {
 #ifdef LOG
 	register char *j = macvalue('j', CurEnv);
+	register STAB *s;
 
 	syslog(LOG_DEBUG, "--- dumping state on %s: $j = %s ---",
 		when,
 		j == NULL ? "<NULL>" : j);
 	if (j != NULL)
 	{
-		if (!wordinclass(j, 'w'))
+		s = stab(j, ST_CLASS, ST_FIND);
+		if (s == NULL || !bitnset('w', s->s_class))
 			syslog(LOG_DEBUG, "*** $j not in $=w ***");
 	}
 	syslog(LOG_DEBUG, "--- open file descriptors: ---");
@@ -1580,20 +1481,4 @@ void
 sigusr1()
 {
 	dumpstate("user signal");
-}
-
-
-void
-sighup()
-{
-#ifdef LOG
-	if (LogLevel > 3)
-		syslog(LOG_INFO, "restarting %s on signal", SaveArgv[0]);
-#endif
-	execv(SaveArgv[0], SaveArgv);
-#ifdef LOG
-	if (LogLevel > 0)
-		syslog(LOG_ALERT, "could not exec %s: %m", SaveArgv[0]);
-#endif
-	exit(EX_OSFILE);
 }
