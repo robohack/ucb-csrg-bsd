@@ -1,5 +1,4 @@
-
-/* point.c -
+/* @(#)point.c	1.2	4/18/83
  *
  * Copyright -C- 1982 Barry S. Roitblat
  *
