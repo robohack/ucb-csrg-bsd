@@ -13,11 +13,12 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	5.29 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)main.c	5.30 (Berkeley) 6/29/90";
 #endif /* not lint */
 
 #define	_DEFINE
 
+#include <sys/param.h>
 #include <sys/file.h>
 #include <signal.h>
 #include <sgtty.h>
@@ -1043,10 +1044,13 @@ disconnect(fulldrop)
 	while ((fd = dup(fileno(CurEnv->e_xfp))) < 2 && fd > 0)
 		continue;
 
-#ifdef TIOCNOTTY
 	/* drop our controlling TTY completely if possible */
 	if (fulldrop)
 	{
+#if BSD > 43
+		daemon(1, 1);
+#else
+#ifdef TIOCNOTTY
 		fd = open("/dev/tty", 2);
 		if (fd >= 0)
 		{
@@ -1054,9 +1058,10 @@ disconnect(fulldrop)
 			(void) close(fd);
 		}
 		(void) setpgrp(0, 0);
+#endif /* TIOCNOTTY */
+#endif /* BSD */
 		errno = 0;
 	}
-#endif TIOCNOTTY
 
 # ifdef LOG
 	if (LogLevel > 11)
