@@ -16,10 +16,10 @@
  */
 
 #if defined(SYSLIBC_SCCS) && !defined(lint)
-	.asciz "@(#)quotactl.s	5.5 (Berkeley) 6/27/88"
+	.asciz "@(#)quotactl.s	5.6 (Berkeley) 4/27/90"
 #endif /* SYSLIBC_SCCS and not lint */
 
 #include "SYS.h"
 
-SYSCALL(quota)
+SYSCALL(quotactl)
 	ret
