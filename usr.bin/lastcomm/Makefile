@@ -1,8 +1,5 @@
-#	@(#)Makefile	5.6 (Berkeley) 4/27/93
+#	@(#)Makefile	5.7 (Berkeley) 6/2/93
 
 PROG=	lastcomm
-SRCS=	devname.c lastcomm.c
-
-.PATH: ${.CURDIR}/../../bin/ps
 
 .include <bsd.prog.mk>
