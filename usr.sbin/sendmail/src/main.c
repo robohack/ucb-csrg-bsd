@@ -7,7 +7,7 @@
 # include <syslog.h>
 # endif LOG
 
-SCCSID(@(#)main.c	3.78		5/31/82);
+SCCSID(@(#)main.c	3.78.1.1		6/6/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -656,6 +656,11 @@ setfrom(from, realname)
 		printf("setfrom(%s, %s)\n", from, realname);
 # endif DEBUG
 
+	/*
+	**  Do validation to determine whether this user is allowed
+	**  to change the sender name.
+	*/
+
 	if (from != NULL)
 	{
 		if (strcmp(realname, "network") != 0 &&
@@ -672,6 +677,12 @@ setfrom(from, realname)
 		}
 	}
 
+	/*
+	**  Parse the sender name.
+	**	Arrange to send return messages to the same person.
+	**	Set up some environment info.
+	*/
+
 	SuprErrs = TRUE;
 	if (from == NULL || parse(from, &CurEnv->e_from, 1) == NULL)
 	{
@@ -680,6 +691,7 @@ setfrom(from, realname)
 	}
 	else
 		FromFlag = TRUE;
+	CurEnv->e_returnto = &CurEnv->e_from;
 	SuprErrs = FALSE;
 	CurEnv->e_from.q_uid = getuid();
 	CurEnv->e_from.q_gid = getgid();
