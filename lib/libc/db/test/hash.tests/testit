@@ -1,6 +1,6 @@
 #!/bin/csh -f
 #
-#	@(#)testit	5.2 (Berkeley) 6/4/93
+#	@(#)testit	8.1 (Berkeley) 6/4/93
 #
 
 echo ""
