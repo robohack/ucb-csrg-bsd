@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.1 (Berkeley) 5/8/91
+#	@(#)Makefile	8.1 (Berkeley) 6/11/93
 
 LIB=	smsa
 CFLAGS=	-DSMALL
