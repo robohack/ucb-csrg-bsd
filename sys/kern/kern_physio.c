@@ -1,4 +1,4 @@
-/*	kern_physio.c	3.4	11/15/19	*/
+/*	kern_physio.c	3.5	11/15/19	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
@@ -642,7 +642,7 @@ swkill(p, rout)
 	 * done by user) after killing it so noone will try
 	 * to swap it out.
 	 */
-	psignal(p, SIGKIL);
+	psignal(p, SIGKILL);
 	p->p_flag |= SULOCK;
 }
 
