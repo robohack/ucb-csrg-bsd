@@ -1,8 +1,14 @@
-static	char *sccsid = "@(#)dumpfs.c	1.11 (Berkeley) 2/25/82";
+static	char *sccsid = "@(#)dumpfs.c	2.1 (Berkeley) 4/8/82";
 
+#ifndef SIMFS
+#include <sys/param.h>
+#include <sys/inode.h>
+#include <sys/fs.h>
+#else
 #include "../h/param.h"
-#include "../h/fs.h"
 #include "../h/inode.h"
+#include "../h/fs.h"
+#endif
 
 /*
  * dumpfs
