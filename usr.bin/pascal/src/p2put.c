@@ -1,7 +1,7 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
 #ifndef lint
-static	char sccsid[] = "@(#)p2put.c 1.15 2/7/84";
+static	char sccsid[] = "@(#)p2put.c 1.16 2/8/84";
 #endif
 
     /*
@@ -451,6 +451,7 @@ typerecur( np , quals )
 	switch ( np -> class ) {
 	    case SCAL :
 	    case RANGE :
+	    case CRANGE :
 		if ( np -> type == ( nl + TDOUBLE ) ) {
 		    return P2DOUBLE;
 		}
