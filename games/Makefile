@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.23 (Berkeley) 5/30/93
+#	@(#)Makefile	8.1 (Berkeley) 5/31/93
 
 SUBDIR=	adventure arithmetic atc backgammon battlestar bcd boggle caesar \
 	canfield chess ching cribbage dm factor fish fortune hack hangman \
