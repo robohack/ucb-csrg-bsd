@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)collect.c	6.17 (Berkeley) 5/27/93";
+static char sccsid[] = "@(#)collect.c	6.18 (Berkeley) 5/27/93";
 #endif /* not lint */
 
 # include <errno.h>
@@ -444,7 +444,7 @@ eatfrom(fm, e)
 			break;
 	}
 
-	if (*p != NULL)
+	if (*p != '\0')
 	{
 		char *q;
 		extern char *arpadate();
