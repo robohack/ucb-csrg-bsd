@@ -3,7 +3,7 @@
 # include <sgtty.h>
 # include "sendmail.h"
 
-SCCSID(@(#)main.c	4.13		8/11/84);
+SCCSID(@(#)main.c	4.14		8/11/84);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -472,7 +472,6 @@ main(argc, argv, envp)
 		{
 			register char **pvp;
 			char *q;
-			extern char **prescan();
 			extern char *DelimChar;
 
 			printf("> ");
@@ -489,7 +488,10 @@ main(argc, argv, envp)
 			*p = '\0';
 			do
 			{
-				pvp = prescan(++p, ',');
+				extern char **prescan();
+				char pvpbuf[PSBUFSIZE];
+
+				pvp = prescan(++p, ',', pvpbuf);
 				if (pvp == NULL)
 					continue;
 				rewrite(pvp, 3);
@@ -725,7 +727,7 @@ struct metamac	MetaMacros[] =
 	'?', CONDIF,	'|', CONDELSE,	'.', CONDFI,
 
 	/* and finally the hostname lookup characters */
-	'{', HOSTBEGIN,	'}', HOSTEND,
+	'[', HOSTBEGIN,	']', HOSTEND,
 
 	'\0'
 };
