@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)syslog.h	7.18 (Berkeley) 2/22/91
+ *	@(#)syslog.h	7.19 (Berkeley) 2/22/91
  */
 
 #define	_PATH_LOG	"/dev/log"
@@ -139,7 +139,7 @@ CODE facilitynames[] = {
 #ifndef KERNEL
 
 #include <sys/cdefs.h>
-#include <varargs.h>
+#include <stdarg.h>
 
 __BEGIN_DECLS
 void	closelog __P((void));
