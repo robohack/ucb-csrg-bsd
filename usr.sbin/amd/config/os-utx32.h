@@ -13,7 +13,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)os-utx32.h	5.2 (Berkeley) 3/17/91
+ *	@(#)os-utx32.h	5.3 (Berkeley) 5/12/91
  */
 
 /*
