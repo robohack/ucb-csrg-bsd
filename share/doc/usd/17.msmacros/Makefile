@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.3 (Berkeley) 8/3/93
+#	@(#)Makefile	8.1 (Berkeley) 8/14/93
 
 DIR=	usd/17.msmacros
 SRCS=	ms

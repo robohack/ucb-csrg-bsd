@@ -1,9 +1,9 @@
-.\" Copyright (c) 1986, 1993 The Regents of the University of California.
-.\" All rights reserved.
+.\" Copyright (c) 1986, 1993
+.\"	The Regents of the University of California.  All rights reserved.
 .\"
 .\" %sccs.include.redist.roff%
 .\"
-.\"	@(#)1.t	5.2 (Berkeley) 5/14/93
+.\"	@(#)1.t	8.1 (Berkeley) 8/14/93
 .\"
 .\".ds LH "4.4BSD IPC Primer
 .\".ds RH Introduction
