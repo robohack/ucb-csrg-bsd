@@ -9,9 +9,9 @@
  *
  * %sccs.include.redist.c%
  *
- * from: Utah $Hdr: rdreg.h 1.14 89/02/27$
+ * from: Utah $Hdr: rdreg.h 1.1 90/07/09$
  *
- *	@(#)rdreg.h	7.1 (Berkeley) 5/8/90
+ *	@(#)rdreg.h	7.2 (Berkeley) 11/4/90
  */
 
 struct	rd_iocmd {
