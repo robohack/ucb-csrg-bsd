@@ -5,7 +5,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)inet_netof.c	5.2 (Berkeley) 3/9/86";
+static char sccsid[] = "@(#)inet_netof.c	5.3 (Berkeley) 10/1/87";
 #endif LIBC_SCCS and not lint
 
 #include <sys/types.h>
@@ -15,6 +15,7 @@ static char sccsid[] = "@(#)inet_netof.c	5.2 (Berkeley) 3/9/86";
  * Return the network number from an internet
  * address; handles class a/b/c network #'s.
  */
+u_long
 inet_netof(in)
 	struct in_addr in;
 {
