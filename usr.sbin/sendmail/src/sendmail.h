@@ -5,7 +5,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)sendmail.h	6.26 (Berkeley) 3/1/93
+ *	@(#)sendmail.h	6.27 (Berkeley) 3/7/93
  */
 
 /*
@@ -15,7 +15,7 @@
 # ifdef _DEFINE
 # define EXTERN
 # ifndef lint
-static char SmailSccsId[] =	"@(#)sendmail.h	6.26		3/1/93";
+static char SmailSccsId[] =	"@(#)sendmail.h	6.27		3/7/93";
 # endif lint
 # else /*  _DEFINE */
 # define EXTERN extern
@@ -727,3 +727,4 @@ extern EVENT	*setevent();
 extern char	*sfgets();
 extern char	*queuename();
 extern time_t	curtime();
+extern bool	transienterror();
