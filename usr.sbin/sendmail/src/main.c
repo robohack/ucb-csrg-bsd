@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.130		11/5/82);
+SCCSID(@(#)main.c	3.131		11/7/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -1070,7 +1070,7 @@ initsys()
 	**	tucked away in the transcript).
 	*/
 
-	if ((Mode == MD_DAEMON && QueueRun) || HoldErrs)
+	if (Mode == MD_DAEMON && QueueRun)
 		OutChannel = Xscript;
 
 	/*
