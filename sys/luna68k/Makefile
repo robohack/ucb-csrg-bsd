@@ -1,4 +1,4 @@
-#	@(#)Makefile	7.2 (Berkeley) 6/11/93
+#	@(#)Makefile	8.1 (Berkeley) 6/11/93
 
 # Makefile for luna68k links, tags file
 
