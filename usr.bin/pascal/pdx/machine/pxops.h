@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)pxops.h	5.1 (Berkeley) 6/7/85
+ *	@(#)pxops.h	5.2 (Berkeley) 6/29/90
  */
 
 /*
@@ -12,4 +12,4 @@
 
 typedef unsigned char PXOP;
 
-#include "../px/h02opcs.h"		/* opcode defines */
+#include "h02opcs.h"		/* opcode defines */
