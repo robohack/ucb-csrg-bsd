@@ -1,4 +1,4 @@
-/*	@(#)if_hdh.c	7.5 (Berkeley) 5/26/88 */
+/*	@(#)if_hdh.c	7.6 (Berkeley) 4/25/89 */
 
 
 /************************************************************************\
@@ -71,7 +71,7 @@ Revision History:
 #include "socket.h"
 #include "vmmac.h"
 
-#include "../machine/pte.h"
+#include "machine/pte.h"
 
 #include "../net/if.h"
 #include "../netimp/if_imp.h"

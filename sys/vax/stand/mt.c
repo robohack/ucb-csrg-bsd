@@ -3,14 +3,14 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)mt.c	7.3 (Berkeley) 2/22/88
+ *	@(#)mt.c	7.4 (Berkeley) 4/25/89
  */
 
 /*
  * TM78/TU78 tape driver
  * Made to work reliably by by Jeffrey R. Schwab (Purdue)
  */
-#include "../machine/pte.h"
+#include "machine/pte.h"
 
 #include "param.h"
 #include "inode.h"

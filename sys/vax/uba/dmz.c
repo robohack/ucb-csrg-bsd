@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)dmz.c	7.4 (Berkeley) 1/24/89
+ *	@(#)dmz.c	7.5 (Berkeley) 4/25/89
  */
 
 /*
@@ -13,7 +13,7 @@
 #include "dmz.h"
 #if NDMZ > 0
 
-#include "../machine/pte.h"
+#include "machine/pte.h"
 
 #include "bk.h"
 #include "uba.h"

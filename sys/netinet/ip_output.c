@@ -14,7 +14,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)ip_output.c	7.14 (Berkeley) 4/8/89
+ *	@(#)ip_output.c	7.15 (Berkeley) 4/25/89
  */
 
 #include "param.h"
@@ -36,7 +36,7 @@
 #include "ip_var.h"
 
 #ifdef vax
-#include "../machine/mtpr.h"
+#include "machine/mtpr.h"
 #endif
 
 struct mbuf *ip_insertoptions();
