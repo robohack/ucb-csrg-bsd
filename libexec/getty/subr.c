@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)subr.c	5.7 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)subr.c	5.8 (Berkeley) 2/25/91";
 #endif /* not lint */
 
 /*
@@ -14,6 +14,8 @@ static char sccsid[] = "@(#)subr.c	5.7 (Berkeley) 6/1/90";
  */
 #define USE_OLD_TTY
 #include <sgtty.h>
+#include <unistd.h>
+#include <string.h>
 #include "gettytab.h"
 
 extern	struct sgttyb tmode;
