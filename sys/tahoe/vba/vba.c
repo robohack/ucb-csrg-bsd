@@ -3,15 +3,12 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)vba.c	1.11.1.1 (Berkeley) 11/24/87
+ *	@(#)vba.c	1.12 (Berkeley) 5/14/88
  */
 
 /*
  * Tahoe VERSAbus adapator support routines.
  */
-
-#include "../tahoe/mtpr.h"
-#include "../tahoe/pte.h"
 
 #include "param.h"
 #include "buf.h"
@@ -26,10 +23,12 @@
 #include "vmmac.h"
 #include "proc.h"
 #include "syslog.h"
+#include "malloc.h"
+
+#include "../tahoe/mtpr.h"
+#include "../tahoe/pte.h"
 
 #include "../tahoevba/vbavar.h"
-
-#define	kvtopte(v) (&Sysmap[btop((int)(v) &~ KERNBASE)])
 
 /*
  * Allocate private page map and intermediate buffer
@@ -52,7 +51,7 @@ vbainit(vb, xsize, flags)
 	n = roundup(xsize, NBPG);
 	vb->vb_bufsize = n;
 	if (vb->vb_rawbuf == 0)
-		vb->vb_rawbuf = calloc(n);
+		vb->vb_rawbuf = (caddr_t)malloc(n, M_DEVBUF, M_NOWAIT);
 	if (vb->vb_rawbuf == 0) {
 		printf("no memory for device buffer\n");
 		return (0);
