@@ -11,7 +11,7 @@ char copyright[] =
 #endif not lint
 
 #ifndef lint
-static char sccsid[] = "@(#)ranlib.c	5.1 (Berkeley) 6/6/85";
+static char sccsid[] = "@(#)ranlib.c	5.2 (Berkeley) 9/5/85";
 #endif not lint
 
 /*
@@ -91,7 +91,7 @@ char **argv;
 				continue;
 			}
 			fclose(fi);
-			fixdate(*++argv);
+			fixdate(*argv);
 			continue;
 		}
 		fseek(fi, 0L, 0);
