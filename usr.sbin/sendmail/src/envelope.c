@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)envelope.c	8.27 (Berkeley) 1/8/94";
+static char sccsid[] = "@(#)envelope.c	8.28 (Berkeley) 1/9/94";
 #endif /* not lint */
 
 #include "sendmail.h"
@@ -731,7 +731,7 @@ setsender(from, e, delimptr, internal)
 	define('f', e->e_sender, e);
 
 	/* save the domain spec if this mailer wants it */
-	if (!internal && e->e_from.q_mailer != NULL &&
+	if (e->e_from.q_mailer != NULL &&
 	    bitnset(M_CANONICAL, e->e_from.q_mailer->m_flags))
 	{
 		extern char **copyplist();
