@@ -1,5 +1,5 @@
 #ifndef lint
-static char *sccsid ="@(#)allo.c	4.5 (Berkeley) 3/19/85";
+static char *sccsid ="@(#)allo.c	4.6 (Berkeley) 4/2/85";
 #endif lint
 
 # include "pass2.h"
@@ -31,8 +31,6 @@ allo0(){ /* free everything */
 		}
 	}
 # endif
-
-# define TBUSY 01000
 
 # ifndef ALLO
 allo( p, q ) NODE *p; struct optab *q; {
