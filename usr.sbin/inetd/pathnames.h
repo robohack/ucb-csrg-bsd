@@ -14,7 +14,9 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)pathnames.h	5.1 (Berkeley) 4/2/89
+ *	@(#)pathnames.h	5.2 (Berkeley) 5/11/89
  */
+
+#include <paths.h>
 
 #define	_PATH_INETDCONF	"/etc/inetd.conf"
