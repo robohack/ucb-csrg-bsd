@@ -17,7 +17,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)quota.h	7.4 (Berkeley) 5/2/90
+ *	@(#)quota.h	7.5 (Berkeley) 5/6/90
  */
 
 /*
@@ -55,6 +55,7 @@
 #ifndef KERNEL
 char *qfname = "quota";
 char *qfextension[] = INITQFNAMES;
+char *quotagroup = "operator";
 #endif
 
 /*
