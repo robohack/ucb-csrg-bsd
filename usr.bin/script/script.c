@@ -1,4 +1,4 @@
-static char *sccsid = "@(#)script.c	4.1 (Berkeley) 10/1/80";
+static char *sccsid = "@(#)script.c	4.2 (Berkeley) 3/26/82";
  /*
   * script - makes copy of terminal conversation. usage:
   *
