@@ -1,4 +1,4 @@
-.\"	@(#)lint.ms	4.1 (Berkeley) 5/7/86
+.\"	@(#)lint.ms	5.1 (Berkeley) 5/7/86
 .\"
 .RP
 .ND "July 26, 1978"
