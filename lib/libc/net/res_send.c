@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)res_send.c	4.1 (Berkeley) 3/1/85";
+static char sccsid[] = "@(#)res_send.c	4.2 (Berkeley) 3/27/85";
 #endif
 
 /*
@@ -143,12 +143,7 @@ sendquery(buf, buflen, answer, anslen)
 				 * response from old query, ignore it
 				 */
 				if (_res.options & RES_DEBUG) {
-					int f;
-
 					printf("old answer:\n");
-					f = creat("ro", 0644);
-					write(f, answer, resplen);
-					close(f);
 					p_query(answer);
 				}
 				continue;
