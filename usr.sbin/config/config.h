@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)config.h	5.12 (Berkeley) 2/6/91
+ *	@(#)config.h	5.13 (Berkeley) 5/24/91
  */
 
 /*
@@ -161,7 +161,7 @@ int	yyline;
 
 struct	file_list *ftab, *conf_list, **confp;
 
-int	timezone, hadtz;
+int	zone, hadtz;
 int	dst;
 int	profiling;
 int	debugging;
