@@ -5,7 +5,7 @@
  */
 
 #ifndef lint
-static char *sccsid = "@(#)ex_tty.c	7.12 (Berkeley) 1/2/88";
+static char *sccsid = "@(#)ex_tty.c	7.13 (Berkeley) 5/19/89";
 #endif not lint
 
 #include "ex.h"
@@ -22,7 +22,7 @@ gettmode()
 {
 
 #ifndef USG3TTY
-	if (gtty(1, &tty) < 0)
+	if (ioctl(1, TIOCGETP, &tty) < 0)
 		return;
 	if (ospeed != tty.sg_ospeed)
 		value(SLOWOPEN) = tty.sg_ospeed < B1200;
