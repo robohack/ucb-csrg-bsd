@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.75 (Berkeley) 1/7/95";
+static char sccsid[] = "@(#)main.c	8.76 (Berkeley) 1/24/95";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -1506,15 +1506,13 @@ dumpstate(when)
 {
 #ifdef LOG
 	register char *j = macvalue('j', CurEnv);
-	register STAB *s;
 
 	syslog(LOG_DEBUG, "--- dumping state on %s: $j = %s ---",
 		when,
 		j == NULL ? "<NULL>" : j);
 	if (j != NULL)
 	{
-		s = stab(j, ST_CLASS, ST_FIND);
-		if (s == NULL || !bitnset('w', s->s_class))
+		if (!wordinclass(j, 'w'))
 			syslog(LOG_DEBUG, "*** $j not in $=w ***");
 	}
 	syslog(LOG_DEBUG, "--- open file descriptors: ---");
