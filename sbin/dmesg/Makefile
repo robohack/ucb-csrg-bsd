@@ -1,6 +1,7 @@
-#	@(#)Makefile	5.4 (Berkeley) 5/11/90
+#	@(#)Makefile	5.5 (Berkeley) 7/25/90
 
 PROG=	dmesg
+MAN8=	dmesg.0
 BINGRP=	kmem
 BINMODE=2555
 
