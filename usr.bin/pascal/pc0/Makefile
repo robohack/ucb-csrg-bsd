@@ -1,4 +1,4 @@
-SCCSID = "@(#)Makefile 1.44 4/7/83"
+SCCSID = "@(#)Makefile 1.45 4/16/83"
 
 INSTALLDIR = $(DESTDIR)/usr/lib
 INSTALLNAME = ${INSTALLDIR}/pc0
@@ -6,7 +6,7 @@ BINDIR = ../pc0
 SRCDIR = ../src
 WHOAMI = pc
 VERSION = 2.13
-DATE = 4/7/83
+DATE = 4/16/83
 
 MKSTR = /usr/ucb/mkstr
 EYACC = /usr/ucb/eyacc
@@ -113,8 +113,8 @@ clean:
 
 install: a.out
 	${RM} ${LIBDIR}/${OLDSTRINGS}
-	install -c ${ERRORSTRINGS} ${LIBDIR}/${ERRORSTRINGS}
-	install -c a.out ${INSTALLNAME}
+	install -c -m 664 ${ERRORSTRINGS} ${LIBDIR}/${ERRORSTRINGS}
+	install -c -m 775 a.out ${INSTALLNAME}
 
 depend:
 	ls ${SRCDIR}/*.c | sed \
