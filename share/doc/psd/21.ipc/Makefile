@@ -1,6 +1,6 @@
-#	@(#)Makefile	1.5 (Berkeley) 6/5/93
+#	@(#)Makefile	1.6 (Berkeley) 6/8/93
 
-DIR=	psd/20.ipc
+DIR=	psd/21.ipc
 SRCS=	0.t 1.t 2.t 3.t 4.t 5.t
 MACROS=	-ms
 
