@@ -7,8 +7,11 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)quota.h	7.6 (Berkeley) 6/28/90
+ *	@(#)quota.h	7.7 (Berkeley) 9/11/90
  */
+
+#ifndef _QUOTA_
+#define _QUOTA_
 
 /*
  * Definitions for disk quotas imposed on the average user
@@ -144,3 +147,4 @@ struct	dquot {
 #define	DQREF(dq)	dqref(dq)
 #endif /* DIAGNOSTIC */
 #endif /* KERNEL */
+#endif /* _QUOTA_ */
