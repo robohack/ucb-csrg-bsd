@@ -9,7 +9,7 @@
  * software without specific prior written permission. This software
  * is provided ``as is'' without express or implied warranty.
  *
- *      @(#)ns_cksum.c	1.3 (Berkeley) 3/2/88
+ *      @(#)ns_cksum.c	7.1 (Berkeley) 5/21/88
  */
 #include "types.h"
 #include "mbuf.h"
