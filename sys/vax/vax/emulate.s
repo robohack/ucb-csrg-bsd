@@ -1,5 +1,5 @@
 /*
- *	@(#)emulate.s	6.2 (Berkeley) 5/30/86
+ *	@(#)emulate.s	7.1 (Berkeley) 6/5/86
  */
 
 #ifdef VAX630

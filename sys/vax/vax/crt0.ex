@@ -2,4 +2,4 @@
 ?	.word	?d
 w
 q
-"	@(#)crt0.ex	4.2 (Berkeley) 6/8/85	"
+"	@(#)crt0.ex	7.1 (Berkeley) 6/5/86	"

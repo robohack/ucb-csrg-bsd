@@ -1,5 +1,5 @@
 /*
- *	@(#)ka630.c	6.1 (Berkeley) 4/22/86
+ *	@(#)ka630.c	7.1 (Berkeley) 6/5/86
  */
 #if defined(VAX630)
 /* ka630.c routines for the ka630 clock chip... */

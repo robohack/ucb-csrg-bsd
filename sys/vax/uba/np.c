@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)np.c	6.2 (Berkeley) 2/20/86
+ *	@(#)np.c	7.1 (Berkeley) 6/5/86
  */
 
 		/******************************************

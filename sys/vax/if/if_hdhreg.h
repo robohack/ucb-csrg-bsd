@@ -1,4 +1,4 @@
-/*	@(#)if_hdhreg.h	6.3 (Berkeley) 2/20/86 */
+/*	@(#)if_hdhreg.h	7.1 (Berkeley) 6/5/86 */
 
 
 /* $Header$ */

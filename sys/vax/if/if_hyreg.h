@@ -1,5 +1,5 @@
 /*
- *	@(#)if_hyreg.h	6.4 (Berkeley) 8/28/85
+ *	@(#)if_hyreg.h	7.1 (Berkeley) 6/5/86
  *
  * $Header: if_hyreg.h,v 10.0 84/06/30 19:51:34 steveg Stable $
  * $Locker:  $

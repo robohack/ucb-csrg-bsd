@@ -1,5 +1,5 @@
 /*
- *	@(#)urem.s	6.3 (Berkeley) 6/8/85
+ *	@(#)urem.s	7.1 (Berkeley) 6/5/86
  *
  *	urem - unsigned remainder for vax-11
  *

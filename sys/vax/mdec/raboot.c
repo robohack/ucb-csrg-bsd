@@ -4,7 +4,7 @@
  * specifies the terms and conditions for redistribution.
  */
 
-/* "@(#)raboot.c	6.4 (Berkeley) 3/17/86" */
+/* "@(#)raboot.c	7.1 (Berkeley) 6/5/86" */
 
 	.set	MAJOR,9			/* major("/dev/ra0a") */
 
