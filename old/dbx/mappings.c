@@ -2,6 +2,8 @@
 
 static char sccsid[] = "@(#)mappings.c 1.4 8/10/83";
 
+static char rcsid[] = "$Header: mappings.c,v 1.3 84/03/27 10:21:54 linton Exp $";
+
 /*
  * Source-to-object and vice versa mappings.
  */

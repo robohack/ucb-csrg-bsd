@@ -2,6 +2,8 @@
 
 static char sccsid[] = "@(#)names.c 1.3 2/16/83";
 
+static char rcsid[] = "$Header: names.c,v 1.3 84/03/27 10:22:19 linton Exp $";
+
 /*
  * Name are the internal representation for identifiers.
  *
