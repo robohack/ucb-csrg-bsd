@@ -1,10 +1,10 @@
-SCCSID = "@(#)Makefile 1.30 7/26/82"
+SCCSID = "@(#)Makefile 1.31 7/29/82"
 
 INSTALLDIR = $(DESTDIR)/usr/lib
 INSTALLNAME = ${INSTALLDIR}/pc0
 WHOAMI = pc
-VERSION = 2.5
-DATE = 7/26/82
+VERSION = 2.6
+DATE = 7/29/82
 
 MKSTR = /usr/ucb/mkstr
 EYACC = /usr/ucb/eyacc
