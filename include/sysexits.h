@@ -53,7 +53,7 @@
 **	Maintained by Eric Allman (eric@berkeley, ucbvax!eric) --
 **		please mail changes to me.
 **
-**			@(#)sysexits.h	3.1		8/29/82
+**			@(#)sysexits.h	4.1		7/25/83
 */
 
 # define EX_OK		0	/* successful termination */

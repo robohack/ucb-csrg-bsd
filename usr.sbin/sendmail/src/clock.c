@@ -1,7 +1,7 @@
 # include "sendmail.h"
 # include <signal.h>
 
-SCCSID(@(#)clock.c	3.15		5/21/83);
+SCCSID(@(#)clock.c	4.1		7/25/83);
 
 /*
 **  SETEVENT -- set an event to happen at a specific time.

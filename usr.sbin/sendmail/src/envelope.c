@@ -3,7 +3,7 @@
 #include "sendmail.h"
 #include <sys/stat.h>
 
-SCCSID(@(#)envelope.c	3.16		7/1/83);
+SCCSID(@(#)envelope.c	4.1		7/25/83);
 
 /*
 **  NEWENVELOPE -- allocate a new envelope

@@ -6,7 +6,7 @@
 # endif
 # include "useful.h"
 
-SCCSID(@(#)arpadate.c	3.13		7/13/83);
+SCCSID(@(#)arpadate.c	4.1		7/25/83);
 
 /*
 **  ARPADATE -- Create date in ARPANET format

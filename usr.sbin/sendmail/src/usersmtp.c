@@ -3,10 +3,10 @@
 # include "sendmail.h"
 
 # ifndef SMTP
-SCCSID(@(#)usersmtp.c	3.43		3/26/83	(no SMTP));
+SCCSID(@(#)usersmtp.c	4.1		7/25/83	(no SMTP));
 # else SMTP
 
-SCCSID(@(#)usersmtp.c	3.43		3/26/83);
+SCCSID(@(#)usersmtp.c	4.1		7/25/83);
 
 
 

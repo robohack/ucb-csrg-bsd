@@ -2,7 +2,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)recipient.c	3.54		5/21/83);
+SCCSID(@(#)recipient.c	4.1		7/25/83);
 
 /*
 **  SENDTOLIST -- Designate a send list.

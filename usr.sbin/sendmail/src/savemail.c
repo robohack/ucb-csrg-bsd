@@ -1,7 +1,7 @@
 # include <pwd.h>
 # include "sendmail.h"
 
-SCCSID(@(#)savemail.c	3.60		3/8/83);
+SCCSID(@(#)savemail.c	4.1		7/25/83);
 
 /*
 **  SAVEMAIL -- Save mail on error

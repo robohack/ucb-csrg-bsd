@@ -1,6 +1,6 @@
 # include "sendmail.h"
 
-SCCSID(@(#)parseaddr.c	3.81		3/26/83);
+SCCSID(@(#)parseaddr.c	4.1		7/25/83);
 
 /*
 **  PARSEADDR -- Parse an address

@@ -1,7 +1,7 @@
 # include <ctype.h>
 # include "sendmail.h"
 
-SCCSID(@(#)trace.c	3.1		8/8/82);
+SCCSID(@(#)trace.c	4.1		7/25/83);
 
 /*
 **  TtSETUP -- set up for trace package.
