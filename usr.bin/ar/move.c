@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 1990, 1993
+ * Copyright (c) 1990, 1993, 1994
  *	The Regents of the University of California.  All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)move.c	8.2 (Berkeley) 4/1/94";
+static char sccsid[] = "@(#)move.c	8.3 (Berkeley) 4/2/94";
 #endif /* not lint */
 
 #include <sys/param.h>
