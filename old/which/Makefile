@@ -1,10 +1,6 @@
-#	@(#)Makefile	5.4 (Berkeley) 5/24/90
+#	@(#)Makefile	5.5 (Berkeley) 7/1/90
 
 MAN1=	which.0
-
-all which: ${MAN1}
-
-clean cleandir depend lint tags:
 
 beforeinstall:
 	install -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
