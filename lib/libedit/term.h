@@ -1,13 +1,13 @@
 /*-
- * Copyright (c) 1992 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1992, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
  * Christos Zoulas of Cornell University.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)term.h	5.4 (Berkeley) 7/16/92
+ *	@(#)term.h	8.1 (Berkeley) 6/4/93
  */
 
 /*
