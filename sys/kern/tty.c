@@ -5,7 +5,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)tty.c	7.45 (Berkeley) 8/2/91
+ *	@(#)tty.c	7.46 (Berkeley) 9/5/91
  */
 
 #include "param.h"
@@ -944,6 +944,10 @@ parmrk:
 			c = unputc(&tp->t_rawq);
 			if (c == -1)
 				goto endcase;
+			if (c == ' ' || c == '\t') {
+				putc(c, &tp->t_rawq);
+				goto endcase;
+			}
 			ctype = ISALPHA(c);
 			/*
 			 * erase rest of word
