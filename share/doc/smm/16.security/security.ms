@@ -1,4 +1,4 @@
-.\"	@(#)security.ms	4.1 (Berkeley) 5/13/86
+.\"	@(#)security.ms	5.1 (Berkeley) 5/13/86
 .\"
 .ND June 10, 1977
 .TL
