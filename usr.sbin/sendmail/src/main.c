@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	5.30 (Berkeley) 6/29/90";
+static char sccsid[] = "@(#)main.c	5.31 (Berkeley) 7/20/90";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -67,7 +67,7 @@ char		*FullName;	/* sender's full name */
 ENVELOPE	BlankEnvelope;	/* a "blank" envelope */
 ENVELOPE	MainEnvelope;	/* the envelope around the basic letter */
 ADDRESS		NullAddress =	/* a null address */
-		{ "", "", "" };
+		{ "", "", NULL, "" };
 
 /*
 **  Pointers for setproctitle.
