@@ -11,9 +11,9 @@
 #include "SYS.h"
 
 #if defined(LIBC_SCCS) && !defined(lint)
-	ASMSTR("@(#)syscall.s	5.1 (Berkeley) 2/29/92")
+	ASMSTR("@(#)syscall.s	5.2 (Berkeley) 2/4/93")
 #endif /* LIBC_SCCS and not lint */
 
 #define SYS_syscall	0
 
-SYSCALL(syscall)
+RSYSCALL(syscall)
