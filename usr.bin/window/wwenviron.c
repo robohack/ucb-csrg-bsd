@@ -16,10 +16,13 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)wwenviron.c	3.23 (Berkeley) 9/24/89";
+static char sccsid[] = "@(#)wwenviron.c	3.24 (Berkeley) 6/2/90";
 #endif /* not lint */
 
 #include "ww.h"
+#ifdef POSIX_TTY
+#include <sys/ioctl.h>
+#endif
 #include <sys/signal.h>
 
 /*
