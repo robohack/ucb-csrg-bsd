@@ -4,10 +4,10 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)prf.c	7.1 (Berkeley) 5/8/90
+ *	@(#)prf.c	7.2 (Berkeley) 6/24/90
  */
 
-#include "../h/param.h"
+#include "param.h"
 
 /*
  * Scaled down version of C Library printf.
