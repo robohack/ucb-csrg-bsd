@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)exec.c	8.1 (Berkeley) 5/31/93";
+static char sccsid[] = "@(#)exec.c	8.2 (Berkeley) 4/28/95";
 #endif /* not lint */
 
 /*
@@ -258,7 +258,7 @@ padvance(path, name)
 		growstackblock();
 	q = stackblock();
 	if (p != start) {
-		bcopy(start, q, p - start);
+		memmove(q, start, p - start);
 		q += p - start;
 		*q++ = '/';
 	}
