@@ -1,7 +1,6 @@
-#	@(#)Makefile	8.1 (Berkeley) 6/2/93
+#	@(#)Makefile	8.2 (Berkeley) 4/1/94
 
 PROG=	df
-CFLAGS+=-DCOMPAT_43
 BINGRP=	operator
 BINMODE=2555
 
