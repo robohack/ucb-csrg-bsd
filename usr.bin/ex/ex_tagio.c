@@ -9,7 +9,7 @@
 
 #ifdef FASTTAG
 #ifndef lint
-static char *sccsid = "@(#)ex_tagio.c	7.1	5/31/85";
+static char *sccsid = "@(#)ex_tagio.c	7.2 (Berkeley) 6/7/85";
 #endif
 
 #include <sys/file.h>
