@@ -9,13 +9,11 @@
 */
 
 #ifndef lint
-static char	SccsId[] = "@(#)savemail.c	5.1 (Berkeley) 6/7/85";
+static char	SccsId[] = "@(#)savemail.c	5.2 (Berkeley) 6/7/85";
 #endif not lint
 
 # include <pwd.h>
 # include "sendmail.h"
-
-SCCSID(@(#)savemail.c	5.1		6/7/85);
 
 /*
 **  SAVEMAIL -- Save mail on error
