@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.123 (Berkeley) 6/10/95";
+static char sccsid[] = "@(#)main.c	8.124 (Berkeley) 6/10/95";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -1581,6 +1581,7 @@ dumpstate(when)
 		if (!wordinclass(j, 'w'))
 			syslog(LOG_DEBUG, "*** $j not in $=w ***");
 	}
+	syslog(LOG_DEBUG, "CurChildren = %d", CurChildren);
 	syslog(LOG_DEBUG, "--- open file descriptors: ---");
 	printopenfds(TRUE);
 	syslog(LOG_DEBUG, "--- connection cache: ---");
