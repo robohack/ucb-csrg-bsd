@@ -1,4 +1,5 @@
-/* Copyright (c) 1979 Regents of the University of California */
+/* Copyright (c) 1980 Regents of the University of California */
+/* sccs id:	@(#)ex_tty.h	4.2 8/1/80  */
 /*
  * Capabilities from termcap
  *
