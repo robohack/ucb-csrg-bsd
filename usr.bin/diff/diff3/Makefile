@@ -1,4 +1,4 @@
-#	@(#)Makefile	4.7 (Berkeley) 5/11/90
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	diff3
 BINDIR=	/usr/libexec
