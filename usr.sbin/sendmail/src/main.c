@@ -4,7 +4,7 @@
 # include "sendmail.h"
 # include <sys/file.h>
 
-SCCSID(@(#)main.c	3.149		1/4/83);
+SCCSID(@(#)main.c	3.150		1/6/83);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -62,7 +62,6 @@ main(argc, argv)
 	char **argv;
 {
 	register char *p;
-	int ac;
 	char **av;
 	extern int finis();
 	extern char Version[];
@@ -111,14 +110,13 @@ main(argc, argv)
 	*/
 
 	argv[argc] = NULL;
-	ac = argc;
 	av = argv;
-	while (--ac > 0)
+	while (*++av != NULL)
 	{
-		if (strncmp(*++av, "-C", 2) == 0 || strncmp(*av, "-bz", 3) == 0)
+		if (strncmp(*av, "-C", 2) == 0 || strncmp(*av, "-bz", 3) == 0)
 			break;
 	}
-	if (ac <= 0)
+	if (*av == NULL)
 		readconfig = !thaw(FreezeFile);
 
 	/*
@@ -160,7 +158,6 @@ main(argc, argv)
 	** Crack argv.
 	*/
 
-	ac = argc;
 	av = argv;
 	p = rindex(*av, '/');
 	if (p++ == NULL)
@@ -169,7 +166,7 @@ main(argc, argv)
 		OpMode = MD_INITALIAS;
 	else if (strcmp(p, "mailq") == 0)
 		OpMode = MD_PRINT;
-	while (--ac > 0 && (p = *++av)[0] == '-')
+	while ((p = *++av) != NULL && p[0] == '-')
 	{
 		switch (p[1])
 		{
@@ -221,13 +218,12 @@ main(argc, argv)
 		  case 'f':	/* from address */
 		  case 'r':	/* obsolete -f flag */
 			p += 2;
-			if (*p == '\0')
+			if (*p == '\0' && ((p = *++av) == NULL || *p == '-'))
 			{
 				p = *++av;
-				if (--ac <= 0 || *p == '-')
+				if (p == NULL || *p == '-')
 				{
 					syserr("No \"from\" person");
-					ac++;
 					av--;
 					break;
 				}
@@ -242,32 +238,22 @@ main(argc, argv)
 
 		  case 'F':	/* set full name */
 			p += 2;
-			if (*p == '\0')
+			if (*p == '\0' && ((p = *++av) == NULL || *p == '-'))
 			{
-				p = *++av;
-				if (--ac <= 0 || *p == '-')
-				{
-					syserr("Bad -F flag");
-					ac++;
-					av--;
-					break;
-				}
+				syserr("Bad -F flag");
+				av--;
+				break;
 			}
 			FullName = p;
 			break;
 
 		  case 'h':	/* hop count */
 			p += 2;
-			if (*p == '\0')
+			if (*p == '\0' && ((p = *++av) == NULL || !isdigit(*p)))
 			{
-				p = *++av;
-				if (--ac <= 0 || *p < '0' || *p > '9')
-				{
-					syserr("Bad hop count (%s)", p);
-					ac++;
-					av--;
-					break;
-				}
+				syserr("Bad hop count (%s)", p);
+				av--;
+				break;
 			}
 			CurEnv->e_hopcount = atoi(p);
 			break;
@@ -533,7 +519,7 @@ main(argc, argv)
 	initsys();
 	setsender(from);
 
-	if (OpMode != MD_ARPAFTP && ac <= 0 && !GrabTo)
+	if (OpMode != MD_ARPAFTP && *av == NULL && !GrabTo)
 	{
 		usrerr("Usage: /etc/sendmail [flags] addr...");
 		finis();
