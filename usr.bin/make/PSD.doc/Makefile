@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.3 (Berkeley) 8/13/93
+#	@(#)Makefile	8.1 (Berkeley) 8/14/93
 
 DIR=	psd/12.make
 SRCS=	tutorial.ms
