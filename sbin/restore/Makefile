@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.13 (Berkeley) 3/16/92
+#	@(#)Makefile	8.1 (Berkeley) 6/5/93
 
 PROG=	restore
 LINKS=	${BINDIR}/restore ${BINDIR}/rrestore
