@@ -1,9 +1,4 @@
-    /*	static	char sccsid[] = "@(#)pstab.h 1.1 9/5/80"; */
-
-    /*
-     *	the new .stab type for pascal separate compilation type checking
-     */
-#define	N_PC	0x30	/* global pascal symbol: name,,0,subtype,line */
+    /*	static	char sccsid[] = "@(#)pstab.h 1.2 9/9/80"; */
 
     /*
      *	subtypes within the above type
