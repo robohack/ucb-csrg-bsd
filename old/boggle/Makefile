@@ -1,10 +1,11 @@
-#	@(#)Makefile	5.13 (Berkeley) 5/11/90
+#	@(#)Makefile	5.14 (Berkeley) 7/1/90
 
 PROG=	boggle
 MAN6=	boggle.0
 DPADD=	${LIBCOMPAT}
 LDADD=	-lcompat
 HIDEGAME=hidegame
+CLEANFILES=comp bogdict
 
 all: bogdict
 
