@@ -1,7 +1,8 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-static char sccsid[] = "@(#)ROUND.c 1.2 3/7/81";
+static char sccsid[] = "@(#)ROUND.c 1.3 3/7/81";
 
+long
 ROUND(value)
 
 	double	value;
