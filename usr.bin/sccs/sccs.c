@@ -3,6 +3,8 @@
 # include <sys/stat.h>
 # include <sysexits.h>
 
+static char SccsId[] = "@(#)sccs.c 1.3 delta 5/13/80 00:27:33 get 11/15/19 15:08:51";
+
 struct sccsprog
 {
 	char	*sccsname;	/* name of SCCS routine */
