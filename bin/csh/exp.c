@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)exp.c	5.14 (Berkeley) 9/6/91";
+static char sccsid[] = "@(#)exp.c	5.15 (Berkeley) 11/6/91";
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -678,7 +678,7 @@ etracc(str, cp, vp)
     Char   *cp;
     Char ***vp;
 {
-    (void) fprintf(csherr, "%s=%s\t", str, cp);
+    (void) fprintf(csherr, "%s=%s\t", str, vis_str(cp));
     blkpr(csherr, *vp);
     (void) fprintf(csherr, "\n");
 }
