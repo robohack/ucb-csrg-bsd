@@ -1,10 +1,7 @@
-#	@(#)Makefile	1.2 (Berkeley) 6/30/90
+#	@(#)Makefile	1.3 (Berkeley) 6/5/93
 
-DIR=	smm/17.security
+DIR=	smm/16.security
 SRCS=	security.ms
 MACROS=	-ms
-
-paper.${PRINTER}: ${SRCS}
-	 ${ROFF} ${SRCS} > ${.TARGET}
 
 .include <bsd.doc.mk>

@@ -1,6 +1,6 @@
-#	@(#)Makefile	6.3 (Berkeley) 6/30/90
+#	@(#)Makefile	6.4 (Berkeley) 6/5/93
 
-DIR=	smm/22.timed
+DIR=	smm/12.timed
 SRCS=	timed.ms
 MACROS=	-ms
 PRINTER=Pdp

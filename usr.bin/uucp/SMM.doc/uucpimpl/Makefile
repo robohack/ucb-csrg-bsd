@@ -1,10 +1,10 @@
-#	@(#)Makefile	6.2 (Berkeley) 6/30/90
+#	@(#)Makefile	6.3 (Berkeley) 6/5/93
 
-DIR=	smm/09.uucpimpl
+DIR=	smm/14.uucpimpl
 SRCS=	implement.ms
 MACROS=	-ms
 
-paper.${PRINTER}: ${SRCS}
+paper.ps: ${SRCS}
 	${TBL} ${SRCS} | ${ROFF} > ${.TARGET}
 
 .include <bsd.doc.mk>
