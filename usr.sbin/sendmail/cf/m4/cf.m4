@@ -6,7 +6,7 @@ divert(0)dnl
 #
 # %sccs.include.redist.sh%
 #
-#	@(#)cf.m4	2.9 (Berkeley) 10/3/91
+#	@(#)cf.m4	2.10 (Berkeley) 10/5/91
 #
 
 
@@ -52,8 +52,5 @@ define(`LOCAL_NAME', `PUSHDIVERT(5)CL$1
 POPDIVERT`'dnl')
 
 m4wrap(`include(`../m4/proto.m4')')
-
-# a local mailer is required
-MAILER(local)
 
 divert(0)dnl
