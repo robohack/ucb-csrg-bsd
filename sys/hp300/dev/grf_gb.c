@@ -11,7 +11,7 @@
  *
  * from: Utah $Hdr: grf_gb.c 1.18 93/08/13$
  *
- *	@(#)grf_gb.c	8.3 (Berkeley) 1/4/94
+ *	@(#)grf_gb.c	8.4 (Berkeley) 1/12/94
  */
 
 #include "grf.h"
@@ -115,6 +115,7 @@ gb_microcode(gbp)
  */
 gb_mode(gp, cmd, data)
 	register struct grf_softc *gp;
+	int cmd;
 	caddr_t data;
 {
 	struct gboxfb *gbp;

@@ -11,7 +11,7 @@
  *
  * from: Utah $Hdr: grf_dv.c 1.12 93/08/13$
  *
- *	@(#)grf_dv.c	8.3 (Berkeley) 1/4/94
+ *	@(#)grf_dv.c	8.4 (Berkeley) 1/12/94
  */
 
 #include "grf.h"
@@ -137,6 +137,7 @@ dv_reset(dbp)
  */
 dv_mode(gp, cmd, data)
 	register struct grf_softc *gp;
+	int cmd;
 	caddr_t data;
 {
 	register struct dvboxfb *dbp;
