@@ -1,7 +1,7 @@
 # include <pwd.h>
 # include "sendmail.h"
 
-SCCSID(@(#)savemail.c	4.3		3/11/84);
+SCCSID(@(#)savemail.c	4.4		3/11/84);
 
 /*
 **  SAVEMAIL -- Save mail on error
@@ -271,6 +271,7 @@ returntosender(msg, returnto, sendbody)
 		returndepth--;
 		return (-1);
 	}
+	loweraddr(&ee->e_from);
 
 	/* push state into submessage */
 	CurEnv = ee;
