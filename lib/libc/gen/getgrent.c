@@ -1,9 +1,9 @@
-/* @(#)getgrent.c	4.2 (Berkeley) 3/29/82 */
+/* @(#)getgrent.c	4.3 (Berkeley) 8/18/83 */
 
 #include <stdio.h>
 #include <grp.h>
 
-#define	MAXGRP	100
+#define	MAXGRP	200
 
 static char GROUP[] = "/etc/group";
 static FILE *grf = NULL;
