@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)nhpib.c	7.4 (Berkeley) 5/7/91
+ *	@(#)nhpib.c	7.5 (Berkeley) 6/5/92
  */
 
 /*
@@ -17,7 +17,7 @@
 #include "sys/systm.h"
 #include "sys/buf.h"
 
-#include "device.h"
+#include "hp/dev/device.h"
 #include "nhpibreg.h"
 #include "hpibvar.h"
 #include "dmavar.h"

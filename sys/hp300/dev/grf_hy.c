@@ -1,47 +1,48 @@
 /*
- * Copyright (c) 1988 University of Utah.
+ * Copyright (c) 1991 University of Utah.
  * Copyright (c) 1990 The Regents of the University of California.
  * All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
  * the Systems Programming Group of the University of Utah Computer
- * Science Department.
+ * Science Department and Mark Davies of the Department of Computer
+ * Science, Victoria University of Wellington, New Zealand.
  *
  * %sccs.include.redist.c%
  *
- * from: Utah $Hdr: grf_tc.c 1.19 92/01/21$
+ * from: Utah $Hdr: grf_hy.c 1.1 92/01/22$
  *
- *	@(#)grf_tc.c	7.5 (Berkeley) 6/5/92
+ *	@(#)grf_hy.c	7.1 (Berkeley) 6/5/92
  */
 
 #include "grf.h"
 #if NGRF > 0
 
 /*
- * Graphics routines for TOPCAT and CATSEYE frame buffers
+ * Graphics routines for HYPERION frame buffer
  */
 #include "sys/param.h"
 #include "sys/errno.h"
 
 #include "hp/dev/grfioctl.h"
 #include "hp/dev/grfvar.h"
-#include "grf_tcreg.h"
+#include "grf_hyreg.h"
 
 #include "../include/cpu.h"
+
+caddr_t badhyaddr = (caddr_t) -1;
 
 /*
  * Initialize hardware.
  * Must fill in the grfinfo structure in g_softc.
  * Returns 0 if hardware not present, non-zero ow.
  */
-tc_init(gp, addr)
+hy_init(gp, addr)
 	struct grf_softc *gp;
 	caddr_t addr;
 {
-	register struct tcboxfb *tp = (struct tcboxfb *) addr;
+	register struct hyboxfb *hy = (struct hyboxfb *) addr;
 	struct grfinfo *gi = &gp->g_display;
-	volatile u_char *fbp;
-	u_char save;
 	int fboff;
 	extern caddr_t sctopa(), iomap();
 
@@ -49,11 +50,11 @@ tc_init(gp, addr)
 		gi->gd_regaddr = (caddr_t) IIOP(addr);
 	else
 		gi->gd_regaddr = sctopa(vatosc(addr));
-	gi->gd_regsize = 0x10000;
-	gi->gd_fbwidth = (tp->fbwmsb << 8) | tp->fbwlsb;
-	gi->gd_fbheight = (tp->fbhmsb << 8) | tp->fbhlsb;
-	gi->gd_fbsize = gi->gd_fbwidth * gi->gd_fbheight;
-	fboff = (tp->fbomsb << 8) | tp->fbolsb;
+	gi->gd_regsize = 0x20000;
+	gi->gd_fbwidth = (hy->fbwmsb << 8) | hy->fbwlsb;
+	gi->gd_fbheight = (hy->fbhmsb << 8) | hy->fbhlsb;
+	gi->gd_fbsize = (gi->gd_fbwidth * gi->gd_fbheight) >> 3;
+	fboff = (hy->fbomsb << 8) | hy->fbolsb;
 	gi->gd_fbaddr = (caddr_t) (*((u_char *)addr + fboff) << 16);
 	if (gi->gd_regaddr >= (caddr_t)DIOIIBASE) {
 		/*
@@ -72,20 +73,11 @@ tc_init(gp, addr)
 		gp->g_regkva = addr;
 		gp->g_fbkva = iomap(gi->gd_fbaddr, gi->gd_fbsize);
 	}
-	gi->gd_dwidth = (tp->dwmsb << 8) | tp->dwlsb;
-	gi->gd_dheight = (tp->dhmsb << 8) | tp->dhlsb;
-	gi->gd_planes = tp->num_planes;
+	gi->gd_dwidth = (hy->dwmsb << 8) | hy->dwlsb;
+	gi->gd_dheight = (hy->dhmsb << 8) | hy->dhlsb;
+	gi->gd_planes = hy->num_planes;
 	gi->gd_colors = 1 << gi->gd_planes;
-	if (gi->gd_colors == 1) {
-		fbp = (u_char *) gp->g_fbkva;
-		tp->wen = ~0;
-		tp->prr = 0x3;
-		tp->fben = ~0;
-		save = *fbp;
-		*fbp = 0xFF;
-		gi->gd_colors = *fbp + 1;
-		*fbp = save;
-	}
+
 	return(1);
 }
 
@@ -95,8 +87,7 @@ tc_init(gp, addr)
  * Return a UNIX error number or 0 for success.
  * Function may not be needed anymore.
  */
-/*ARGSUSED*/
-tc_mode(gp, cmd)
+hy_mode(gp, cmd)
 	struct grf_softc *gp;
 {
 	int error = 0;
