@@ -7,11 +7,10 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)deliver.c	8.139 (Berkeley) 3/30/95";
+static char sccsid[] = "@(#)deliver.c	8.140 (Berkeley) 3/31/95";
 #endif /* not lint */
 
 #include "sendmail.h"
-#include <netdb.h>
 #include <errno.h>
 #if NAMED_BIND
 #include <resolv.h>
