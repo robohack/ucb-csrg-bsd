@@ -4,8 +4,8 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)pathnames.h	5.2 (Berkeley) 6/1/90
+ *	@(#)pathnames.h	5.3 (Berkeley) 6/23/90
  */
 
-#define	_PATH_LIBB	"/usr/share/misc/lib.b"
+#define	_PATH_LIBB	"/usr/share/misc/bc.library"
 #define	_PATH_DC	"/usr/bin/dc"

@@ -1,12 +1,12 @@
-#	@(#)Makefile	5.4 (Berkeley) 5/11/90
+#	@(#)Makefile	5.5 (Berkeley) 6/23/90
 
 PROG=	bc
 SRCS=	bc.c
 CFLAGS+=-I${.CURDIR}
-CLEANFILES=	bc.c
+CLEANFILES=	bc.c y.tab.h
 
 beforeinstall:
-	install -c -o ${BINOWN} -g ${BINGRP} -m 444 ${.CURDIR}/lib.b \
+	install -c -o ${BINOWN} -g ${BINGRP} -m 444 ${.CURDIR}/bc.library \
 	    ${DESTDIR}/usr/share/misc
 
 .include <bsd.prog.mk>
