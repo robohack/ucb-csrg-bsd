@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 6/20/92
+#	@(#)Makefile	8.1 (Berkeley) 5/31/93
 
 PROG=	fortune
 MAN6=	fortune.0
