@@ -1,9 +1,10 @@
 #!/bin/sh
-#	cleanvolumes.sh	1.1	7/31/84
+#	cleanvolumes.sh	1.2	8/1/84
 #	shell script to clean dumplog file
 #
+PATH=:/etc/:/bin:/usr/bin:
 #	Name of	logfile
-DL=dumplog
+DL=/etc/dumplog
 #	Name of tmp files
 DT=/tmp/dumpclean$$
 DE=/tmp/dumpedit$$
