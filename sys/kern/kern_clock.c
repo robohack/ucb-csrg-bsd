@@ -1,4 +1,4 @@
-/*	kern_clock.c	3.6	11/15/19	*/
+/*	kern_clock.c	3.7	11/15/19	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
@@ -37,7 +37,7 @@ unsigned short kcount[20000];
  * We handle regular calls to the dh and dz silo input processors
  * without using timeouts to save a little time.
  */
-int	rintvl = 4;		/* every 1/15'th of sec check receivers */
+int	rintvl = 0;		/* every 1/60'th of sec check receivers */
 int	rcnt;
 
 clock(pc, ps)
