@@ -6,11 +6,13 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)subr.c	5.4 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)subr.c	5.5 (Berkeley) 2/26/91";
 #endif /* not lint */
 
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 #include "error.h"
 /*
  *	Arrayify a list of rules
