@@ -1,6 +1,7 @@
-#	@(#)Makefile	5.3 (Berkeley) 5/11/90
+#	@(#)Makefile	5.4 (Berkeley) 2/12/91
 
 PROG=	vipw
+SRCS=	pw_util.c vipw.c
 MAN8=	vipw.0
 
 .include <bsd.prog.mk>
