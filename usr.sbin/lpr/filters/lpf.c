@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)lpf.c	4.12 (Berkeley) 7/16/83";
+static char sccsid[] = "@(#)lpf.c	4.13 (Berkeley) 4/5/85";
 #endif
 
 /*
@@ -156,6 +156,7 @@ main(argc, argv)
 			else
 				putc(ch, o);
 			if (++lineno >= length) {
+				fflush(o);
 				npages++;
 				lineno = 0;
 			}
