@@ -1,11 +1,11 @@
 #!/bin/sh -
 #
-# Copyright (c) 1991 The Regents of the University of California.
-# All rights reserved.
+# Copyright (c) 1991, 1993
+#	The Regents of the University of California.  All rights reserved.
 #
 # %sccs.include.redist.sh%
 #
-#	@(#)mkdep.gcc.sh	5.6 (Berkeley) 1/23/93
+#	@(#)mkdep.gcc.sh	8.1 (Berkeley) 6/6/93
 #
 
 PATH=/bin:/usr/bin:/usr/ucb
