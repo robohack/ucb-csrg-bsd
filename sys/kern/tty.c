@@ -5,7 +5,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)tty.c	8.6 (Berkeley) 1/2/94
+ *	@(#)tty.c	8.7 (Berkeley) 1/6/94
  */
 
 #include <sys/param.h>
@@ -1764,7 +1764,12 @@ ttyinfo(tp)
 		ttyprintf(tp, "%d%% %dk\n",
 		    tmp / 100,
 		    pick->p_stat == SIDL || pick->p_stat == SZOMB ? 0 :
-			pgtok(pick->p_vmspace->vm_rssize));
+#ifdef pmap_resident_count
+			pgtok(pmap_resident_count(&pick->p_vmspace->vm_pmap))
+#else
+			pgtok(pick->p_vmspace->vm_rssize)
+#endif
+			);
 	}
 	tp->t_rocount = 0;	/* so pending input will be retyped if BS */
 }
