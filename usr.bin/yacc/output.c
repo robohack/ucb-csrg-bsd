@@ -19,7 +19,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)output.c	5.3 (Berkeley) 3/6/90";
+static char sccsid[] = "@(#)output.c	5.4 (Berkeley) 3/11/90";
 #endif /* not lint */
 
 #include "defs.h"
@@ -1119,7 +1119,7 @@ output_semantic_actions()
     if (!lflag)
     {
 	++outline;
-	fprintf(output_file, line_format, outline, output_file_name);
+	fprintf(output_file, line_format, outline + 1, output_file_name);
     }
 }
 
