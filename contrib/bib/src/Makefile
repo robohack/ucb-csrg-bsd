@@ -1,6 +1,7 @@
-#	@(#)Makefile	2.5	10/1/84
+#	@(#)Makefile	2.6	6/10/85
 #
 CFLAGS = -DINCORE
+#CFLAGS = -DINCORE -g
 CC = cc $(CFLAGS)
 .c.o:
 	$(CC) -c $*.c
