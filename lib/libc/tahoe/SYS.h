@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1983 Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1983, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)SYS.h	5.8 (Berkeley) 5/7/91
+ *	@(#)SYS.h	8.1 (Berkeley) 6/4/93
  */
 
 #include <sys/syscall.h>
