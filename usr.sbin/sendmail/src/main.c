@@ -15,7 +15,7 @@ char copyright[] =
 #endif not lint
 
 #ifndef lint
-static char	SccsId[] = "@(#)main.c	5.9.1.1 (Berkeley) 11/18/85";
+static char	SccsId[] = "@(#)main.c	5.10 (Berkeley) 12/7/85";
 #endif not lint
 
 # define  _DEFINE
@@ -151,8 +151,8 @@ main(argc, argv, envp)
 	BlankEnvelope.e_putbody = putbody;
 	BlankEnvelope.e_xfp = NULL;
 	STRUCTCOPY(NullAddress, BlankEnvelope.e_from);
-	STRUCTCOPY(BlankEnvelope, MainEnvelope);
-	CurEnv = &MainEnvelope;
+	CurEnv = &BlankEnvelope;
+	STRUCTCOPY(NullAddress, MainEnvelope.e_from);
 
 	/*
 	**  Do a quick prescan of the argument list.
@@ -193,7 +193,10 @@ main(argc, argv, envp)
 	*/
 
 	Argv = argv;
-	LastArgv = envp[i - 1] + strlen(envp[i - 1]);
+	if (i > 0)
+		LastArgv = envp[i - 1] + strlen(envp[i - 1]);
+	else
+		LastArgv = argv[argc - 1] + strlen(argv[argc - 1]);
 # endif SETPROCTITLE
 
 	/*
