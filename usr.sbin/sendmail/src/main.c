@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.97		8/22/82);
+SCCSID(@(#)main.c	3.98		8/23/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -159,6 +159,8 @@ main(argc, argv)
 	/* set up the main envelope */
 	MainEnvelope.e_puthdr = putheader;
 	MainEnvelope.e_putbody = putbody;
+	time(&CurTime);
+	MainEnvelope.e_ctime = CurTime;
 	CurEnv = &MainEnvelope;
 
 # ifdef LOG
@@ -976,11 +978,6 @@ initsys()
 	register struct tm *tm;
 	extern struct tm *gmtime();
 
-	/* convert timeout interval to absolute time */
-	TimeOut -= CurTime;
-	(void) time(&CurTime);
-	TimeOut += CurTime;
-
 	/* process id */
 	(void) sprintf(pbuf, "%d", getpid());
 	define('p', pbuf);
@@ -990,6 +987,7 @@ initsys()
 	define('c', cbuf);
 
 	/* time as integer, unix time, arpa time */
+	(void) time(&CurTime);
 	tm = gmtime(&CurTime);
 	(void) sprintf(tbuf, "%02d%02d%02d%02d%02d", tm->tm_year, tm->tm_mon,
 			tm->tm_mday, tm->tm_hour, tm->tm_min);
@@ -1097,6 +1095,7 @@ newenvelope(e)
 	bmove((char *) CurEnv, (char *) e, sizeof *e);
 	e->e_header = NULL;
 	e->e_queueup = FALSE;
+	e->e_dontqueue = FALSE;
 	e->e_oldstyle = FALSE;
 	e->e_retreceipt = FALSE;
 	e->e_sendreceipt = FALSE;
@@ -1108,6 +1107,7 @@ newenvelope(e)
 	e->e_df = NULL;
 	e->e_qf = NULL;
 	e->e_id = NULL;
+	e->e_ctime = CurTime;
 
 	return (e);
 }
