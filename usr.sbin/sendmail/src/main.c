@@ -21,7 +21,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	5.15 (Berkeley) 3/13/88";
+static char sccsid[] = "@(#)main.c	5.16 (Berkeley) 4/1/88";
 #endif /* not lint */
 
 # define  _DEFINE
@@ -238,9 +238,7 @@ main(argc, argv, envp)
 	OldUmask = umask(0);
 	OpMode = MD_DELIVER;
 	MotherPid = getpid();
-# ifndef V6
 	FullName = getenv("NAME");
-# endif V6
 
 # ifdef LOG
 	openlog("sendmail", LOG_PID, LOG_MAIL);
