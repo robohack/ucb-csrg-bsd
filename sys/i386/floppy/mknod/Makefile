@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 5/9/91
+#	@(#)Makefile	8.1 (Berkeley) 6/11/93
 
 PROG=	mknod
 CFLAGS+=-s -N -I${.CURDIR}/../cat
