@@ -153,6 +153,14 @@ exec:
 		printf("archive\n");
 		goto out;
 	}
+	if (mbuf.st_size % 512 == 0) {	/* it may be a PRESS file */
+		lseek(ifile, -512L, 2);	/* last block */
+		if (read(ifile, buf, BUFSIZ) > 0
+		 && *(short int *)buf == 12138) {
+			printf("PRESS file\n");
+			goto out;
+		}
+	}
 	i = 0;
 	if(ccom() == 0)goto notc;
 	while(buf[i] == '#'){
