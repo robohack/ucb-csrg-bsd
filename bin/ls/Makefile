@@ -1,7 +1,8 @@
-#	@(#)Makefile	5.3 (Berkeley) 5/11/90
+#	@(#)Makefile	5.4 (Berkeley) 3/1/92
 
 PROG=	ls
-SRCS=	cmp.c ls.c print.c util.c
+SRCS=	cmp.c getbsize.c ls.c print.c util.c
+.PATH:	${.CURDIR}/../../bin/df
 DPADD=	${LIBUTIL}
 LDADD=	-lutil
 
