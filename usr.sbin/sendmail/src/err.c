@@ -9,12 +9,10 @@
 */
 
 #ifndef lint
-static char	SccsId[] = "@(#)err.c	5.1 (Berkeley) 6/7/85";
+static char	SccsId[] = "@(#)err.c	5.2 (Berkeley) 6/7/85";
 #endif not lint
 
 # include "sendmail.h"
-
-SCCSID(@(#)err.c	5.1		6/7/85);
 
 /*
 **  SYSERR -- Print error message.
