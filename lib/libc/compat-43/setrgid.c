@@ -6,11 +6,18 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)setrgid.c	5.4 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)setrgid.c	5.5 (Berkeley) 2/23/91";
 #endif /* LIBC_SCCS and not lint */
 
+#include <unistd.h>
+
+int
+#ifdef __STDC__
+setrgid(gid_t rgid)
+#else
 setrgid(rgid)
 	int rgid;
+#endif
 {
 
 	return (setregid(rgid, -1));
