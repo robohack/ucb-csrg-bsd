@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.1 (Berkeley) 6/29/90
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 FILES=	how_pc how_pi how_pix how_pxp
 NOOBJ=	noobj
