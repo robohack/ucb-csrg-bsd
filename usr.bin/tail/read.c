@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)read.c	5.2 (Berkeley) 3/3/92";
+static char sccsid[] = "@(#)read.c	5.3 (Berkeley) 3/4/92";
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -111,8 +111,7 @@ lines(fp, off)
 	} *lines;
 	register int ch;
 	register char *p;
-	u_int blen, cnt, recno;
-	int wrap;
+	int blen, cnt, recno, wrap;
 	char *sp;
 
 	if ((lines = malloc(off * sizeof(*lines))) == NULL)
