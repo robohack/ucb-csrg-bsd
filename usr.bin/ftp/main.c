@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)main.c	4.9 (Berkeley) 7/18/83";
+static char sccsid[] = "@(#)main.c	4.10 (Berkeley) 7/19/84";
 #endif
 
 /*
@@ -180,6 +180,8 @@ cmdscanner(top)
 		}
 		if (gets(line) == 0) {
 			if (feof(stdin)) {
+				if (!fromatty)
+					quit();
 				clearerr(stdin);
 				putchar('\n');
 			}
