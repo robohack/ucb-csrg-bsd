@@ -14,15 +14,15 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)cat.c	7.3 (Berkeley) 6/29/88
+ *	@(#)cat.c	7.4 (Berkeley) 3/21/89
  */
 
 main()
 {
 	register int c, fd;
 
-	fd = getfile("File: ", 0);
-	while ((c = getc(fd)) > 0)
+	fd = getfile("File", 0);
+	while ((c = getc(fd)) >= 0)
 		putchar(c);
 	exit(0);
 }
