@@ -14,8 +14,9 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)pathnames.h	6.2 (Berkeley) 3/8/90
+ *	@(#)pathnames.h	6.3 (Berkeley) 3/15/90
  */
 
 #define _PATH_EXECDIR	"/sbin"
 #define	_PATH_EXPORTS	"/etc/exports"
+#define	_PATH_MOUNTDPID	"/var/run/mountd.pid"
