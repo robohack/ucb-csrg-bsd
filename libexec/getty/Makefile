@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.13 (Berkeley) 5/27/93
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 PROG=	getty
 SRCS=	main.c init.c subr.c ttydefaults.c
