@@ -8,7 +8,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)defs.h	5.4 (Berkeley) 4/14/93
+ *	@(#)defs.h	5.5 (Berkeley) 4/18/93
  */
 
 /*
@@ -64,7 +64,6 @@ struct s_command {
 	char code;				/* Command code */
 	u_int nonsel:1;				/* True if ! */
 	u_int inrange:1;			/* True if in range */
-	u_int lused:1;				/* True if label used. */
 };
 
 /*
