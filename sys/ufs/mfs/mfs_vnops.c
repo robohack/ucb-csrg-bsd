@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)mfs_vnops.c	7.19 (Berkeley) 12/5/90
+ *	@(#)mfs_vnops.c	7.20 (Berkeley) 2/1/91
  */
 
 #include "param.h"
@@ -73,6 +73,7 @@ struct vnodeops mfs_vnodeops = {
 	mfs_strategy,		/* strategy */
 	mfs_print,		/* print */
 	mfs_nullop,		/* islocked */
+	mfs_badop,		/* advlock */
 };
 
 /*
