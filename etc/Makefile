@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.27 (Berkeley) 6/13/93
+#	@(#)Makefile	8.1 (Berkeley) 6/13/93
 
 NOOBJ=	oobj
 
