@@ -1,8 +1,22 @@
+/*
+**  Sendmail
+**  Copyright (c) 1983  Eric P. Allman
+**  Berkeley, California
+**
+**  Copyright (c) 1983 Regents of the University of California.
+**  All rights reserved.  The Berkeley software License Agreement
+**  specifies the terms and conditions for redistribution.
+*/
+
+#ifndef lint
+static char	SccsId[] = "@(#)recipient.c	5.1 (Berkeley) 6/7/85";
+#endif not lint
+
 # include <pwd.h>
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)recipient.c	4.3		3/11/84);
+SCCSID(@(#)recipient.c	5.1		6/7/85);
 
 /*
 **  SENDTOLIST -- Designate a send list.
