@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)cpu.h	5.4 (Berkeley) 5/9/91
+ *	@(#)cpu.h	5.5 (Berkeley) 2/5/92
  */
 
 /*
@@ -33,6 +33,8 @@
 #define	NEED_STRLEN		/* need strlen function */
 
 #define	cpu_exec(p)	/* nothing */
+#define cpu_setstack(p, ap) \
+	(p)->p_md.md_regs[SP] = ap
 
 /*
  * Arguments to hardclock, softclock and gatherstats
