@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.19 (Berkeley) 2/19/93";
+static char sccsid[] = "@(#)main.c	6.20 (Berkeley) 2/19/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -582,7 +582,7 @@ main(argc, argv, envp)
 	}
 
 	/* our name for SMTP codes */
-	expand("\001j", jbuf, &jbuf[sizeof jbuf - 1], CurEnv);
+	expand("\201j", jbuf, &jbuf[sizeof jbuf - 1], CurEnv);
 	MyHostName = jbuf;
 
 	/* the indices of built-in mailers */
