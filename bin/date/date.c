@@ -1,5 +1,5 @@
 #ifndef lint
-static char *sccsid = "@(#)date.c	4.4 (Berkeley) 5/23/83";
+static char *sccsid = "@(#)date.c	4.5 (Berkeley) 7/1/83";
 #endif
 
 /*
@@ -7,7 +7,7 @@ static char *sccsid = "@(#)date.c	4.4 (Berkeley) 5/23/83";
  */
 
 #include <stdio.h>
-#include <time.h>
+#include <sys/time.h>
 #include <utmp.h>
 #define WTMP "/usr/adm/wtmp"
 
