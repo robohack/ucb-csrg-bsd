@@ -7,7 +7,7 @@
 # include <syslog.h>
 # endif LOG
 
-SCCSID(@(#)main.c	3.69		3/6/82);
+SCCSID(@(#)main.c	3.70		3/6/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -104,6 +104,12 @@ SCCSID(@(#)main.c	3.69		3/6/82);
 
 int	NextMailer = 0;		/* "free" index into Mailer struct */
 static char	*FullName;	/* sender's full name */
+
+#ifdef DAEMON
+#ifndef SMTP
+ERROR %%%%   Cannot have daemon mode without SMTP   %%%% ERROR
+#endif SMTP
+#endif DAEMON
 
 
 
@@ -346,7 +352,8 @@ main(argc, argv)
 		  case 'D':	/* run as a daemon */
 #ifdef DAEMON
 			Daemon = TRUE;
-#else
+			ArpaMode = Smtp = TRUE;
+#else DAEMON
 			syserr("Daemon mode not implemented");
 #endif DAEMON
 			break;
