@@ -21,8 +21,10 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)cbrt.c	5.5 (Berkeley) 9/22/88";
+static char sccsid[] = "@(#)cbrt.c	5.6 (Berkeley) 6/1/90";
 #endif /* not lint */
+
+#include <sys/stdc.h>
 
 /* kahan's cube root (53 bits IEEE double precision)
  * for IEEE machines only
