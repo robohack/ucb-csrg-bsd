@@ -1,7 +1,7 @@
-#	@(#)Makefile	5.1 (Berkeley) 5/11/90
+#	@(#)Makefile	5.2 (Berkeley) 2/28/91
 
 PROG=	snscore
-CFLAGS+=-I${.CURDIR}/..
+CFLAGS+=-I${.CURDIR}/../snake
 NOMAN=	noman
 HIDEGAME=hidegame
 
