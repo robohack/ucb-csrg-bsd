@@ -1,7 +1,9 @@
+#ifndef lint
 	.data
 _sccsid:
-	.asciz	"@(#)doprnt.c	5.1 (Berkeley) 6/5/85"
+	.asciz	"@(#)doprnt.c	5.2 (Berkeley) 6/21/85"
 	.text
+#endif not lint
 
 	# C library -- conversions
 
