@@ -1,4 +1,6 @@
-#
+#ifndef lint
+static char sccsid[] = "@(#)optim.c	2.9 (Berkeley) 8/11/83";
+#endif
 
 /*
  * Mail -- a program for sending and receiving mail.
@@ -9,8 +11,6 @@
 #include "rcv.h"
 #include "configdefs.h"
 #include <ctype.h>
-
-static char *SccsId = "@(#)optim.c	2.8 3/2/83";
 
 /*
  * Map a name into the correct network "view" of the

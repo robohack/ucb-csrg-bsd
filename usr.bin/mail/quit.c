@@ -1,4 +1,6 @@
-#
+#ifndef lint
+static char sccsid[] = "@(#)quit.c	2.7 (Berkeley) 8/11/83";
+#endif
 
 #include "rcv.h"
 #include <sys/stat.h>
@@ -8,8 +10,6 @@
  *
  * Termination processing.
  */
-
-static char *SccsId = "@(#)quit.c	2.6 5/28/83";
 
 /*
  * Save all of the undetermined messages at the top of "mbox"

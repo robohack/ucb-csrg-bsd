@@ -1,4 +1,6 @@
-#
+#ifndef lint
+static char sccsid[] = "@(#)lock.c	2.4 (Berkeley) 8/11/83";
+#endif
 
 /*
  * A mailing program.
@@ -8,8 +10,6 @@
 
 #include "rcv.h"
 #include <sys/stat.h>
-
-static char *SccsId = "@(#)lock.c	2.3 10/5/82";
 
 char	*maillock	= ".lock";		/* Lock suffix for mailname */
 char	*lockname	= "/usr/spool/mail/tmXXXXXX";

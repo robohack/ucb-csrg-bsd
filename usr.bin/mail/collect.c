@@ -1,4 +1,6 @@
-#
+#ifndef lint
+static char sccsid[] = "@(#)collect.c	2.15 (Berkeley) 8/11/83";
+#endif
 
 /*
  * Mail -- a mail program
@@ -6,8 +8,6 @@
  * Collect input from standard input, handling
  * ~ escapes.
  */
-
-static char *SccsId = "@(#)collect.c	2.14 6/12/83";
 
 #include "rcv.h"
 #include <sys/stat.h>
