@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)bang.c	5.3 (Berkeley) 2/28/93";
+static char sccsid[] = "@(#)bang.c	5.4 (Berkeley) 3/18/93";
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -82,7 +82,7 @@ bang(inputt, errnum)
 	}
 
 	system(l_shellcmd);
-	if (explain_flag != 0)	/* for the -s option */
+	if (explain_flag > 0)	/* for the -s option */
 		printf("!\n");
 	l_cnt_last_pos = l_cnt;
 	*errnum = 0;
