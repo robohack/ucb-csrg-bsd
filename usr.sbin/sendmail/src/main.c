@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.126		10/16/82);
+SCCSID(@(#)main.c	3.127		11/3/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -875,7 +875,7 @@ openxscrpt()
 		syserr("Can't create %s", p);
 	}
 	Transcript = p;
-	(void) chmod(p, 0600);
+	(void) chmod(p, FileMode);
 }
 /*
 **  SETSENDER -- set sendmail's idea of the sender.
@@ -1234,7 +1234,7 @@ queuename(e, type)
 			if (access(lf, 0) >= 0 || access(qf, 0) >= 0)
 				continue;
 			errno = 0;
-			i = creat(xf, 0600);
+			i = creat(xf, FileMode);
 			if (i < 0)
 			{
 				(void) unlink(xf);	/* kernel bug */

@@ -1,7 +1,7 @@
 # include <errno.h>
 # include "sendmail.h"
 
-SCCSID(@(#)collect.c	3.52		9/12/82);
+SCCSID(@(#)collect.c	3.53		11/3/82);
 
 /*
 **  COLLECT -- read & parse message header & make temp file.
@@ -49,7 +49,7 @@ collect(sayok)
 		NoReturn = TRUE;
 		finis();
 	}
-	(void) chmod(CurEnv->e_df, 0600);
+	(void) chmod(CurEnv->e_df, FileMode);
 
 	/*
 	**  Tell ARPANET to go ahead.
