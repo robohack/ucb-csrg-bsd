@@ -1,4 +1,4 @@
-/*	sys.c	4.1	11/9/80	*/
+/*	sys.c	4.2	2/9/81	*/
 
 #include <sys/param.h>
 #include <sys/ino.h>
@@ -463,6 +463,11 @@ exit()
 _stop(s)
 char	*s;
 {
+	int i;
+
+	for (i = 0; i < NFILES; i++)
+		if (iob[i].i_flgs != 0)
+			close(i);
 	printf("%s\n", s);
 	_rtt();
 }
