@@ -1,6 +1,6 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-static char sccsid[] = "@(#)var.c 1.10 7/8/81";
+static char sccsid[] = "@(#)var.c 1.11 7/23/81";
 
 #include "whoami.h"
 #include "0.h"
@@ -249,7 +249,7 @@ roundup( x , y )
     {
 	
 	if ( y == 0 ) {
-	    return 0;
+	    return x;
 	}
 	if ( x >= 0 ) {
 		return ( ( ( x + ( y - 1 ) ) / y ) * y );
