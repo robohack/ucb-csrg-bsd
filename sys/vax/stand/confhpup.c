@@ -14,12 +14,10 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)confhpup.c	7.4 (Berkeley) 6/29/88
+ *	@(#)confhpup.c	7.5 (Berkeley) 4/4/90
  */
 
 #include "param.h"
-#include "fs.h"
-#include "inode.h"
 #include "saio.h"
 
 int	nullsys();

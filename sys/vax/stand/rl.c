@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)rl.c	7.6 (Berkeley) 7/9/88
+ *	@(#)rl.c	7.7 (Berkeley) 4/4/90
  */
 
 /*
@@ -11,8 +11,6 @@
  */
 
 #include "param.h"
-#include "inode.h"
-#include "fs.h"
 
 #include "../vax/pte.h"
 #include "../vaxuba/rlreg.h"

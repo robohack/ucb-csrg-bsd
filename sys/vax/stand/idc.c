@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)idc.c	7.4 (Berkeley) 7/9/88
+ *	@(#)idc.c	7.5 (Berkeley) 4/4/90
  */
 
 /*
@@ -11,8 +11,6 @@
  */
 
 #include "param.h"
-#include "inode.h"
-#include "fs.h"
 
 #include "../vax/pte.h"
 #include "../vaxuba/idcreg.h"
