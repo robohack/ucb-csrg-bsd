@@ -1,4 +1,4 @@
-/*	tty.c	3.6	11/15/19	*/
+/*	tty.c	3.7	11/15/19	*/
 
 /*
  * general TTY subroutines
@@ -411,6 +411,11 @@ caddr_t addr;
 
 	case TIOCLGET:
 		if (copyout((caddr_t)&tp->t_local, addr, sizeof(tp->t_local)))
+			u.u_error = EFAULT;
+		break;
+
+	case TIOCOUTQ:
+		if (copyout((caddr_t)&tp->t_outq.c_cc, addr, sizeof(tp->t_outq.c_cc)))
 			u.u_error = EFAULT;
 		break;
 
