@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)headers.c	8.39 (Berkeley) 11/6/94";
+static char sccsid[] = "@(#)headers.c	8.40 (Berkeley) 11/8/94";
 #endif /* not lint */
 
 # include <errno.h>
@@ -1031,8 +1031,7 @@ putheader(mci, h, e)
 		if (hvalue("Content-Type", e->e_header) == NULL)
 		{
 			sprintf(obuf, "Content-Type: text/plain; charset=%s",
-				DefaultCharSet != NULL ? DefaultCharSet
-						       : "unknown-8bit");
+				defcharset(e));
 			putline(obuf, mci);
 		}
 		if (hvalue("Content-Transfer-Encoding", e->e_header) == NULL)
