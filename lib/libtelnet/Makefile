@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.8 (Berkeley) 5/27/93
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 LIB=	telnet
 SRCS=	auth.c encrypt.c genget.c getent.c misc.c
