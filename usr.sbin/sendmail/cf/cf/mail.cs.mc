@@ -8,8 +8,8 @@ divert(-1)
 #
 
 include(`../m4/cf.m4')
-VERSIONID(@(#)mail.cs.mc	2.8 (Berkeley) 6/25/92)
-OSTYPE(hpux)dnl
+VERSIONID(@(#)mail.cs.mc	2.9 (Berkeley) 8/6/92)
+OSTYPE(ultrix4.1)dnl
 DOMAIN(cs.exposed)dnl
 MAILER(local)dnl
 MAILER(smtp)dnl
