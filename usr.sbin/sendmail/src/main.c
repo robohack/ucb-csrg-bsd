@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.4 (Berkeley) 1/2/93";
+static char sccsid[] = "@(#)main.c	6.5 (Berkeley) 1/10/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -125,6 +125,7 @@ main(argc, argv, envp)
 	bool nothaw;
 	bool safecf = TRUE;
 	static bool reenter = FALSE;
+	char *argv0 = argv[0];
 	char jbuf[MAXHOSTNAMELEN];	/* holds MyHostName */
 	extern int DtableSize;
 	extern int optind;
@@ -238,7 +239,7 @@ main(argc, argv, envp)
 	OutChannel = stdout;
 
 	if (!nothaw)
-		readconfig = !thaw(FreezeFile);
+		readconfig = !thaw(FreezeFile, argv0);
 
 	/* strip out "dangerous" environment variables */
 	(void) unsetenv("FS");
@@ -1043,6 +1044,7 @@ freeze(freezefile)
 **
 **	Parameters:
 **		freezefile -- the name of the file to thaw from.
+**		binfile -- the name of the sendmail binary (ok to guess).
 **
 **	Returns:
 **		TRUE if it successfully read the freeze file.
@@ -1052,13 +1054,15 @@ freeze(freezefile)
 **		reads freezefile in to BSS area.
 */
 
-thaw(freezefile)
+thaw(freezefile, binfile)
 	char *freezefile;
+	char *binfile;
 {
 	int f;
 	register char *p;
 	union frz fhdr;
 	char hbuf[60];
+	struct stat fst, sst;
 	extern char edata, end;
 	extern char Version[];
 	extern caddr_t brk();
@@ -1073,6 +1077,22 @@ thaw(freezefile)
 	if (f < 0)
 	{
 		errno = 0;
+		return (FALSE);
+	}
+
+	if (fstat(f, &fst) < 0 || stat(ConfFile, &sst) < 0 ||
+	    fst.st_mtime < sst.st_mtime)
+	{
+		syslog(LOG_WARNING, "Freeze file older than config file");
+		(void) close(f);
+		return (FALSE);
+	}
+
+	if (strchr(binfile, '/') != NULL && stat(binfile, &sst) == 0 &&
+	    fst.st_mtime < sst.st_mtime)
+	{
+		syslog(LOG_WARNING, "Freeze file older than binary file");
+		(void) close(f);
 		return (FALSE);
 	}
 
