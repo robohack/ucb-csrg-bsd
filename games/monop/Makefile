@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.8 (Berkeley) 9/2/92
+#	@(#)Makefile	8.1 (Berkeley) 5/31/93
 
 PROG=	monop
 SRCS=	monop.c cards.c execute.c getinp.c houses.c jail.c misc.c morg.c \
