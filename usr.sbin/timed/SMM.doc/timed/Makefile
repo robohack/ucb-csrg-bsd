@@ -1,11 +1,10 @@
-#	@(#)Makefile	8.1 (Berkeley) 6/8/93
+#	@(#)Makefile	8.2 (Berkeley) 5/11/94
 
 DIR=	smm/12.timed
 SRCS=	timed.ms
 MACROS=	-ms
-PRINTER=Pdp
 
-paper.${PRINTER}: ${SRCS}
+paper.ps: ${SRCS}
 	${SOELIM} ${SRCS} | ${TBL} | ${ROFF} > ${.TARGET}
 
 .include <bsd.doc.mk>
