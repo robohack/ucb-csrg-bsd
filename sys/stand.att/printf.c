@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)printf.c	5.6 (Berkeley) 5/25/91
+ *	@(#)printf.c	5.7 (Berkeley) 10/11/92
  */
 
 /*
