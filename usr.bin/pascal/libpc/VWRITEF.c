@@ -1,14 +1,10 @@
 /* Copyright (c) 1989 Regents of the University of California */
 
-static char sccsid[] = "@(#)VWRITEF.c 1.1 1/9/89";
+static char sccsid[] = "@(#)VWRITEF.c 1.2 1/11/89";
 
 #include "h00vars.h"
 
-#ifdef notdef
 #include <stdarg.h>
-#else
-typedef char *va_list;
-#endif
 
 VWRITEF(curfile, file, format, args)
 
