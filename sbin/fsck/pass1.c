@@ -5,7 +5,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)pass1.c	5.4 (Berkeley) 4/9/87";
+static char sccsid[] = "@(#)pass1.c	5.5 (Berkeley) 3/2/89";
 #endif not lint
 
 #include <sys/param.h>
@@ -82,6 +82,12 @@ pass1()
 				inodirty();
 			}
 			ndb = howmany(dp->di_size, sblock.fs_bsize);
+			if (ndb < 0) {
+				if (debug)
+					printf("bad size %d ndb %d:",
+						dp->di_size, ndb);
+				goto unknown;
+			}
 			if (SPECIAL(dp))
 				ndb++;
 			for (j = ndb; j < NDADDR; j++)
