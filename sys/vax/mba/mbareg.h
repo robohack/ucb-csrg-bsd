@@ -1,4 +1,4 @@
-/*	mbareg.h	3.5	10/9/80	*/
+/*	mbareg.h	4.1	11/9/80	*/
 
 /*
  * VAX Massbus adapter registers

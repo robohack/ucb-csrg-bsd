@@ -1,4 +1,4 @@
-/*	buf.h	3.4	6/7/80	*/
+/*	buf.h	4.1	11/9/80	*/
 
 /*
  * Each buffer in the pool is usually doubly linked into 2 lists:

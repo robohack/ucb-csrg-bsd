@@ -1,4 +1,4 @@
-/*	dir.h	3.2	6/7/80	*/
+/*	dir.h	4.1	11/9/80	*/
 
 #ifndef	DIRSIZ
 #define	DIRSIZ	14

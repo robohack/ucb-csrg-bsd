@@ -1,4 +1,4 @@
-/*	flp.h	3.2	6/7/80	*/
+/*	flp.h	4.1	11/9/80	*/
 
 /*
  * Console floppy command/status and sectoring information.

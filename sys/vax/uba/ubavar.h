@@ -1,4 +1,4 @@
-/*	ubavar.h	3.5	10/9/80	*/
+/*	ubavar.h	4.1	11/9/80	*/
 
 /*
  * Unibus adapter

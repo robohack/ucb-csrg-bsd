@@ -1,4 +1,4 @@
-/*	hp.c	3.19	11/3/80	*/
+/*	hp.c	4.1	11/9/80	*/
 
 #include "../conf/hp.h"
 #if NHP > 0

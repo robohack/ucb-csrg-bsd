@@ -1,4 +1,4 @@
-/*	vfs_cluster.c	3.12	9/16/80	*/
+/*	vfs_cluster.c	4.1	11/9/80	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"

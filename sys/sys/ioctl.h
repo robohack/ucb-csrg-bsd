@@ -1,4 +1,4 @@
-/*	ioctl.h	3.9	9/27/80	*/
+/*	ioctl.h	4.1	11/9/80	*/
 /*
  * ioctl definitions, and special character and local tty definitions
  */

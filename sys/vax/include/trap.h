@@ -1,4 +1,4 @@
-/*	trap.h	3.2	6/7/80	*/
+/*	trap.h	4.1	11/9/80	*/
 
 /*
  * Trap type values
