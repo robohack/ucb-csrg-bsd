@@ -16,14 +16,16 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)bcopy.c	5.2 (Berkeley) 7/21/88";
+static char sccsid[] = "@(#)bcopy.c	5.3 (Berkeley) 3/8/89";
 #endif /* LIBC_SCCS and not lint */
+
+#include <sys/types.h>
 
 /*
  * bcopy -- vax movc3 instruction
  */
 bcopy(src, dst, length)
-	register char *src, *dst;
+	register long *src, *dst;
 	register int length;
 {
 	if (length && src != dst)
