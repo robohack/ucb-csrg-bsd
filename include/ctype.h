@@ -7,15 +7,13 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)ctype.h	8.2 (Berkeley) 1/3/94
+ *	@(#)ctype.h	8.3 (Berkeley) 1/4/94
  */
 
 #ifndef	_CTYPE_H_
 #define _CTYPE_H_
 
-#ifndef _ANSI_SOURCE
 #include <runetype.h>
-#endif
 
 #define	_A	0x00000100L		/* Alpha */
 #define	_C	0x00000200L		/* Control */
