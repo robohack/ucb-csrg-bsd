@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)util.c	8.1 (Berkeley) 6/6/93";
+static char sccsid[] = "@(#)util.c	8.2 (Berkeley) 1/3/94";
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -34,8 +34,8 @@ ttoa(tval)
 
 	if (tval) {
 		tp = localtime(&tval);
-		(void)sprintf(tbuf, "%s %d, 19%d", months[tp->tm_mon],
-		    tp->tm_mday, tp->tm_year);
+		(void)sprintf(tbuf, "%s %d, %d", months[tp->tm_mon],
+		    tp->tm_mday, tp->tm_year + TM_YEAR_BASE);
 	}
 	else
 		*tbuf = '\0';
