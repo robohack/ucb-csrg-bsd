@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)docmd.c	5.11 (Berkeley) 7/9/92";
+static char sccsid[] = "@(#)docmd.c	5.12 (Berkeley) 1/9/93";
 #endif /* not lint */
 
 #include "defs.h"
@@ -223,7 +223,7 @@ makeconn(rhost)
 	fflush(stdout);
 	seteuid(0);
 	rem = rcmd(&rhost, port, user, ruser, buf, 0);
-	setreuid(0, userid);
+	seteuid(userid);
 	if (rem < 0)
 		return(0);
 	cp = buf;
