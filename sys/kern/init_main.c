@@ -1,4 +1,4 @@
-/*	init_main.c	3.9	7/12/80	*/
+/*	init_main.c	3.10	7/16/80	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
