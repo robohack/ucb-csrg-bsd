@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)csh.h	5.11 (Berkeley) 6/4/91
+ *	@(#)csh.h	5.12 (Berkeley) 6/5/91
  */
 
 #ifdef SHORT_STRINGS
@@ -244,10 +244,7 @@ struct Bin {
  */
 off_t   lineloc;
 
-#ifdef	TELL
 bool    cantell;		/* Is current source tellable ? */
-
-#endif				/* TELL */
 
 /*
  * Input lines are parsed into doubly linked circular
