@@ -5,10 +5,10 @@
 # include <errno.h>
 
 # ifndef QUEUE
-SCCSID(@(#)queue.c	3.18		6/6/82	(no queueing));
+SCCSID(@(#)queue.c	3.19		6/7/82	(no queueing));
 # else QUEUE
 
-SCCSID(@(#)queue.c	3.18		6/6/82);
+SCCSID(@(#)queue.c	3.19		6/7/82);
 
 /*
 **  QUEUEUP -- queue a message up for future transmission.
@@ -355,7 +355,9 @@ orderq()
 		cf = fopen(cbuf, "r");
 		if (cf == NULL)
 		{
-			syserr("orderq: cannot open %s", cbuf);
+			/* this may be some random person sending hir msgs */
+			/* syserr("orderq: cannot open %s", cbuf); */
+			errno = 0;
 			continue;
 		}
 		wlist[wn].w_name = newstr(cbuf);
@@ -570,9 +572,7 @@ readqf(cf)
 	**  Read and process the file.
 	*/
 
-	if (Verbose)
-		message(Arpa_Info, "Running %s", cf);
-
+	message(Arpa_Info, "Running %s", cf);
 	while (fgets(buf, sizeof buf, f) != NULL)
 	{
 		fixcrlf(buf, TRUE);
