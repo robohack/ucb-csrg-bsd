@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)savemail.c	8.33 (Berkeley) 7/23/94";
+static char sccsid[] = "@(#)savemail.c	8.34 (Berkeley) 8/15/94";
 #endif /* not lint */
 
 # include "sendmail.h"
@@ -637,7 +637,7 @@ errbody(mci, e, separator)
 	**  Output error message header (if specified and available).
 	*/
 
-	if (ErrMsgFile != NULL)
+	if (ErrMsgFile != NULL && !bitset(EF_SENDRECEIPT, e->e_parent->e_flags))
 	{
 		if (*ErrMsgFile == '/')
 		{
