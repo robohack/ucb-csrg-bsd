@@ -1,5 +1,8 @@
-#	@(#)Makefile	8.1 (Berkeley) 5/31/93
+#	@(#)Makefile	8.2 (Berkeley) 4/2/94
 
 PROG=	mv
+
+DPADD=	${LIBUTIL}
+LDADD=	-lutil
 
 .include <bsd.prog.mk>
