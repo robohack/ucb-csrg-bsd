@@ -1,6 +1,6 @@
 .\" %sccs.include.proprietary.roff%
 .\"
-.\"	@(#)p1	6.4 (Berkeley) 6/5/93
+.\"	@(#)p1	8.1 (Berkeley) 6/8/93
 .\"
 .OH 'The UNIX Time-Sharing System''PSD:1-%'
 .EH 'PSD:1-%''The UNIX Time-Sharing System'
