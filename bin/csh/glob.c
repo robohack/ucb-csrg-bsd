@@ -1,7 +1,7 @@
-static	char *sccsid = "@(#)glob.c 4.3 2/12/82";
+static	char *sccsid = "@(#)glob.c 4.4 5/7/82";
 
 #include "sh.h"
-#include <ndir.h>
+#include <dir.h>
 
 /*
  * C Shell
