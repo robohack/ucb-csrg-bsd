@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.20 (Berkeley) 8/17/93";
+static char sccsid[] = "@(#)main.c	8.21 (Berkeley) 8/19/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -1083,7 +1083,9 @@ main(argc, argv, envp)
 finis()
 {
 	if (tTd(2, 1))
-		printf("\n====finis: stat %d e_flags %o\n", ExitStat, CurEnv->e_flags);
+		printf("\n====finis: stat %d e_flags %o, e_id=%s\n",
+			ExitStat, CurEnv->e_flags,
+			CurEnv->e_id == NULL ? "NOQUEUE" : CurEnv->e_id);
 
 	/* clean up temp files */
 	CurEnv->e_to = NULL;
