@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1986, 1987 Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1986, 1987, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)bug.h	5.10 (Berkeley) 2/25/91
+ *	@(#)bug.h	8.1 (Berkeley) 6/4/93
  */
 
 #define BUGS_HOME	"owner-bugs@ucbvax.Berkeley.EDU"
