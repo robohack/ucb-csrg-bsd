@@ -6,12 +6,13 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)sum1.c	5.1 (Berkeley) 4/4/91";
+static char sccsid[] = "@(#)sum1.c	5.2 (Berkeley) 11/27/91";
 #endif /* not lint */
 
 #include <sys/types.h>
 #include <unistd.h>
 
+int
 csum1(fd, cval, clen)
 	register int fd;
 	u_long *cval, *clen;
