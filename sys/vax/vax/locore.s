@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)locore.s	7.3 (Berkeley) 2/21/87
+ *	@(#)locore.s	7.4 (Berkeley) 4/2/87
  */
 
 #include "psl.h"
@@ -921,6 +921,7 @@ l0:	pushab	b`init-l1(pc)
 l1:	pushl	$2
 	movl	sp,ap
 	chmk	$exec
+	pushl	r0
 	chmk	$exit
 
 init:	.asciz	"/etc/init"
