@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)kern_xxx.c	7.14 (Berkeley) 6/28/90
+ *	@(#)kern_xxx.c	7.15 (Berkeley) 8/24/90
  */
 
 #include "param.h"
@@ -25,6 +25,7 @@ gethostid(p, uap, retval)
 	return (0);
 }
 
+/* ARGSUSED */
 sethostid(p, uap, retval)
 	struct proc *p;
 	struct args {
