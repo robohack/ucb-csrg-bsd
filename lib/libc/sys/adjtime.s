@@ -4,9 +4,9 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-_sccsid:.asciz	"@(#)adjtime.s	5.1 (Berkeley) 6/9/85"
-#endif not lint
+#ifdef SYSLIBC_SCCS
+_sccsid:.asciz	"@(#)adjtime.s	5.2 (Berkeley) 3/9/86"
+#endif SYSLIBC_SCCS
 
 #include "SYS.h"
 

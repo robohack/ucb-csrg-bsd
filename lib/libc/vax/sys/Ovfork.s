@@ -4,9 +4,9 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-_sccsid:.asciz	"@(#)Ovfork.s	5.2 (Berkeley) 6/5/85"
-#endif not lint
+#ifdef SYSLIBC_SCCS
+_sccsid:.asciz	"@(#)Ovfork.s	5.3 (Berkeley) 3/9/86"
+#endif SYSLIBC_SCCS
 
 /*
  * @(#)vfork.s	4.1 (Berkeley) 12/21/80

@@ -4,11 +4,11 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-_sccsid:.asciz	"@(#)wait3.s	5.2 (Berkeley) 6/5/85"
-#endif not lint
+#ifdef SYSLIBC_SCCS
+_sccsid:.asciz	"@(#)wait3.s	5.3 (Berkeley) 3/9/86"
+#endif SYSLIBC_SCCS
 
-/*	@(#)wait3.s	5.2	(Berkeley)	6/5/85	*/
+/*	@(#)wait3.s	5.3	(Berkeley)	3/9/86	*/
 
 /*
  * C library -- wait3
