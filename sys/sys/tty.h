@@ -1,4 +1,4 @@
-/*	tty.h	3.3	11/15/19	*/
+/*	tty.h	3.4	6/7/80	*/
 
 #include <sgtty.h>
 #include <sys/ioctl.h>

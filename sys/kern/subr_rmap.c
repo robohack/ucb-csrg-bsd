@@ -1,4 +1,4 @@
-/*	subr_rmap.c	3.1	11/15/19	*/
+/*	subr_rmap.c	3.2	6/7/80	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"

@@ -1,4 +1,4 @@
-/*	tty_subr.c	3.3	11/15/19	*/
+/*	tty_subr.c	3.4	6/7/80	*/
 
 #include "../h/param.h"
 #include "../h/tty.h"
