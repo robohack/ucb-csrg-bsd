@@ -1,4 +1,4 @@
-static char sccsid[] = "@(#)telnet.h	4.3 (Berkeley) 3/16/82";
+/*	telnet.h	4.4	82/03/16	*/
 /*
  * Definitions for the TELNET protocol.
  */
