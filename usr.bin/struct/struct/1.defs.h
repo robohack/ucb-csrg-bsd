@@ -1,7 +1,7 @@
 /*-
  * %sccs.include.proprietary.c%
  *
- *	@(#)1.defs.h	4.3 (Berkeley) 4/16/91
+ *	@(#)1.defs.h	8.1 (Berkeley) 6/6/93
  */
 
 #define snum 	145
