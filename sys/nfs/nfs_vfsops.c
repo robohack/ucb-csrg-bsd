@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)nfs_vfsops.c	7.31 (Berkeley) 5/6/91
+ *	@(#)nfs_vfsops.c	7.32 (Berkeley) 11/1/91
  */
 
 #include "param.h"
@@ -511,7 +511,7 @@ nfs_sync(mp, waitfor)
 	int waitfor;
 {
 	if (syncprt)
-		bufstats();
+		ufs_bufstats();
 	/*
 	 * Force stale buffer cache information to be flushed.
 	 */
