@@ -22,11 +22,11 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)env.c	5.1 (Berkeley) 9/27/88";
+static char sccsid[] = "@(#)env.c	5.2 (Berkeley) 5/15/90";
 #endif /* not lint */
 
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
 
 main(argc, argv)
 	int argc;

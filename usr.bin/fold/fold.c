@@ -25,11 +25,11 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)fold.c	5.3 (Berkeley) 4/5/90";
+static char sccsid[] = "@(#)fold.c	5.4 (Berkeley) 5/15/90";
 #endif /* not lint */
 
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
 
 #define	DEFLINEWIDTH	80
 
