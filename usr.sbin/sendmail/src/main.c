@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.48 (Berkeley) 2/3/94";
+static char sccsid[] = "@(#)main.c	8.49 (Berkeley) 2/6/94";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -1273,6 +1273,7 @@ disconnect(droplev, e)
 	HoldErrs = TRUE;
 	CurEnv->e_errormode = EM_MAIL;
 	Verbose = FALSE;
+	DisConnected = TRUE;
 
 	/* all input from /dev/null */
 	if (InChannel != stdin)
