@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.39 (Berkeley) 3/17/93";
+static char sccsid[] = "@(#)main.c	6.40 (Berkeley) 3/18/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -886,7 +886,7 @@ main(argc, argv, envp)
 # endif
 
 	initsys(CurEnv);
-	setsender(from, CurEnv, NULL);
+	setsender(from, CurEnv, NULL, FALSE);
 
 	if (*av == NULL && !GrabTo)
 	{
