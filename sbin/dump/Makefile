@@ -1,4 +1,4 @@
-# sccsid = "@(#)Makefile	1.10 (Berkeley) 2/11/83"
+# sccsid = "@(#)Makefile	1.11 (Berkeley) 6/12/83"
 #
 #	dump.h			header file
 #	dumpitime.c		reads /etc/ddate
@@ -32,7 +32,7 @@ CFLAGS = -O $(DFLAGS)
 all: dump rdump
 
 rdump:	$(ROBJS)
-	$(CC) $(CFLAGS) $(ROBJS) -o rdump -ljobs
+	$(CC) $(CFLAGS) $(ROBJS) -o rdump
 
 dump:	$(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o dump
