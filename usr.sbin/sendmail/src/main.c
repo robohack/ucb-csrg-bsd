@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.24 (Berkeley) 8/21/93";
+static char sccsid[] = "@(#)main.c	8.25 (Berkeley) 8/22/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -619,7 +619,7 @@ main(argc, argv, envp)
 		BlankEnvelope.e_flags |= EF_METOO;
 
 # ifdef QUEUE
-	if (queuemode && RealUid != 0)
+	if (queuemode && RealUid != 0 && bitset(PRIV_RESTRICTQRUN, PrivacyFlags))
 	{
 		struct stat stbuf;
 
@@ -629,7 +629,7 @@ main(argc, argv, envp)
 		if (stbuf.st_uid != RealUid)
 		{
 			/* nope, really a botch */
-			usrerr("Permission denied");
+			usrerr("You do not have permission to process the queue");
 			exit (EX_NOPERM);
 		}
 	}
