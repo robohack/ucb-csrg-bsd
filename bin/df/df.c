@@ -1,5 +1,5 @@
 #ifndef lint
-static	char *sccsid = "@(#)df.c	4.14 1/2/83";
+static	char *sccsid = "@(#)df.c	4.15 2/7/83";
 #endif
 
 #include <stdio.h>
@@ -67,8 +67,8 @@ main(argc, argv)
 		if (setfsent() == 0)
 			perror(FSTAB), exit(1);
 		while (fsp = getfsent()) {
-			if (!strcmp(fsp->fs_type, FSTAB_RW) &&
-			    !(strcmp(fsp->fs_type, FSTAB_RO)))
+			if (strcmp(fsp->fs_type, FSTAB_RW) &&
+			    strcmp(fsp->fs_type, FSTAB_RO))
 				continue;
 			if (root[0] == 0)
 				(void) strcpy(root, fsp->fs_spec);
