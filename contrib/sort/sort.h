@@ -1,13 +1,13 @@
 /*-
- * Copyright (c) 1993 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
  * Peter McIlroy.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)sort.h	5.1 (Berkeley) 6/1/93
+ *	@(#)sort.h	8.1 (Berkeley) 6/6/93
  */
 
 #include <sys/param.h>
