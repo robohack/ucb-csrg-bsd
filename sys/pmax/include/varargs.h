@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)varargs.h	7.1 (Berkeley) 11/4/92
+ *	@(#)varargs.h	7.2 (Berkeley) 12/5/92
  */
 
 #ifndef _VARARGS_H_
@@ -24,7 +24,7 @@ typedef char *va_list;
 #define	va_arg(ap, type) \
 	((type *)(ap += sizeof(type) == sizeof(int) ? sizeof(type) : \
 		sizeof(type) > sizeof(int) ? \
-		(-(int)(ap) & ~(sizeof(type) - 1)) + sizeof(type) : \
+		(-(int)(ap) & (sizeof(type) - 1)) + sizeof(type) : \
 		(abort(), 0)))[-1]
 #endif
 
