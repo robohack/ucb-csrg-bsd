@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.9 (Berkeley) 4/27/93
+#	@(#)Makefile	8.1 (Berkeley) 5/31/93
 
 # -DLOG		log games
 PROG=	dm
