@@ -5,10 +5,10 @@
 # include <errno.h>
 
 # ifndef QUEUE
-SCCSID(@(#)queue.c	3.68		1/8/83	(no queueing));
+SCCSID(@(#)queue.c	3.69		1/8/83	(no queueing));
 # else QUEUE
 
-SCCSID(@(#)queue.c	3.68		1/8/83);
+SCCSID(@(#)queue.c	3.69		1/8/83);
 
 /*
 **  Work queue.
@@ -239,6 +239,14 @@ runqueue(forkflag)
 	if (LogLevel > 11)
 		syslog(LOG_DEBUG, "runqueue %s, pid=%d", QueueDir, getpid());
 # endif LOG
+
+	/*
+	**  Release any resources used by the daemon code.
+	*/
+
+# ifdef DAEMON
+	clrdaemon();
+# endif DAEMON
 
 	/*
 	**  Start making passes through the queue.
