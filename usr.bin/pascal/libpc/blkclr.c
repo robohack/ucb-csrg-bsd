@@ -1,10 +1,10 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-static char sccsid[] = "@(#)blkclr.c 1.1 3/7/81";
+static char sccsid[] = "@(#)blkclr.c 1.2 11/12/82";
 
-blkclr(siz, at)
-	long		siz;
+blkclr(at, siz)
 	register char	*at;
+	long		siz;
 {
 	register int	size = siz;
 
