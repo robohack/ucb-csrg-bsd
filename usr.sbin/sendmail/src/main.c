@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.65 (Berkeley) 5/22/93";
+static char sccsid[] = "@(#)main.c	6.66 (Berkeley) 5/24/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -129,6 +129,7 @@ main(argc, argv, envp)
 	extern char **myhostname();
 	extern char *arpadate();
 	extern char *getauthinfo();
+	extern char *macvalue();
 	extern char *optarg;
 	extern char **environ;
 
