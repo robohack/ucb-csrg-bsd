@@ -6,12 +6,13 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)io.c	5.9 (Berkeley) 2/16/92";
+static char sccsid[] = "@(#)io.c	5.10 (Berkeley) 8/31/92";
 #endif /* not lint */
 
 # include	<curses.h>
 # include	<ctype.h>
 # include	<signal.h>
+# include       <termios.h>
 # if __STDC__
 # include	<stdarg.h>
 # else
