@@ -8,10 +8,10 @@
  * %sccs.include.redist.c%
  */
 
-#include "DEFS.h"
+#include <machine/machAsmDefs.h>
 
 #if defined(LIBC_SCCS) && !defined(lint)
-	ASMSTR("@(#)bcmp.s	5.3 (Berkeley) 6/20/92")
+	ASMSTR("@(#)bcmp.s	5.4 (Berkeley) 7/26/92")
 #endif /* LIBC_SCCS and not lint */
 
 /* bcmp(s1, s2, n) */
