@@ -5,7 +5,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)subr.c	5.1 (Berkeley) 4/29/85";
+static char sccsid[] = "@(#)subr.c	5.2 (Berkeley) 5/4/85";
 #endif not lint
 
 /*
@@ -116,7 +116,7 @@ setchars()
 		if (p && *p)
 			*charvars[i] = *p;
 		else
-			*charvars[i] = '\0377';
+			*charvars[i] = '\377';
 	}
 }
 
