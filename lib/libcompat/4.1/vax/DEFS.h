@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1983 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1983, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.proprietary.c%
  *
- *	@(#)DEFS.h	5.2 (Berkeley) 4/12/91
+ *	@(#)DEFS.h	8.1 (Berkeley) 6/4/93
  */
 
 #ifdef PROF
