@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)initscr.c	5.5 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)initscr.c	5.6 (Berkeley) 3/3/91";
 #endif /* not lint */
 
 # include	"curses.ext"
@@ -22,7 +22,7 @@ WINDOW *
 initscr() {
 
 	reg char	*sp;
-	int		tstp();
+	void		tstp();
 
 # ifdef DEBUG
 	fprintf(outf, "INITSCR()\n");
