@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1989, 1991 Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1989, 1991, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)lfs_balloc.c	7.42 (Berkeley) 2/2/93
+ *	@(#)lfs_balloc.c	8.1 (Berkeley) 6/11/93
  */
 #include <sys/param.h>
 #include <sys/buf.h>
