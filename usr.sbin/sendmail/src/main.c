@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.22 (Berkeley) 2/21/93";
+static char sccsid[] = "@(#)main.c	6.23 (Berkeley) 2/21/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -837,6 +837,9 @@ main(argc, argv, envp)
 	/*
 	**  Do basic system initialization and set the sender
 	*/
+
+	/* make sendmail immune from process group signals */
+	(void) setpgrp(0, getpid());
 
 	initsys(CurEnv);
 	setsender(from, CurEnv);
