@@ -10,7 +10,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)notdi2.c	5.3 (Berkeley) 6/2/92";
+static char sccsid[] = "@(#)notdi2.c	5.4 (Berkeley) 6/25/92";
 #endif /* LIBC_SCCS and not lint */
 
 #include "quad.h"
@@ -19,8 +19,9 @@ static char sccsid[] = "@(#)notdi2.c	5.3 (Berkeley) 6/2/92";
  * Return ~a.  For some reason gcc calls this `one's complement' rather
  * than `not'.
  */
-quad
-__one_cmpldi2(quad a)
+quad_t
+__one_cmpldi2(a)
+	quad_t a;
 {
 	union uu aa;
 
