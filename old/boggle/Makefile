@@ -3,7 +3,7 @@
 # All rights reserved.  The Berkeley software License Agreement
 # specifies the terms and conditions for redistribution.
 #
-#	@(#)Makefile	5.3 (Berkeley) 9/7/85
+#	@(#)Makefile	5.4 (Berkeley) 4/3/87
 #
 DESTDIR=
 CC = /bin/cc
@@ -15,7 +15,7 @@ bogdict: comp sfile
 	-if [ -f /usr/local/lib/w2a ]; \
 		then dict=/usr/local/lib/w2a; \
 		else dict=/usr/dict/words; fi; \
-	sed -f sfile $$dict | uniq | comp >bogdict
+	sed -f sfile $$dict | uniq | ./comp >bogdict
 
 install:
 	install -s boggle ${DESTDIR}/usr/games/boggle
