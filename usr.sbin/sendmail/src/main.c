@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.62 (Berkeley) 5/6/93";
+static char sccsid[] = "@(#)main.c	6.63 (Berkeley) 5/13/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -882,7 +882,7 @@ main(argc, argv, envp)
 		if (tTd(0, 1))
 			strcat(dtype, "+debugging");
 
-		syslog(LOG_INFO, "starting daemon: %s", dtype + 1);
+		syslog(LOG_INFO, "starting daemon (%s): %s", Version, dtype + 1);
 #ifdef XLA
 		xla_create_file();
 #endif
