@@ -1,4 +1,4 @@
-#	@(#)Makefile	4.5	(Berkeley)	5/30/85
+#	@(#)Makefile	4.6	(Berkeley)	6/6/85
 #
 DESTDIR=
 CFLAGS=	-O
@@ -15,7 +15,7 @@ ${SUBDIR}: FRC
 FRC:
 
 install:
-	for i in ${SUBDIR}; do \
+	-for i in ${SUBDIR}; do \
 		(cd $$i; make ${MFLAGS} DESTDIR=${DESTDIR} install); done
 
 tags:
