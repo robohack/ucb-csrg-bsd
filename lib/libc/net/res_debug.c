@@ -4,14 +4,14 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)res_debug.c	5.30 (Berkeley) 6/27/90
+ *	@(#)res_debug.c	5.31 (Berkeley) 12/28/90
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)res_debug.c	5.30 (Berkeley) 6/27/90";
+static char sccsid[] = "@(#)res_debug.c	5.31 (Berkeley) 12/28/90";
 #endif /* LIBC_SCCS and not lint */
 
-#include <sys/types.h>
+#include <sys/param.h>
 #include <netinet/in.h>
 #include <stdio.h>
 #include <arpa/nameser.h>
