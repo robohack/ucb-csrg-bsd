@@ -8,7 +8,5 @@ divert(-1)
 #
 
 divert(0)
-VERSIONID(`@(#)linux.m4	8.1 (Berkeley) 8/8/93')
-define(`LOCAL_MAILER_PATH', /usr/bin/lmail)dnl
-define(`LOCAL_MAILER_ARGS', mail $u)dnl
-define(`LOCAL_MAILER_FLAGS', `rm')dnl
+VERSIONID(`@(#)linux.m4	8.2 (Berkeley) 8/21/93')
+define(`LOCAL_MAILER_PATH', /bin/mail.local)dnl
