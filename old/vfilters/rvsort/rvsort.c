@@ -12,7 +12,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)rvsort.c	5.4 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)rvsort.c	5.5 (Berkeley) 3/2/91";
 #endif /* not lint */
 
 /*
@@ -258,11 +258,6 @@ getch()
 		return(c);
 	}
 	return(getc(in));
-}
-
-ungetc(c)
-{
-	peekc = c;
 }
 
 error(s)
