@@ -9,7 +9,7 @@
 */
 
 #ifndef lint
-static char	SccsId[] = "@(#)deliver.c	5.10.1.2 (Berkeley) 7/21/86";
+static char	SccsId[] = "@(#)deliver.c	5.11 (Berkeley) 7/21/86";
 #endif not lint
 
 # include <signal.h>
