@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.4 (Berkeley) 6/18/93
+#	@(#)Makefile	8.1 (Berkeley) 6/18/93
 
 PROG=	newlfs
 CFLAGS+=-I/sys/ufs/lfs
