@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 6/11/93
+#	@(#)Makefile	8.1 (Berkeley) 6/11/93
 
 PROG=	boggle
 SRCS=	bog.c help.c mach.c prtable.c timer.c word.c
