@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)trace.c	5.9 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)trace.c	5.10 (Berkeley) 2/26/91";
 #endif /* not lint */
 
 /*
@@ -32,6 +32,7 @@ char *xns_ntoa();
 traceinit(ifp)
 	register struct interface *ifp;
 {
+	static int iftraceinit();
 
 	if (iftraceinit(ifp, &ifp->int_input) &&
 	    iftraceinit(ifp, &ifp->int_output))

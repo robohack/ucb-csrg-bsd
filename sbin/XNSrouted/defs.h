@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)defs.h	5.8 (Berkeley) 6/1/90
+ *	@(#)defs.h	5.9 (Berkeley) 2/26/91
  */
 
 #include <sys/types.h>
@@ -57,11 +57,6 @@ struct	rip *msg;
 
 char	**argv0;
 
-extern	int errno;
-
-char	*malloc();
-int	exit();
-int	sendmsg();
+int	sndmsg();
 int	supply();
-int	timer();
 int	cleanup();
