@@ -1,5 +1,5 @@
 /* Copyright (c) 1981 Regents of the University of California */
-static char *sccsid = "@(#)ex_temp.c	7.1	7/8/81";
+static char *sccsid = "@(#)ex_temp.c	7.2	7/26/81";
 #include "ex.h"
 #include "ex_temp.h"
 #include "ex_vis.h"
@@ -15,7 +15,7 @@ static char *sccsid = "@(#)ex_temp.c	7.1	7/8/81";
 char	tfname[40];
 char	rfname[40];
 int	havetmp;
-/* short	tfile = -1;	mjm: in ex_space.c */
+short	tfile = -1;
 short	rfile = -1;
 
 fileinit()
