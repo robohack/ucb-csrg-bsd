@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)wsfe.c	5.1	6/7/85
+ *	@(#)wsfe.c	5.2	7/30/85
  */
 
 /*
@@ -21,7 +21,7 @@ LOCAL ioflag new;
 s_wsfe(a) cilist *a;	/*start*/
 {	int n;
 	reading = NO;
-	sequential=FORMATTED;
+	sequential = YES;
 	if(n=c_sfe(a,WRITE,SEQ,wsfe)) return(n);
 	if(curunit->url) err(errflag,F_ERNOSIO,wsfe)
 	if(!curunit->uwrt && ! nowwriting(curunit)) err(errflag, errno, wsfe)
