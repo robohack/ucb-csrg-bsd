@@ -1,4 +1,4 @@
-SCCSID = "@(#)Makefile 1.6 9/4/80"
+SCCSID = "@(#)Makefile 1.7 9/9/80"
 
 MKSTR = /usr/ucb/mkstr
 EYACC = /usr/ucb/eyacc
@@ -8,7 +8,7 @@ GET = sccs get
 CFLAGS = -O -w
 LDFLAGS = -z
 
-INSTALLDIR = /usr/new
+INSTALLDIR = /usr/lib
 LIBDIR = /usr/lib
 TMPDIR = tmp
 
