@@ -1,8 +1,8 @@
-#	@(#)Makefile	6.2 (Berkeley) 6/30/90
+#	@(#)Makefile	5.1 (Berkeley) 6/30/90
 
-DIR=	smm/09.uucpimpl
-SRCS=	implement.ms
-MACROS=	-ms
+DIR=	usd/28.tbl
+SRCS=	tbl
+MACROS=	-msU
 
 paper.${PRINTER}: ${SRCS}
 	${TBL} ${SRCS} | ${ROFF} > ${.TARGET}
