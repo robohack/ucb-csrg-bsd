@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)collect.c	6.11 (Berkeley) 3/19/93";
+static char sccsid[] = "@(#)collect.c	6.12 (Berkeley) 3/23/93";
 #endif /* not lint */
 
 # include <errno.h>
@@ -245,7 +245,6 @@ readerr:
 	if ((feof(InChannel) || ferror(InChannel)) && OpMode == MD_SMTP)
 	{
 		char *host;
-		int usrerr(), syserr();
 
 		host = RealHostName;
 		if (host == NULL)
