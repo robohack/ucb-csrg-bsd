@@ -1,6 +1,13 @@
+/*-
+ * Copyright (c) 1983 The Regents of the University of California.
+ * All rights reserved.
+ *
+ * %sccs.include.proprietary.c%
+ */
+
 #ifndef lint
-static char sccsid[] = "@(#)line.c	5.2 (Berkeley) 6/6/85";
-#endif not lint
+static char sccsid[] = "@(#)line.c	5.3 (Berkeley) 4/22/91";
+#endif /* not lint */
 
 #include "aed.h"
 
