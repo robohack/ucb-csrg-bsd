@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)raw_usrreq.c	6.12 (Berkeley) 2/3/86
+ *	@(#)raw_usrreq.c	6.13 (Berkeley) 2/23/86
  */
 
 #include "param.h"
@@ -142,7 +142,7 @@ next:
 /*ARGSUSED*/
 raw_ctlinput(cmd, arg)
 	int cmd;
-	caddr_t arg;
+	struct sockaddr *arg;
 {
 
 	if (cmd < 0 || cmd > PRC_NCMDS)
