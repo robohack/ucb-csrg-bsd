@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.9 (Berkeley) 1/21/93";
+static char sccsid[] = "@(#)main.c	6.10 (Berkeley) 1/22/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -214,7 +214,7 @@ main(argc, argv, envp)
 	**	to the run that froze the configuration.
 	*/
 	nothaw = FALSE;
-#define OPTIONS		"b:C:cd:eF:f:h:Iimno:p:q:R:r:sTtv"
+#define OPTIONS		"b:C:cd:e:F:f:h:Iimno:p:q:R:r:sTtv"
 	while ((j = getopt(argc, argv, OPTIONS)) != EOF)
 	{
 		switch (j)
@@ -481,12 +481,15 @@ main(argc, argv, envp)
 
 			/* compatibility flags */
 		  case 'c':	/* connect to non-local mailers */
-		  case 'e':	/* error message disposition */
 		  case 'i':	/* don't let dot stop me */
 		  case 'm':	/* send to me too */
 		  case 'T':	/* set timeout interval */
 		  case 'v':	/* give blow-by-blow description */
 			setoption(j, "T", FALSE, TRUE);
+			break;
+
+		  case 'e':	/* error message disposition */
+			setoption(j, optarg, FALSE, TRUE);
 			break;
 
 		  case 's':	/* save From lines in headers */
