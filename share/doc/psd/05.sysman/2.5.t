@@ -1,9 +1,9 @@
-.\" Copyright (c) 1983 The Regents of the University of California.
-.\" All rights reserved.
+.\" Copyright (c) 1983, 1993
+.\"	The Regents of the University of California.  All rights reserved.
 .\"
 .\" %sccs.include.redist.roff%
 .\"
-.\"	@(#)2.5.t	6.3 (Berkeley) 4/17/91
+.\"	@(#)2.5.t	8.1 (Berkeley) 6/8/93
 .\"
 .sh "Process and kernel descriptors
 .PP
