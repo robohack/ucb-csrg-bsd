@@ -1,5 +1,5 @@
 /*
- *	@(#)if_hy.c	6.9 (Berkeley) 2/23/86
+ *	@(#)if_hy.c	7.1 (Berkeley) 6/5/86
  */
 
 /*
