@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.4 (Berkeley) 4/27/93
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 LIB=	kvm
 CFLAGS+=-DLIBC_SCCS -I/sys
