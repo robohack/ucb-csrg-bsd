@@ -5,7 +5,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)acu.c	5.3 (Berkeley) 4/3/86";
+static char sccsid[] = "@(#)acu.c	5.4 (Berkeley) 2/9/87";
 #endif not lint
 
 #include "tip.h"
@@ -62,8 +62,7 @@ connect()
 			else
 				(*acu->acu_abort)();
 		}
-		delock(uucplock);
-		exit(1);
+		return ("interrupt");
 	}
 	if ((acu = acutype(AT)) == NOACU)
 		return ("unknown ACU type");
