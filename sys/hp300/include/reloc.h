@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1992 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1992, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)reloc.h	7.1 (Berkeley) 3/18/92
+ *	@(#)reloc.h	8.1 (Berkeley) 6/10/93
  */
 
 /* Relocation format. */

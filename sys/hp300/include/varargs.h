@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1990 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1990, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)varargs.h	5.4 (Berkeley) 2/19/92
+ *	@(#)varargs.h	8.1 (Berkeley) 6/10/93
  */
 
 #ifndef _VARARGS_H_
