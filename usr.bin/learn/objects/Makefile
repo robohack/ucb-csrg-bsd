@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.3 (Berkeley) 6/8/90
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 OBJS=	getline.o getnum.o
 
