@@ -12,7 +12,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)rmdir.c	8.1 (Berkeley) 5/31/93";
+static char sccsid[] = "@(#)rmdir.c	8.2 (Berkeley) 4/1/94";
 #endif /* not lint */
 
 #include <err.h>
@@ -54,6 +54,7 @@ main(argc, argv)
 void
 usage()
 {
+
 	(void)fprintf(stderr, "usage: rmdir directory ...\n");
 	exit(1);
 }
