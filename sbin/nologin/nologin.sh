@@ -1,11 +1,11 @@
 #!/bin/sh -
 #
-# Copyright (c) 1992 The Regents of the University of California.
-# All rights reserved.
+# Copyright (c) 1992, 1993
+#	The Regents of the University of California.  All rights reserved.
 #
 # %sccs.include.redist.sh%
 #
-#	@(#)nologin.sh	5.1 (Berkeley) 4/2/92
+#	@(#)nologin.sh	8.1 (Berkeley) 6/5/93
 #
 
 echo 'This account is currently not available.'
