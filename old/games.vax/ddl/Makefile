@@ -3,15 +3,13 @@
 # All rights reserved.  The Berkeley software License Agreement
 # specifies the terms and conditions for redistribution.
 #
-#	@(#)Makefile	5.1 (Berkeley) 2/1/86
+#	@(#)Makefile	5.2 (Berkeley) 6/3/87
 #
-DESTDIR=
-
 all:
 	@echo "ddlcomp and ddlrun come in binary form only"
 
 install:
-	install -c -m 755 ddlrun ${DESTDIR}/usr/games/lib/ddlrun
+	install -c -o bin -g bin -m 755 ddlrun ${DESTDIR}/usr/games/lib/ddlrun
 
 clean:
-	
+depend:
