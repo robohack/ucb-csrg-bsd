@@ -14,7 +14,9 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)pathnames.h	5.2 (Berkeley) 5/9/89
+ *	@(#)pathnames.h	5.3 (Berkeley) 5/12/90
  */
+
+#include <paths.h>
 
 #define	_PATH_LOGIN	"/usr/bin/login"
