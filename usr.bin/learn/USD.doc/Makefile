@@ -1,4 +1,4 @@
-#	@(#)Makefile	6.3 (Berkeley) 6/5/93
+#	@(#)Makefile	8.1 (Berkeley) 6/8/93
 
 DIR=	usd/02.learn
 SRCS=	p0 p1 p2 p3 p4 p5 p6 p7
