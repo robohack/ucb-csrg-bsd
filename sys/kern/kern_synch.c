@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)kern_synch.c	7.15 (Berkeley) 5/4/91
+ *	@(#)kern_synch.c	7.16 (Berkeley) 5/6/91
  */
 
 #include "param.h"
@@ -15,6 +15,8 @@
 #include "resourcevar.h"
 
 #include "machine/cpu.h"
+
+u_char	curpri;			/* usrpri of curproc */
 
 /*
  * Force switch among equal priority processes every 100ms.
