@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)conf.c	8.15 (Berkeley) 8/7/93";
+static char sccsid[] = "@(#)conf.c	8.16 (Berkeley) 8/8/93";
 #endif /* not lint */
 
 # include "sendmail.h"
@@ -1067,10 +1067,20 @@ initgroups(name, basegid)
 pid_t
 setsid __P ((void))
 {
+#ifdef TIOCNOTTY
+	int fd;
+
+	fd = open("/dev/tty", 2);
+	if (fd >= 0)
+	{
+		(void) ioctl(fd, (int) TIOCNOTTY, (char *) 0);
+		(void) close(fd);
+	}
+#endif /* TIOCNOTTY */
 # ifdef SYSTEM5
 	return setpgrp();
 # else
-	return 0;
+	return setpgid(0, getpid());
 # endif
 }
 
