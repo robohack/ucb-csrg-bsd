@@ -5,7 +5,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)dumprmt.c	5.2 (Berkeley) 6/18/85";
+static char sccsid[] = "@(#)dumprmt.c	5.3 (Berkeley) 9/17/85";
 #endif not lint
 
 #include <sys/param.h>
@@ -83,8 +83,8 @@ rmtopen(tape, mode)
 	char buf[256];
 
 	sprintf(buf, "O%s\n%d\n", tape, mode);
-	rmtcall(tape, buf);
 	rmtstate = TS_OPEN;
+	return (rmtcall(tape, buf));
 }
 
 rmtclose()
