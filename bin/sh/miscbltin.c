@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)miscbltin.c	8.1 (Berkeley) 5/31/93";
+static char sccsid[] = "@(#)miscbltin.c	8.2 (Berkeley) 4/16/94";
 #endif /* not lint */
 
 /*
@@ -60,7 +60,7 @@ readcmd(argc, argv)  char **argv; {
 		out2str(prompt);
 		flushall();
 	}
-	if ((ap = argptr) == NULL)
+	if (*(ap = argptr) == NULL)
 		error("arg count");
 	if ((ifs = bltinlookup("IFS", 1)) == NULL)
 		ifs = nullstr;
