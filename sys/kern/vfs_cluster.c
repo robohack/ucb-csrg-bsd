@@ -1,10 +1,10 @@
-/*
- * Copyright (c) 1982, 1986, 1989 Regents of the University of California.
+/*-
+ * Copyright (c) 1982, 1986, 1989 The Regents of the University of California.
  * All rights reserved.
  *
- * %sccs.include.redist.c%
+ * %sccs.include.proprietary.c%
  *
- *	@(#)vfs_cluster.c	7.40 (Berkeley) 5/8/91
+ *	@(#)vfs_cluster.c	7.41 (Berkeley) 5/9/91
  */
 
 #include "param.h"
