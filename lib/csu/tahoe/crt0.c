@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)crt0.c	5.2 (Berkeley) 5/6/91";
+static char sccsid[] = "@(#)crt0.c	5.3 (Berkeley) 5/22/91";
 #endif /* not lint */
 
 /*
@@ -73,7 +73,7 @@ asm("eprol:");
 exit(code)
 	register int code;
 {
-	monitor(0);
+	_mcleanup();
 	_cleanup();
 	_exit(code);
 }
