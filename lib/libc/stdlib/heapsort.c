@@ -2,11 +2,14 @@
  * Copyright (c) 1991 The Regents of the University of California.
  * All rights reserved.
  *
+ * This code is derived from software contributed to Berkeley by
+ * Ronnie Kon at Mindcraft Inc., Kevin Lew and Elmer Yglesias.
+ *
  * %sccs.include.redist.c%
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)heapsort.c	5.1 (Berkeley) 6/4/91";
+static char sccsid[] = "@(#)heapsort.c	5.2 (Berkeley) 7/22/91";
 #endif /* LIBC_SCCS and not lint */
 
 #include <sys/cdefs.h>
