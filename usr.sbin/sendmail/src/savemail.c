@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)savemail.c	6.39 (Berkeley) 5/4/93";
+static char sccsid[] = "@(#)savemail.c	6.40 (Berkeley) 5/5/93";
 #endif /* not lint */
 
 # include <pwd.h>
@@ -332,7 +332,8 @@ savemail(e)
 				break;
 			}
 
-			fp = dfopen("/usr/tmp/dead.letter", "a");
+			fp = dfopen("/usr/tmp/dead.letter",
+				    O_WRONLY|O_CREAT|O_APPEND, FileMode);
 			if (fp == NULL)
 			{
 				state = ESM_PANIC;
