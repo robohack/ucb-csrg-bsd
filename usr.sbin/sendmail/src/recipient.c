@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)recipient.c	8.64 (Berkeley) 2/14/95";
+static char sccsid[] = "@(#)recipient.c	8.65 (Berkeley) 2/20/95";
 #endif /* not lint */
 
 # include "sendmail.h"
@@ -56,9 +56,9 @@ sendtolist(list, ctladdr, sendq, aliaslevel, e)
 	bool firstone;		/* set on first address sent */
 	char delimiter;		/* the address delimiter */
 	int naddrs;
+	int i;
 	char *oldto = e->e_to;
-	static char *bufp = NULL;
-	static int buflen;
+	char *bufp;
 	char buf[MAXNAME + 1];
 
 	if (list == NULL)
@@ -87,19 +87,13 @@ sendtolist(list, ctladdr, sendq, aliaslevel, e)
 	naddrs = 0;
 
 	if (bufp == NULL)
-	{
+	/* make sure we have enough space to copy the string */
+	i = strlen(list) + 1;
+	if (i <= sizeof buf)
 		bufp = buf;
-		buflen = sizeof buf - 1;
-	}
-	if (strlen(list) > buflen)
-	{
-		/* allocate additional space */
-		if (bufp != buf)
-			free(bufp);
-		buflen = strlen(list);
-		bufp = malloc(buflen + 1);
-	}
-	strcpy(bufp, list);
+	else
+		bufp = xalloc(i);
+	strcpy(bufp, denlstring(list));
 
 	for (p = bufp; *p != '\0'; )
 	{
@@ -155,6 +149,8 @@ sendtolist(list, ctladdr, sendq, aliaslevel, e)
 	}
 
 	e->e_to = oldto;
+	if (bufp != buf)
+		free(bufp);
 	return (naddrs);
 }
 /*
@@ -1080,8 +1076,7 @@ sendtoargv(argv, e)
 
 	while ((p = *argv++) != NULL)
 	{
-		(void) sendtolist(denlstring(p), NULLADDR,
-				  &e->e_sendqueue, 0, e);
+		(void) sendtolist(p, NULLADDR, &e->e_sendqueue, 0, e);
 	}
 }
 /*
