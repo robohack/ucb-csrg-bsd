@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.102		8/25/82);
+SCCSID(@(#)main.c	3.103		8/25/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -511,6 +511,8 @@ main(argc, argv)
 			runqueue(TRUE);
 # endif QUEUE
 		checkerrors(CurEnv);
+		dropenvelope(CurEnv);
+		CurEnv->e_id = CurEnv->e_qf = CurEnv->e_df = NULL;
 		getrequests();
 
 		/* at this point we are in a child: reset state */
