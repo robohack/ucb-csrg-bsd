@@ -16,7 +16,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)collect.c	5.11 (Berkeley) 7/7/88";
+static char sccsid[] = "@(#)collect.c	5.12 (Berkeley) 7/7/88";
 #endif /* not lint */
 
 /*
@@ -358,7 +358,7 @@ out:
 	signal(SIGHUP, savehup);
 	signal(SIGCONT, savecont);
 	sigsetmask(omask);
-	noreset = 0;
+	noreset--;
 	return collf;
 }
 
