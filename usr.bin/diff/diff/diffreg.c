@@ -1,4 +1,4 @@
-static	char sccsid[] = "@(#)diffreg.c 4.1 10/9/80";
+static	char sccsid[] = "@(#)diffreg.c 4.2 5/5/82";
 
 #include "diff.h"
 /*
@@ -167,7 +167,7 @@ copytemp()
 	tempfile = mktemp("/tmp/dXXXXX");
 	f = creat(tempfile,0600);
 	if (f < 0) {
-		fprintf("diff: ");
+		fprintf(stderr, "diff: ");
 		perror(tempfile);
 		done();
 	}
