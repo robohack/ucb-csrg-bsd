@@ -12,7 +12,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)pstat.c	8.7 (Berkeley) 1/23/94";
+static char sccsid[] = "@(#)pstat.c	8.8 (Berkeley) 2/10/94";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -44,8 +44,6 @@ static char sccsid[] = "@(#)pstat.c	8.7 (Berkeley) 1/23/94";
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-
-#include "pathnames.h"
 
 struct nlist nl[] = {
 #define VM_SWAPMAP	0
