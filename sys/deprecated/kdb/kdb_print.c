@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)kdb_print.c	7.15 (Berkeley) 1/15/90
+ *	@(#)kdb_print.c	7.16 (Berkeley) 5/3/90
  */
 
 #include "machine/mtpr.h"
@@ -201,7 +201,7 @@ printtrace(modif)
 				if (U->u_ttyp)
 					printf(" ctty %x ", U->u_ttyp);
 #endif
-				printf(" %.8s ", U->u_comm);
+				printf(" %.8s ", p->p_comm);
 #undef U
 			}
 
