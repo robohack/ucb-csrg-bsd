@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)pte.h	7.5 (Berkeley) 5/9/89
+ *	@(#)pte.h	7.6 (Berkeley) 8/31/89
  */
 
 /*
@@ -94,5 +94,8 @@ extern	struct pte Ioamap[][1];
 #endif
 #ifdef NFS
 extern	struct pte Nfsiomap[];
+#endif
+#ifdef MFS
+extern	struct pte Mfsiomap[];
 #endif
 #endif /* defined(KERNEL) && !defined(LOCORE) */
