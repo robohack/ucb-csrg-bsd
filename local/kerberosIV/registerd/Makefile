@@ -4,7 +4,7 @@
 #
 # %sccs.include.redist.sh
 #
-#	@(#)Makefile	5.4 (Berkeley) 11/1/90
+#	@(#)Makefile	8.1 (Berkeley) 6/1/93
 #
 PROG=	registerd
 SRCS=	registerd.c des_rw.c
