@@ -6,17 +6,18 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)putchar.c	5.4 (Berkeley) 6/1/90";
-#endif /* not lint */
+static char sccsid[] = "@(#)putchar.c	5.5 (Berkeley) 8/23/92";
+#endif	/* not lint */
 
-# include	"curses.ext"
+#include <curses.h>
 
-char
-_putchar(c)
-reg char	c; {
+void
+__cputchar(ch)
+	int ch;
+{
 
-	putchar(c);
 #ifdef DEBUG
-	fprintf(outf, "_PUTCHAR(%s)\n", unctrl(c));
+	__TRACE("__cputchar: %s\n", unctrl(ch));
 #endif
+	(void)putchar(ch);
 }
