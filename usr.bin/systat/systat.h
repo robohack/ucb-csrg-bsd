@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)systat.h	5.1 (Berkeley) 5/30/85
+ *	@(#)systat.h	5.2 (Berkeley) 7/20/86
  */
 
 #include <netdb.h>
@@ -13,7 +13,7 @@
 
 #include <sys/param.h>
 #include <sys/file.h>
-#include <sys/dk.h>
+#include <sys/dkstat.h>
 
 #include <netinet/in.h>
 #include <arpa/inet.h>
