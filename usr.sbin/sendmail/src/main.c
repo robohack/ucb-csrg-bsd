@@ -3,7 +3,7 @@
 # include <sgtty.h>
 # include "sendmail.h"
 
-SCCSID(@(#)main.c	4.17		4/9/85);
+SCCSID(@(#)main.c	4.18		5/24/85);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -70,7 +70,6 @@ main(argc, argv, envp)
 	STAB *st;
 	register int i;
 	bool readconfig = TRUE;
-	bool safecf = TRUE;		/* this conf file is sys default */
 	bool queuemode = FALSE;		/* process queue requests */
 	static bool reenter = FALSE;
 	char jbuf[30];			/* holds HostName */
@@ -127,7 +126,6 @@ main(argc, argv, envp)
 			ConfFile = &p[2];
 			if (ConfFile[0] == '\0')
 				ConfFile = "sendmail.cf";
-			safecf = FALSE;
 			setgid(getrgid());
 			setuid(getruid());
 			break;
@@ -340,8 +338,8 @@ main(argc, argv, envp)
 	**	Extract special fields for local use.
 	*/
 
-	if (!safecf || OpMode == MD_FREEZE || readconfig)
-		readcf(ConfFile, safecf);
+	if (OpMode == MD_FREEZE || readconfig)
+		readcf(ConfFile);
 
 	switch (OpMode)
 	{
