@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 7/19/93
+#	@(#)Makefile	8.1 (Berkeley) 7/19/93
 
 PROG=	sliplogin
 MAN8=	sliplogin.0
