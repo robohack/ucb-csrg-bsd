@@ -3,7 +3,7 @@
 # All rights reserved.  The Berkeley software License Agreement
 # specifies the terms and conditions for redistribution.
 #
-#	@(#)Makefile	5.4 (Berkeley) 4/3/87
+#	@(#)Makefile	5.5 (Berkeley) 5/31/87
 #
 DESTDIR=
 CC = /bin/cc
@@ -29,3 +29,5 @@ comp: comp.c
 
 clean:
 	rm -f bogdict boggle comp
+
+depend:
