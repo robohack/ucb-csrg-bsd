@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)rcv.h	5.1 (Berkeley) 6/6/85
+ *	@(#)rcv.h	5.2 (Berkeley) 5/18/87
  */
 
 /*
@@ -13,8 +13,5 @@
  * globals and declarations.
  */
 
-#ifdef	pdp11
-#include <whoami.h>
-#endif
 #include "def.h"
 #include "glob.h"

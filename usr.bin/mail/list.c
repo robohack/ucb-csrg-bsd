@@ -5,7 +5,7 @@
  */
 
 #ifndef lint
-static char *sccsid = "@(#)list.c	5.4 (Berkeley) 11/2/85";
+static char *sccsid = "@(#)list.c	5.5 (Berkeley) 5/18/87";
 #endif not lint
 
 #include "rcv.h"
@@ -414,7 +414,7 @@ scan(sp)
 	int quotec;
 
 	if (regretp >= 0) {
-		copy(stringstack[regretp], lexstring);
+		strcpy(lexstring, stringstack[regretp]);
 		lexnumber = numberstack[regretp];
 		return(regretstack[regretp--]);
 	}
