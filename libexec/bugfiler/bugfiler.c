@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)bugfiler.c	4.9 (Berkeley) 8/27/83";
+static char sccsid[] = "@(#)bugfiler.c	4.10 (Berkeley) 9/12/83";
 #endif
 
 /*
@@ -165,7 +165,7 @@ struct header {
 	"To",		H_SAV|H_HDR, 0,
 	"Cc",		H_SAV|H_HDR, 0,
 	"Description",	H_REQ,       0,
-	"Repeat-By",	H_REQ,	     0,
+	"Repeat-By",	0,	     0,
 	"Fix",		0,	     0,
 	0,	0,	0,
 };
