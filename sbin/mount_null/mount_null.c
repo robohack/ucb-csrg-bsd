@@ -8,12 +8,12 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)mount_null.c	5.2 (Berkeley) 7/11/92
+ *	@(#)mount_null.c	5.3 (Berkeley) 7/12/92
  */
 
 #include <sys/param.h>
 #include <sys/mount.h>
-#include <nullfs/null.h>
+#include <miscfs/nullfs/null.h>
 
 #include <errno.h>
 #include <stdio.h>
