@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)term.h	5.3 (Berkeley) 7/3/92
+ *	@(#)term.h	5.4 (Berkeley) 7/16/92
  */
 
 /*
