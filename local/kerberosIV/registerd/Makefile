@@ -4,7 +4,7 @@
 #
 # %sccs.include.redist.sh
 #
-#	@(#)Makefile	5.2 (Berkeley) 6/26/90
+#	@(#)Makefile	5.3 (Berkeley) 8/6/90
 #
 PROG=	registerd
 SRCS=	registerd.c des_rw.c
@@ -13,5 +13,6 @@ CFLAGS+=-DKERBEROS -I${.CURDIR}/../register
 DPADD=	${LIBKDB} ${LIBKRB} ${LIBDES}
 LDADD=	-lkdb -lkrb -ldes
 MAN8=	registerd.0
+BINDIR=	/usr/libexec
 
 .include <bsd.prog.mk>
