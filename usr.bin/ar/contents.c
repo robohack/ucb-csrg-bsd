@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)contents.c	5.2 (Berkeley) 1/21/91";
+static char sccsid[] = "@(#)contents.c	5.3 (Berkeley) 3/10/91";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -56,7 +56,7 @@ contents(argv)
 			if (!all && !*argv)
 				break;
 		}
-		SKIP(afd, chdr.size, archive);
+		skipobj(afd);
 	} 
 	eval = 0;
 	ORPHANS;
