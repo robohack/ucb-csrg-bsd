@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.47 (Berkeley) 1/15/94";
+static char sccsid[] = "@(#)main.c	8.48 (Berkeley) 2/3/94";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -416,6 +416,9 @@ main(argc, argv, envp)
 			  case MD_TEST:
 			  case MD_INITALIAS:
 			  case MD_PRINT:
+#ifdef MAYBE_NEXT_RELEASE
+			  case MD_ARPAFTP:
+#endif
 				OpMode = j;
 				break;
 
