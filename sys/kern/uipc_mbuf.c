@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)uipc_mbuf.c	8.2 (Berkeley) 1/4/94
+ *	@(#)uipc_mbuf.c	8.3 (Berkeley) 1/9/95
  */
 
 #include <sys/param.h>
@@ -352,6 +352,7 @@ m_cat(m, n)
 	}
 }
 
+void
 m_adj(mp, req_len)
 	struct mbuf *mp;
 	int req_len;
