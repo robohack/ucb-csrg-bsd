@@ -1,4 +1,4 @@
-static	char sccsid[] = "@(#)setup.c 4.2 4/18/81";
+static	char sccsid[] = "@(#)setup.c 4.3 8/17/82";
 #
 /*
  *

@@ -1,4 +1,4 @@
-static	char sccsid[] = "@(#)sub.c 4.1 10/9/80";
+static	char sccsid[] = "@(#)sub.c 4.2 8/17/82";
 #include "head.h"
 #include <a.out.h>
 #include <stab.h>
@@ -204,6 +204,7 @@ char *pat, *str; {
 
 /* gets indirect address for pointers and subscripts */
 getindir(class, addr, type) 
+u_char class;
 ADDR addr; {
 	if (ISARY(type)) return(addr);
 	if (class == N_RSYM)

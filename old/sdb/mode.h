@@ -1,4 +1,4 @@
-/* "@(#)mode.h 4.1 10/9/80" */
+/* "@(#)mode.h 4.2 8/17/82" */
 #include "machine.h"
 /*
  *	UNIX debugger
