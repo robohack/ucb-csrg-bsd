@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)vm_swap.c	7.17 (Berkeley) 4/16/91
+ *	@(#)vm_swap.c	7.18 (Berkeley) 5/6/91
  */
 
 #include "param.h"
@@ -22,6 +22,8 @@
 /*
  * Indirect driver for multi-controller paging.
  */
+
+int	nswap, nswdev;
 
 /*
  * Set up swap devices.
