@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)conn.c	5.13	(Berkeley) 4/5/88";
+static char sccsid[] = "@(#)conn.c	5.14	(Berkeley) 4/24/88";
 #endif
 
 #include <signal.h>
@@ -228,11 +228,13 @@ keeplooking:
  *		FAIL  -  failed
  */
 
+int nulldev();
+
 getto(flds)
 register char *flds[];
 {
 	register struct condev *cd;
-	int nulldev(), diropn();
+	int diropn();
 	char *line;
 
 	DEBUG(4, "getto: call no. %s ", flds[F_PHONE]);
