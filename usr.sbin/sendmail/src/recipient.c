@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)recipient.c	8.37 (Berkeley) 1/6/94";
+static char sccsid[] = "@(#)recipient.c	8.38 (Berkeley) 1/8/94";
 #endif /* not lint */
 
 # include "sendmail.h"
@@ -241,7 +241,7 @@ recipient(a, sendq, e)
 				if (!bitset(QDONTSEND, a->q_flags) &&
 				    !bitset(QSELFREF, q->q_flags))
 					message("duplicate suppressed");
-				q->q_flags |= a->q_flags;
+				q->q_flags |= a->q_flags & ~QDONTSEND;
 			}
 			a = q;
 			goto testselfdestruct;
