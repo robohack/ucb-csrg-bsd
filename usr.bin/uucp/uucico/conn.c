@@ -1,3 +1,6 @@
+#ifndef lint
+static char sccsid[] = "@(#)conn.c	5.12 (Berkeley) 2/24/88";
+#endif
 
 #include <signal.h>
 #include "uucp.h"
