@@ -4,13 +4,14 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)tty_conf.c	7.7 (Berkeley) 2/5/92
+ *	@(#)tty_conf.c	7.8 (Berkeley) 2/15/92
  */
 
 #include "param.h"
 #include "systm.h"
 #include "buf.h"
 #include "ioctl.h"
+#include "proc.h"
 #include "tty.h"
 #include "conf.h"
 
