@@ -18,7 +18,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)command.c	5.18 (Berkeley) 5/11/89";
+static char sccsid[] = "@(#)command.c	5.19 (Berkeley) 4/1/90";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -190,9 +190,9 @@ prompt()
 		putstr(current_name);
 		if (hit_eof)
 			if (next_name) {
-				(void)sprintf(pbuf, ": END (next file: %s)",
-				    next_name);
-				putstr(pbuf);
+				putstr(": END (next file: ");
+				putstr(next_name);
+				putstr(")");
 			}
 			else
 				putstr(": END");
