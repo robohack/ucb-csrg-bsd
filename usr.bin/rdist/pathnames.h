@@ -4,11 +4,9 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)pathnames.h	5.3 (Berkeley) 6/1/90
+ *	@(#)pathnames.h	5.4 (Berkeley) 8/27/90
  */
 
 #include <paths.h>
 
 #define	_PATH_RDIST	"rdist"
-#undef _PATH_TMP
-#define	_PATH_TMP	"/tmp/rdistXXXXXX"
