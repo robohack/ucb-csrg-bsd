@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)tprintf.h	1.2 (Berkeley) 6/28/90
+ *	@(#)tprintf.h	7.1 (Berkeley) 7/1/90
  */
 
 typedef struct session *tpr_t;
