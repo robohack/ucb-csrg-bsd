@@ -5,7 +5,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)findfp.c	5.6 (Berkeley) 3/9/86";
+static char sccsid[] = "@(#)findfp.c	5.7 (Berkeley) 9/22/88";
 #endif LIBC_SCCS and not lint
 
 #include <stdio.h>
@@ -119,11 +119,4 @@ _fwalk(function)
 			if (*iov && active(*iov))
 				(*function)(*iov);
 	}
-}
-
-_cleanup()
-{
-	extern int fclose();
-
-	_fwalk(fclose);
 }
