@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.15 (Berkeley) 7/1/90
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 PROG=	ftpd
 CFLAGS+=-I${.CURDIR}/../../usr.bin/ftp -DSETPROCTITLE
