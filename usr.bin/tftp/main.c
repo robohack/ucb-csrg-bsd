@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)main.c	4.7 (Berkeley) 8/11/83";
+static char sccsid[] = "@(#)main.c	4.8 (Berkeley) 4/12/84";
 #endif
 
 /*
@@ -425,6 +425,7 @@ status(argc, argv)
 intr()
 {
 
+	alarm(0);
 	longjmp(toplevel, -1);
 }
 
