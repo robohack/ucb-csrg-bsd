@@ -14,7 +14,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)qd.c	1.10 (Berkeley) 8/9/88
+ *	@(#)qd.c	1.11 (Berkeley) 2/7/89
  */
 
 /************************************************************************
@@ -361,6 +361,8 @@ qdcons_init()
 	for (pcpu = percpu; pcpu && pcpu->pc_cputype != cpu; pcpu++)
 		;
 	if (pcpu == NULL)
+	    return 0;
+	if (pcpu->pc_io->io_type != IO_QBUS)
 	    return 0;
 
 	/*
