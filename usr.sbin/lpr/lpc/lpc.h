@@ -1,4 +1,10 @@
-/*	lpc.h (Berkeley) 5/11/83	*/
+/*
+ * Copyright (c) 1983 Regents of the University of California.
+ * All rights reserved.  The Berkeley software License Agreement
+ * specifies the terms and conditions for redistribution.
+ *
+ *	@(#)lpc.h	5.1 (Berkeley) 6/6/85
+ */
 
 /*
  * Line printer control program.

@@ -1,6 +1,12 @@
+/*
+ * Copyright (c) 1983 Regents of the University of California.
+ * All rights reserved.  The Berkeley software License Agreement
+ * specifies the terms and conditions for redistribution.
+ */
+
 #ifndef lint
-static char sccsid[] = "@(#)cmds.c	4.13 (Berkeley) 7/26/84";
-#endif
+static char sccsid[] = "@(#)cmds.c	5.1 (Berkeley) 6/6/85";
+#endif not lint
 
 /*
  * lpc -- line printer control program -- commands:
