@@ -1,6 +1,12 @@
+/*
+ * Copyright (c) 1983 Regents of the University of California.
+ * All rights reserved.  The Berkeley software License Agreement
+ * specifies the terms and conditions for redistribution.
+ */
+
 #ifndef lint
-static char sccsid[] = "@(#)htable.c	4.12 (Berkeley) 3/22/84";
-#endif
+static char sccsid[] = "@(#)htable.c	5.2 (Berkeley) 5/28/85";
+#endif not lint
 
 /*
  * htable - convert NIC host table into a UNIX format.
