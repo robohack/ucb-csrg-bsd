@@ -1,3 +1,7 @@
+#ifndef lint
+static char sccsid[] = "@(#)mail.local.c	4.16 (Berkeley) 8/11/83";
+#endif
+
 #include <ctype.h>
 #include <stdio.h>
 #include <pwd.h>
@@ -7,8 +11,6 @@
 #include <sys/stat.h>
 #include <setjmp.h>
 #include <sysexits.h>
-
-static char SccsId[] = "@(#)mail.local.c	4.15	4/12/83";
 
 #define SENDMAIL	"/usr/lib/sendmail"
 
