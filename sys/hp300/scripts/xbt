@@ -3,7 +3,7 @@
 #
 # usage: xbt procp
 #
-#	@(#)xbt	7.1 (Berkeley) 8/2/92
+#	@(#)xbt	8.1 (Berkeley) 6/10/93
 
 set $maxargs = 4
 
