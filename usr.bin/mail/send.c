@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)send.c	5.22 (Berkeley) 7/3/90";
+static char sccsid[] = "@(#)send.c	5.23 (Berkeley) 2/9/91";
 #endif /* not lint */
 
 #include "rcv.h"
@@ -411,7 +411,7 @@ infix(hp, fi)
 		(void) Fclose(nfo);
 		return(fi);
 	}
-	(void) remove(tempMail);
+	(void) rm(tempMail);
 	(void) puthead(hp, nfo, GTO|GSUBJECT|GCC|GBCC|GNL|GCOMMA);
 	c = getc(fi);
 	while (c != EOF) {
