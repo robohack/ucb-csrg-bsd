@@ -4,9 +4,9 @@
 # include "sendmail.h"
 
 # ifdef DBM
-SCCSID(@(#)alias.c	3.29		2/4/82	(with DBM));
+SCCSID(@(#)alias.c	3.30		2/15/82	(with DBM));
 # else DBM
-SCCSID(@(#)alias.c	3.29		2/4/82	(without DBM));
+SCCSID(@(#)alias.c	3.30		2/15/82	(without DBM));
 # endif DBM
 
 /*
@@ -509,6 +509,6 @@ hostalias(a)
 	p = aliaslookup(buf);
 	if (p == NULL)
 		return (NULL);
-	sprintf(buf, p, a->q_user);
+	(void) sprintf(buf, p, a->q_user);
 	return (newstr(buf));
 }
