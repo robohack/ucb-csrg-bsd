@@ -4,12 +4,10 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)genassym.c	7.4 (Berkeley) 1/20/93
+ *	@(#)genassym.c	7.5 (Berkeley) 3/9/93
  */
 
 #define KERNEL
-
-#include <machine/fix_machine_type.h>
 
 #include <sys/param.h>
 #include <sys/buf.h>
