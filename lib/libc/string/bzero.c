@@ -16,15 +16,18 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)bzero.c	5.3 (Berkeley) 4/1/89";
+static char sccsid[] = "@(#)bzero.c	5.4 (Berkeley) 5/16/90";
 #endif /* LIBC_SCCS and not lint */
+
+#include <string.h>
 
 /*
  * bzero -- vax movc5 instruction
  */
+void
 bzero(b, length)
 	register char *b;
-	register int length;
+	register size_t length;
 {
 
 	while (length--)
