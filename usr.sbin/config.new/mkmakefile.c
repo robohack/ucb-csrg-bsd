@@ -1,6 +1,6 @@
 /* 
- * Copyright (c) 1992 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1992, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * This software was developed by the Computer Systems Engineering group
  * at Lawrence Berkeley Laboratory under DARPA contract BG 91-66 and
@@ -13,7 +13,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)mkmakefile.c	5.3 (Berkeley) 5/24/93
+ *	@(#)mkmakefile.c	8.1 (Berkeley) 6/6/93
  */
 
 #include <sys/param.h>
