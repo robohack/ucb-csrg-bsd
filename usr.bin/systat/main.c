@@ -11,7 +11,7 @@ char copyright[] =
 #endif not lint
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	5.2 (Berkeley) 8/13/85";
+static char sccsid[] = "@(#)main.c	5.3 (Berkeley) 3/26/87";
 #endif not lint
 
 #include "systat.h"
@@ -61,8 +61,8 @@ main(argc, argv)
 			}
 			curcmd = p;
 		} else {
-			naptime = atoi(argv[1]);
-			if (naptime < 5)
+			naptime = atoi(argv[0]);
+			if (naptime <= 0)
 				naptime = 5;
 		}
 		argc--, argv++;
