@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.139		11/24/82);
+SCCSID(@(#)main.c	3.140		11/24/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -452,7 +452,6 @@ main(argc, argv)
 			register char **pvp;
 			char *q;
 			extern char **prescan();
-			extern char **rewrite();
 			extern char *DelimChar;
 
 			printf("> ");
@@ -1138,7 +1137,7 @@ newenvelope(e)
 	register HDR **nhp;
 
 	clear((char *) e, sizeof *e);
-	bmove(&CurEnv->e_from, &e->e_from, sizeof e->e_from);
+	bmove((char *) &CurEnv->e_from, (char *) &e->e_from, sizeof e->e_from);
 	e->e_parent = CurEnv;
 	e->e_ctime = curtime();
 	e->e_puthdr = CurEnv->e_puthdr;
@@ -1406,8 +1405,8 @@ freeze(freezefile)
 	strcpy(fhdr.frzver, Version);
 
 	/* write out the freeze header */
-	if (write(f, &fhdr, sizeof fhdr) != sizeof fhdr ||
-	    write(f, &edata, fhdr.frzbrk - &edata) != (fhdr.frzbrk - &edata))
+	if (write(f, (char *) &fhdr, sizeof fhdr) != sizeof fhdr ||
+	    write(f, (char *) &edata, fhdr.frzbrk - &edata) != (fhdr.frzbrk - &edata))
 		syserr("Cannot freeze");
 
 	/* fine, clean up */
@@ -1446,7 +1445,7 @@ thaw(freezefile)
 	}
 
 	/* read in the header */
-	if (read(f, &fhdr, sizeof fhdr) < sizeof fhdr ||
+	if (read(f, (char *) &fhdr, sizeof fhdr) < sizeof fhdr ||
 	    strcmp(fhdr.frzver, Version) != 0)
 	{
 		(void) close(f);
@@ -1462,7 +1461,7 @@ thaw(freezefile)
 	}
 
 	/* now read in the freeze file */
-	if (read(f, &edata, fhdr.frzbrk - &edata) != (fhdr.frzbrk - &edata))
+	if (read(f, (char *) &edata, fhdr.frzbrk - &edata) != (fhdr.frzbrk - &edata))
 	{
 		/* oops!  we have trashed memory..... */
 		fprintf(stderr, "Cannot read freeze file\n");
