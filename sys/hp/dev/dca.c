@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)dca.c	8.2 (Berkeley) 1/12/94
+ *	@(#)dca.c	8.3 (Berkeley) 1/9/95
  */
 
 #include "dca.h"
@@ -465,7 +465,7 @@ dcamint(unit, dca)
 
 dcaioctl(dev, cmd, data, flag, p)
 	dev_t dev;
-	int cmd;
+	u_long cmd;
 	caddr_t data;
 	int flag;
 	struct proc *p;
