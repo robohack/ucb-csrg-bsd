@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 5/16/93
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	mset
 CFLAGS+=-I${.CURDIR} -I.
