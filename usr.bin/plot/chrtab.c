@@ -1,6 +1,10 @@
+/*-
+ * %sccs.include.proprietary.c%
+ */
+
 #ifndef lint
-static char sccsid[] = "@(#)chrtab.c	4.1 (Berkeley) 7/4/83";
-#endif
+static char sccsid[] = "@(#)chrtab.c	4.2 (Berkeley) 4/18/91";
+#endif /* not lint */
 
 char	chrtab[][16] = {
 0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000, /*, sp, */

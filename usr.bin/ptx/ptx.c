@@ -1,5 +1,18 @@
+/*-
+ * Copyright (c) 1989 The Regents of the University of California.
+ * All rights reserved.
+ *
+ * %sccs.include.proprietary.c%
+ */
+
 #ifndef lint
-static char *sccsid = "@(#)ptx.c	4.6 (Berkeley) 3/1/91";
+char copyright[] =
+"@(#) Copyright (c) 1989 The Regents of the University of California.\n\
+ All rights reserved.\n";
+#endif /* not lint */
+
+#ifndef lint
+static char sccsid[] = "@(#)ptx.c	4.7 (Berkeley) 4/18/91";
 #endif /* not lint */
 
 /*	permuted title index

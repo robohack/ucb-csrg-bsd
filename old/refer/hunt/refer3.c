@@ -1,6 +1,10 @@
+/*-
+ * %sccs.include.proprietary.c%
+ */
+
 #ifndef lint
-static char *sccsid = "@(#)refer3.c	4.2 (Berkeley) 8/26/85";
-#endif
+static char sccsid[] = "@(#)refer3.c	4.3 (Berkeley) 4/18/91";
+#endif /* not lint */
 
 #include "refer..c"
 #define move(x, y) close(y); dup(x); close(x);
