@@ -12,7 +12,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)rwhod.c	5.26 (Berkeley) 5/21/93";
+static char sccsid[] = "@(#)rwhod.c	5.27 (Berkeley) 5/26/93";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -324,7 +324,8 @@ void
 getboottime(signo)
 	int signo;
 {
-	int mib[2], size;
+	int mib[2];
+	size_t size;
 	struct timeval tm;
 
 	mib[0] = CTL_KERN;
