@@ -1,3 +1,3 @@
-#	@(#)Makefile.inc	5.1 (Berkeley) 6/26/92
+#	@(#)Makefile.inc	5.2 (Berkeley) 7/26/92
 
-SRCS+=	abs.s atof.c
+SRCS+=	atof.c
