@@ -1,6 +1,7 @@
-#	@(#)Makefile	5.3 (Berkeley) 5/11/90
+#	@(#)Makefile	5.4 (Berkeley) 6/25/90
 
 PROG=	iostat
+MAN8=	iostat.0
 BINGRP=	kmem
 BINMODE=2555
 
