@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)init.c	5.11 (Berkeley) 6/8/91";
+static char sccsid[] = "@(#)init.c	5.12 (Berkeley) 6/26/91";
 #endif /* not lint */
 
 #if __STDC__
