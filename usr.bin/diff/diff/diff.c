@@ -12,7 +12,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)diff.c	4.9 (Berkeley) 4/17/91";
+static char sccsid[] = "@(#)diff.c	4.10 (Berkeley) 4/5/93";
 #endif /* not lint */
 
 #include "diff.h"
@@ -112,7 +112,7 @@ main(argc, argv)
 				fprintf(stderr, "diff: use -Sstart\n");
 				done();
 			}
-			start = argp;
+			Start = argp;
 			*--argp = 0;		/* don't pass it on */
 			continue;
 		case 'r':
