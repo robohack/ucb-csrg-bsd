@@ -1,6 +1,6 @@
 # include "sendmail.h"
 
-SCCSID(@(#)parseaddr.c	4.11		9/8/84);
+SCCSID(@(#)parseaddr.c	4.12		9/9/84);
 
 /*
 **  PARSEADDR -- Parse an address
@@ -765,7 +765,7 @@ rewrite(pvp, ruleset)
 			}
 
 			/* restore the old trailing information */
-			for (xpvp = pvpb1, avp--; (*avp++ = *xpvp++) != NULL; )
+			for (xpvp = pvpb1; (*avp++ = *xpvp++) != NULL; )
 				if (avp >= &npvp[MAXATOM])
 					goto toolong;
 
