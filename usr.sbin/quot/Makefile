@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.5 (Berkeley) 4/27/93
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	quot
 MAN8=	quot.0
