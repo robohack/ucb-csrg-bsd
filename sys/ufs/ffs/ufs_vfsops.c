@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)ufs_vfsops.c	7.67 (Berkeley) 4/8/93
+ *	@(#)ufs_vfsops.c	7.68 (Berkeley) 4/16/93
  */
 
 #include <sys/param.h>
@@ -220,6 +220,7 @@ ufs_free_netcred(rn, w)
 	caddr_t w;
 {
 	free((caddr_t)rn, M_NETADDR);
+	return (0);
 }
 	
 
