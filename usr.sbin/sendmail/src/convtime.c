@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)convtime.c	5.4 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)convtime.c	6.1 (Berkeley) 12/21/92";
 #endif /* not lint */
 
 # include <ctype.h>
