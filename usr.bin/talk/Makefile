@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.13 (Berkeley) 3/1/91
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	talk
 DPADD=	${LIBCURSES} ${LIBTERMCAP} ${LIBCOMPAT}
