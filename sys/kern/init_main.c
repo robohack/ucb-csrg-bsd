@@ -1,4 +1,4 @@
-/*	init_main.c	4.3	1/31/81	*/
+/*	init_main.c	4.4	2/8/81	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
@@ -41,7 +41,6 @@ main(firstaddr)
 {
 	register int i;
 
-	cpusid = mfpr(SID);		/* get system identification */
 #ifdef FASTVAX
 	rqinit();
 #endif
