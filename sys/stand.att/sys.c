@@ -1,4 +1,4 @@
-/*	sys.c	1.1	6/28/80	*/
+/*	sys.c	4.1	11/9/80	*/
 
 #include <sys/param.h>
 #include <sys/ino.h>

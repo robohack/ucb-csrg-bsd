@@ -1,4 +1,4 @@
-/*	conf.c	1.2	7/29/80	*/
+/*	conf.c	4.1	11/9/80	*/
 
 #include "../h/param.h"
 #include "../h/inode.h"

@@ -1,4 +1,4 @@
-/*	ls.c	1.1	6/28/80	*/
+/*	ls.c	4.1	11/9/80	*/
 
 #include "../h/param.h"
 #include "../h/inode.h"
