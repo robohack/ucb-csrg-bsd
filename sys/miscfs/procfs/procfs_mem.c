@@ -4,11 +4,11 @@
  * All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
- * Jan-Simon Pendry.
+ * Jan-Simon Pendry and Sean Eric Fagan.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)procfs_mem.c	8.1 (Berkeley) 1/5/94
+ *	@(#)procfs_mem.c	8.2 (Berkeley) 1/17/94
  *
  * From:
  *	$Id: procfs_mem.c,v 3.2 1993/12/15 09:40:17 jsp Exp $
