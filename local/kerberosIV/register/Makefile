@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.3 (Berkeley) 2/25/91
+#	@(#)Makefile	8.1 (Berkeley) 6/1/93
 
 PROG=	register
 SRCS=	register.c des_rw.c
