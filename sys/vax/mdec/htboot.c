@@ -4,9 +4,7 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-_sccsid:.asciz	"@(#)htboot.c	6.2 (Berkeley) 6/8/85"
-#endif not lint
+/* "@(#)htboot.c	6.3 (Berkeley) 6/26/85" */
 
 
 /*
