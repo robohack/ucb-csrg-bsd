@@ -1,4 +1,4 @@
-/*	kern_proc.c	3.18	7/12/80	*/
+/*	kern_proc.c	3.19	7/13/80	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
