@@ -1,4 +1,4 @@
-#
+static char sccsid[] = "@(#)vpac.c	1.2	(Berkeley)	8/8/82";
 
 #include <stdio.h>
 
