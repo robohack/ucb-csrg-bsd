@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)ftp.c	4.14 (Berkeley) 12/3/84";
+static char sccsid[] = "@(#)ftp.c	4.15 (Berkeley) 2/13/85";
 #endif
 
 #include <sys/param.h>
@@ -242,7 +242,7 @@ sendrequest(cmd, local, remote)
 		closefunc = fclose;
 		if (fstat(fileno(fin), &st) < 0 ||
 		    (st.st_mode&S_IFMT) != S_IFREG) {
-			fprintf(stderr, "%s: not a plain file.", local);
+			fprintf(stderr, "%s: not a plain file.\n", local);
 			goto bad;
 		}
 	}
