@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)collect.c	6.9 (Berkeley) 2/28/93";
+static char sccsid[] = "@(#)collect.c	6.10 (Berkeley) 3/17/93";
 #endif /* not lint */
 
 # include <errno.h>
@@ -298,7 +298,11 @@ readerr:
 	}
 
 	if ((e->e_dfp = fopen(e->e_df, "r")) == NULL)
+	{
+		/* we haven't acked receipt yet, so just chuck this */
 		syserr("Cannot reopen %s", e->e_df);
+		finis();
+	}
 }
 /*
 **  FLUSHEOL -- if not at EOL, throw away rest of input line.
