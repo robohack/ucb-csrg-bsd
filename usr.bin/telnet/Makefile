@@ -4,7 +4,7 @@
 #
 # %sccs.include.redist.sh%
 #
-#	@(#)Makefile	5.9 (Berkeley) 5/21/93
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 #
 
 PROG=	telnet
