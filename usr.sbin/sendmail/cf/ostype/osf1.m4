@@ -8,8 +8,7 @@ divert(-1)
 #
 
 divert(0)
-VERSIONID(`@(#)osf1.m4	8.1 (Berkeley) 6/7/93')
-ifdef(`_OLD_SENDMAIL_', `define(`NEED_DOMAIN', `')')dnl
+VERSIONID(`@(#)osf1.m4	8.2 (Berkeley) 7/2/94')
 define(`ALIAS_FILE', /usr/adm/sendmail/aliases)dnl
 define(`STATUS_FILE', /usr/adm/sendmail/sendmail.st)dnl
 define(`HELP_FILE', /usr/share/lib/sendmail.hf)dnl

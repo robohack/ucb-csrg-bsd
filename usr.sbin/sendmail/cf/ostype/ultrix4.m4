@@ -8,5 +8,4 @@ divert(-1)
 #
 
 divert(0)
-VERSIONID(`@(#)ultrix4.m4	8.1 (Berkeley) 6/7/93')
-ifdef(`_OLD_SENDMAIL_', `define(`NEED_DOMAIN', `')')dnl
+VERSIONID(`@(#)ultrix4.m4	8.2 (Berkeley) 7/2/94')
