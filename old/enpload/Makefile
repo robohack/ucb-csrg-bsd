@@ -1,6 +1,7 @@
-#	@(#)Makefile	5.6 (Berkeley) 5/11/90
+#	@(#)Makefile	5.7 (Berkeley) 1/17/91
 
 PROG=	enpload
+CFLAGS+=-I/sys
 MAN8=	enpload.0
 
 install:
