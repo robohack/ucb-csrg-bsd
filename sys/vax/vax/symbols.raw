@@ -1,4 +1,4 @@
-# symbols.raw 3.3 7/4/80
+# symbols.raw 3.4 9/9/80
 	_version
 #dmesg
 	_msgbuf
@@ -15,7 +15,7 @@
 #ps
 	_proc
 	_swapdev
-	_Usrptma
+	_Usrptmap
 	_usrpt
 	_text
 	_nswap
@@ -44,7 +44,7 @@
 	_deficit
 	_forkstat
 	_sum
-	_firstfre
+	_firstfree
 	_maxfree
 #	_rectime
 #	_pgintime
