@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)uipc_domain.c	7.12 (Berkeley) 2/4/93
+ *	@(#)uipc_domain.c	7.13 (Berkeley) 3/2/93
  */
 
 #include <sys/param.h>
@@ -109,13 +109,14 @@ found:
 	return (maybe);
 }
 
-net_sysctl(name, namelen, oldp, oldlenp, newp, newlen)
+net_sysctl(name, namelen, oldp, oldlenp, newp, newlen, p)
 	int *name;
 	u_int namelen;
 	void *oldp;
 	u_int *oldlenp;
 	void *newp;
 	u_int newlen;
+	struct proc *p;
 {
 	register struct domain *dp;
 	register struct protosw *pr;
