@@ -2,8 +2,9 @@
 # include <signal.h>
 # include <sys/ioctl.h>
 # include "sendmail.h"
+# include <sys/file.h>
 
-SCCSID(@(#)main.c	3.148		1/4/83);
+SCCSID(@(#)main.c	3.149		1/4/83);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -491,7 +492,7 @@ main(argc, argv)
 			MotherPid = getpid();
 
 			/* disconnect from our controlling tty */
-			disconnect();
+			disconnect(TRUE);
 		}
 
 # ifdef QUEUE
@@ -824,7 +825,11 @@ thaw(freezefile)
 **  DISCONNECT -- remove our connection with any foreground process
 **
 **	Parameters:
-**		none.
+**		fulldrop -- if set, we should also drop the controlling
+**			TTY if possible -- this should only be done when
+**			setting up the daemon since otherwise UUCP can
+**			leave us trying to open a dialin, and we will
+**			wait for the carrier.
 **
 **	Returns:
 **		none
@@ -834,7 +839,8 @@ thaw(freezefile)
 **		the controlling tty.
 */
 
-disconnect()
+disconnect(fulldrop)
+	bool fulldrop;
 {
 	int fd;
 
@@ -883,11 +889,14 @@ disconnect()
 
 #ifdef TIOCNOTTY
 	/* drop our controlling TTY completely if possible */
-	fd = open("/dev/tty", 2);
-	if (fd >= 0)
+	if (fulldrop)
 	{
-		(void) ioctl(fd, TIOCNOTTY, 0);
-		(void) close(fd);
+		fd = open("/dev/tty", 2);
+		if (fd >= 0)
+		{
+			(void) ioctl(fd, TIOCNOTTY, 0);
+			(void) close(fd);
+		}
 	}
 #endif TIOCNOTTY
 
