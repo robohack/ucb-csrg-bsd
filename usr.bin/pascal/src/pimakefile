@@ -1,11 +1,11 @@
-SCCSID = "@(#)pimakefile 1.37 2/28/83"
+SCCSID = "@(#)pimakefile 1.38 2/28/83"
 
 INSTALLDIR = ${DESTDIR}/usr/ucb
 INSTALLNAME = ${INSTALLDIR}/pi
 BINDIR = ../pi
 SRCDIR = ../src
 WHOAMI = pi
-VERSION = 2.11
+VERSION = 2.12
 DATE = 2/28/83
 
 MKSTR = /usr/ucb/mkstr
