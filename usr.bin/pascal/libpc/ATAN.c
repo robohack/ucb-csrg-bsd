@@ -1,6 +1,6 @@
 /* Copyright (c) 1982 Regents of the University of California */
 
-static char sccsid[] = "@(#)ATAN.c 1.1 2/8/82";
+static char sccsid[] = "@(#)ATAN.c 1.2 1/9/89";
 
 #include <math.h>
 extern int errno;
@@ -15,7 +15,6 @@ ATAN(value)
 	result = atan(value);
 	if (errno != 0) {
 		ERROR("Argument %e is out of the domain of atan\n", value);
-		return;
 	}
 	return result;
 }

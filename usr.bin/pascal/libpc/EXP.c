@@ -1,6 +1,6 @@
 /* Copyright (c) 1982 Regents of the University of California */
 
-static char sccsid[] = "@(#)EXP.c 1.1 2/8/82";
+static char sccsid[] = "@(#)EXP.c 1.2 1/9/89";
 
 #include <math.h>
 extern int errno;
@@ -15,7 +15,6 @@ EXP(value)
 	result = exp(value);
 	if (errno != 0) {
 		ERROR("exp(%e) yields a result that is out of the range of reals\n", value);
-		return;
 	}
 	return result;
 }
