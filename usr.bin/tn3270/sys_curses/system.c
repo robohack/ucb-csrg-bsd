@@ -20,12 +20,16 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)system.c	3.1 (Berkeley) 8/11/87";
+static char sccsid[] = "@(#)system.c	3.2 (Berkeley) 1/5/88";
 #endif	/* not lint */
 
 #include <sys/types.h>
 
-#if	!defined(sun)
+#if     defined(pyr)
+#define fd_set fdset_t
+#endif  /* defined(pyr) */
+
+#if	!defined(sun) && !defined(pyr)
 #include <sys/inode.h>
 #else	/* !defined(sun) */
 #define	IREAD	00400
