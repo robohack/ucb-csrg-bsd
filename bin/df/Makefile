@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.5 (Berkeley) 6/2/93
+#	@(#)Makefile	8.1 (Berkeley) 6/2/93
 
 PROG=	df
 CFLAGS+=-DCOMPAT_43
