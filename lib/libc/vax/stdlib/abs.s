@@ -4,9 +4,9 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-	.asciz	"@(#)abs.s	5.2 (Berkeley) 6/5/85"
-#endif not lint
+#ifdef LIBC_SCCS
+	.asciz	"@(#)abs.s	5.3 (Berkeley) 3/9/86"
+#endif LIBC_SCCS
 
 
 /* abs - int absolute value */

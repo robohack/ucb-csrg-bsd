@@ -4,9 +4,9 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-	.asciz	"@(#)rindex.s	5.2 (Berkeley) 6/5/85"
-#endif not lint
+#ifdef LIBC_SCCS
+	.asciz	"@(#)rindex.s	5.3 (Berkeley) 3/9/86"
+#endif LIBC_SCCS
 
 /*
  * Find the last occurence of c in the string cp.

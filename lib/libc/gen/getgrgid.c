@@ -1,6 +1,6 @@
-#ifndef lint
-static char sccsid[] = "@(#)getgrgid.c	5.1 (Berkeley) 6/5/85";
-#endif not lint
+#if defined(LIBC_SCCS) && !defined(lint)
+static char sccsid[] = "@(#)getgrgid.c	5.2 (Berkeley) 3/9/86";
+#endif LIBC_SCCS and not lint
 
 #include <grp.h>
 

@@ -4,9 +4,9 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-static char sccsid[] = "@(#)strcpyn.c	4.2 (Berkeley) 5/30/85";
-#endif not lint
+#if defined(LIBC_SCCS) && !defined(lint)
+static char sccsid[] = "@(#)strcpyn.c	4.3 (Berkeley) 3/9/86";
+#endif LIBC_SCCS and not lint
 
 /*
  * Copy s2 to s1, truncating or null-padding to always copy n bytes

@@ -4,9 +4,9 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-static char sccsid[] = "@(#)regex.c	5.1 (Berkeley) 5/30/85";
-#endif not lint
+#if defined(LIBC_SCCS) && !defined(lint)
+static char sccsid[] = "@(#)regex.c	5.2 (Berkeley) 3/9/86";
+#endif LIBC_SCCS and not lint
 
 #
 

@@ -4,9 +4,9 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-static char sccsid[] = "@(#)res_comp.c	6.5 (Berkeley) 2/18/86";
-#endif not lint
+#if defined(LIBC_SCCS) && !defined(lint)
+static char sccsid[] = "@(#)res_comp.c	6.6 (Berkeley) 3/9/86";
+#endif LIBC_SCCS and not lint
 
 #include <sys/types.h>
 #include <stdio.h>

@@ -4,9 +4,9 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-	.asciz	"@(#)_setjmp.s	5.4 (Berkeley) 1/20/86"
-#endif not lint
+#ifdef LIBC_SCCS
+	.asciz	"@(#)_setjmp.s	5.5 (Berkeley) 3/9/86"
+#endif LIBC_SCCS
 
 
 /*

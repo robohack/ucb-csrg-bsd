@@ -4,9 +4,9 @@
  * specifies the terms and conditions for redistribution.
  */
 
-#ifndef lint
-	.asciz	"@(#)strcmp.s	5.2 (Berkeley) 6/5/85"
-#endif not lint
+#ifdef LIBC_SCCS
+	.asciz	"@(#)strcmp.s	5.3 (Berkeley) 3/9/86"
+#endif LIBC_SCCS
 
 /*
  * Compare string s1 lexicographically to string s2.
