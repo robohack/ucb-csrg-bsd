@@ -1,9 +1,9 @@
-/* @(#)bcmp.s	4.2 1/14/83 */
+/* @(#)bcmp.s	4.3 11/1/84 */
 /* bcmp(s1, s2, n) */
 
 #include "DEFS.h"
 
-ENTRY(bcmp)
+ENTRY(bcmp, 0)
 	movl	4(ap),r1
 	movl	8(ap),r3
 	movl	12(ap),r4
