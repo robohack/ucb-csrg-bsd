@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)wwrint.c	3.10 (Berkeley) 6/6/90";
+static char sccsid[] = "@(#)wwrint.c	3.11 (Berkeley) 3/2/91";
 #endif /* not lint */
 
 #include "ww.h"
@@ -25,6 +25,7 @@ static char sccsid[] = "@(#)wwrint.c	3.10 (Berkeley) 6/6/90";
  * when the buffer is empty; and everywhere else, we only change wwibp.
  * It should be completely safe.
  */
+void
 wwrint()
 {
 	register n;
