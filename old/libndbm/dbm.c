@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)dbm.c	5.5 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)dbm.c	5.6 (Berkeley) 3/12/91";
 #endif /* not lint */
 
 #include	"dbm.h"
@@ -106,5 +106,5 @@ datum key;
 		item.dptr = 0;
 		return (item);
 	}
-	return (dbm_nextkey(cur_db, key));
+	return (dbm_nextkey(cur_db));
 }
