@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)ufs_disksubr.c	7.14 (Berkeley) 6/28/90
+ *	@(#)ufs_disksubr.c	7.15 (Berkeley) 3/19/91
  */
 
 #include "param.h"
@@ -12,7 +12,6 @@
 #include "buf.h"
 #include "disklabel.h"
 #include "syslog.h"
-#include "user.h"
 
 /*
  * Seek sort for disks.  We depend on the driver
