@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.99		8/24/82);
+SCCSID(@(#)main.c	3.100		8/24/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -493,6 +493,11 @@ main(argc, argv)
 
 			/* get our pid right */
 			MotherPid = getpid();
+# ifdef LOG
+			if (LogLevel > 11)
+				syslog(LOG_DEBUG, "background daemon, pid=%d",
+				       MotherPid);
+# endif LOG
 
 			/* disconnect from our controlling tty */
 			i = open("/dev/tty", 2);
@@ -611,6 +616,10 @@ main(argc, argv)
 			/* parent -- quit */
 			exit(ExitStat);
 		}
+# ifdef LOG
+		if (LogLevel > 11)
+			syslog(LOG_DEBUG, "background delivery, pid=%d", getpid());
+# endif LOG
 	}
 	else if (Mode == MD_QUEUE)
 	{
@@ -820,6 +829,10 @@ finis()
 	if (Transcript != NULL)
 		xunlink(Transcript);
 	dropenvelope(CurEnv);
+# ifdef LOG
+	if (LogLevel > 11)
+		syslog(LOG_DEBUG, "finis, pid=%d", getpid());
+# endif LOG
 	exit(ExitStat);
 }
 /*
