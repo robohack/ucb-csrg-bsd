@@ -1,8 +1,13 @@
-/* Copyright (c) 1982 Regents of the University of California */
-
-static char sccsid[] = "@(#)printdecl.c 1.2 2/14/83";
-
 /*
+ * Copyright (c) 1980 Regents of the University of California.
+ * All rights reserved.  The Berkeley software License Agreement
+ * specifies the terms and conditions for redistribution.
+ */
+
+#ifndef lint
+static char sccsid[] = "@(#)printdecl.c	5.1 (Berkeley) 6/6/85";
+#endif not lint
+*
  * Print out the type of a symbol.
  */
 
