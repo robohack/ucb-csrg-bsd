@@ -4,7 +4,7 @@
 # include "sendmail.h"
 # include <sys/file.h>
 
-SCCSID(@(#)main.c	3.158		4/17/83);
+SCCSID(@(#)main.c	3.159		4/30/83);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -80,6 +80,7 @@ main(argc, argv)
 	extern ENVELOPE *newenvelope();
 	extern intsig();
 	extern char **myhostname();
+	extern char *arpadate();
 
 	/*
 	**  Check to see if we reentered.
@@ -172,7 +173,7 @@ main(argc, argv)
 	define('v', Version, CurEnv);
 
 	/* current time */
-	define('b', arpadate(NULL), CurEnv);
+	define('b', arpadate((char *) NULL), CurEnv);
 
 	/*
 	** Crack argv.

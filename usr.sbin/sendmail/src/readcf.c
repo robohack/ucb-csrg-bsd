@@ -1,6 +1,6 @@
 # include "sendmail.h"
 
-SCCSID(@(#)readcf.c	3.56		2/8/83);
+SCCSID(@(#)readcf.c	3.57		4/30/83);
 
 /*
 **  READCF -- read control file.
@@ -165,7 +165,6 @@ readcf(cfname, safe)
 			{
 				register char *wd;
 				char delim;
-				register STAB *s;
 
 				while (*p != '\0' && isspace(*p))
 					p++;
