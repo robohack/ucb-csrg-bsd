@@ -15,7 +15,7 @@ char copyright[] =
 #endif not lint
 
 #ifndef lint
-static char	SccsId[] = "@(#)main.c	5.12 (Berkeley) 10/14/86";
+static char	SccsId[] = "@(#)main.c	5.13 (Berkeley) 3/24/87";
 #endif not lint
 
 # define  _DEFINE
@@ -131,6 +131,9 @@ main(argc, argv, envp)
 		abort();
 	}
 	reenter = TRUE;
+
+	/* Enforce use of local time */
+	unsetenv("TZ");
 
 	/*
 	**  Be sure we have enough file descriptors.
