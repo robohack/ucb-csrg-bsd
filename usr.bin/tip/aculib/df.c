@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)df.c	5.3 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)df.c	5.4 (Berkeley) 3/2/91";
 #endif /* not lint */
 
 /*
@@ -16,7 +16,7 @@ static char sccsid[] = "@(#)df.c	5.3 (Berkeley) 6/1/90";
 #include "tip.h"
 
 static jmp_buf Sjbuf;
-static timeout();
+static void timeout();
 
 df02_dialer(num, acu)
 	char *num, *acu;
@@ -98,7 +98,7 @@ df_abort()
 }
 
 
-static
+static void
 timeout()
 {
 
