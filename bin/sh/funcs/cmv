@@ -6,7 +6,7 @@
 #
 # %sccs.include.redist.sh%
 #
-#	@(#)cmv	8.1 (Berkeley) 5/31/93
+#	@(#)cmv	8.2 (Berkeley) 5/4/95
 
 # Conditional move--don't replace an existing file.
 
