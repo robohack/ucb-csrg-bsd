@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.8 (Berkeley) 5/13/90
+#	@(#)Makefile	5.9 (Berkeley) 6/8/90
 
 LIB=	dbm
 SRCS=	dbm.c
@@ -10,5 +10,4 @@ beforeinstall:
 	install -c -o ${BINOWN} -g ${BINGRP} -m ${MANMODE} ${.CURDIR}/dbm.h \
 	    ${DESTDIR}/usr/include/dbm.h
 
-.include <bsd.own.mk>
 .include <bsd.lib.mk>
