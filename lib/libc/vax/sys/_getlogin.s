@@ -16,10 +16,12 @@
  */
 
 #if defined(SYSLIBC_SCCS) && !defined(lint)
-	.asciz "@(#)_getlogin.s	5.1 (Berkeley) 2/21/89"
+	.asciz "@(#)_getlogin.s	5.2 (Berkeley) 8/26/89"
 #endif /* SYSLIBC_SCCS and not lint */
 
 #include "SYS.h"
 
-SYSCALL(getlogname)
-	ret		# getlogname(buf, buflen)
+/* internal version of getlogin() */
+
+PSEUDO(_getlogin,getlogin)
+	ret		# _getlogin(buf, buflen)
