@@ -6,7 +6,7 @@
 # include "sendmail.h"
 # include <sys/stat.h>
 
-SCCSID(@(#)main.c	3.113		9/12/82);
+SCCSID(@(#)main.c	3.114		9/22/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -631,7 +631,7 @@ main(argc, argv)
 	else if (Mode == MD_QUEUE)
 	{
 		queueup(CurEnv, TRUE);
-		exit(ExitStat);
+		finis();
 	}
 
 	initsys();
