@@ -1,3 +1,4 @@
+/* @(#)deck.h	1.3 (Berkeley) 5/19/83 */
 
 /*
  * define structure of a deck of cards and other related things
