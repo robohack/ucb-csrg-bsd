@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.9 (Berkeley) 6/23/92
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	vmstat
 CFLAGS+=-I/sys
