@@ -2,14 +2,13 @@
 # include "sendmail.h"
 
 #ifndef DAEMON
-SCCSID(@(#)daemon.c	3.9		3/6/82	(w/o daemon mode));
+SCCSID(@(#)daemon.c	3.10		3/22/82	(w/o daemon mode));
 #else
 
 # include <sys/socket.h>
-# include <wellknown.h>
 # include <net/in.h>
 
-SCCSID(@(#)daemon.c	3.9		3/6/82	(with daemon mode));
+SCCSID(@(#)daemon.c	3.10		3/22/82	(with daemon mode));
 
 /*
 **  DAEMON.C -- routines to use when running as a daemon.
