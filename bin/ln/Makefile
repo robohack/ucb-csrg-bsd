@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.5 (Berkeley) 7/27/92
+#	@(#)Makefile	8.1 (Berkeley) 5/31/93
 
 PROG=	ln
 MAN1=	ln.0
