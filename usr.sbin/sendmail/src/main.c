@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.40 (Berkeley) 12/1/93";
+static char sccsid[] = "@(#)main.c	8.41 (Berkeley) 12/2/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -1403,7 +1403,14 @@ void
 dumpstate()
 {
 #ifdef LOG
-	syslog(LOG_DEBUG, "--- dumping state on user signal: open file descriptors: ---");
+	register char *j = macvalue('j', CurEnv);
+	register STAB *s;
+
+	syslog(LOG_DEBUG, "--- dumping state on user signal: $j = %s ---", j);
+	s = stab(j, ST_CLASS, ST_FIND);
+	if (s == NULL || !bitnset('w', s->s_class))
+		syslog(LOG_DEBUG, "*** $j not in $=w ***");
+	syslog(LOG_DEBUG, "--- open file descriptors: ---");
 	printopenfds(TRUE);
 	syslog(LOG_DEBUG, "--- connection cache: ---");
 	mci_dump_all(TRUE);
