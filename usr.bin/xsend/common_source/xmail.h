@@ -1,7 +1,7 @@
 /*-
  * %sccs.include.proprietary.c%
  *
- *	@(#)xmail.h	4.2 (Berkeley) 4/18/91
+ *	@(#)xmail.h	8.1 (Berkeley) 6/6/93
  */
 
 #include <stdio.h>
