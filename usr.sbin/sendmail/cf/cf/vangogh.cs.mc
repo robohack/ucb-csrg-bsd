@@ -8,7 +8,9 @@ divert(-1)
 #
 
 include(`../m4/cf.m4')
-VERSIONID(@(#)vangogh.cs.mc	2.2 (Berkeley) 10/3/91)
+VERSIONID(@(#)vangogh.cs.mc	2.3 (Berkeley) 10/5/91)
 DOMAIN(cs.exposed)dnl
 OSTYPE(bsd4.4)dnl
+MAILER(local)dnl
 MAILER(smtp)dnl
+define(`NEWSENDMAIL')dnl
