@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.1 (Berkeley) 3/2/91
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	uucico
 SRCS=	chksum.c cico.c cntrl.c condevs.c conn.c fio.c gio.c gnsys.c \
