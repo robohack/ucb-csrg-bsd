@@ -1,9 +1,9 @@
-.\" Copyright (c) 1986 The Regents of the University of California.
-.\" All rights reserved.
+.\" Copyright (c) 1986, 1993
+.\"	The Regents of the University of California.  All rights reserved.
 .\"
 .\" %sccs.include.redist.roff%
 .\"
-.\"	@(#)0.t	6.5 (Berkeley) 6/5/93
+.\"	@(#)0.t	8.1 (Berkeley) 6/8/93
 .\"
 .EQ
 delim $$
