@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.3 (Berkeley) 4/30/91
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 LIB=	acu
 CFLAGS+=-I${.CURDIR}/../includes
