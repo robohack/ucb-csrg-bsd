@@ -10,9 +10,9 @@
 
 #ifndef lint
 #ifdef SMTP
-static char sccsid[] = "@(#)srvrsmtp.c	8.51 (Berkeley) 12/3/94 (with SMTP)";
+static char sccsid[] = "@(#)srvrsmtp.c	8.52 (Berkeley) 12/5/94 (with SMTP)";
 #else
-static char sccsid[] = "@(#)srvrsmtp.c	8.51 (Berkeley) 12/3/94 (without SMTP)";
+static char sccsid[] = "@(#)srvrsmtp.c	8.52 (Berkeley) 12/5/94 (without SMTP)";
 #endif
 #endif /* not lint */
 
@@ -674,6 +674,8 @@ smtp(e)
 			{
 				/* make sure it is in the queue */
 				queueup(e, TRUE, FALSE);
+				if (e->e_sendmode == SM_QUEUE)
+					e->e_flags |= EF_KEEPQUEUE;
 			}
 			else
 			{
