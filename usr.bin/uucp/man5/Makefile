@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.1 (Berkeley) 3/2/91
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 MAN5=	L-devices.0 L-dialcodes.0 L.aliases.0 L.cmds.0 L.sys.0 USERFILE.0
 
