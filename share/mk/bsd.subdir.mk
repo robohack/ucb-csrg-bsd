@@ -1,3 +1,5 @@
+#	@(#)bsd.subdir.mk	5.6 (Berkeley) 5/10/90
+
 .MAIN: all
 
 _SUBDIRUSE: .USE
