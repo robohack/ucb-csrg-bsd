@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)nfs_vnops.c	7.46 (Berkeley) 7/26/90
+ *	@(#)nfs_vnops.c	7.47 (Berkeley) 8/17/90
  */
 
 /*
@@ -555,6 +555,7 @@ nfsmout:
 		ndp->ni_vp = newvp;
 		if (lockparent)
 			nfs_lock(vp);
+		m_freem(mrep);
 		return (0);
 	}
 
