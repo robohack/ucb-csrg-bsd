@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.8 (Berkeley) 6/29/90
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 all: pcexterns.o
 
