@@ -9,9 +9,9 @@
  *
  * %sccs.include.redist.c%
  *
- * from: Utah $Hdr: itevar.h 1.13 89/02/27$
+ * from: Utah $Hdr: itevar.h 1.1 90/07/09$
  *
- *	@(#)itevar.h	7.1 (Berkeley) 5/8/90
+ *	@(#)itevar.h	7.2 (Berkeley) 11/4/90
  */
 
 #define UNIT(dev)       minor(dev)
