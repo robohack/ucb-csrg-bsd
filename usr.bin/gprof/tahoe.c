@@ -1,6 +1,18 @@
+/*
+ * Copyright (c) 1983 Regents of the University of California.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms are permitted
+ * provided that this notice is preserved and that due credit is given
+ * to the University of California at Berkeley. The name of the University
+ * may not be used to endorse or promote products derived from this
+ * software without specific prior written permission. This software
+ * is provided ``as is'' without express or implied warranty.
+ */
+
 #ifndef lint
-static	char *sccsid = "@(#)tahoe.c	1.2 (Berkeley) 1/7/86";
-#endif not lint
+static char sccsid[] = "@(#)tahoe.c	1.3 (Berkeley) 5/5/88";
+#endif /* not lint */
 
 #include	"gprof.h"
 
