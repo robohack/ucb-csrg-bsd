@@ -1,4 +1,6 @@
-/* @(#)sibuf.c	4.1 (Berkeley) 5/15/84 */
+#ifndef lint
+static char sccsid[] = "@(#)sibuf.c	5.1 (Berkeley) 6/5/85";
+#endif not lint
 
 #include <stdio.h>
 

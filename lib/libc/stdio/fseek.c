@@ -1,4 +1,7 @@
-/* @(#)fseek.c	4.4 (Berkeley) 2/13/85 */
+#ifndef lint
+static char sccsid[] = "@(#)fseek.c	5.1 (Berkeley) 6/5/85";
+#endif not lint
+
 /*
  * Seek for standard library.  Coordinates with buffering.
  */
