@@ -1,5 +1,5 @@
 /*
- *	@(#)value.h	3.3 84/01/12
+ * @(#)value.h	3.4 5/23/84
  */
 
 struct value {
