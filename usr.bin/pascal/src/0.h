@@ -1,6 +1,10 @@
-/* Copyright (c) 1979 Regents of the University of California */
-
-/* static char sccsid[] = "@(#)0.h 2.2 5/13/85"; */
+/*
+ * Copyright (c) 1980 Regents of the University of California.
+ * All rights reserved.  The Berkeley software License Agreement
+ * specifies the terms and conditions for redistribution.
+ *
+ *	@(#)0.h	5.1 (Berkeley) 6/5/85
+ */
 
 #define DEBUG
 #define CONSETS
