@@ -1,6 +1,6 @@
 .\" %sccs.include.proprietary.roff%
 .\"
-.\"	@(#)tt12	6.2 (Berkeley) 4/17/91
+.\"	@(#)tt12	8.1 (Berkeley) 6/8/93
 .\"
 .NH
 Conditionals

@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 6/5/93
+#	@(#)Makefile	8.1 (Berkeley) 6/8/93
 
 DIR=	usd/24.eqnguide
 SRCS=	g.mac g0 g1 g2 g3 g4 g5
