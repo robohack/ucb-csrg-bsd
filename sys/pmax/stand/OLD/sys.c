@@ -9,11 +9,11 @@
  * This code is derived from software contributed to Berkeley by
  * Ralph Campbell.
  *
- *	@(#)sys.c	7.1 (Berkeley) 1/7/92
+ *	@(#)sys.c	7.2 (Berkeley) 2/29/92
  */
 
 #include "saio.h"
-#include "ufs/dir.h"
+#include "ufs/ufs/dir.h"
 #ifndef SMALL
 #include "stat.h"
 #endif
@@ -387,7 +387,7 @@ Read(fdesc, buf, count)
 }
 
 #ifndef SMALL
-write(fdesc, buf, count)
+Write(fdesc, buf, count)
 	int fdesc, count;
 	char *buf;
 {
@@ -431,7 +431,6 @@ Open(str, how)
 {
 	register char *cp;
 	register struct iob *file;
-	register struct devsw *dp;
 	int fdesc;
 	ino_t i;
 	char c;
@@ -455,33 +454,33 @@ Open(str, how)
 gotfile:
 	file->i_flgs |= F_ALLOC;
 
-	for (cp = str; *cp && *cp != '('; cp++)
-		;
-	if (*cp != '(') {
-	baddev:
-		printf("Unknown or bad device name \'%s\'\n", str);
-		errno = ENXIO;
-	err:
-		file->i_flgs = 0;
-		return (-1);
+	cp = str;
+
+	/* look for a string like '5/rz0/vmunix' or '6/tftp' */
+	if ((c = *cp) >= '0' && c <= '9') {
+		while ((c = *++cp) >= '0' && c <= '9')
+			;
+		cp++;	/* skip the '/' */
+		while ((c = *cp) != '\0') {
+			if (c == '/')
+				break;
+			cp++;
+		}
+	} else {
+		/* expect a string like 'rz(0,0,0)vmunix' or 'tz(0,0,0)' */
+		while ((c = *cp) != '\0') {
+			cp++;
+			if (c == ')')
+				break;
+		}
 	}
-	*cp = '\0';
-	for (dp = devsw; dp->dv_name; dp++)
-		if (!strcmp(str, dp->dv_name))
-			break;
-	*cp++ = '(';
-	if (dp->dv_name == NULL)
-		goto baddev;
-	file->i_dev = dp - devsw;
-	while (*cp != ')') {
-		if (*cp++ == '\0')
-			goto baddev;
-	}
-	c = *++cp;
+	c = *cp;
 	*cp = '\0';
 	if ((file->i_unit = open(str, how)) <= 0) {
 		printf("Can\'t open device \'%s\'\n", str);
-		goto err;
+	err:
+		file->i_flgs = 0;
+		return (-1);
 	}
 	*cp = c;
 	if (c == '\0') {
