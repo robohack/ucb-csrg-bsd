@@ -1,7 +1,7 @@
 /*
  * Clean things up before exiting
  *
- * 1/26/81 (Berkeley) %W
+ * @(#)endwin.c	1.2 (Berkeley) 5/1/85
  */
 
 # include	"curses.ext"
