@@ -5,7 +5,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)sendmail.h	6.34 (Berkeley) 3/23/93
+ *	@(#)sendmail.h	6.35 (Berkeley) 3/26/93
  */
 
 /*
@@ -15,7 +15,7 @@
 # ifdef _DEFINE
 # define EXTERN
 # ifndef lint
-static char SmailSccsId[] =	"@(#)sendmail.h	6.34		3/23/93";
+static char SmailSccsId[] =	"@(#)sendmail.h	6.35		3/26/93";
 # endif lint
 # else /*  _DEFINE */
 # define EXTERN extern
@@ -746,7 +746,7 @@ EXTERN u_char	tTdvect[100];
 **  Declarations of useful functions
 */
 
-#ifdef __STDC__
+#if defined(__STDC__) && defined(_FORGIVING_CC_)
 #define P(protos)	protos
 #else
 #define P(protos)	()
