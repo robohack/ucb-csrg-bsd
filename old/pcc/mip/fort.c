@@ -1,4 +1,7 @@
-static char *sccsid ="@(#)fort.c	4.2 (Berkeley) 6/11/83";
+#ifndef lint
+static char *sccsid ="@(#)fort.c	4.3 (Berkeley) 1/18/85";
+#endif lint
+
 # define FORT
 /* this forces larger trees, etc. */
 # include "mfile2"
