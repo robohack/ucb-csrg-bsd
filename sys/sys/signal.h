@@ -3,13 +3,17 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)signal.h	7.2 (Berkeley) 7/11/87
+ *	@(#)signal.h	7.3 (Berkeley) 5/14/88
  */
 
 #ifndef	NSIG
 #define NSIG	32
 
+#ifdef KERNEL
+#include "../machine/trap.h"	/* codes for SIGILL, SIGFPE */
+#else
 #include <machine/trap.h>	/* codes for SIGILL, SIGFPE */
+#endif
 
 #define	SIGHUP	1	/* hangup */
 #define	SIGINT	2	/* interrupt */
