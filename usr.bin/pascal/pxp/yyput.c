@@ -1,4 +1,4 @@
-static	char *sccsid = "@(#)yyput.c	1.3 (Berkeley) 5/11/83";
+static	char *sccsid = "@(#)yyput.c	2.1 (Berkeley) 2/8/84";
 /* Copyright (c) 1979 Regents of the University of California */
 #
 /*

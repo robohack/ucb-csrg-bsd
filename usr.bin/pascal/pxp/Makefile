@@ -1,4 +1,4 @@
-SCCSID = "@(#)Makefile	1.12 (Berkeley) 9/12/83"
+SCCSID = "@(#)Makefile	2.1 (Berkeley) 2/8/84"
 DESTDIR=
 ED=	-ex
 AS=	-as
