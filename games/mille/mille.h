@@ -14,13 +14,13 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)mille.h	5.3 (Berkeley) 6/18/88
+ *	@(#)mille.h	5.4 (Berkeley) 5/15/90
  */
 
 # include	<sys/types.h>
 # include	<ctype.h>
 # include	<curses.h>
-# include	<strings.h>
+# include	<string.h>
 
 /*
  * @(#)mille.h	1.1 (Berkeley) 4/1/82
