@@ -1,3 +1,12 @@
+/*-
+ * Copyright (c) 1994
+ *	The Regents of the University of California.  All rights reserved.
+ *
+ * %sccs.include.redist.c%
+ *
+ *	@(#)maskbits.h	8.2 (Berkeley) 3/21/94
+ */
+
 /*
  * Derived from X11R4
  */
