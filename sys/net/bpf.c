@@ -9,7 +9,7 @@
  *
  * %sccs.include.redist.c%
  *
- *      @(#)bpf.c	8.3 (Berkeley) 8/10/94
+ *      @(#)bpf.c	8.4 (Berkeley) 1/9/95
  *
  * static char rcsid[] =
  * "$Header: bpf.c,v 1.33 91/10/27 21:21:58 mccanne Exp $";
@@ -558,7 +558,7 @@ reset_d(d)
 int
 bpfioctl(dev, cmd, addr, flag)
 	dev_t dev;
-	int cmd;
+	u_long cmd;
 	caddr_t addr;
 	int flag;
 {
