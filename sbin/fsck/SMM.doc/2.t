@@ -2,7 +2,7 @@
 .\" All rights reserved.  The Berkeley software License Agreement
 .\" specifies the terms and conditions for redistribution.
 .\"
-.\"	@(#)2.t	4.2 (Berkeley) 7/18/85
+.\"	@(#)2.t	4.3 (Berkeley) 2/1/86
 .\"
 .ds RH Overview of the file system
 .NH
@@ -59,7 +59,7 @@ block contains 1024 further block addresses,
 a doubly indirect block contains 1024 addresses of further single indirect
 blocks,
 and a triply indirect block contains 1024 addresses of further doubly indirect
-blocks.
+blocks (the triple indirect block is never needed in practice).
 .PP
 In order to create files with up to
 2\(ua32 bytes,
