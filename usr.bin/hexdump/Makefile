@@ -1,6 +1,7 @@
-#	@(#)Makefile	5.3 (Berkeley) 5/11/90
+#	@(#)Makefile	5.4 (Berkeley) 3/7/91
 
 PROG=	hexdump
+CFLAGS+=-fwritable-strings
 SRCS=	conv.c display.c hexdump.c hexsyntax.c odsyntax.c parse.c
 MAN1=	hexdump.0 od.0
 LINKS=	${BINDIR}/hexdump ${BINDIR}/od
