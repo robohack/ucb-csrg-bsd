@@ -1,8 +1,8 @@
-#	Makefile (Berkeley) 6/12/83
+#	Makefile (Berkeley) 4/9/84
 #
 ALL=	routed
 OBJS=	af.o if.o input.o main.o output.o startup.o tables.o timer.o \
-	trace.o
+	trace.o inet.o
 CFLAGS=	-O
 DESTDIR=
 LDFLAGS=
