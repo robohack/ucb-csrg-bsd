@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1985 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1985, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)globals.h	5.1 (Berkeley) 5/11/93
+ *	@(#)globals.h	8.1 (Berkeley) 6/6/93
  */
 
 #ifdef sgi
