@@ -1,9 +1,9 @@
-.\" Copyright (c) 1982 The Regents of the University of California.
-.\" All rights reserved.
+.\" Copyright (c) 1982, 1993
+.\"	The Regents of the University of California.  All rights reserved.
 .\"
 .\" %sccs.include.redist.roff%
 .\"
-.\"	@(#)4.t	4.6 (Berkeley) 4/17/91
+.\"	@(#)4.t	8.1 (Berkeley) 6/5/93
 .\"
 .ds RH Appendix A \- Fsck Error Conditions
 .NH
