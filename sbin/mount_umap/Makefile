@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.3 (Berkeley) 7/12/92
+#	@(#)Makefile	8.1 (Berkeley) 6/5/93
 
 CFLAGS=	-I/sys
 PROG=	mount_umap
