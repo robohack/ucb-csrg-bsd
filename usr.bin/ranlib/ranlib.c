@@ -11,7 +11,7 @@ char copyright[] =
 #endif not lint
 
 #ifndef lint
-static char sccsid[] = "@(#)ranlib.c	5.3 (Berkeley) 1/22/86";
+static char sccsid[] = "@(#)ranlib.c	5.4 (Berkeley) 4/6/87";
 #endif not lint
 
 /*
@@ -37,7 +37,7 @@ int	tssiz;
 char	*strtab;
 int	ssiz;
 int	new;
-char	tempnm[] = "__.SYMDEF";
+char	tempnm[] = RANLIBMAG;
 char	firstname[17];
 void	stash();
 char *malloc(), *calloc();
