@@ -1,4 +1,4 @@
-static	char *sccsid = "@(#)type.c	1.1 (Berkeley) 3/2/81";
+static	char *sccsid = "@(#)type.c	1.2 (Berkeley) 3/7/81";
 /* Copyright (c) 1979 Regents of the University of California */
 #
 /*
@@ -11,7 +11,7 @@ static	char *sccsid = "@(#)type.c	1.1 (Berkeley) 3/2/81";
 #include "0.h"
 #include "tree.h"
 
-STATIC	int typecnt -1;
+STATIC	int typecnt = -1;
 /*
  * Type declaration part
  */

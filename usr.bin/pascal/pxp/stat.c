@@ -1,4 +1,4 @@
-static	char *sccsid = "@(#)stat.c	1.1 (Berkeley) 3/2/81";
+static	char *sccsid = "@(#)stat.c	1.2 (Berkeley) 3/7/81";
 /* Copyright (c) 1979 Regents of the University of California */
 #
 /*
@@ -12,7 +12,7 @@ static	char *sccsid = "@(#)stat.c	1.1 (Berkeley) 3/2/81";
 #include "tree.h"
 
 int cntstat;
-int cnts 3;
+int cnts = 3;
 
 statlist(r)
 	int *r;
