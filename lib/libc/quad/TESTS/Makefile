@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.1 (Berkeley) 6/2/92
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 all: mul divrem
 
