@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.4 (Berkeley) 1/28/92
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	arp
 MAN8=	arp.0
