@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.27 (Berkeley) 2/26/93";
+static char sccsid[] = "@(#)main.c	6.28 (Berkeley) 2/28/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -778,6 +778,8 @@ main(argc, argv, envp)
 
 	if (OpMode == MD_DAEMON || QueueIntvl != 0)
 	{
+		char dtype[200];
+
 		if (!tTd(0, 1))
 		{
 			FILE *pidf;
@@ -802,6 +804,21 @@ main(argc, argv, envp)
 			/* disconnect from our controlling tty */
 			disconnect(TRUE);
 		}
+
+		dtype[0] = '\0';
+		if (OpMode == MD_DAEMON)
+			strcat(dtype, "+SMTP");
+		if (QueueIntvl != 0)
+		{
+			extern char *pintvl();
+
+			strcat(dtype, "+queueing@");
+			strcat(dtype, pintvl(QueueIntvl, TRUE));
+		}
+		if (tTd(0, 1))
+			strcat(dtype, "+debugging");
+
+		syslog(LOG_INFO, "starting %s daemon", dtype);
 
 # ifdef QUEUE
 		if (queuemode)
