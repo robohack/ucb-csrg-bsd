@@ -8,7 +8,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)union.h	1.6 (Berkeley) 2/4/94
+ *	@(#)union.h	1.8 (Berkeley) 2/7/94
  */
 
 struct union_args {
@@ -42,9 +42,12 @@ struct union_node {
 	struct vnode	        *un_lowervp;	/* underlying object */
 	struct vnode		*un_dirvp;	/* Parent dir of uppervp */
 	char			*un_path;	/* saved component name */
-	int			un_open;	/* # of opens on lowervp */
+	int			un_hash;	/* saved un_path hash value */
+	int			un_openl;	/* # of opens on lowervp */
 	int			un_flags;
+#ifdef DIAGNOSTIC
 	pid_t			un_pid;
+#endif
 };
 
 #define UN_WANT 0x01
@@ -60,6 +63,10 @@ extern int union_mkshadow __P((struct union_mount *, struct vnode *,
 				struct componentname *, struct vnode **));
 extern int union_vn_create __P((struct vnode **, struct union_node *,
 				struct proc *));
+extern int union_cn_close __P((struct vnode *, int, struct ucred *,
+				struct proc *));
+extern void union_removed_upper __P((struct union_node *un));
+extern struct vnode *union_lowervp __P((struct vnode *));
 
 #define	MOUNTTOUNIONMOUNT(mp) ((struct union_mount *)((mp)->mnt_data))
 #define	VTOUNION(vp) ((struct union_node *)(vp)->v_data)
