@@ -1,4 +1,4 @@
-#	@(#)Makefile.inc	5.5 (Berkeley) 10/9/92
+#	@(#)Makefile.inc	8.1 (Berkeley) 6/4/93
 
 .PATH: ${.CURDIR}/db/btree
 
