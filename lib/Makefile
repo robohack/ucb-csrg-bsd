@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.32 (Berkeley) 5/16/93
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 SUBDIR=	libc libcurses libcompat libedit libkvm libm libmp \
 	libplot libresolv librpc/rpc libtelnet libterm libutil liby
