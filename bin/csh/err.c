@@ -5,7 +5,7 @@
  */
 
 #ifndef lint
-static char *sccsid = "@(#)err.c	5.3 (Berkeley) 5/13/86";
+static char *sccsid = "@(#)err.c	5.4 (Berkeley) 4/1/91";
 #endif
 
 #include "sh.h"
@@ -80,7 +80,7 @@ error(s, arg)
 	setq("status", onev, &shvhed);
 	if (tpgrp > 0)
 		(void) ioctl(FSHTTY, TIOCSPGRP, (char *)&tpgrp);
-	reset();		/* Unwind */
+	longjmp(reslab, 0);		/* Unwind */
 }
 
 /*
