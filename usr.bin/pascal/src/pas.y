@@ -1,9 +1,10 @@
-/*
- * Copyright (c) 1980 Regents of the University of California.
- * All rights reserved.  The Berkeley software License Agreement
- * specifies the terms and conditions for redistribution.
+/*-
+ * Copyright (c) 1980 The Regents of the University of California.
+ * All rights reserved.
  *
- *	@(#)pas.y	5.4 (Berkeley) 1/3/88
+ * %sccs.include.redist.c%
+ *
+ *	@(#)pas.y	5.5 (Berkeley) 4/16/91
  */
 
 /*
@@ -94,7 +95,7 @@
 
 /* Copyright (c) 1979 Regents of the University of California */
 
-/* static	char sccsid[] = "@(#)pas.y 5.4 1/3/88"; */
+/* static	char sccsid[] = "@(#)pas.y 5.5 4/16/91"; */
 
 /*
  * The following line marks the end of the yacc
@@ -104,7 +105,7 @@
 ##
 /* Copyright (c) 1979 Regents of the University of California */
 
-static	char sccsid[] = "@(#)pas.y 5.4 1/3/88";
+static	char sccsid[] = "@(#)pas.y 5.5 4/16/91";
 
 #include "whoami.h"
 #include "0.h"
