@@ -1,8 +1,10 @@
-/*
+/*-
  * Copyright (c) 1988 The Regents of the University of California.
  * All rights reserved.
  *
- *	@(#)machdep.h	5.2 (Berkeley) 2/23/90
+ * %sccs.include.proprietary.c%
+ *
+ *	@(#)machdep.h	5.3 (Berkeley) 4/4/91
  */
 
 /*
