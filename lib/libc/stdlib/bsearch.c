@@ -6,10 +6,11 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)bsearch.c	5.2 (Berkeley) 5/16/90";
+static char sccsid[] = "@(#)bsearch.c	5.3 (Berkeley) 5/17/90";
 #endif /* LIBC_SCCS and not lint */
 
 #include <stddef.h>		/* size_t */
+#include <stdlib.h>
 
 /*
  * Perform a binary search.
