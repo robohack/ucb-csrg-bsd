@@ -4,7 +4,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)lextab.l	5.1 (Berkeley) 4/16/91";
+static char sccsid[] = "@(#)lextab.l	8.1 (Berkeley) 6/6/93";
 #endif /* not lint */
 
 #include "y.tab.h"

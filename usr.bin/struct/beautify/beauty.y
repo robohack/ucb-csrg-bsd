@@ -19,7 +19,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)beauty.y	5.1 (Berkeley) 4/16/91";
+static char sccsid[] = "@(#)beauty.y	8.1 (Berkeley) 6/6/93";
 #endif /* not lint */
 
 #include "b.h"

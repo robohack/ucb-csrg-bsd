@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 2/28/91
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	beautify
 SRCS=	beauty.c tree.c lextab.c bdef.c

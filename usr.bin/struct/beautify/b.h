@@ -1,7 +1,7 @@
 /*-
  * %sccs.include.proprietary.c%
  *
- *	@(#)b.h	5.1 (Berkeley) 4/16/91
+ *	@(#)b.h	8.1 (Berkeley) 6/6/93
  */
 
 extern int xxindent, xxval, newflag, xxmaxchars, xxbpertab;
