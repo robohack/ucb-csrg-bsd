@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)saio.h	7.1 (Berkeley) 1/7/92
+ *	@(#)saio.h	7.2 (Berkeley) 2/29/92
  */
 
 /*
@@ -22,9 +22,9 @@ struct vnode {
 };
 
 #include "param.h"
-#include "ufs/quota.h"
-#include "ufs/inode.h"
-#include "ufs/fs.h"
+#include "ufs/ufs/quota.h"
+#include "ufs/ufs/inode.h"
+#include "ufs/ffs/fs.h"
 
 /*
  * Io block: includes an
