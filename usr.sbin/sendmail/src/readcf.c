@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)readcf.c	6.35 (Berkeley) 5/4/93";
+static char sccsid[] = "@(#)readcf.c	6.36 (Berkeley) 5/13/93";
 #endif /* not lint */
 
 # include "sendmail.h"
@@ -683,7 +683,7 @@ makemailer(line)
 				m->m_rh_rwset = m->m_re_rwset = i;
 
 			p = endp;
-			if (*p == '/')
+			if (*p++ == '/')
 			{
 				i = strtol(p, NULL, 10);
 				if (i < 0 || i >= MAXRWSETS)
