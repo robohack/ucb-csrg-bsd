@@ -1,7 +1,7 @@
 /*-
  * %sccs.include.proprietary.c%
  *
- *	@(#)abbrev.c	4.4 (Berkeley) 4/27/91
+ *	@(#)abbrev.c	8.1 (Berkeley) 6/6/93
  */
 
 struct dict abbrev_d[] = {

@@ -1,7 +1,7 @@
 /*-
  * %sccs.include.proprietary.c%
  *
- *	@(#)dict.c	4.4 (Berkeley) 4/27/91
+ *	@(#)dict.c	8.1 (Berkeley) 6/6/93
  */
 
 struct dict  dict[] = {
