@@ -4,13 +4,16 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)file.h	7.10 (Berkeley) 6/4/91
+ *	@(#)file.h	7.11 (Berkeley) 3/2/92
  */
 
 #include <sys/fcntl.h>
 #include <sys/unistd.h>
 
 #ifdef KERNEL
+struct proc;
+struct uio;
+
 /*
  * Kernel descriptor table.
  * One entry for each open kernel vnode and socket.
