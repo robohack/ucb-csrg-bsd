@@ -8,7 +8,7 @@
 # include <syslog.h>
 # endif LOG
 
-SCCSID(@(#)main.c	3.90		7/14/82);
+SCCSID(@(#)main.c	3.91		7/27/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -496,6 +496,11 @@ main(argc, argv)
 # endif QUEUE
 		checkerrors(CurEnv);
 		getrequests();
+
+		/* at this point we are in a child: reset state */
+		FatalErrors = FALSE;
+		openxscrpt();
+		initsys();
 	}
 #endif DAEMON
 	
