@@ -10,7 +10,7 @@
  * their  experiences (good or bad) with these elementary function  codes,
  * using "sendbug 4bsd-bugs@BERKELEY", to the authors.
  *
- * @(#)support.s	1.1 (ELEFUNT) 9/6/85
+ * @(#)support.s	1.3 (Berkeley) 8/21/85; 1.2 (ucb.elefunt) 9/12/85
  *
  * copysign(x,y),
  * logb(x),

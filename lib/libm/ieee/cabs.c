@@ -12,7 +12,8 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)cabs.c	1.1 (ELEFUNT) 9/6/85";
+static char sccsid[] =
+"@(#)cabs.c	1.2 (Berkeley) 8/21/85; 1.2 (ucb.elefunt) 9/12/85";
 #endif not lint
 
 /* CABS(Z)
