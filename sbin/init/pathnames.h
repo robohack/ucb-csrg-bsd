@@ -1,13 +1,13 @@
 /*-
- * Copyright (c) 1991 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1991, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
  * Donn Seeley at Berkeley Software Design, Inc.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)pathnames.h	6.2 (Berkeley) 5/26/93
+ *	@(#)pathnames.h	8.1 (Berkeley) 6/5/93
  */
 
 #include <paths.h>
