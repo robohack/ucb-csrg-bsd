@@ -1,5 +1,5 @@
 /* block copy from from to to, count bytes */
-static char *sccsid = "@(#)bcopy.c	4.1 8/1/80";
+static char *sccsid = "@(#)bcopy.c	5.1 8/20/80";
 bcopy(from, to, count)
 #ifdef vax
 	char *from, *to;
