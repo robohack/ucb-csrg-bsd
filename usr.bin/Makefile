@@ -1,9 +1,9 @@
-#	@(#)Makefile	5.18 (Berkeley) 4/27/93
+#	@(#)Makefile	5.19 (Berkeley) 5/3/93
 
 # BROKEN: tn3270
 SUBDIR=	apply ar at awk banner basename bc bdes biff cal calendar cap_mkdb \
 	checknr chflags chpass cksum col colcrt colrm column comm compress \
-	cpio ctags cut dc deroff diction diff dirname du env error ex \
+	cpio cpp ctags cut dc deroff diction diff dirname du env error ex \
 	expand false file find finger fmt fold fpr from fsplit fstat ftp \
 	gcore gprof graph grep head hexdump id indent join last \
 	lastcomm learn leave lex locate lock logger login logname lorder \
