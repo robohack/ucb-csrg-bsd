@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.3 (Berkeley) 6/25/90
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 PROG=	uucpd
 NOMAN=	noman
