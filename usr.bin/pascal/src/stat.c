@@ -1,6 +1,6 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-static char sccsid[] = "@(#)stat.c 1.5 6/1/81";
+static char sccsid[] = "@(#)stat.c 1.6 2/2/82";
 
 #include "whoami.h"
 #include "0.h"
@@ -190,6 +190,12 @@ putline()
 #	ifdef OBJ
 	    if (opt('p') != 0)
 		    put(2, O_LINO, line);
+
+	    /*
+	     * put out line number information for pdx
+	     */
+	    lineno(line);
+
 #	endif OBJ
 #	ifdef PC
 	    static lastline;
