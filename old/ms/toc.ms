@@ -1,3 +1,4 @@
+.\" @(#)toc.ms	1.3 (Berkeley) 6/2/90
 .	\" XS - begin index entry
 .de XS
 .if !\\n(1T .BG

@@ -1,3 +1,4 @@
+.\" @(#)cov.ms	1.3 (Berkeley) 6/2/90
 .	\" TL - title and initialization
 .de TL
 .if \\n(TM .nr ST 1

@@ -1,3 +1,4 @@
+.\" @(#)ref.ms	1.3 (Berkeley) 6/2/90
 .	\" refer macros for citations
 .de []
 .][ \\$1
