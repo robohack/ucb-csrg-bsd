@@ -1,6 +1,6 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-/* static	char sccsid[] = "@(#)pc.h 1.9 9/5/83"; */
+/* static	char sccsid[] = "@(#)pc.h 2.1 2/8/84"; */
 
 #include <setjmp.h>
 

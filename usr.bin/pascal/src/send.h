@@ -1,6 +1,6 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-/* static	char sccsid[] = "@(#)send.h 1.2 9/19/83"; */
+/* static	char sccsid[] = "@(#)send.h 2.1 2/8/84"; */
 
 #define	RINIT	1
 #define	RENQ	2

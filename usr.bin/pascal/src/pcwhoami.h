@@ -1,6 +1,6 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-/* static	char sccsid[] = "@(#)pcwhoami.h 1.5 9/19/83"; */
+/* static	char sccsid[] = "@(#)pcwhoami.h 2.1 2/8/84"; */
 
 /*
  *	am i generating an obj file (OBJ),

@@ -88,7 +88,7 @@
 
 /* Copyright (c) 1979 Regents of the University of California */
 
-/* static	char sccsid[] = "@(#)pas.y 1.13 2/8/84"; */
+/* static	char sccsid[] = "@(#)pas.y 2.1 2/8/84"; */
 
 /*
  * The following line marks the end of the yacc
@@ -98,7 +98,7 @@
 ##
 /* Copyright (c) 1979 Regents of the University of California */
 
-static	char sccsid[] = "@(#)pas.y 1.13 2/8/84";
+static	char sccsid[] = "@(#)pas.y 2.1 2/8/84";
 
 #include "whoami.h"
 #include "0.h"

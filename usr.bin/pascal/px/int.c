@@ -1,6 +1,6 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-static char sccsid[] = "@(#)int.c 1.8 2/11/82";
+static char sccsid[] = "@(#)int.c 2.1 2/8/84";
 
 /*
  * px - interpreter for Berkeley Pascal
