@@ -8,10 +8,10 @@
 
 #include "../machine/pte.h"
 
-#include "../h/param.h"
-#include "../h/inode.h"
-#include "../h/fs.h"
-#include "../h/vm.h"
+#include "param.h"
+#include "inode.h"
+#include "fs.h"
+#include "vm.h"
 
 #include "../vax/mtpr.h"
 #include "../vaxmba/mbareg.h"
@@ -102,11 +102,13 @@ mbainit(mbanum)
 {
 	register struct mba_regs *mba = mbaddr[mbanum];
 
-	if (badaddr((char *)mba, sizeof(long)))
+	if (badaddr((char *)mba, sizeof(long))) {
+		printf("nonexistent mba");
 		return (0);
-	if (mbaact & (1<<mbanum))
-		return (1);
-	mba->mba_cr = MBCR_INIT;
-	mbaact |= 1<<mbanum;
+	}
+	if ((mbaact & (1<<mbanum)) == 0) {
+		mba->mba_cr = MBCR_INIT;
+		mbaact |= 1<<mbanum;
+	}
 	return (1);
 }
