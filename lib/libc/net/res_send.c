@@ -1,6 +1,11 @@
 #ifndef lint
-static char sccsid[] = "@(#)res_send.c	4.3 (Berkeley) 3/28/85";
+static char sccsid[] = "@(#)res_send.c	4.4 (Berkeley) 4/1/85";
 #endif
+
+/*
+ * Copyright (c) 1985 Regents of the University of California
+ *	All Rights Reserved
+ */
 
 /*
  * Send query to name server and wait for reply.
