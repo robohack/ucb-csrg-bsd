@@ -15,7 +15,7 @@ char copyright[] =
 #endif not lint
 
 #ifndef lint
-static char	SccsId[] = "@(#)main.c	5.10 (Berkeley) 12/7/85";
+static char	SccsId[] = "@(#)main.c	5.11 (Berkeley) 1/30/86";
 #endif not lint
 
 # define  _DEFINE
@@ -107,6 +107,7 @@ main(argc, argv, envp)
 	register int i;
 	bool readconfig = TRUE;
 	bool queuemode = FALSE;		/* process queue requests */
+	bool nothaw;
 	static bool reenter = FALSE;
 	char jbuf[30];			/* holds MyHostName */
 	extern bool safefile();
@@ -164,6 +165,7 @@ main(argc, argv, envp)
 
 	argv[argc] = NULL;
 	av = argv;
+	nothaw = FALSE;
 	while ((p = *++av) != NULL)
 	{
 		if (strncmp(p, "-C", 2) == 0)
@@ -173,12 +175,21 @@ main(argc, argv, envp)
 				ConfFile = "sendmail.cf";
 			(void) setgid(getrgid());
 			(void) setuid(getruid());
-			break;
+			nothaw = TRUE;
 		}
 		else if (strncmp(p, "-bz", 3) == 0)
-			break;
+			nothaw = TRUE;
+# ifdef DEBUG
+		else if (strncmp(p, "-d", 2) == 0)
+		{
+			tTsetup(tTdvect, sizeof tTdvect, "0-99.1");
+			tTflag(&p[2]);
+			setbuf(stdout, (char *) NULL);
+			printf("Version %s\n", Version);
+		}
+# endif DEBUG
 	}
-	if (p == NULL)
+	if (!nothaw)
 		readconfig = !thaw(FreezeFile);
 
 	/* reset the environment after the thaw */
@@ -233,12 +244,22 @@ main(argc, argv, envp)
 		av = myhostname(jbuf, sizeof jbuf);
 		if (jbuf[0] != '\0')
 		{
+#ifdef DEBUG
+			if (tTd(0, 4))
+				printf("canonical name: %s\n", jbuf);
+#endif DEBUG
 			p = newstr(jbuf);
 			define('w', p, CurEnv);
 			setclass('w', p);
 		}
 		while (av != NULL && *av != NULL)
+		{
+#ifdef DEBUG
+			if (tTd(0, 4))
+				printf("\ta.k.a.: %s\n", *av);
+#endif DEBUG
 			setclass('w', *av++);
+		}
 
 		/* version */
 		define('v', Version, CurEnv);
@@ -298,11 +319,10 @@ main(argc, argv, envp)
 			break;
 
 # ifdef DEBUG
-		  case 'd':	/* debug */
+		  case 'd':	/* debugging -- redo in case frozen */
 			tTsetup(tTdvect, sizeof tTdvect, "0-99.1");
 			tTflag(&p[2]);
 			setbuf(stdout, (char *) NULL);
-			printf("Version %s\n", Version);
 			break;
 # endif DEBUG
 
