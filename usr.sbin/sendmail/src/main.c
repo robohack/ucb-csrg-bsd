@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.61 (Berkeley) 5/3/93";
+static char sccsid[] = "@(#)main.c	6.62 (Berkeley) 5/6/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -952,7 +952,10 @@ main(argc, argv, envp)
 		finis();
 	}
 	if (OpMode == MD_VERIFY)
+	{
 		CurEnv->e_sendmode = SM_VERIFY;
+		CurEnv->e_errormode = EM_QUIET;
+	}
 
 	/*
 	**  Scan argv and deliver the message to everyone.
@@ -995,7 +998,8 @@ main(argc, argv, envp)
 	sendall(CurEnv, SM_DEFAULT);
 
 	/*
-	** All done.
+	**  All done.
+	**	Don't send return error message if in VERIFY mode.
 	*/
 
 	finis();
