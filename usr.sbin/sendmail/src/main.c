@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.100 (Berkeley) 4/9/95";
+static char sccsid[] = "@(#)main.c	8.101 (Berkeley) 4/13/95";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -896,6 +896,7 @@ main(argc, argv, envp)
 		exit(EX_OK);
 
 	  case MD_DAEMON:
+	  case MD_SMTP:
 		/* don't open alias database -- done in srvrsmtp */
 		break;
 
