@@ -1,10 +1,10 @@
-#!/bin/sh -
+#! /bin/csh
 #
 # Copyright (c) 1980 Regents of the University of California.
 # All rights reserved.  The Berkeley software License Agreement
 # specifies the terms and conditions for redistribution.
 #
-#	@(#)vgrind.sh	5.1 (Berkeley) 6/6/85
+#	@(#)vgrind.sh	5.2 (Berkeley) 7/22/85
 #
 # vgrind
 #
