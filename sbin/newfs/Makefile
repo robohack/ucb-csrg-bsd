@@ -14,9 +14,9 @@
 # IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
 # WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 #
-#	@(#)Makefile	7.5 (Berkeley) 5/11/89
+#	@(#)Makefile	7.6 (Berkeley) 9/5/89
 #
-CFLAGS=	-O
+CFLAGS=	-O -DMFS
 LIBC=	/lib/libc.a
 SRCS=	newfs.c mkfs.c
 OBJS=	newfs.o mkfs.o
