@@ -12,7 +12,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)halt.c	5.8 (Berkeley) 2/3/91";
+static char sccsid[] = "@(#)halt.c	5.9 (Berkeley) 2/26/91";
 #endif /* not lint */
 
 /*
@@ -114,6 +114,7 @@ main(argc, argv)
 	perror("halt");
 }
 
+void
 dingdong()
 {
 	/* RRRIIINNNGGG RRRIIINNNGGG */
