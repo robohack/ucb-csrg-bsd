@@ -3,7 +3,7 @@
 # include <sgtty.h>
 # include "sendmail.h"
 
-SCCSID(@(#)main.c	4.12		8/11/84);
+SCCSID(@(#)main.c	4.13		8/11/84);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -714,15 +714,18 @@ struct metamac
 
 struct metamac	MetaMacros[] =
 {
-	/* these are important on the LHS */
+	/* LHS pattern matching characters */
 	'*', MATCHZANY,	'+', MATCHANY,	'-', MATCHONE,	'=', MATCHCLASS,
 	'~', MATCHNCLASS,
 
 	/* these are RHS metasymbols */
 	'#', CANONNET,	'@', CANONHOST,	':', CANONUSER,	'>', CALLSUBR,
 
-	/* and finally the conditional operations */
+	/* the conditional operations */
 	'?', CONDIF,	'|', CONDELSE,	'.', CONDFI,
+
+	/* and finally the hostname lookup characters */
+	'{', HOSTBEGIN,	'}', HOSTEND,
 
 	'\0'
 };
