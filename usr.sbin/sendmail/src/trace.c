@@ -9,13 +9,11 @@
 */
 
 #ifndef lint
-static char	SccsId[] = "@(#)trace.c	5.1 (Berkeley) 6/7/85";
+static char	SccsId[] = "@(#)trace.c	5.2 (Berkeley) 6/7/85";
 #endif not lint
 
 # include <ctype.h>
 # include "sendmail.h"
-
-SCCSID(@(#)trace.c	5.1		6/7/85);
 
 /*
 **  TtSETUP -- set up for trace package.

@@ -9,7 +9,6 @@
 */
 
 #ifndef lint
-static char	SccsId[] = "@(#)usersmtp.c	5.1 (Berkeley) 6/7/85";
 #endif not lint
 
 # include <ctype.h>
@@ -18,10 +17,10 @@ static char	SccsId[] = "@(#)usersmtp.c	5.1 (Berkeley) 6/7/85";
 # include "sendmail.h"
 
 # ifndef SMTP
-SCCSID(@(#)usersmtp.c	5.1		6/7/85	(no SMTP));
+static char	SccsId[] = "@(#)usersmtp.c	5.2 (Berkeley) 6/7/85	(no SMTP)";
 # else SMTP
 
-SCCSID(@(#)usersmtp.c	5.1		6/7/85);
+static char	SccsId[] = "@(#)usersmtp.c	5.2 (Berkeley) 6/7/85";
 
 
 
