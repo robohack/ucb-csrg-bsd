@@ -1,6 +1,18 @@
+/*
+ * Copyright (c) 1983 Regents of the University of California.
+ * All rights reserved.  The Berkeley software License Agreement
+ * specifies the terms and conditions for redistribution.
+ */
+
 #ifndef lint
-static char sccsid[] = "@(#)implog.c	4.4 (Berkeley) 7/1/83";
-#endif
+char copyright[] =
+"@(#) Copyright (c) 1983 Regents of the University of California.\n\
+ All rights reserved.\n";
+#endif not lint
+
+#ifndef lint
+static char sccsid[] = "@(#)implog.c	5.2 (Berkeley) 5/28/85";
+#endif not lint
 
 #include <stdio.h>
 #include <signal.h>
