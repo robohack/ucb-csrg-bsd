@@ -9,7 +9,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)print.c	5.1 (Berkeley) 1/17/91";
+static char sccsid[] = "@(#)print.c	5.2 (Berkeley) 1/21/91";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -50,6 +50,7 @@ print(argv)
 		if (!all && !*argv)
 			break;
 	}
+	eval = 0;
 	ORPHANS;
 	close_archive(afd);
 	return(eval);
