@@ -14,7 +14,7 @@
 # IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
 # WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 #
-#	@(#)makefile	4.1 (Berkeley) 12/4/88
+#	@(#)makefile	4.2 (Berkeley) 6/6/90
 #
 # msdos versus unix defines
 O	= .o
@@ -107,8 +107,8 @@ ALLO	= globals$O ${SUBSO}
 .s.o:
 	/lib/cpp -E $< | as -o $@
 
-.c.obj:
-	${CC} ${CFLAGS} -c $<
+#.c.obj:
+#	${CC} ${CFLAGS} -c $<
 
 generallib.a:	${ALLO}
 	${RM} $@
