@@ -14,7 +14,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)pathnames.h	5.3 (Berkeley) 3/6/90
+ *	@(#)pathnames.h	5.4 (Berkeley) 3/11/90
  */
 
-#define	_PATH_FCODES	"/var/db/find.database"
+#define	_PATH_FCODES	"/var/db/locate.database"
