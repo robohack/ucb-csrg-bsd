@@ -9,14 +9,12 @@
 */
 
 #ifndef lint
-static char	SccsId[] = "@(#)recipient.c	5.1 (Berkeley) 6/7/85";
+static char	SccsId[] = "@(#)recipient.c	5.2 (Berkeley) 6/7/85";
 #endif not lint
 
 # include <pwd.h>
 # include "sendmail.h"
 # include <sys/stat.h>
-
-SCCSID(@(#)recipient.c	5.1		6/7/85);
 
 /*
 **  SENDTOLIST -- Designate a send list.
