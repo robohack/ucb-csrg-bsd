@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)qv.c	1.16 (Berkeley) 5/16/91
+ *	@(#)qv.c	7.1 (Berkeley) 6/28/91
  */
 
 /*
