@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.3 (Berkeley) 2/27/93
+#	@(#)Makefile	8.1 (Berkeley) 6/1/93
 
 # do compile_et and make_* first, used by other directories
 

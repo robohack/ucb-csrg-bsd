@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 5/25/93
+#	@(#)Makefile	8.1 (Berkeley) 6/1/93
 
 LIB=	acl
 CFLAGS+=-DDEBUG -DKERBEROS -I${.CURDIR}/../include
