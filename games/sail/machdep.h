@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1983 Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1983, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)machdep.h	5.5 (Berkeley) 6/1/90
+ *	@(#)machdep.h	8.1 (Berkeley) 5/31/93
  */
 
 #define TIMEOUT 300				/* Sync() timeout in seconds */
