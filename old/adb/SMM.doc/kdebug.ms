@@ -1,8 +1,9 @@
-.\" Copyright (c) 1983 Regents of the University of California.
-.\" All rights reserved.  The Berkeley software License Agreement
-.\" specifies the terms and conditions for redistribution.
+.\" Copyright (c) 1983 The Regents of the University of California.
+.\" All rights reserved.
 .\"
-.\"	@(#)kdebug.ms	6.5 (Berkeley) 3/8/89
+.\" %sccs.include.redist.roff%
+.\"
+.\"	@(#)kdebug.ms	6.6 (Berkeley) 4/17/91
 .\"
 .bd S B 3
 .de UX

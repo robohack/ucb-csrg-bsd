@@ -1,4 +1,6 @@
-.\"	@(#)Clib.ms	6.1 (Berkeley) 5/14/86
+.\" %sccs.include.proprietary.man%
+.\"
+.\"	@(#)Clib.ms	6.2 (Berkeley) 4/17/91
 .\"
 .so /k3/unx/MACROS/cmac1
 .CH 3 "C LIBRARIES"
