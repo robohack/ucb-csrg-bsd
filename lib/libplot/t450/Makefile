@@ -1,4 +1,4 @@
-#	@(#)Makefile	4.5 (Berkeley) 5/11/90
+#	@(#)Makefile	8.1 (Berkeley) 6/4/93
 
 LIB=	450
 SRCS=	arc.c box.c circle.c close.c dot.c erase.c label.c \
