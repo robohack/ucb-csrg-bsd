@@ -1,10 +1,13 @@
+/*-
+ * Copyright (c) 1980 The Regents of the University of California.
+ * All rights reserved.
+ *
+ * %sccs.include.proprietary.c%
+ *
+ *	@(#)operand.h	5.2 (Berkeley) 4/12/91
+ */
+
 /*
- * Copyright (c) 1980 Regents of the University of California.
- * All rights reserved.  The Berkeley software License Agreement
- * specifies the terms and conditions for redistribution.
- *
- *	@(#)operand.h	5.1 (Berkeley) 6/7/85
- *
  * operand.h  --  definitions useful to VAX operand decoding
  */
 
