@@ -12,12 +12,12 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)ppt.c	5.4 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)ppt.c	5.5 (Berkeley) 2/3/93";
 #endif /* not lint */
 
 #include <stdio.h>
 
-void	putppt();
+static void	putppt();
 
 main(argc, argv)
 	int argc;
