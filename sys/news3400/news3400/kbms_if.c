@@ -1,13 +1,13 @@
 /*
- * Copyright (c) 1992 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1992, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
  * Sony Corp. and Kazumasa Utashiro of Software Research Associates, Inc.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)kbms_if.c	7.3 (Berkeley) 3/9/93
+ *	@(#)kbms_if.c	8.1 (Berkeley) 6/11/93
  */
 
 /* Keyboard Mouse Gate-array control routine */

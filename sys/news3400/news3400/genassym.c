@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1992 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1992, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)genassym.c	7.7 (Berkeley) 5/13/93
+ *	@(#)genassym.c	8.1 (Berkeley) 6/11/93
  */
 
 #define KERNEL
