@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)lfs_inode.c	7.78 (Berkeley) 8/21/92
+ *	@(#)lfs_inode.c	7.79 (Berkeley) 8/25/92
  */
 
 #include <sys/param.h>
@@ -99,7 +99,7 @@ lfs_update(ap)
 	}
 
 #define SEGDEC { \
-	if (daddr != UNASSIGNED) { \
+	if (daddr != 0) { \
 		if (lastseg != (seg = datosn(fs, daddr))) { \
 			UPDATE_SEGUSE; \
 			num = 1; \
