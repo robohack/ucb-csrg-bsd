@@ -14,11 +14,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)memory.h	5.2 (Berkeley) 8/12/88
+ *	@(#)memory.h	5.3 (Berkeley) 2/12/90
  */
 
-char *memccpy();
-char *memchr();
-char *memcpy();
-char *memset();
-int memcmp();
+#include <strings.h>
