@@ -1,4 +1,6 @@
-.\"	@(#)u1	6.1 (Berkeley) 5/22/86
+.\" %sccs.include.proprietary.roff%
+.\"
+.\"	@(#)u1	6.2 (Berkeley) 4/17/91
 .\"
 .nr PS 9
 .if t .nr VS 11
