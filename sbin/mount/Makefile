@@ -1,10 +1,7 @@
-#	@(#)Makefile	8.1 (Berkeley) 6/5/93
+#	@(#)Makefile	8.2 (Berkeley) 2/16/94
 
 PROG=	mount
-CFLAGS+=-DNFS
 MAN8=	mount.0
-DPADD=	${LIBRPC}
-LDADD=	-lrpc
 MLINKS=	mount.8 umount.8
 
 .include <bsd.prog.mk>
