@@ -1,5 +1,5 @@
 /*
- * @(#)strings.c	1.2	1/3/85
+ * @(#)strings.c	1.3	1/4/85
  *
  * String definitions for the SUN Gremlin picture editor.
  *
@@ -7,5 +7,5 @@
  *
  */
 
-char version[] = " Gremlin (85.1.3) <> Editing: ";
+char version[] = " Gremlin (85.1.4) <> Editing: ";
 char GLibrary[] = "/usr/local/lib/gremlin/";
