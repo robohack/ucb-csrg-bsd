@@ -14,9 +14,9 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)pathnames.h	5.1 (Berkeley) 5/11/89
+ *	@(#)pathnames.h	5.2 (Berkeley) 4/30/90
  */
 
 #include <paths.h>
 
-#define	_PATH_SPECIAL_DIR	"/usr/games/lib/atc/"
+#define	_PATH_SPECIAL_DIR	"/usr/share/games/atc/"
