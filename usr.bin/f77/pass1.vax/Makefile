@@ -3,11 +3,10 @@
 # All rights reserved.  The Berkeley software License Agreement
 # specifies the terms and conditions for redistribution.
 #
-#	@(#)Makefile	5.1 (Berkeley) 6/7/85
+#	@(#)Makefile	5.2 (Berkeley) 8/29/85
 #
-CFLAGS	      = -O -DHERE=VAX -DTARGET=VAX -DFAMILY=PCC -DUCBVAXASM -DUCBPASS2 \
-
-		-I../../include
+CFLAGS	      = -O -DHERE=VAX -DTARGET=VAX -DFAMILY=PCC -DUCBVAXASM \
+		-DUCBPASS2 -DNAMELIST -I../../include
 
 DEST	      = $(DESTDIR)/usr/lib
 
