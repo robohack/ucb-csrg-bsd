@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)nfs_vnops.c	7.81 (Berkeley) 6/17/92
+ *	@(#)nfs_vnops.c	7.82 (Berkeley) 6/18/92
  */
 
 /*
@@ -1100,7 +1100,6 @@ nfs_link(ap)
 			vrele(vp);
 		else
 			vput(vp);
-		vrele(tdvp);
 		return (EXDEV);
 	}
 
