@@ -1,5 +1,5 @@
 /* Copyright (c) 1981 Regents of the University of California */
-static char *sccsid = "@(#)ex_set.c	7.1	7/8/81";
+static char *sccsid = "@(#)ex_set.c	7.2	6/27/83";
 #include "ex.h"
 #include "ex_temp.h"
 #include "ex_tty.h"
@@ -94,6 +94,8 @@ printone:
 			op->ovalue = getnum();
 			if (value(TABSTOP) <= 0)
 				value(TABSTOP) = TABS;
+			if (value(HARDTABS) <= 0)
+				value(HARDTABS) = TABS;
 			if (op == &options[WINDOW]) {
 				if (value(WINDOW) >= LINES)
 					value(WINDOW) = LINES-1;
