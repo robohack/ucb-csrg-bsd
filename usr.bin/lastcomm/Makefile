@@ -1,9 +1,7 @@
-#	@(#)Makefile	5.5 (Berkeley) 7/12/92
+#	@(#)Makefile	5.6 (Berkeley) 4/27/93
 
 PROG=	lastcomm
 SRCS=	devname.c lastcomm.c
-DPADD=	${LIBUTIL}
-LDADD=	-lutil
 
 .PATH: ${.CURDIR}/../../bin/ps
 
