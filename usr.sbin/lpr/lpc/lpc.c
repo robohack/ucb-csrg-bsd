@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)lpc.c	4.1 (Berkeley) 5/11/83";
+static char sccsid[] = "@(#)lpc.c	4.2 (Berkeley) 5/27/83";
 #endif
 
 /*
@@ -27,6 +27,9 @@ main(argc, argv)
 	char *argv[];
 {
 	register struct cmd *c;
+	extern char *name;
+
+	name = argv[0];
 
 	if (--argc > 0) {
 		c = getcmd(*++argv);
