@@ -1,7 +1,7 @@
 # xps
 # kernel ps
 #
-#	@(#)xps	7.1 (Berkeley) 8/2/92
+#	@(#)xps	8.1 (Berkeley) 6/10/93
 
 define xps
 
