@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.2 (Berkeley) 3/3/93
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 PROG=	chflags
 SRCS=	chflags.c stat_flags.c
