@@ -1,10 +1,9 @@
-#	@(#)Makefile	8.1 (Berkeley) 6/4/93
+#	@(#)Makefile	8.2 (Berkeley) 4/4/94
 
 PROG=	ftpd
-CFLAGS+=-I${.CURDIR}/../../usr.bin/ftp -DSETPROCTITLE
-SRCS=	ftpd.c ftpcmd.c glob.c logwtmp.c popen.c vers.c
+CFLAGS+=-DSETPROCTITLE
+SRCS=	ftpd.c ftpcmd.c logwtmp.c popen.c
 MAN8=	ftpd.0
 CLEANFILES+=ftpcmd.c y.tab.h
-.PATH:	${.CURDIR}/../../usr.bin/ftp
 
 .include <bsd.prog.mk>
