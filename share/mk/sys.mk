@@ -1,4 +1,4 @@
-#	@(#)sys.mk	5.15 (Berkeley) 7/9/93
+#	@(#)sys.mk	8.1 (Berkeley) 7/9/93
 
 unix		?=	We run UNIX.
 
