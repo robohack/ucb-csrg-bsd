@@ -1,11 +1,4 @@
-#
-# Copyright (c) 1986, 1991 The Regents of the University of California.
-# All rights reserved.
-#
-# %sccs.include.redist.sh
-#
-#	@(#)Makefile	7.12 (Berkeley) 4/20/91
-#
+#	@(#)Makefile	7.13 (Berkeley) 5/9/91
 
 # Makefile for kernel tags files, init_systent, etc.
 
