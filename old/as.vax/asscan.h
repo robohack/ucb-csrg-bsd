@@ -12,7 +12,7 @@
  *	following tokens.
  */
 
-#define TOKBUFLG		BUFSIZ
+#define TOKBUFLG		4096
 #define MAXVAX			32		
 #define SAFETY			16
 
@@ -98,10 +98,10 @@ extern	ptrall tokub;	/*current upper bound in the current buffer*/
  *	We have a third string of nulls so that the .skip can be 
  *	handled in the same way as strings.
  */
-#define MAXSTRLG	127
+#define MAXSTRLG	2048
 
-struct strdesc{
-	char		str_lg;
+struct strdesc {
+	unsigned short	str_lg;
 	char		str[MAXSTRLG];
 };
 

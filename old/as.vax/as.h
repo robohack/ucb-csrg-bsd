@@ -50,7 +50,7 @@
 #	ifdef NCPS
 #		undef	NCPS
 #	endif
-#	define	NCPS	BUFSIZ	/* needed to allocate yytext */
+#	define	NCPS	4096	/* needed to allocate yytext */
 # endif
 # endif UNIX
 

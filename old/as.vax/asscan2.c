@@ -8,6 +8,12 @@ static char sccsid[] = "@(#)asscan2.c 4.4 4/16/82";
 #include "asscanl.h"
 static	inttoktype	oval = NL;
 
+#ifdef BUFSIZ
+#undef BUFSIZ
+#endif
+
+#define BUFSIZ 4096
+
 #define	NINBUFFERS	2
 #define	INBUFLG		NINBUFFERS*BUFSIZ + 2
 	/*
