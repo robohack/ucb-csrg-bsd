@@ -1,7 +1,6 @@
-#	@(#)Makefile	5.15 (Berkeley) 12/2/92
+#	@(#)Makefile	5.16 (Berkeley) 12/2/92
 
 PROG=	compress
-CFLAGS=	-g
 LINKS=	${BINDIR}/compress ${BINDIR}/uncompress
 MLINKS=	compress.1 uncompress.1 compress.1 zcat.1
 
