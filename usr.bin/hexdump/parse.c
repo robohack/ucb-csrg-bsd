@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)parse.c	5.4 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)parse.c	5.5 (Berkeley) 3/7/91";
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -45,14 +45,18 @@ addfile(name)
 	(void)fclose(fp);
 }
 
-add(fmt)
-	char *fmt;
+add(xfmt)
+	char *xfmt;
 {
 	register char *p;
 	static FS **nextfs;
 	FS *tfs;
 	FU *tfu, **nextfu;
 	char savech, *savep, *emalloc(), *strdup();
+	char *fmt;
+
+	if ((fmt = strdup(xfmt)) == NULL)
+		nomem();
 
 	/* start new linked list of format units */
 	/* NOSTRICT */
