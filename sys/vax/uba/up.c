@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)up.c	7.1 (Berkeley) 6/5/86
+ *	@(#)up.c	7.2 (Berkeley) 1/14/87
  */
 
 #include "up.h"
@@ -21,7 +21,7 @@
 
 #include "param.h"
 #include "systm.h"
-#include "dk.h"
+#include "dkstat.h"
 #include "dkbad.h"
 #include "buf.h"
 #include "conf.h"
