@@ -5,7 +5,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)conf.h	8.57 (Berkeley) 12/2/93
+ *	@(#)conf.h	8.58 (Berkeley) 12/9/93
  */
 
 /*
@@ -460,6 +460,7 @@ extern void		*malloc();
 #  define LA_TYPE	LA_FLOAT
 # endif
 # include <sys/sysmacros.h>
+# define GIDSET_T	gid_t
 #endif
 
 
