@@ -5,12 +5,11 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)popen.c	5.3 (Berkeley) 3/9/86";
+static char sccsid[] = "@(#)popen.c	5.4 (Berkeley) 3/26/86";
 #endif LIBC_SCCS and not lint
 
 #include <stdio.h>
 #include <signal.h>
-#include <sys/param.h>
 
 #define	tst(a,b)	(*mode == 'r'? (b) : (a))
 #define	RDR	0
