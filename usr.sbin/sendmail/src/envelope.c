@@ -1,9 +1,9 @@
 #include <pwd.h>
-#include <time.h>
+#include <sys/time.h>
 #include "sendmail.h"
 #include <sys/stat.h>
 
-SCCSID(@(#)envelope.c	3.15		4/17/83);
+SCCSID(@(#)envelope.c	3.16		7/1/83);
 
 /*
 **  NEWENVELOPE -- allocate a new envelope
