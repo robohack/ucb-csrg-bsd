@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)conf.c	6.47 (Berkeley) 4/26/93";
+static char sccsid[] = "@(#)conf.c	6.48 (Berkeley) 4/27/93";
 #endif /* not lint */
 
 # include <sys/ioctl.h>
@@ -85,6 +85,7 @@ struct hdrinfo	HdrInfo[] =
 
 		/* trace fields */
 	"received",		H_TRACE|H_FORCE,
+	"x400-received",	H_TRACE|H_FORCE,
 	"via",			H_TRACE|H_FORCE,
 	"mail-from",		H_TRACE|H_FORCE,
 
