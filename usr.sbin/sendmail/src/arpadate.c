@@ -7,11 +7,10 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)arpadate.c	6.7 (Berkeley) 2/21/93";
+static char sccsid[] = "@(#)arpadate.c	6.8 (Berkeley) 3/1/93";
 #endif /* not lint */
 
 # include "sendmail.h"
-# include <sys/types.h>
 
 /*
 **  ARPADATE -- Create date in ARPANET format

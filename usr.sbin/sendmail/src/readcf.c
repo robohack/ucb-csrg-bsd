@@ -7,12 +7,11 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)readcf.c	6.14 (Berkeley) 2/28/93";
+static char sccsid[] = "@(#)readcf.c	6.15 (Berkeley) 3/1/93";
 #endif /* not lint */
 
 # include "sendmail.h"
 # include <sys/stat.h>
-# include <unistd.h>
 #ifdef NAMED_BIND
 # include <arpa/nameser.h>
 # include <resolv.h>
