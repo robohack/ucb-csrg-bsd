@@ -81,19 +81,19 @@ copyunix(howto, devtype, aio)
 	register int io = aio, i;
 	char *addr;
 
-	i = read(io, (char *)&x, sizeof x);
-	if (i != sizeof x ||
-	    (x.a_magic != 0407 && x.a_magic != 0413 && x.a_magic != 0410)) {
+	i = read(io, (char *)&x, sizeof(x));
+	if (i != sizeof(x) || (x.a_magic != OMAGIC && x.a_magic != ZMAGIC
+	    && x.a_magic != NMAGIC)) {
 		printf("Bad format\n");
 		return;
 	}
 	printf("%d", x.a_text);
-	if (x.a_magic == 0413 && lseek(io, 0x400, 0) == -1)
+	if (x.a_magic == ZMAGIC && lseek(io, 0x400, L_SET) == -1)
 		goto shread;
 	if (read(io, (char *)0, x.a_text) != x.a_text)
 		goto shread;
 	addr = (char *)x.a_text;
-	if (x.a_magic == 0413 || x.a_magic == 0410)
+	if (x.a_magic == ZMAGIC || x.a_magic == NMAGIC)
 		while ((int)addr & CLOFSET)
 			*addr++ = 0;
 	printf("+%d", x.a_data);
