@@ -1,5 +1,5 @@
 /* Copyright (c) 1980 Regents of the University of California */
-/* "@(#)astoks.H 4.1 2/14/82" */
+/* "@(#)astoks.H 4.2 2/14/82" */
 /*
  *	Message to the wary:  The order of tokens has been
  *	hand optimized and assigned to that all switch statements
