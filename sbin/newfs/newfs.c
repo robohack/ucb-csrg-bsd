@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)newfs.c	6.30 (Berkeley) 5/27/92";
+static char sccsid[] = "@(#)newfs.c	6.31 (Berkeley) 6/4/92";
 #endif /* not lint */
 
 #ifndef lint
@@ -33,6 +33,7 @@ char copyright[] =
 #else
 #include <varargs.h>
 #endif
+#include <unistd.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
