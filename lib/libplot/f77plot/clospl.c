@@ -5,12 +5,9 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)clospl.c	5.1 (Berkeley) 6/7/85";
+static char sccsid[] = "@(#)clospl.c	5.2 (Berkeley) 6/8/85";
 #endif not lint
 
-closvt_(){
-	closevt();
-}
 clospl_(){
 	closepl();
 }

@@ -5,13 +5,9 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)open.c	5.1 (Berkeley) 6/7/85";
+static char sccsid[] = "@(#)open.c	5.2 (Berkeley) 6/8/85";
 #endif not lint
 
-openvt_()
-{
-	openvt();
-}
 openpl_()
 {
 	openpl();
