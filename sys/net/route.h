@@ -42,11 +42,24 @@ struct rtentry {
 	short	rt_refcnt;		/* # held references */
 	u_long	rt_use;			/* raw # packets forwarded */
 	struct	ifnet *rt_ifp;		/* the answer: interface to use */
+	union {				/* domain specific info */
+#ifdef INET
+	    struct {
+		int in_rt_pc;		/* count of pings not answered */
+	    } rt_in_data;
+
+#define	irt_pings	rt_data.rt_in_data.in_rt_pc
+#define irt_gdown	rt_data.rt_in_data.in_rt_pc
+
+#endif
+	    char rt_dummy[32];
+	} rt_data;
 };
 
 #define	RTF_UP		0x1		/* route useable */
 #define	RTF_GATEWAY	0x2		/* destination is a gateway */
 #define	RTF_HOST	0x4		/* host entry (net otherwise) */
+#define RTF_REINSTATE	0x8		/* re-instate route after timeout */
 
 /*
  * Routing statistics.
