@@ -8,8 +8,11 @@
  */
 
 /*
- * Sccs Id = "@(#)rcv.h	2.1 7/1/81";
+ * Sccs Id = "@(#)rcv.h	2.2 10/21/82";
  */
 
+#ifdef	pdp11
+#include <whoami.h>
+#endif
 #include "def.h"
 #include "glob.h"
