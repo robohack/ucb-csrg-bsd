@@ -1,4 +1,4 @@
-static	char sccsid[] = "@(#)diff.c 4.3 6/3/85";
+static	char sccsid[] = "@(#)diff.c 4.4 6/7/85";
 
 #include "diff.h"
 /*
@@ -59,6 +59,15 @@ main(argc, argv)
 			continue;
 		case 'b':
 			bflag = 1;
+			continue;
+		case 'w':
+			wflag = 1;
+			continue;
+		case 'i':
+			iflag = 1;
+			continue;
+		case 't':
+			tflag = 1;
 			continue;
 		case 'c':
 			opt = D_CONTEXT;
