@@ -1,6 +1,8 @@
-/* Copyright (c) 1982 Regents of the University of California */
+#ifndef lint
+static char sccsid[] = "@(#)library.c	1.4 (Berkeley) 8/13/83";
+#endif
 
-static char sccsid[] = "@(#)library.c 1.3 8/7/83";
+/* Copyright (c) 1982 Regents of the University of California */
 
 /*
  * General purpose routines.
