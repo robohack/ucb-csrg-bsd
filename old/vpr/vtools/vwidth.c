@@ -1,4 +1,7 @@
-/*	vwidth.c	4.1	83/03/09	*/
+#ifndef lint
+static char sccsid[] = "@(#)vwidth.c	4.2 (Berkeley) 7/16/83";
+#endif
+
 /*
  *	Creates a width table for troff from a versatec font for a
  *		normal font.

@@ -1,4 +1,7 @@
-/*	rotate.c	4.1	83/04/28	*/
+#ifndef lint
+static char sccsid[] = "@(#)rotate.c	4.2 (Berkeley) 7/16/83";
+#endif
+
 /*
  * Rotate a Varian/Versatec font.
  */
