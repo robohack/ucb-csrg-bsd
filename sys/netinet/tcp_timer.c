@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)tcp_timer.c	6.10 (Berkeley) 1/13/86
+ *	@(#)tcp_timer.c	6.11 (Berkeley) 2/8/86
  */
 
 #include "param.h"
@@ -92,6 +92,10 @@ tpgone:
 		;
 	}
 	tcp_iss += TCP_ISSINCR/PR_SLOWHZ;		/* increment iss */
+#ifdef COMPAT_42
+	if ((int)tcp_iss < 0)
+		tcp_iss = 0;				/* XXX */
+#endif
 	splx(s);
 }
 
