@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)if_arp.h	6.1 (Berkeley) 1/24/86
+ *	@(#)if_arp.h	7.1 (Berkeley) 6/4/86
  */
 
 /*
