@@ -2,7 +2,7 @@
 #
 # %sccs.include.proprietary.sh%
 #
-#	@(#)struct.sh	4.4 (Berkeley) 4/16/91
+#	@(#)struct.sh	8.1 (Berkeley) 6/6/93
 #
 
 trap "rm -f /tmp/struct*$$" 0 1 2 3 13 15
