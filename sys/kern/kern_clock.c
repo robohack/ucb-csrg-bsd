@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)kern_clock.c	7.29 (Berkeley) 2/4/93
+ *	@(#)kern_clock.c	7.30 (Berkeley) 3/4/93
  */
 
 #include <sys/param.h>
@@ -461,7 +461,7 @@ statclock(frame)
  */
 sysctl_clockrate(where, sizep)
 	register char *where;
-	int *sizep;
+	size_t *sizep;
 {
 	struct clockinfo clkinfo;
 
