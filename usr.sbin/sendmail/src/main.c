@@ -7,7 +7,7 @@
 # include <syslog.h>
 # endif LOG
 
-SCCSID(@(#)main.c	3.61		2/4/82);
+SCCSID(@(#)main.c	3.62		2/20/82);
 
 /*
 **  SENDMAIL -- Post mail to a set of destinations.
@@ -322,6 +322,12 @@ main(argc, argv)
 # endif SMTP
 			}
 			break;
+
+# ifdef QUEUE
+		  case 'c':	/* don't connect to non-local mailers */
+			NoConnect = TRUE;
+			break;
+# endif QUEUE
 		
 		  case 's':	/* save From lines in headers */
 			SaveFrom++;
