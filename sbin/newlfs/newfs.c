@@ -12,7 +12,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)newfs.c	8.2 (Berkeley) 1/13/94";
+static char sccsid[] = "@(#)newfs.c	8.3 (Berkeley) 4/22/94";
 #endif /* not lint */
 
 /*
@@ -28,7 +28,6 @@ static char sccsid[] = "@(#)newfs.c	8.2 (Berkeley) 1/13/94";
 
 #include <ufs/ufs/dir.h>
 #include <ufs/ufs/dinode.h>
-#include <ufs/ffs/fs.h>
 
 #include <errno.h>
 #include <unistd.h>
