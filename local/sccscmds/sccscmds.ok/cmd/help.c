@@ -1,6 +1,6 @@
 # include	"../hdr/defines.h"
 
-static char Sccsid[] = "@(#)help.c	4.2	2/15/87";
+static char Sccsid[] = "@(#)help.c	4.3	2/2/88";
 
 /*
 	Program to locate helpful info in an ascii file.
@@ -120,7 +120,8 @@ char *p;
 
 	if (q == NULL) {	/* endfile? */
 		printf("\n");
-		fatal(sprintf(Error,"%s not found (he1)",p));
+		sprintf(Error,"%s not found (he1)",p);
+		fatal(Error);
 	}
 
 	printf("\n%s:\n",p);
