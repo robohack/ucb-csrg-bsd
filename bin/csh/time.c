@@ -6,10 +6,11 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)time.c	5.9 (Berkeley) 6/4/91";
+static char sccsid[] = "@(#)time.c	5.10 (Berkeley) 6/7/91";
 #endif /* not lint */
 
-#include "sh.h"
+#include "csh.h"
+#include "extern.h"
 
 /*
  * C Shell - routines handling process timing and niceing
