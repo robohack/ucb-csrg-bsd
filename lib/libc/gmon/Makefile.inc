@@ -1,4 +1,4 @@
-#	@(#)Makefile.inc	5.2 (Berkeley) 6/1/93
+#	@(#)Makefile.inc	8.1 (Berkeley) 6/4/93
 
 # gmon sources
 .PATH: ${.CURDIR}/gmon
