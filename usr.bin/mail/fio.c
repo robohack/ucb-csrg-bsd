@@ -10,7 +10,7 @@
  * File I/O.
  */
 
-static char *SccsId = "@(#)fio.c	2.3 8/12/81";
+static char *SccsId = "@(#)fio.c	2.4 12/7/81";
 
 /*
  * Set up the input pointers while copying the mail file into
@@ -318,7 +318,7 @@ edstop()
 	}
 	if (Tflag != NOSTR)
 		fclose(readstat);
-	if (!gotcha)
+	if (!gotcha || Tflag != NOSTR)
 		goto done;
 	ibuf = NULL;
 	if (stat(editfile, &statb) >= 0 && statb.st_size > mailsize) {
