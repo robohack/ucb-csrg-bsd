@@ -6,7 +6,7 @@
 # include <syslog.h>
 # endif LOG
 
-SCCSID(@(#)deliver.c	3.73		3/6/82);
+SCCSID(@(#)deliver.c	3.74		3/20/82);
 
 /*
 **  DELIVER -- Deliver a message to a list of addresses.
@@ -322,11 +322,8 @@ deliver(firstto, editfcn)
 		*/
 
 		/* link together the chain of recipients */
-		if (!bitset(QDONTSEND, to->q_flags))
-		{
-			to->q_tchain = tochain;
-			tochain = to;
-		}
+		to->q_tchain = tochain;
+		tochain = to;
 
 		/* create list of users for error messages */
 		if (tobuf[0] != '\0')
