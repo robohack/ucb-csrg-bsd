@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)telnet.c	4.22 (Berkeley) 6/21/83";
+static char sccsid[] = "@(#)telnet.c	4.23 (Berkeley) 7/19/83";
 #endif
 
 /*
@@ -468,8 +468,13 @@ command(top)
 		signal(SIGINT, SIG_DFL);
 	for (;;) {
 		printf("%s> ", prompt);
-		if (gets(line) == 0)
+		if (gets(line) == 0) {
+			if (feof(stdin)) {
+				clearerr(stdin);
+				putchar('\n');
+			}
 			break;
+		}
 		if (line[0] == 0)
 			break;
 		makeargv();
