@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)str.c	5.11 (Berkeley) 11/6/91";
+static char sccsid[] = "@(#)str.c	5.12 (Berkeley) 2/5/92";
 #endif /* not lint */
 
 #define MALLOC_INCR	128
@@ -431,8 +431,11 @@ vis_str(cp)
 			    xmalloc((size_t) n * sizeof(char)));
 	dstsize = n;
     }
-    (void) strvis(sdst, short2str(cp), 
-		  AsciiOnly ? VIS_NOSLASH : (VIS_NLS | VIS_NOSLASH));
+    /* 
+     * XXX: When we are in AsciiOnly we want all characters >= 0200 to
+     * be encoded, but currently there is no way in vis to do that.
+     */
+    (void) strvis(sdst, short2str(cp), VIS_NOSLASH);
     return (sdst);
 }
     
