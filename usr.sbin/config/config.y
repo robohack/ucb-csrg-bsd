@@ -76,7 +76,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)config.y	5.11 (Berkeley) 1/15/91
+ *	@(#)config.y	5.12 (Berkeley) 2/6/91
  */
 
 #include "config.h"
@@ -87,7 +87,6 @@ struct	device cur;
 struct	device *curp = 0;
 char	*temp_id;
 char	*val_id;
-char	*malloc();
 
 %}
 %%
