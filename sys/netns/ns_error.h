@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 1984, 1988 Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1984, 1988, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.redist.c%
  *
- *	@(#)ns_error.h	7.5 (Berkeley) 6/28/90
+ *	@(#)ns_error.h	8.1 (Berkeley) 6/10/93
  */
 
 /*
