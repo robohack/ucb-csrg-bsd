@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)kbd.c	7.3 (Berkeley) 4/28/91
+ *	@(#)kbd.c	7.4 (Berkeley) 5/4/91
  */
 
 #define	L		0x01	/* locking function */
@@ -206,6 +206,7 @@ u_char getchar() {
 	u_char c;
 
 	c = kbd();
+	if (c == '\b' || c == '\177') return(c);
 	if (c == '\r') c = '\n';
 	putchar(c);
 	return(c);
