@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 1982, 1986, 1989 The Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1982, 1986, 1989, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * %sccs.include.proprietary.c%
  *
- *	@(#)sys_process.c	7.39 (Berkeley) 6/9/93
+ *	@(#)sys_process.c	8.1 (Berkeley) 6/10/93
  */
 
 #define IPCREG
