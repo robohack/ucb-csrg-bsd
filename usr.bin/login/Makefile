@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.7 (Berkeley) 7/19/93
+#	@(#)Makefile	8.1 (Berkeley) 7/19/93
 
 CFLAGS+=-DKERBEROS
 PROG=	login
