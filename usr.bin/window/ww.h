@@ -1,5 +1,11 @@
 /*
- * @(#)ww.h	3.35 3/1/85	
+ * @(#)ww.h	3.36 4/24/85	
+ */
+
+/*
+ * Copyright (c) 1983 Regents of the University of California,
+ * All rights reserved.  Redistribution permitted subject to
+ * the terms of the Berkeley Software License Agreement.
  */
 
 #include <sgtty.h>
