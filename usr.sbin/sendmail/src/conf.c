@@ -7,7 +7,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)conf.c	6.50 (Berkeley) 4/28/93";
+static char sccsid[] = "@(#)conf.c	6.51 (Berkeley) 5/3/93";
 #endif /* not lint */
 
 # include <sys/ioctl.h>
@@ -179,6 +179,7 @@ setdefaults(e)
 	TimeOuts.to_q_warning = 0;		/* option T */
 	PrivacyFlags = 0;			/* option p */
 	setdefuser();
+	setupaliases();
 	setupmaps();
 	setupmailers();
 }
