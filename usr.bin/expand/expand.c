@@ -1,9 +1,8 @@
-static char *sccsid = "@(#)expand.c	4.2 (Berkeley) 2/7/81";
+static char *sccsid = "@(#)expand.c	4.3 (Berkeley) 9/17/84";
 #include <stdio.h>
 /*
  * expand - expand tabs to equivalent spaces
  */
-char	obuf[BUFSIZ];
 int	nstops;
 int	tabstops[100];
 
@@ -14,7 +13,6 @@ main(argc, argv)
 	register int c, column;
 	register int n;
 
-	setbuf(stdout, obuf);
 	argc--, argv++;
 	do {
 		while (argc > 0 && argv[0][0] == '-') {
