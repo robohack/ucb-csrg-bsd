@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)char.h	5.6 (Berkeley) 6/4/91
+ *	@(#)char.h	5.7 (Berkeley) 7/19/91
  */
 
 #include <ctype.h>
