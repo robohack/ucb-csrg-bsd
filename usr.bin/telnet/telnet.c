@@ -11,12 +11,16 @@ char copyright[] =
 #endif not lint
 
 #ifndef lint
-static char sccsid[] = "@(#)telnet.c	5.14 (Berkeley) 5/6/86";
+static char sccsid[] = "@(#)telnet.c	5.15 (Berkeley) 5/13/86";
 #endif not lint
 
 /*
  * User telnet program.
+ *
+ * Many of the FUNCTIONAL changes in this newest version of telnet
+ * were suggested by Dave Borman of Cray Research, Inc.
  */
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/ioctl.h>
