@@ -11,7 +11,7 @@
 # include <pwd.h>
 
 #ifndef lint
-static char sccsid[] = "@(#)alias.c	6.48 (Berkeley) 5/22/93";
+static char sccsid[] = "@(#)alias.c	6.49 (Berkeley) 5/27/93";
 #endif /* not lint */
 
 
@@ -416,8 +416,6 @@ rebuildaliases(map, automatic)
 #ifdef LOG
 	if (LogLevel > 7)
 	{
-		extern char *username();
-
 		syslog(LOG_NOTICE, "alias database %s %srebuilt by %s",
 			map->map_file, automatic ? "auto" : "", username());
 	}

@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.66 (Berkeley) 5/24/93";
+static char sccsid[] = "@(#)main.c	6.67 (Berkeley) 5/27/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -124,12 +124,10 @@ main(argc, argv, envp)
 	extern int optind;
 	extern time_t convtime();
 	extern putheader(), putbody();
-	extern ENVELOPE *newenvelope();
 	extern void intsig();
 	extern char **myhostname();
 	extern char *arpadate();
 	extern char *getauthinfo();
-	extern char *macvalue();
 	extern char *optarg;
 	extern char **environ;
 
@@ -809,7 +807,6 @@ main(argc, argv, envp)
 				continue;
 			do
 			{
-				extern char **prescan();
 				char pvpbuf[PSBUFSIZE];
 
 				pvp = prescan(++p, ',', pvpbuf, &delimptr);
@@ -874,8 +871,6 @@ main(argc, argv, envp)
 			strcat(dtype, "+SMTP");
 		if (QueueIntvl != 0)
 		{
-			extern char *pintvl();
-
 			strcat(dtype, "+queueing@");
 			strcat(dtype, pintvl(QueueIntvl, TRUE));
 		}
@@ -1235,7 +1230,6 @@ thaw(freezefile, binfile)
 	extern char edata, end;
 	extern char Version[];
 	extern char **myhostname();
-	extern char *macvalue();
 	extern BRK_TYPE brk();
 
 	if (freezefile == NULL)
