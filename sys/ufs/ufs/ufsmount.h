@@ -14,7 +14,7 @@
  * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
- *	@(#)ufsmount.h	7.5 (Berkeley) 5/2/90
+ *	@(#)ufsmount.h	7.6 (Berkeley) 5/4/90
  */
 
 /*
@@ -43,5 +43,5 @@ struct	ufsmount {
 /*
  * Convert mount ptr to ufsmount ptr.
  */
-#define VFSTOUFS(mp)	((struct ufsmount *)((mp)->m_data))
+#define VFSTOUFS(mp)	((struct ufsmount *)((mp)->mnt_data))
 #endif /* KERNEL */
