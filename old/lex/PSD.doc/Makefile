@@ -1,10 +1,10 @@
-#	@(#)Makefile	6.2 (Berkeley) 6/30/90
+#	@(#)Makefile	6.3 (Berkeley) 6/5/93
 
-DIR=	ps1/16.lex
+DIR=	psd/16.lex
 SRCS=	lex.ms
 MACROS=	-msU
 
-paper.${PRINTER}: ${SRCS}
+paper.ps: ${SRCS}
 	${TBL} ${SRCS} | ${ROFF} > ${.TARGET}
 
 .include <bsd.doc.mk>
