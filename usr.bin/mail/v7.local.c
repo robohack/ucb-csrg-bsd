@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)v7.local.c	5.9 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)v7.local.c	5.10 (Berkeley) 6/24/90";
 #endif /* not lint */
 
 /*
@@ -28,7 +28,7 @@ findmail(user, buf)
 	char *buf;
 {
 
-	strcpy(copy(_PATH_MBOX, buf), user);
+	strcpy(copy(_PATH_MAILDIR, buf), user);
 }
 
 /*

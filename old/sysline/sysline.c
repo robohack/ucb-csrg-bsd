@@ -12,7 +12,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)sysline.c	5.15 (Berkeley) 6/1/90";
+static char sccsid[] = "@(#)sysline.c	5.16 (Berkeley) 6/24/90";
 #endif /* not lint */
 
 /*
@@ -409,7 +409,7 @@ main(argc,argv)
 		if ((username = getenv("USER")) == 0)
 			mailcheck = 0;
 		else {
-			chdir(_PATH_MBOX);
+			chdir(_PATH_MAILDIR);
 			if (stat(username, &mstbuf) >= 0)
 				mailsize = mstbuf.st_size;
 			else
