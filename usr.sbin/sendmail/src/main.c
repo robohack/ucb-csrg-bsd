@@ -13,7 +13,7 @@ char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	6.56 (Berkeley) 4/15/93";
+static char sccsid[] = "@(#)main.c	6.57 (Berkeley) 4/18/93";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -884,6 +884,9 @@ main(argc, argv, envp)
 			strcat(dtype, "+debugging");
 
 		syslog(LOG_INFO, "starting daemon: %s", dtype + 1);
+#ifdef XLA
+		xla_create_file();
+#endif
 
 # ifdef QUEUE
 		if (queuemode)
@@ -900,7 +903,6 @@ main(argc, argv, envp)
 		getrequests();
 
 		/* at this point we are in a child: reset state */
-		OpMode = MD_SMTP;
 		(void) newenvelope(CurEnv, CurEnv);
 
 		/*
@@ -1027,6 +1029,11 @@ finis()
 	/* post statistics */
 	poststats(StatFile);
 
+# ifdef XLA
+	/* clean up extended load average stuff */
+	xla_all_end();
+# endif
+
 	/* and exit */
 # ifdef LOG
 	if (LogLevel > 78)
@@ -1057,6 +1064,9 @@ intsig()
 {
 	FileName = NULL;
 	unlockqueue(CurEnv);
+#ifdef XLA
+	xla_all_end();
+#endif
 	exit(EX_OK);
 }
 /*
