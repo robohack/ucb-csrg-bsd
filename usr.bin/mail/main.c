@@ -5,13 +5,13 @@
  */
 
 #ifndef lint
-char copyright[] =
+char *copyright =
 "@(#) Copyright (c) 1980 Regents of the University of California.\n\
  All rights reserved.\n";
 #endif not lint
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	5.1 (Berkeley) 6/6/85";
+static char *sccsid = "@(#)main.c	5.2 (Berkeley) 6/21/85";
 #endif not lint
 
 #include "rcv.h"
