@@ -4,7 +4,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)extern.h	5.14 (Berkeley) 2/12/92
+ *	@(#)extern.h	5.15 (Berkeley) 5/22/93
  */
 
 #include <sys/cdefs.h>
