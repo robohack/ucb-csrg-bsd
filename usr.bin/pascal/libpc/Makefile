@@ -1,4 +1,4 @@
-#	@(#)Makefile	1.28 (Berkeley) 6/29/90
+#	@(#)Makefile	8.1 (Berkeley) 6/6/93
 
 LIB=	pc
 CMDS=	ACTFILE.c ADDT.c ARGV.c ASRT.c ASRTS.c ATAN.c BUFF.c CARD.c \
