@@ -1,4 +1,4 @@
-#	@(#)Makefile	5.4 (Berkeley) 5/11/90
+#	@(#)Makefile	8.1 (Berkeley) 5/31/93
 
 PROG=	chess
 SRCS=	gnuchess.c uxdsp.c move.c
