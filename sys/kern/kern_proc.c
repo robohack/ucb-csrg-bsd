@@ -1,4 +1,4 @@
-/*	kern_proc.c	4.4	2/1/81	*/
+/*	kern_proc.c	4.5	2/3/81	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
@@ -65,6 +65,8 @@ exece()
 
   again:
 	if(access(ip, IEXEC))
+		goto bad;
+	if((u.u_procp->p_flag&STRC) && access(ip, IREAD))
 		goto bad;
 	if((ip->i_mode & IFMT) != IFREG ||
 	   (ip->i_mode & (IEXEC|(IEXEC>>3)|(IEXEC>>6))) == 0) {
