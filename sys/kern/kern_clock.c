@@ -1,4 +1,4 @@
-/*	kern_clock.c	3.1	11/15/19	*/
+/*	kern_clock.c	3.2	11/15/19	*/
 
 #include "../h/param.h"
 #include "../h/systm.h"
@@ -142,7 +142,14 @@ out:
 				pp->p_time++;
 			if(pp->p_clktim)
 				if(--pp->p_clktim == 0)
-					psignal(pp, SIGCLK);
+					if (pp->p_flag & STIMO) {
+						s = spl6();
+						if (pp->p_stat == SSLEEP)
+							setrun(pp);
+						pp->p_flag &= ~STIMO;
+						splx(s);
+					} else
+						psignal(pp, SIGCLK);
 			if(pp->p_stat==SSLEEP||pp->p_stat==SSTOP)
 				if (pp->p_slptime != 127)
 					pp->p_slptime++;
