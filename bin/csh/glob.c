@@ -1,5 +1,5 @@
 #ifndef lint
-static	char *sccsid = "@(#)glob.c	4.8 (Berkeley) 1/17/85";
+static	char *sccsid = "@(#)glob.c	4.9 (Berkeley) 2/28/85";
 #endif
 
 #include "sh.h"
@@ -468,7 +468,7 @@ addpath(c)
 
 	if (gpathp >= lastgpathp)
 		error("Pathname too long");
-	*gpathp++ = c;
+	*gpathp++ = c & TRIM;
 	*gpathp = 0;
 }
 
