@@ -13,7 +13,7 @@ static char copyright[] =
 #endif /* not lint */
 
 #ifndef lint
-static char sccsid[] = "@(#)main.c	8.125 (Berkeley) 6/10/95";
+static char sccsid[] = "@(#)main.c	8.126 (Berkeley) 6/11/95";
 #endif /* not lint */
 
 #define	_DEFINE
@@ -262,7 +262,7 @@ main(argc, argv, envp)
 		int ll;
 		extern char *CompileOptions[];
 
-		printf("Version %s\nCompiled with:\t", Version);
+		printf("Version %s\n Compiled with:", Version);
 		av = CompileOptions;
 		ll = 7;
 		while (*av != NULL)
@@ -277,7 +277,8 @@ main(argc, argv, envp)
 				putchar('\t');
 				putchar('\t');
 			}
-			putchar(' ');
+			else
+				putchar(' ');
 			printf("%s", *av);
 			ll += strlen(*av++) + 1;
 		}
@@ -288,7 +289,7 @@ main(argc, argv, envp)
 		int ll;
 		extern char *OsCompileOptions[];
 
-		printf("OS Defines:\t", Version);
+		printf("    OS Defines:", Version);
 		av = OsCompileOptions;
 		ll = 7;
 		while (*av != NULL)
@@ -303,16 +304,17 @@ main(argc, argv, envp)
 				putchar('\t');
 				putchar('\t');
 			}
-			putchar(' ');
+			else
+				putchar(' ');
 			printf("%s", *av);
 			ll += strlen(*av++) + 1;
 		}
 		putchar('\n');
 #ifdef _PATH_UNIX
-		printf("Unix path:\t  %s\n", _PATH_UNIX);
+		printf("     Unix path:\t%s\n", _PATH_UNIX);
 #endif
-		printf("Config file:\t  %s\n", getcfname());
-		printf("Proc Id file:\t  %s\n", PidFile);
+		printf("   Config file:\t%s\n", getcfname());
+		printf("  Proc Id file:\t%s\n", PidFile);
 	}
 
 	InChannel = stdin;
@@ -703,16 +705,16 @@ main(argc, argv, envp)
 
 	if (tTd(0, 1))
 	{
-		printf("SYSTEM IDENTITY (after readcf):");
-		printf("\n\t    (short domain name) $w = ");
+		printf("\n============ SYSTEM IDENTITY (after readcf) ============");
+		printf("\n      (short domain name) $w = ");
 		xputs(macvalue('w', CurEnv));
-		printf("\n\t(canonical domain name) $j = ");
+		printf("\n  (canonical domain name) $j = ");
 		xputs(macvalue('j', CurEnv));
-		printf("\n\t       (subdomain name) $m = ");
+		printf("\n         (subdomain name) $m = ");
 		xputs(macvalue('m', CurEnv));
-		printf("\n\t            (node name) $k = ");
+		printf("\n              (node name) $k = ");
 		xputs(macvalue('k', CurEnv));
-		printf("\n");
+		printf("\n========================================================\n\n");
 	}
 
 	/*
