@@ -5,7 +5,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char sccsid[] = "@(#)timezone.c	5.4 (Berkeley) 3/28/87";
+static char sccsid[] = "@(#)timezone.c	5.5 (Berkeley) 4/1/87";
 #endif LIBC_SCCS and not lint
 
 #include <sys/types.h>
@@ -78,7 +78,7 @@ static struct zone {
  *	STANDARD LIBRARY.
  */
 char *
-tztab(zone,dst)
+_tztab(zone,dst)
 	register int	zone;
 	int	dst;
 {
