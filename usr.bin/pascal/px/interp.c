@@ -1,6 +1,6 @@
 /* Copyright (c) 1979 Regents of the University of California */
 
-static char sccsid[] = "@(#)interp.c 1.7 1/26/81";
+static char sccsid[] = "@(#)interp.c 1.8 2/4/81";
 
 #include <math.h>
 #include "vars.h"
@@ -854,7 +854,7 @@ interpreter(base)
 			tcp = _display.raw[*pc.ucp++];
 			tcp += *pc.sp++;
 			tl = *pc.usp++;
-			tcp1 = pushsp(tl);
+			tcp1 = pushsp((tl + 1) & ~1);
 			blkcpy(tl, tcp, tcp1);
 			continue;
 		case O_LV:
