@@ -1,4 +1,4 @@
-#	@(#)Makefile	4.14 (Berkeley) 4/30/91
+#	@(#)Makefile	4.15 (Berkeley) 4/2/94
 
 CFLAGS+=-I${.CURDIR}/../common_source
 DEST=	/usr/old/libdata/term
@@ -41,6 +41,6 @@ lint: ${SRCS}
 	${LINT} ${LINTFLAGS} ${CFLAGS} ${.ALLSRC}
 
 tags: ${SRCS}
-	${CTAGS} -f ${.CURDIR}/tags ${.ALLSRC}
+	ctags -f ${.CURDIR}/tags ${.ALLSRC}
 
 .include <bsd.prog.mk>
