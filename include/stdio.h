@@ -7,7 +7,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)stdio.h	5.14 (Berkeley) 3/5/91
+ *	@(#)stdio.h	5.15 (Berkeley) 3/9/91
  */
 
 #ifndef	_STDIO_H_
@@ -15,7 +15,7 @@
 
 #include <sys/cdefs.h>
 
-#include <machine/types.h>
+#include <machine/ansi.h>
 #ifdef	_SIZE_T_
 typedef	_SIZE_T_	size_t;
 #undef	_SIZE_T_
