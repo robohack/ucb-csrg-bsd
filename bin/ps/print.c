@@ -6,7 +6,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)print.c	5.6 (Berkeley) 5/6/91";
+static char sccsid[] = "@(#)print.c	5.7 (Berkeley) 6/3/91";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -569,6 +569,6 @@ printval(bp, v)
 		(void) printf(ofmt, v->width, *(u_long *)bp &~ KERNBASE);
 		break;
 	default:
-		error("unknown type %d", v->type);
+		err("unknown type %d", v->type);
 	}
 }
