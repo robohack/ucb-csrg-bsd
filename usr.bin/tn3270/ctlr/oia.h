@@ -3,7 +3,7 @@
  *
  * Our OIA looks like that used by the 3270 PC and PC 3270 products.
  *
- * @(#)oia.h	1.6 (Berkeley) 7/17/87
+ * @(#)oia.h	3.1 (Berkeley) 8/11/87
  */
 
 #define	INCLUDED_OIA

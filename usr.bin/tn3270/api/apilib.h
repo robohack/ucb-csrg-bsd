@@ -1,7 +1,7 @@
 /*
  * What one needs to specify
  *
- * @(#)apilib.h	1.2 (Berkeley) 7/17/87
+ * @(#)apilib.h	3.1 (Berkeley) 8/11/87
  */
 
 extern int

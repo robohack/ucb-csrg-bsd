@@ -7,7 +7,7 @@
  * termin does "index ==> (scancode, shiftstate)".  Both
  * mappings use this structure.)
  *
- * @(#)astosc.h	1.4 (Berkeley) 7/17/87
+ * @(#)astosc.h	3.1 (Berkeley) 8/11/87
  */
 
 #define	INCLUDED_ASTOSC

@@ -2,7 +2,7 @@
  * This is a header file describing the interface via int 10H to the
  * video subsystem.
  *
- * @(#)video.h	1.3 (Berkeley) 7/17/87
+ * @(#)video.h	3.1 (Berkeley) 8/11/87
  */
 
 #define	BIOS_VIDEO	0x10

@@ -3,7 +3,7 @@
  * between the API client and API server on a Unix-based
  * tn3270 implementation.
  *
- * @(#)api_exch.h	1.6 (Berkeley) 7/17/87
+ * @(#)api_exch.h	3.1 (Berkeley) 8/11/87
  */
 
 /*

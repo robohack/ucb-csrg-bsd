@@ -2,7 +2,7 @@
  * the various options that run our life.  Very few of these are implemented
  *	as yet.
  *
- * @(#)options.h	1.2 (Berkeley) 7/17/87
+ * @(#)options.h	3.1 (Berkeley) 8/11/87
  */
 
 #define	INCLUDED_OPTIONS

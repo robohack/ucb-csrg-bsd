@@ -1,5 +1,5 @@
 /*
- * @(#)dctype.h	1.2 (Berkeley) 7/17/87
+ * @(#)dctype.h	3.1 (Berkeley) 8/11/87
  */
 
 #define	INCLUDED_ECTYPE

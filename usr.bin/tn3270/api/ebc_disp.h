@@ -1,5 +1,5 @@
 /*
- * @(#)ebc_disp.h	1.2 (Berkeley) 7/17/87
+ * @(#)ebc_disp.h	3.1 (Berkeley) 8/11/87
  */
 
 extern unsigned char

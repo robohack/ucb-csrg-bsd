@@ -20,7 +20,7 @@
  */
 
 #ifndef	lint
-static char sccsid[] = "@(#)genbsubs.c	1.4 (Berkeley) 7/17/87";
+static char sccsid[] = "@(#)genbsubs.c	3.1 (Berkeley) 8/11/87";
 #endif	/* ndef lint */
 
 /* The output of bunequal is the offset of the byte which didn't match;

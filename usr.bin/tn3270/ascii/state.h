@@ -1,5 +1,5 @@
 /*
- * @(#)state.h	1.3 (Berkeley) 7/17/87
+ * @(#)state.h	3.1 (Berkeley) 8/11/87
  */
 
 #define	INCLUDED_STATE

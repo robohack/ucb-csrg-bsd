@@ -1,6 +1,6 @@
 /*
  *
- * @(#)dohits.h	1.3 (Berkeley) 7/17/87
+ * @(#)dohits.h	3.1 (Berkeley) 8/11/87
  */
 
 #define	numberof(x)	(sizeof x/sizeof x[0])

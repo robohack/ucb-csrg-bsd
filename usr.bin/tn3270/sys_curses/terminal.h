@@ -1,5 +1,5 @@
 /*
- * @(#)terminal.h	1.6 (Berkeley) 7/17/87
+ * @(#)terminal.h	3.1 (Berkeley) 8/11/87
  */
 
 #define	INCLUDED_TERMINAL

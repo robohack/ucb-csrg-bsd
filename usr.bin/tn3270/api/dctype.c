@@ -1,5 +1,5 @@
 #ifndef lint
-static char sccsid[] = "@(#)dctype.c	1.2 (Berkeley) 7/17/87";
+static char sccsid[] = "@(#)dctype.c	3.1 (Berkeley) 8/11/87";
 #endif	/* not lint */
 
 #include "dctype.h"
