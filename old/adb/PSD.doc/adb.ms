@@ -1,9 +1,9 @@
 .\" %sccs.include.proprietary.roff%
 .\"
-.\"	@(#)adb.ms	6.2 (Berkeley) 4/17/91
+.\"	@(#)adb.ms	6.3 (Berkeley) 6/5/93
 .\"
-.EH 'PS1:10-%''A Tutorial Introduction to ADB'
-.OH 'A Tutorial Introduction to ADB''PS1:10-%'
+.EH 'PSD:11-%''A Tutorial Introduction to ADB'
+.OH 'A Tutorial Introduction to ADB''PSD:11-%'
 .de P1
 .sp .5
 .if \\n(.$>0 .ta \\$1 \\$2 \\$3 \\$4 \\$5 \\$6
