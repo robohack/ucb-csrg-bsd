@@ -10,9 +10,9 @@
 
 #ifndef lint
 #ifdef QUEUE
-static char sccsid[] = "@(#)queue.c	8.38 (Berkeley) 1/24/94 (with queueing)";
+static char sccsid[] = "@(#)queue.c	8.39 (Berkeley) 2/1/94 (with queueing)";
 #else
-static char sccsid[] = "@(#)queue.c	8.38 (Berkeley) 1/24/94 (without queueing)";
+static char sccsid[] = "@(#)queue.c	8.39 (Berkeley) 2/1/94 (without queueing)";
 #endif
 #endif /* not lint */
 
@@ -1115,7 +1115,7 @@ readqf(e)
 			break;
 
 		  default:
-			syserr("readqf: %s: line %s: bad line \"%s\"",
+			syserr("readqf: %s: line %d: bad line \"%s\"",
 				qf, LineNumber, bp);
 			fclose(qfp);
 			rename(qf, queuename(e, 'Q'));
