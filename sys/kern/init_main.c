@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)init_main.c	7.24 (Berkeley) 5/1/90
+ *	@(#)init_main.c	7.25 (Berkeley) 5/10/90
  */
 
 #include "param.h"
@@ -128,7 +128,7 @@ main(firstaddr)
 	 * Setup credentials
 	 */
 	u.u_cred = crget();
-	u.u_ngroups = 1;
+	u.u_cred->cr_ngroups = 1;
 
 	startrtclock();
 #if defined(vax)
