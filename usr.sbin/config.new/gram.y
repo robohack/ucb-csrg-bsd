@@ -15,9 +15,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)gram.y	5.1 (Berkeley) 1/12/93
- *
- * from: $Header: gram.y,v 1.5 93/01/12 10:01:14 torek Exp $
+ *	@(#)gram.y	5.2 (Berkeley) 4/18/93
  */
 
 #include <sys/param.h>

@@ -13,9 +13,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)config.h	5.1 (Berkeley) 1/12/93
- *
- * from: $Header: config.h,v 1.4 93/01/12 03:54:25 torek Exp $
+ *	@(#)config.h	5.2 (Berkeley) 4/18/93
  */
 
 /*

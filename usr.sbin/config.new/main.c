@@ -13,9 +13,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)main.c	5.1 (Berkeley) 1/12/93
- *
- * from: $Header: main.c,v 1.6 93/01/12 10:18:26 torek Exp $
+ *	@(#)main.c	5.2 (Berkeley) 4/18/93
  */
 
 #ifndef lint

@@ -14,9 +14,7 @@
  *
  * %sccs.include.redist.c%
  *
- *	@(#)scan.l	5.1 (Berkeley) 1/12/93
- *
- * from: $Header: scan.l,v 1.5 93/01/12 10:13:42 torek Exp $
+ *	@(#)scan.l	5.2 (Berkeley) 4/18/93
  */
 
 #include <sys/param.h>
