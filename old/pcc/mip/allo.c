@@ -1,8 +1,8 @@
 #ifndef lint
-static char *sccsid ="@(#)allo.c	4.4 (Berkeley) 1/24/85";
+static char *sccsid ="@(#)allo.c	4.5 (Berkeley) 3/19/85";
 #endif lint
 
-# include "mfile2"
+# include "pass2.h"
 
 NODE resc[3];
 
