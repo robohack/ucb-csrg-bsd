@@ -3,7 +3,7 @@
  * All rights reserved.  The Berkeley software License Agreement
  * specifies the terms and conditions for redistribution.
  *
- *	@(#)ex_tune.h	7.8 (Berkeley) 5/31/85
+ *	@(#)ex_tune.h	7.9 (Berkeley) 7/26/86
  */
 
 /*
@@ -75,7 +75,7 @@
 #define	HBLKS		2
 #endif
 #define	MAXDIRT		12		/* Max dirtcnt before sync tfile */
-#define TCBUFSIZE	1024		/* Max entry size in termcap, see
+#define TCBUFSIZE	2048		/* Max entry size in termcap, see
 					   also termlib and termcap */
 
 /*
