@@ -1,0 +1,22 @@
+This disk contains a snapshot of the /usr/src tree as it existed
+on June 23, 1995, approximately one hour after the final 4.4BSD-Lite
+Release 2 distribution from the Computer Systems Research group
+was cut.  The project began using a source code control system (SCCS)
+in 1980 (three years after Bill Joy began his initial Berkeley UNIX
+development).  Initially only the kernel was put under SCCS, but
+by 1983 everything had been put under SCCS.  The source code for
+SCCS commands can be found in local/sccscmds.  Once built they can
+be used to review the SCCS logs.
+
+The list of contributors to the Berkeley Software Distribution
+(BSD) runs to hundreds of names.  For a complete list, see Contrib.
+
+Three other disks are included in this series; two disks with the
+various BSD distributions and one disk with historic AT&T and other
+distributions.  Please note that all four disks contain AT&T
+proprietary (both copyright and trade secret) files.  Therefore,
+these disks may not be redistributed without permission or license
+from AT&T or its successors.
+
+	Marshall Kirk McKusick
+	Keith Bostic
